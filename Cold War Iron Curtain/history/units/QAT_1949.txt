@@ -1,4 +1,4 @@
-##### Division Templates #####
+﻿##### Division Templates #####
 division_template = {
 	name = "Guard Division"
 
@@ -17,7 +17,7 @@ division_template = {
 	}
 }
 division_template = {
-	name = "Militia Division"
+	name = "Militia Division"		
 
 	regiments = {
 		militia = { x = 0 y = 0 }

@@ -10,7 +10,7 @@ focus_tree = {
 	default = no
 	focus = {
 		id = HUN_Embrace_Forced_Industrialization
-		icon = GFX_goal_unknown
+		icon = GFX_PlannedEconomy
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		x = 7
@@ -47,7 +47,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Collectivize_Agriculture
-		icon = GFX_goal_unknown
+		icon = GFX_Agri_Collectivization
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -64,7 +64,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Force_Peasants_into_Collectives
-		icon = GFX_goal_unknown
+		icon = GFX_ban_urban_meat_production
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -78,7 +78,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Fund_Heavy_Industry_Investments_with_Agricultural_Profits
-		icon = GFX_goal_unknown
+		icon = GFX_Communist_Heavy_Industry
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -109,7 +109,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Expand_the_Budapest_Industrial_Hub
-		icon = GFX_goal_unknown
+		icon = GFX_powerhouse_of_the_levant
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -130,7 +130,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Connect_to_Eastern_Bloc_Railways
-		icon = GFX_goal_unknown
+		icon = GFX_Communist_Trains
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -151,7 +151,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Kickstart_Cement_Production
-		icon = GFX_goal_unknown
+		icon = GFX_Cement
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -183,7 +183,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Ration_Food
-		icon = GFX_goal_unknown
+		icon = GFX_Starvation
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -201,7 +201,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Expand_the_State_Owned_Housing_Industry
-		icon = GFX_goal_unknown
+		icon = GFX_Encourage_Urbanization
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -217,7 +217,7 @@ focus_tree = {
 	}		
 	focus = {
 		id = HUN_Electrifiy_the_Households
-		icon = GFX_goal_unknown
+		icon = GFX_1st_Electric_Program
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -238,7 +238,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Concentrate_Our_Efforts_on_Urban_Accomodation
-		icon = GFX_goal_unknown
+		icon = GFX_focus_Urban_Development
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -260,7 +260,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Set_Prices_to_Aid_Working_Families
-		icon = GFX_goal_unknown
+		icon = GFX_farmer_debt_relief
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -271,11 +271,46 @@ focus_tree = {
 		}
 		x = 10
 		y = 3
-
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = fiscal_collapse_5
+				}
+				remove_ideas = fiscal_collapse_5
+				add_ideas = fiscal_collapse_4
+			}
+			else_if = {
+				limit = {
+					has_idea = fiscal_collapse_4
+				}
+				remove_ideas = fiscal_collapse_4
+				add_ideas = fiscal_collapse_3
+			}
+			else_if = {
+				limit = {
+					has_idea = fiscal_collapse_3
+				}
+				remove_ideas = fiscal_collapse_3
+				add_ideas = fiscal_collapse_2
+			}
+			else_if = {
+				limit = {
+					has_idea = fiscal_collapse_2
+				}
+				remove_ideas = fiscal_collapse_2
+				add_ideas = fiscal_collapse_1
+			}
+			else_if = {
+				limit = {
+					has_idea = fiscal_collapse_1
+				}
+				remove_ideas = fiscal_collapse_1
+			}
+		}
 	}
 	focus = {
 		id = HUN_Patriotic_Loans_to_Pay_Reperations
-		icon = GFX_goal_unknown
+		icon = GFX_Soviet_Loans
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -283,11 +318,47 @@ focus_tree = {
 		}
 		x = 10
 		y = 5
-
+		completion_reward = {
+			set_country_flag = Loan_Repayment_Enabled
+			if = {
+				limit = {
+					has_idea = fiscal_collapse_5
+				}
+				remove_ideas = fiscal_collapse_5
+				add_ideas = fiscal_collapse_4
+			}
+			else_if = {
+				limit = {
+					has_idea = fiscal_collapse_4
+				}
+				remove_ideas = fiscal_collapse_4
+				add_ideas = fiscal_collapse_3
+			}
+			else_if = {
+				limit = {
+					has_idea = fiscal_collapse_3
+				}
+				remove_ideas = fiscal_collapse_3
+				add_ideas = fiscal_collapse_2
+			}
+			else_if = {
+				limit = {
+					has_idea = fiscal_collapse_2
+				}
+				remove_ideas = fiscal_collapse_2
+				add_ideas = fiscal_collapse_1
+			}
+			else_if = {
+				limit = {
+					has_idea = fiscal_collapse_1
+				}
+				remove_ideas = fiscal_collapse_1
+			}
+		}
 	}
 	focus = {
 		id = HUN_Achieve_Early_Industrialization_Goals
-		icon = GFX_goal_unknown
+		icon = GFX_Economic_Reconstruction_Generic
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -307,7 +378,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_A_Hungarian_New_Economic_Policy
-		icon = GFX_goal_unknown
+		icon = GFX_InvestInNatal
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -324,7 +395,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Reduce_the_Burden_of_Farmers
-		icon = GFX_goal_unknown
+		icon = GFX_increase_kolkhoz_funding
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -332,11 +403,15 @@ focus_tree = {
 		}
 		x = 8
 		y = 8
-
+		completion_reward = {
+			add_to_variable = { cg_spend_base_ten = 0.1 }
+			add_to_variable = { cg_spend_base_four = 0.04 }
+			custom_effect_tooltip = cg_spend_increase_TT
+		}
 	}
 	focus = {
 		id = HUN_Allow_Cultivators_to_Leave_Cooperatives
-		icon = GFX_goal_unknown
+		icon = GFX_agricultural_banks
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -344,11 +419,20 @@ focus_tree = {
 		}
 		x = 11
 		y = 8
-
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = agri_industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
 	}
 	focus = {
 		id = HUN_Encourage_Limited_Private_Activity
-		icon = GFX_goal_unknown
+		icon = GFX_FocusSmallBusinesses
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -359,11 +443,46 @@ focus_tree = {
 		}
 		x = 10
 		y = 9
-
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = fiscal_collapse_5
+				}
+				remove_ideas = fiscal_collapse_5
+				add_ideas = fiscal_collapse_4
+			}
+			else_if = {
+				limit = {
+					has_idea = fiscal_collapse_4
+				}
+				remove_ideas = fiscal_collapse_4
+				add_ideas = fiscal_collapse_3
+			}
+			else_if = {
+				limit = {
+					has_idea = fiscal_collapse_3
+				}
+				remove_ideas = fiscal_collapse_3
+				add_ideas = fiscal_collapse_2
+			}
+			else_if = {
+				limit = {
+					has_idea = fiscal_collapse_2
+				}
+				remove_ideas = fiscal_collapse_2
+				add_ideas = fiscal_collapse_1
+			}
+			else_if = {
+				limit = {
+					has_idea = fiscal_collapse_1
+				}
+				remove_ideas = fiscal_collapse_1
+			}
+		}
 	}
 	focus = {
 		id = HUN_Lower_Food_Prices
-		icon = GFX_goal_unknown
+		icon = GFX_vegetable_gardens
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -371,11 +490,15 @@ focus_tree = {
 		}
 		x = 14
 		y = 8
-
+		completion_reward = {
+			add_to_variable = { cg_spend_base_ten = 0.1 }
+			add_to_variable = { cg_spend_base_four = 0.04 }
+			custom_effect_tooltip = cg_spend_increase_TT
+		}
 	}
 	focus = {
 		id = HUN_Increase_the_Standard_of_Living
-		icon = GFX_goal_unknown
+		icon = GFX_Backyard_Classes_Commission
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -386,11 +509,15 @@ focus_tree = {
 		}
 		x = 12
 		y = 9
-
+		completion_reward = {
+			add_to_variable = { cg_spend_base_ten = 0.1 }
+			add_to_variable = { cg_spend_base_four = 0.04 }
+			custom_effect_tooltip = cg_spend_increase_TT
+		}
 	}
 	focus = {
 		id = HUN_Purge_Kadar_and_his_Ilk
-		icon = GFX_goal_unknown
+		icon = GFX_PurgeKulaks
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -404,7 +531,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Denounce_Religous_Instruction
-		icon = GFX_goal_unknown
+		icon = GFX_anti_non_muslims
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -415,11 +542,12 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = { clergy_persecution_factor = 0.05 }
 			add_to_variable = { clergy_persecution_negative = -0.05  }
+			custom_effect_tooltip = clergy_persecution_increase_TT
 		}
 	}
 	focus = {
 		id = HUN_Remove_Cults_from_Schools
-		icon = GFX_goal_unknown
+		icon = GFX_focus_atheism
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -430,11 +558,12 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = { clergy_persecution_factor = 0.05 }
 			add_to_variable = { clergy_persecution_negative = -0.05  }
+			custom_effect_tooltip = clergy_persecution_increase_TT
 		}
 	}
 	focus = {
 		id = HUN_Dissolve_the_Last_of_the_Clergys_Institution
-		icon = GFX_goal_unknown
+		icon = GFX_Close_Monasteries
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -448,11 +577,12 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = { clergy_persecution_factor = 0.05 }
 			add_to_variable = { clergy_persecution_negative = -0.05  }
+			custom_effect_tooltip = clergy_persecution_increase_TT
 		}
 	}
 	focus = {
 		id = HUN_Incorporate_the_Church_into_the_Regime
-		icon = GFX_goal_unknown
+		icon = GFX_christian_socialism
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -467,11 +597,12 @@ focus_tree = {
 			add_stability = 0.03
 			add_to_variable = { clergy_persecution_factor = -0.10 }
 			add_to_variable = { clergy_persecution_negative = 0.10  }
+			custom_effect_tooltip = clergy_persecution_decrease_TT
 		}
 	}
 	focus = {
 		id = HUN_Promote_the_Golden_Team
-		icon = GFX_goal_unknown
+		icon = GFX_focus_red_propaganda
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -487,7 +618,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Cultivate_a_Cult_of_Personality
-		icon = GFX_goal_unknown
+		icon = GFX_AppealtoStalin
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -501,7 +632,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Create_the_State_Protection_Authority
-		icon = GFX_goal_unknown
+		icon = GFX_focus_police
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -518,7 +649,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Purge_Nazi_Remnants_and_Imperialist_Collaborators
-		icon = GFX_goal_unknown
+		icon = GFX_ChainTheEagleFocus
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -535,7 +666,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Open_Forced_Labor_Camps
-		icon = GFX_goal_unknown
+		icon = GFX_Crush_Strikers
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -548,12 +679,13 @@ focus_tree = {
 			add_to_variable = { gulag_factor_neg = -0.01 }		
 			add_to_variable = { gulag_factor_five = 0.05 }			
 			add_to_variable = { gulag_factor_five_neg = -0.05 }
+			custom_effect_tooltip = gulag_factor_increase_TT
 			
 		}
 	}
 	focus = {
 		id = HUN_Encourage_Anti_Semetism
-		icon = GFX_goal_unknown
+		icon = GFX_Persecute_Jews
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -569,13 +701,13 @@ focus_tree = {
 			add_to_variable = { gulag_factor_neg = -0.01 }		
 			add_to_variable = { gulag_factor_five = 0.05 }			
 			add_to_variable = { gulag_factor_five_neg = -0.05 }
-			
+			custom_effect_tooltip = gulag_factor_increase_TT
 			news_event = Hungary_Anti_Semetic.1
 		}
 	}
 	focus = {
 		id = HUN_Prepare_the_Wallenberg_Trials
-		icon = GFX_goal_unknown
+		icon = GFX_Court_Justice
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -588,13 +720,13 @@ focus_tree = {
 			add_to_variable = { gulag_factor_neg = -0.01 }		
 			add_to_variable = { gulag_factor_five = 0.05 }			
 			add_to_variable = { gulag_factor_five_neg = -0.05 }
-			
+			custom_effect_tooltip = gulag_factor_increase_TT
 			news_event = Wallenberg.1
 		}
 	}
 	focus = {
 		id = HUN_Form_a_Hard_Working_Intelligenista
-		icon = GFX_goal_unknown
+		icon = GFX_CommunistScientists
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -608,7 +740,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Expand_the_AVH_Numbers
-		icon = GFX_goal_unknown
+		icon = GFX_integrate_the_black_market
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -657,7 +789,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Amnesty_for_Thought_Criminals
-		icon = GFX_goal_unknown
+		icon = GFX_National_Security_Act
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -669,12 +801,13 @@ focus_tree = {
 			add_to_variable = { gulag_factor = -0.01 }					
 			add_to_variable = { gulag_factor_neg = 0.01 }		
 			add_to_variable = { gulag_factor_five = -0.05 }			
-			add_to_variable = { gulag_factor_five_neg = 0.05 }		
+			add_to_variable = { gulag_factor_five_neg = 0.05 }	
+			custom_effect_tooltip = gulag_factor_decrease_TT		
 		}
 	}
 	focus = {
 		id = HUN_Annul_AVH_Judiciary_Initiatives
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Revolutionary_Government
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -686,7 +819,9 @@ focus_tree = {
 			add_to_variable = { gulag_factor = -0.01 }					
 			add_to_variable = { gulag_factor_neg = 0.01 }		
 			add_to_variable = { gulag_factor_five = -0.05 }			
-			add_to_variable = { gulag_factor_five_neg = 0.05 }		
+			add_to_variable = { gulag_factor_five_neg = 0.05 }
+			custom_effect_tooltip = gulag_factor_decrease_TT
+			
 		}
 	}
 	focus = {
@@ -705,7 +840,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Soviet_Equipment
-		icon = GFX_goal_unknown
+		icon = GFX_PRC_Arm_Pakistan
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -717,23 +852,23 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment_1
 				amount = 10000
-				producer = SOV
+				producer = CUM
 			}		
 			add_equipment_to_stockpile = {
 				type = motorized_equipment_2
 				amount = 200
-				producer = SOV
+				producer = CUM
 			}			
 			add_equipment_to_stockpile = {
 			 type = mbt_equipment_3 
 				amount = 100
-				producer = SOV
+				producer = CUM
 			}			
 		}
 	}
 	focus = {
 		id = HUN_Political_Commissars
-		icon = GFX_goal_unknown
+		icon = GFX_Communist_Spy
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -747,7 +882,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Adopt_the_AK47
-		icon = GFX_goal_unknown
+		icon = GFX_FocusAK47s
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -762,14 +897,14 @@ focus_tree = {
 					add_equipment_to_stockpile = {
 							type = infantry_equipment_1
 							amount = 25000
-							producer = SOV
+							producer = CUM
 						}
 				
 			}
 	}
 	focus = {
 		id = HUN_Soviet_Advisors
-		icon = GFX_goal_unknown
+		icon = GFX_focus_soviet_advisors
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -797,7 +932,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Budapest_Anti_Air_Initiative
-		icon = GFX_goal_unknown
+		icon = GFX_Anti_Aircraft
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -818,7 +953,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Rebuild_AA_Infrastructure
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Radio_Communication
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -835,7 +970,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Modernize_Anti_Air_Facilities
-		icon = GFX_goal_unknown
+		icon = GFX_Anti_Ship_Missles
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -857,7 +992,7 @@ focus_tree = {
 	}
 	focus = { 
 		id = HUN_Missle_Investments
-		icon = GFX_goal_unknown
+		icon = GFX_SovietRocketry
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -890,7 +1025,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Expand_Airbases
-		icon = GFX_goal_unknown
+		icon = GFX_Expand_Airfields
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -910,7 +1045,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Surplus_Soviet_Lavochkin_LA_9
-		icon = GFX_goal_unknown
+		icon = GFX_FocusLavochkinLa_9s
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -928,7 +1063,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Soviet_MiG_15s
-		icon = GFX_goal_unknown
+		icon = GFX_focus_soviet_mig_15
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -943,7 +1078,7 @@ focus_tree = {
 				add_equipment_to_stockpile = {
 						type = jet_multirole_equipment_2
 						amount = 200
-						producer = SOV
+						producer = CUM
 					}
 			}
 	}
@@ -961,13 +1096,13 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = jet_multirole_equipment_4
 				amount = 150
-				producer = SOV
+				producer = CUM
 			}		
 		}
 	}
 	focus = {
 		id = HUN_Close_Down_the_Camps
-		icon = GFX_goal_unknown
+		icon = GFX_Close_Exile_Camps
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -980,11 +1115,12 @@ focus_tree = {
 			add_to_variable = { gulag_factor_neg = 0.01 }		
 			add_to_variable = { gulag_factor_five = -0.05 }			
 			add_to_variable = { gulag_factor_five_neg = 0.05 }		
+			custom_effect_tooltip = gulag_factor_decrease_TT
 		}
 	}
 	focus = {
 		id = HUN_Engage_in_Talks_with_the_Clergy
-		icon = GFX_goal_unknown
+		icon = GFX_Communist_Priests
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -998,11 +1134,12 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = { clergy_persecution_factor = -0.05 }
 			add_to_variable = { clergy_persecution_negative = 0.05  }
+			custom_effect_tooltip = clergy_persecution_decrease_TT
 		}
 	}
 	focus = {
 		id = HUN_Seek_Approval_from_Moscow
-		icon = GFX_goal_unknown
+		icon = GFX_American_Soviet_Outreach
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1013,7 +1150,9 @@ focus_tree = {
 		}
 		x = 22
 		y = 8
-
+		completion_reward = {
+			SOV = { country_event = SOV_HUN.1 }
+		}
 	}
 	focus = {
 		id = HUN_Rehabilitate_Kadar
@@ -1031,7 +1170,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Organize_a_Popular_Patriotic_Front
-		icon = GFX_goal_unknown
+		icon = GFX_hungary
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1039,11 +1178,14 @@ focus_tree = {
 		}
 		x = 21
 		y = 9
-
+		completion_reward = {
+			add_political_power = 75
+			add_stability = 0.05
+		}
 	}
 	focus = {
 		id = HUN_Nagys_Falling_Out_From_Moscow
-		icon = GFX_goal_unknown
+		icon = GFX_TheRussianBear
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1072,7 +1214,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Give_Extended_Powers_to_the_AVH
-		icon = GFX_goal_unknown
+		icon = GFX_Mafia
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1080,11 +1222,17 @@ focus_tree = {
 		}
 		x = 18
 		y = 11
-
+		completion_reward = {
+			add_to_variable = { gulag_factor = 0.02 }					
+			add_to_variable = { gulag_factor_neg = -0.02 }		
+			add_to_variable = { gulag_factor_five = 0.1 }			
+			add_to_variable = { gulag_factor_five_neg = -0.1 }
+			custom_effect_tooltip = gulag_factor_increase_TT
+		}
 	}
 	focus = {
 		id = HUN_Reinstate_the_Cult_of_Personality
-		icon = GFX_goal_unknown
+		icon = GFX_Socialist_Consolidation
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1092,11 +1240,13 @@ focus_tree = {
 		}
 		x = 22
 		y = 11
-
+		completion_reward = {
+			add_ideas = total_loyalty
+		}	
 	}
 	focus = {
 		id = HUN_Force_Collectivization
-		icon = GFX_goal_unknown
+		icon = GFX_agricultural_price_controls
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1104,11 +1254,13 @@ focus_tree = {
 		}
 		x = 18
 		y = 12
-
+		completion_reward = {
+			add_ideas = communism_intensifies
+		}	
 	}
 	focus = {
 		id = HUN_Reduce_Investments_in_Consumer_Spendings
-		icon = GFX_goal_unknown
+		icon = GFX_Cut_Welfare
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1116,11 +1268,14 @@ focus_tree = {
 		}
 		x = 22
 		y = 12
-
+		completion_reward = {
+			add_to_variable = { cg_spend_base_ten = -0.1 }
+			add_to_variable = { cg_spend_base_four = -0.04 }
+		}
 	}
 	focus = {
 		id = HUN_Role_Out_Rakosi
-		icon = GFX_goal_unknown
+		icon = GFX_Room_Meeting
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1131,11 +1286,13 @@ focus_tree = {
 		}
 		x = 20
 		y = 13
-
+		completion_reward = {
+			country_event = Rakosi.1
+		}	
 	}
 	focus = {
 		id = HUN_The_Next_Stage_of_Liberalization
-		icon = GFX_goal_unknown
+		icon = GFX_focus_peace_talks
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1161,7 +1318,7 @@ focus_tree = {
 	}	
 	focus = {
 		id = HUN_Assure_Neutrality_of_Hungary
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_neutrality_focus
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1175,7 +1332,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_End_Church_Suppression
-		icon = GFX_goal_unknown
+		icon = GFX_Papal_Relations
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1186,11 +1343,12 @@ focus_tree = {
 		completion_reward = {
 			add_to_variable = { clergy_persecution_factor = -0.1 }
 			add_to_variable = { clergy_persecution_negative = 0.1  }
+			custom_effect_tooltip = clergy_persecution_decrease_TT
 		}
 	}
 	focus = {
 		id = HUN_Emulate_Tito
-		icon = GFX_goal_unknown
+		icon = GFX_marshall_tito
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1198,11 +1356,17 @@ focus_tree = {
 		}
 		x = 7
 		y = 14
-
+		completion_reward = {
+			add_popularity = {
+				ideology = trotskyism
+				popularity = 0.25
+			}
+			add_stability = 0.03
+		}	
 	}
 	focus = {
 		id = HUN_Mass_Political_Amnesty
-		icon = GFX_goal_unknown
+		icon = GFX_Amnesty_for_political_prisoners
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1215,12 +1379,13 @@ focus_tree = {
 			add_to_variable = { gulag_factor_neg = 0.01 }		
 			add_to_variable = { gulag_factor_five = -0.05 }			
 			add_to_variable = { gulag_factor_five_neg = 0.05 }
+			custom_effect_tooltip = gulag_factor_decrease_TT
 		
 		}
 	}
 	focus = {
 		id = HUN_Abolish_the_AVH
-		icon = GFX_goal_unknown
+		icon = GFX_goal_DEN_ban_paramilitary
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1233,13 +1398,13 @@ focus_tree = {
 			add_to_variable = { gulag_factor_neg = 0.01 }		
 			add_to_variable = { gulag_factor_five = -0.05 }			
 			add_to_variable = { gulag_factor_five_neg = 0.05 }
-			
+			custom_effect_tooltip = gulag_factor_decrease_TT
 			add_political_power = 100
 		}
 	}
 	focus = {
 		id = HUN_Legalize_Opposition_Parties
-		icon = GFX_goal_unknown
+		icon = GFX_Relax_Political_Repression
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1268,7 +1433,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Reject_Collectivization_of_Agriculture
-		icon = GFX_goal_unknown
+		icon = GFX_Anti_Communist
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1276,11 +1441,21 @@ focus_tree = {
 		}
 		x = 3
 		y = 15
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = agri_industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
 
 	}
 	focus = {
 		id = HUN_Allow_Larger_Private_Plots
-		icon = GFX_goal_unknown
+		icon = GFX_support_tribal_farmer
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1289,19 +1464,15 @@ focus_tree = {
 		x = 5
 		y = 16
 		completion_reward = {
-			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = agri_industrial_complex
-					level = 1
-					instant_build = yes
-				}
+			add_timed_idea = {
+				idea = ddr_idea_expanded_private_agriculture
+				days = 1625
 			}
 		}
 	}
 	focus = {
 		id = HUN_Outreach_to_Yugoslavia
-		icon = GFX_goal_unknown
+		icon = GFX_TensionsWithYug
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1326,7 +1497,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Agricultural_Modernization
-		icon = GFX_goal_unknown
+		icon = GFX_Agricultural_Modernization
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1338,14 +1509,14 @@ focus_tree = {
 			add_tech_bonus = {
 				name = agri_tech_bonus
 				bonus = 1.75
-				uses = 1
-				category = agri_tech
+				uses = 2
+				category = agriculture
 			}
 		}
 	}
 	focus = {
 		id = HUN_Empower_Worker_Councils
-		icon = GFX_goal_unknown
+		icon = GFX_Migrant_Workers
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1359,7 +1530,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Increase_Western_Trade
-		icon = GFX_goal_unknown
+		icon = GFX_Euro_Communism
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1367,11 +1538,20 @@ focus_tree = {
 		}
 		x = 13
 		y = 16
-
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = office_park
+					level = 2
+					instant_build = yes
+				}	
+			}
+		}
 	}
 	focus = {
 		id = HUN_Study_Yugoslavian_Economic_System
-		icon = GFX_goal_unknown
+		icon = GFX_Mongolian_Political_Investigations
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1382,11 +1562,15 @@ focus_tree = {
 		}
 		x = 3
 		y = 17
-
+		completion_reward = {
+			add_to_variable = { cg_spend_base_ten = 0.1 }
+			add_to_variable = { cg_spend_base_four = 0.04 }
+			custom_effect_tooltip = cg_spend_increase_TT
+		}
 	}
 	focus = {
 		id = HUN_Rehabilitate_Liberal_Communists
-		icon = GFX_goal_unknown
+		icon = GFX_Democratic_Socialism
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1407,7 +1591,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Tolerate_the_FKgP
-		icon = GFX_goal_unknown
+		icon = GFX_Agrarian_Collectivization
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1425,7 +1609,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Seek_Foriegn_Funding
-		icon = GFX_goal_unknown
+		icon = GFX_ReopentheStockMarkets
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1433,11 +1617,14 @@ focus_tree = {
 		}
 		x = 14
 		y = 17
-
+		completion_reward = {
+			add_to_variable = { currentMoney = 100 }
+			custom_effect_tooltip = Add_Hundred_Money
+		}
 	}
 	focus = {
 		id = HUN_Constitutional_Reform
-		icon = GFX_goal_unknown
+		icon = GFX_nationalize_banks
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1451,11 +1638,14 @@ focus_tree = {
 		}
 		x = 11
 		y = 18
-
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+		}
 	}
 	focus = {
 		id = HUN_Embrace_Socialist_Self_Management
-		icon = GFX_goal_unknown
+		icon = GFX_Workers_Councils
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1463,11 +1653,13 @@ focus_tree = {
 		}
 		x = 0
 		y = 18
-
+		completion_reward = {
+			add_ideas = Social_Dividends
+		}
 	}
 	focus = {
 		id = HUN_End_the_One_Party_State
-		icon = GFX_goal_unknown
+		icon = GFX_Socialist_Coalition
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1481,7 +1673,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Allow_Limited_Capitalist_Businesses
-		icon = GFX_goal_unknown
+		icon = GFX_Business_Bills
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1495,7 +1687,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Complete_the_Decollectivization
-		icon = GFX_goal_unknown
+		icon = GFX_focus_anti_socialist_realism
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1523,11 +1715,22 @@ focus_tree = {
 		}
 		x = 24
 		y = 14
-
+		completion_reward = {
+			create_country_leader = {
+				name = "János Kádár"
+				picture = "Janos_Kadar.dds"
+				ideology = marxism_leninism 
+				traits = {
+					conciliatory_pragmatic
+					goulash_communism
+				}
+			}	
+			news_event = Kadar.2
+		}
 	}
 	focus = {
 		id = HUN_Form_a_Committee_to_Reform_the_Economy
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Factionalism
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1535,11 +1738,15 @@ focus_tree = {
 		}
 		x = 20
 		y = 15
-
+		completion_reward = {
+			add_to_variable = { cg_spend_base_ten = 0.1 }
+			add_to_variable = { cg_spend_base_four = 0.04 }
+			custom_effect_tooltip = cg_spend_increase_TT
+		}
 	}
 	focus = {
 		id = HUN_Agree_to_Recollective_Agriculture
-		icon = GFX_goal_unknown
+		icon = GFX_Agricultural_Subsidies
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1547,11 +1754,13 @@ focus_tree = {
 		}
 		x = 22
 		y = 16
-	
+		completion_reward = {
+			add_ideas = peoples_communes
+		}
 	}
 	focus = {
 		id = HUN_Gain_Hardliner_Support
-		icon = GFX_goal_unknown
+		icon = GFX_Develop_the_Soviet_Spirit
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1559,11 +1768,17 @@ focus_tree = {
 		}
 		x = 28
 		y = 15
-
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+		}
 	}
 	focus = {
 		id = HUN_Abolish_Compulsory_Quotas
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Ripping_Papers
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1571,7 +1786,11 @@ focus_tree = {
 		}
 		x = 18
 		y = 16
-
+		completion_reward = {
+			add_to_variable = { cg_spend_base_ten = 0.1 }
+			add_to_variable = { cg_spend_base_four = 0.04 }
+			custom_effect_tooltip = cg_spend_increase_TT
+		}
 	}
 	focus = {
 		id = HUN_Strengthen_the_Hungarian_Socialist_Workers_Party
@@ -1583,11 +1802,17 @@ focus_tree = {
 		}
 		x = 26
 		y = 16
-
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+			add_political_power = 50
+		}
 	}
 	focus = {
 		id = HUN_Incoporate_Former_AVH_Agents_into_the_Interior_Ministry
-		icon = GFX_goal_unknown
+		icon = GFX_shadow_government
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1595,11 +1820,17 @@ focus_tree = {
 		}
 		x = 30
 		y = 16
-
+		completion_reward = {
+			add_to_variable = { gulag_factor = 0.01 }					
+			add_to_variable = { gulag_factor_neg = -0.01 }		
+			add_to_variable = { gulag_factor_five = 0.05 }			
+			add_to_variable = { gulag_factor_five_neg = -0.05 }
+			custom_effect_tooltip = gulag_factor_increase_TT
+		}
 	}
 	focus = {
 		id = HUN_Incentives_for_Collective_Agriculture
-		icon = GFX_goal_unknown
+		icon = GFX_agrarian_propaganda
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1610,11 +1841,15 @@ focus_tree = {
 		}
 		x = 20
 		y = 17
-
+		completion_reward = {
+			add_to_variable = { cg_spend_base_ten = 0.1 }
+			add_to_variable = { cg_spend_base_four = 0.04 }
+			custom_effect_tooltip = cg_spend_increase_TT
+		}
 	}
 	focus = {
 		id = HUN_Reassure_Moscow_of_our_Attentions
-		icon = GFX_goal_unknown
+		icon = GFX_Soviet_Relations
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1646,7 +1881,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Purge_Liberal_Party_Members
-		icon = GFX_goal_unknown
+		icon = GFX_The_Purge
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1673,7 +1908,7 @@ focus_tree = {
 	}
 	focus = {
 		id = HUN_Track_Down_FKgP_Supporters
-		icon = GFX_goal_unknown
+		icon = GFX_Mongolian_Political_Investigations
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1696,12 +1931,12 @@ focus_tree = {
 			add_to_variable = { gulag_factor_neg = -0.01 }		
 			add_to_variable = { gulag_factor_five = 0.05 }			
 			add_to_variable = { gulag_factor_five_neg = -0.05 }
-
+			custom_effect_tooltip = gulag_factor_increase_TT
 		}
 	}
 	focus = {
 		id = HUN_Allow_Substantial_Private_Flocks
-		icon = GFX_goal_unknown
+		icon = GFX_livestock_taxes
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1709,11 +1944,25 @@ focus_tree = {
 		}
 		x = 17
 		y = 18
-
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = agri_industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = agri_tech_bonus
+				bonus = 1
+				category = agriculture
+			}
+		}
 	}
 	focus = {
 		id = HUN_Stimulate_Intra_Bloc_Tourism
-		icon = GFX_goal_unknown
+		icon = GFX_Travel_Modernization
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1721,6 +1970,7 @@ focus_tree = {
 		}
 		x = 20
 		y = 18
+		completion_reward = {
 			capital_scope = {
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -1729,10 +1979,11 @@ focus_tree = {
 					instant_build = yes
 				}	
 			}
+		}
 	}
 	focus = {
 		id = HUN_Encourage_Cooperation_Between_Public_and_Private_Farms
-		icon = GFX_goal_unknown
+		icon = GFX_SP_focus_trade_unions
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -1740,11 +1991,20 @@ focus_tree = {
 		}
 		x = 23
 		y = 18
-
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = agri_industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
 	}
 	focus = {
 		id = HUN_Declare_a_Successful_Agricultural_Collectivization
-		icon = GFX_goal_unknown
+		icon = GFX_focus_socialist_realism
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {

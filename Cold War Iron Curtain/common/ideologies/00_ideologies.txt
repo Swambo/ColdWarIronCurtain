@@ -39,7 +39,7 @@ ideologies = {
 		rules = {
 			can_declare_war_on_same_ideology = yes
 			can_force_government = no
-			can_send_volunteers = no
+			can_send_volunteers = yes
 			can_puppet = no
 			can_lower_tension = yes
 			can_only_justify_war_on_threat_country = yes
@@ -95,7 +95,7 @@ ideologies = {
 		rules = {
 			can_declare_war_on_same_ideology = no
 			can_force_government = no
-			can_send_volunteers = no
+			can_send_volunteers = yes
 			can_puppet = no
 			can_lower_tension = yes
 			can_only_justify_war_on_threat_country = yes
@@ -154,7 +154,7 @@ ideologies = {
 		rules = {
 			can_declare_war_on_same_ideology = no
 			can_force_government = no
-			can_send_volunteers = no
+			can_send_volunteers = yes
 			can_puppet = no
 			can_lower_tension = yes
 			can_only_justify_war_on_threat_country = yes
@@ -286,7 +286,7 @@ ideologies = {
 		rules = {
 			can_declare_war_on_same_ideology = no
 			can_force_government = no
-			can_send_volunteers = no
+			can_send_volunteers = yes
 			can_puppet = no
 			can_lower_tension = yes
 			can_only_justify_war_on_threat_country = yes
@@ -339,7 +339,7 @@ ideologies = {
 		rules = {
 			can_declare_war_on_same_ideology = no
 			can_force_government = no
-			can_send_volunteers = no
+			can_send_volunteers = yes
 			can_puppet = no
 			can_lower_tension = yes
 			can_only_justify_war_on_threat_country = yes
@@ -395,7 +395,7 @@ ideologies = {
 		rules = {
 			can_declare_war_on_same_ideology = yes
 			can_force_government = no
-			can_send_volunteers = no
+			can_send_volunteers = yes
 			can_puppet = no
 			can_lower_tension = yes
 			can_only_justify_war_on_threat_country = no
@@ -449,7 +449,7 @@ ideologies = {
 		rules = {
 			can_declare_war_on_same_ideology = yes
 			can_force_government = no
-			can_send_volunteers = no
+			can_send_volunteers = yes
 			can_puppet = no
 			can_lower_tension = yes
 			can_only_justify_war_on_threat_country = no
@@ -499,7 +499,7 @@ ideologies = {
 		rules = {
 			can_declare_war_on_same_ideology = no
 			can_force_government = no
-			can_send_volunteers = no
+			can_send_volunteers = yes
 			can_puppet = no
 			can_lower_tension = yes
 			can_only_justify_war_on_threat_country = yes
@@ -538,6 +538,8 @@ ideologies = {
 			marxism_leninism = {
 			}
 			
+			liberal_communism = {
+			}
 			
 			stalinism = {
 			}
@@ -564,7 +566,7 @@ ideologies = {
 		
 		rules = {
 			can_force_government = no
-			can_send_volunteers = no
+			can_send_volunteers = yes
 			can_puppet = no
 		}
 		
@@ -572,9 +574,12 @@ ideologies = {
 		
 		modifiers = {
 			puppet_cost_factor = -0.3
+			join_faction_tension = 0
+			ai_get_ally_desire_factor = 30
 		}
 		
 		faction_modifiers = {
+			faction_trade_opinion_factor = 0.5
 			
 		}
 		can_be_boosted = no
@@ -585,7 +590,9 @@ ideologies = {
 	trotskyism = { # Revolutionary Socialism
 		
 		types = {
-		
+			revolutionary_islamic_socialism = {		#MEK Revolutionary Islamic Socialism
+			}
+			
 			revolutionary_socialism = {
 			}
 			
@@ -624,17 +631,18 @@ ideologies = {
 		
 		rules = {
 			can_force_government = no
-			can_send_volunteers = no
+			can_send_volunteers = yes
 			can_puppet = no
 		}
 		
 		modifiers = {
 			puppet_cost_factor = -0.3
 			join_faction_tension = 1.0
+			ai_get_ally_desire_factor = 30
 		}
 		
 		faction_modifiers = {
-			
+			faction_trade_opinion_factor = 0.5
 		}
 		can_be_boosted = no
 	}
@@ -677,16 +685,17 @@ ideologies = {
 		
 		rules = {
 			can_force_government = no
-			can_send_volunteers = no
+			can_send_volunteers = yes
 			can_puppet = no
 		}
 		
 		modifiers = {
 			puppet_cost_factor = -0.3
-			join_faction_tension = 1.0
+			ai_get_ally_desire_factor = 30
 		}
 		
 		faction_modifiers = {
+			faction_trade_opinion_factor = 0.5
 			
 		}
 		can_be_boosted = no
@@ -748,7 +757,7 @@ ideologies = {
 		
 		rules = {
 			can_force_government = no
-			can_send_volunteers = no
+			can_send_volunteers = yes
 			can_puppet = no
 		}
 		
@@ -805,7 +814,7 @@ ideologies = {
 		
 		rules = {
 			can_force_government = no
-			can_send_volunteers = no
+			can_send_volunteers = yes
 			can_puppet = no
 		}
 		
@@ -846,7 +855,7 @@ ideologies = {
 		rules = {
 			can_declare_war_on_same_ideology = yes
 			can_force_government = no
-			can_send_volunteers = no
+			can_send_volunteers = yes
 			can_puppet = no
 			can_guarantee_other_ideologies = no
 		}
@@ -899,7 +908,7 @@ ideologies = {
 		rules = {
 			can_force_government = no
 			can_puppet = no
-			can_send_volunteers = no
+			can_send_volunteers = yes
 		}
 		
 		can_host_government_in_exile = yes
@@ -952,7 +961,7 @@ ideologies = {
 		
 		rules = {
 			can_force_government = no
-			can_send_volunteers = no
+			can_send_volunteers = yes
 			can_puppet = no
 			can_guarantee_other_ideologies = no
 		}
@@ -996,7 +1005,7 @@ ideologies = {
 		
 		rules = {
 			can_force_government = no
-			can_send_volunteers = no
+			can_send_volunteers = yes
 			can_puppet = no
 			can_guarantee_other_ideologies = no
 		}

@@ -46,6 +46,11 @@ focus_tree = {
 				name = "Saud bin Abdulaziz Al Saud"
 				picture = "Saud_bin_Abdulaziz_Al_Saud.dds"
 				ideology = islamic_monarchy
+				traits = {
+					champion_of_the_muslim_cause
+					non_aligned_leader
+					education_promotor
+				}
 			}
 		}
 	}
@@ -64,7 +69,7 @@ focus_tree = {
 				remove_ideas = illiteracy_2
 				add_ideas = illiteracy_1
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = illiteracy_1
 				}
@@ -87,8 +92,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			create_country_leader = {
-				name = "Abdul Karim Ahmed Al-Qahtani"
-				picture = "Abdul_Karim_Ahmed_Al_Qahtani.dds"
+				name = "Nasser Al-Saeed"	
+				picture = "Nasir_al-Said.dds"
 				ideology = pan_arabism
 			}
 			set_politics = {
@@ -272,7 +277,7 @@ focus_tree = {
 		x = 3
 		y = 12
 		completion_reward = {
-			add_ideas = gen_pro_union_2
+			add_ideas = policy_union_temp_5
 		}
 	}
 	focus = {
@@ -423,14 +428,14 @@ focus_tree = {
 				remove_ideas = fiscal_collapse_3
 				add_ideas = fiscal_collapse_2
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = fiscal_collapse_2
 				}
 				remove_ideas = fiscal_collapse_2
 				add_ideas = fiscal_collapse_1
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = fiscal_collapse_1
 				}
@@ -526,14 +531,14 @@ focus_tree = {
 				remove_ideas = fiscal_collapse_3
 				add_ideas = fiscal_collapse_2
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = fiscal_collapse_2
 				}
 				remove_ideas = fiscal_collapse_2
 				add_ideas = fiscal_collapse_1
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = fiscal_collapse_1
 				}
@@ -884,7 +889,7 @@ focus_tree = {
 		x = 19
 		y = 11
 		completion_reward = {
-			add_ideas = gen_pro_union_1
+			add_ideas = policy_union_temp_4
 		}
 	}
 	focus = {
@@ -1081,7 +1086,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = lt_equipment_3
 				amount = 250
-				producer = USA
+				producer = CAP
 			}
 		}	
 	}
@@ -1218,7 +1223,7 @@ focus_tree = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_0
 					amount = 10000
-					producer = USA
+					producer = CAP
 				}			
 		}
 	}
@@ -1236,7 +1241,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = mbt_equipment_1
 				amount = 250
-				producer = USA
+				producer = CAP
 			}	
 		}
 	}
@@ -1268,27 +1273,27 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = jet_multirole_equipment_2
 				amount = 75
-				producer = SOV
+				producer = CUM
 			}		
 			add_equipment_to_stockpile = {
 				type = jet_tac_bomber_equipment_1
 				amount = 50
-				producer = SOV
+				producer = CUM
 			}	
 			add_equipment_to_stockpile = {
 				type = mbt_equipment_0
 				amount = 150
-				producer = SOV
+				producer = CUM
 			}	
 			add_equipment_to_stockpile = {
 				type = mechanized_equipment_4
 				amount = 150
-				producer = SOV
+				producer = CUM
 			}	
 			add_equipment_to_stockpile = {
 				type = artillery_equipment_1
 				amount = 200
-				producer = SOV
+				producer = CUM
 			}	
 		}
 	}
@@ -1307,9 +1312,9 @@ focus_tree = {
 		y = 5
 		completion_reward = {
 				add_equipment_to_stockpile = {
-					type = infantry_equipment_0
+					type = infantry_equipment_1
 					amount = 10000
-					producer = SOV
+					producer = CUM
 				}			
 		}
 	}
@@ -1327,7 +1332,7 @@ focus_tree = {
 				add_equipment_to_stockpile = {
 						type = jet_multirole_equipment_2
 						amount = 75
-						producer = SOV
+						producer = CUM
 					}
 			}
 	}
@@ -1713,27 +1718,27 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = jet_multirole_equipment_2
 				amount = 75
-				producer = USA
+				producer = CAP
 			}		
 			add_equipment_to_stockpile = {
 				type = jet_tac_bomber_equipment_1
 				amount = 50
-				producer = USA
+				producer = CAP
 			}	
 			add_equipment_to_stockpile = {
 				type = mbt_equipment_1
 				amount = 150
-				producer = USA
+				producer = CAP
 			}	
 			add_equipment_to_stockpile = {
 				type = mechanized_equipment_4
 				amount = 150
-				producer = USA
+				producer = CAP
 			}	
 			add_equipment_to_stockpile = {
 				type = artillery_equipment_1
 				amount = 200
-				producer = USA
+				producer = CAP
 			}	
 		}
 
@@ -2060,6 +2065,9 @@ focus_tree = {
 		x = 2
 		y = 16
 		completion_reward = {
+			every_owned_state = {
+				add_core_of = EGY
+			}
 			EGY = { change_tag_from = SAU }
 			EGY = {
 				annex_country = {
@@ -2133,7 +2141,7 @@ focus_tree = {
 		x = 9
 		y = 12
 		completion_reward = {
-			add_ideas = gen_pro_employer_2
+			add_ideas = policy_union_temp_0
 		}
 	}
 	focus = {
@@ -2460,7 +2468,7 @@ focus_tree = {
 				remove_ideas = illiteracy_2
 				add_ideas = illiteracy_1
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = illiteracy_1
 				}

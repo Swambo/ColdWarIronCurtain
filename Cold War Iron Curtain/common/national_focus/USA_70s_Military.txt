@@ -1,9 +1,10 @@
 
 	shared_focus = {
 		id = USA_70s_American_Armed_Forces
-		icon = GFX_goal_unknown
+		icon = GFX_AmericanEagle
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3
+		offset = { y = 10 x = 7 trigger = { tag = USA } }
 		x = 18
 		y = 0
 		completion_reward = {
@@ -14,9 +15,10 @@
 	}
 	shared_focus = {
 		id = USA_70s_Missle_Command
-		icon = GFX_goal_unknown
+		icon = GFX_expand_ballistic_missile_funding
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3
+		offset = { y = 10 x = 7 trigger = { tag = USA } }
 		prerequisite = {
 			focus = USA_70s_American_Armed_Forces
 		}
@@ -33,9 +35,10 @@
 	}
 	shared_focus = {
 		id = USA_70s_Advanced_Cruise_Missle_Development
-		icon = GFX_goal_unknown
+		icon = GFX_AdvancedCruiseMissiles
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3
+		offset = { y = 10 x = 7 trigger = { tag = USA } }
 		prerequisite = {
 			focus = USA_70s_Missle_Command
 		}
@@ -53,9 +56,10 @@
 	}
 	shared_focus = {
 		id = USA_70s_Improve_Missle_Launch_Awareness
-		icon = GFX_goal_unknown
+		icon = GFX_ImproveMissileLaunchAwareness
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3
+		offset = { y = 10 x = 7 trigger = { tag = USA } }
 		prerequisite = {
 			focus = USA_70s_Missle_Command
 		}
@@ -70,9 +74,10 @@
 	}
 	shared_focus = {
 		id = USA_70s_The_Minuteman_IV
-		icon = GFX_goal_unknown
+		icon = GFX_MinutemanIV
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3
+		offset = { y = 10 x = 7 trigger = { tag = USA } }
 		prerequisite = {
 			focus = USA_70s_Improve_Missle_Launch_Awareness
 		}
@@ -83,16 +88,17 @@
 				name = VFAX_Program
 				bonus = 1.50
 				uses = 1
-				technology = icbm_equipment_3
+				technology = icbm3
 			}
 		}
 
 	}
 	shared_focus = {
 		id = USA_70s_Pershing_Deployment
-		icon = GFX_goal_unknown
+		icon = GFX_PershingDeployment
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3
+		offset = { y = 10 x = 7 trigger = { tag = USA } }
 		prerequisite = {
 			focus = USA_70s_Missle_Command
 		}
@@ -103,16 +109,17 @@
 				name = VFAX_Program
 				bonus = 1.65
 				uses = 1
-				technology = USA_irbm_equipment_6
+				technology = irbm6
 			}
 		}
 
 	}
 	shared_focus = {
 		id = USA_70s_The_US_Army
-		icon = GFX_goal_unknown
+		icon = GFX_USA_army
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3
+		offset = { y = 10 x = 7 trigger = { tag = USA } }
 		prerequisite = {
 			focus = USA_70s_American_Armed_Forces
 		}
@@ -124,9 +131,10 @@
 	}
 	shared_focus = {
 		id = USA_70s_Improve_the_M113
-		icon = GFX_goal_unknown
+		icon = GFX_ImproveTheM113
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3
+		offset = { y = 10 x = 7 trigger = { tag = USA } }
 		prerequisite = {
 			focus = USA_70s_The_US_Army
 		}
@@ -143,15 +151,20 @@
 	}	
 	shared_focus = {
 		id = USA_70s_The_MICV_Program
-		icon = GFX_goal_unknown
+		icon = GFX_MICVProgram
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3
+		offset = { y = 10 x = 7 trigger = { tag = USA } }
 		prerequisite = {
 			focus = USA_70s_Improve_the_M113
 		}
 		mutually_exclusive = {
 			focus = USA_70s_Widen_M113_Deployment
 		}
+		mutually_exclusive = {
+			focus = USA_70s_M113_Combat_Support_Integration
+		}
+		
 		x = 6
 		y = 3
 		completion_reward = {
@@ -165,9 +178,10 @@
 	} 
 	shared_focus = {
 		id = USA_70s_Widen_M113_Deployment
-		icon = GFX_goal_unknown
+		icon = GFX_WidenM113Deployment
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3
+		offset = { y = 10 x = 7 trigger = { tag = USA } }
 		prerequisite = {
 			focus = USA_70s_Improve_the_M113
 		}
@@ -185,9 +199,10 @@
 	}
 	shared_focus = {
 		id = USA_70s_M113_Combat_Support_Integration
-		icon = GFX_goal_unknown
+		icon = GFX_M113CombatSupportIntegration
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3
+		offset = { y = 10 x = 7 trigger = { tag = USA } }
 		prerequisite = {
 			focus = USA_70s_Widen_M113_Deployment
 			focus = USA_70s_The_MICV_Program
@@ -216,9 +231,10 @@
 	}
 	shared_focus = {
 		id = USA_70s_M939_Trucks
-		icon = GFX_goal_unknown
+		icon = GFX_M939Trucks
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3
+		offset = { y = 10 x = 7 trigger = { tag = USA } }
 		prerequisite = {
 			focus = USA_70s_The_US_Army
 		}
@@ -235,9 +251,10 @@
 	}
 	shared_focus = {
 		id = USA_70s_The_TOW_Missle
-		icon = GFX_goal_unknown
+		icon = GFX_TOWMissile
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3
+		offset = { y = 10 x = 7 trigger = { tag = USA } }
 		prerequisite = {
 			focus = USA_70s_M939_Trucks
 		}
@@ -261,9 +278,10 @@
 	}
 	shared_focus = {
 		id = USA_70s_Continue_ATGM_Development
-		icon = GFX_goal_unknown
+		icon = GFX_ImprovedATGMs
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3
+		offset = { y = 10 x = 7 trigger = { tag = USA } }
 		prerequisite = {
 			focus = USA_70s_M939_Trucks
 		}
@@ -281,9 +299,10 @@
 	}
 	shared_focus = {
 		id = USA_70s_The_M60A3
-		icon = GFX_goal_unknown
+		icon = GFX_M60A3
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3
+		offset = { y = 10 x = 7 trigger = { tag = USA } }
 		prerequisite = {
 			focus = USA_70s_The_TOW_Missle
 			focus = USA_70s_Continue_ATGM_Development
@@ -302,9 +321,10 @@
 	}
 	shared_focus = {
 		id = USA_70s_The_Navys_20th_Decade
-		icon = GFX_goal_unknown
+		icon = GFX_US_Navy_XX_Decade
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3
+		offset = { y = 10 x = 7 trigger = { tag = USA } }
 		prerequisite = {
 			focus = USA_70s_American_Armed_Forces
 		}
@@ -316,9 +336,10 @@
 	}
 	shared_focus = {
 		id = USA_70s_The_VFX_Program
-		icon = GFX_goal_unknown
+		icon = GFX_VFXProgram
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3
+		offset = { y = 10 x = 7 trigger = { tag = USA } }
 		prerequisite = {
 			focus = USA_70s_The_Navys_20th_Decade
 		}
@@ -331,9 +352,10 @@
 	}
 	shared_focus = {
 		id = USA_70s_Restart_the_VFAX_Program
-		icon = GFX_goal_unknown
+		icon = GFX_Restart_VFAX
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3
+		offset = { y = 10 x = 7 trigger = { tag = USA } }
 		prerequisite = {
 			focus = USA_70s_The_VFX_Program
 		}
@@ -353,9 +375,10 @@
 	}
 	shared_focus = {
 		id = USA_70s_Select_a_VFX_Program_Winner
-		icon = GFX_goal_unknown
+		icon = GFX_VFXWinner
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3
+		offset = { y = 10 x = 7 trigger = { tag = USA } }
 		prerequisite = {
 			focus = USA_70s_The_VFX_Program
 		}
@@ -370,9 +393,10 @@
 	}
 	shared_focus = {
 		id = USA_70s_Big_Cats_Big_Decks
-		icon = GFX_goal_unknown
+		icon = GFX_DBigCatsBigDecks
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3
+		offset = { y = 10 x = 7 trigger = { tag = USA } }
 		prerequisite = {
 			focus = USA_70s_Select_a_VFX_Program_Winner
 			focus = USA_70s_Restart_the_VFAX_Program
@@ -391,9 +415,10 @@
 	}
 	shared_focus = {
 		id = USA_70s_Carrier_Power_Projection
-		icon = GFX_goal_unknown
+		icon = GFX_Carrier_Power_Projection
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3
+		offset = { y = 10 x = 7 trigger = { tag = USA } }
 		prerequisite = {
 			focus = USA_70s_The_Navys_20th_Decade
 		}
@@ -410,9 +435,10 @@
 	}
 	shared_focus = {
 		id = USA_70s_Advanced_S_3_Viking_Capabilities
-		icon = GFX_goal_unknown
+		icon = GFX_VikingS3
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3
+		offset = { y = 10 x = 7 trigger = { tag = USA } }
 		prerequisite = {
 			focus = USA_70s_Carrier_Power_Projection
 		}
@@ -427,9 +453,10 @@
 	}
 	shared_focus = {
 		id = USA_70s_The_Harpoon_ASuM
-		icon = GFX_goal_unknown
+		icon = GFX_HarpoonASuM
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3
+		offset = { y = 10 x = 7 trigger = { tag = USA } }
 		prerequisite = {
 			focus = USA_70s_Carrier_Power_Projection
 		}
@@ -449,9 +476,10 @@
 	}
 	shared_focus = {
 		id = USA_70s_Spruance_Class_Destroyers
-		icon = GFX_goal_unknown
+		icon = GFX_SpruanceClass
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3
+		offset = { y = 10 x = 7 trigger = { tag = USA } }
 		prerequisite = {
 			focus = USA_70s_Advanced_S_3_Viking_Capabilities
 			focus = USA_70s_The_Harpoon_ASuM
@@ -461,7 +489,7 @@
 		completion_reward = {
 			add_tech_bonus = {
 				name = dd_bonus
-				category = screen_hull_medium
+				category = screen_hull_heavy
 				bonus = 1.75
 				uses = 1
 			}
@@ -469,9 +497,10 @@
 	}
 	shared_focus = {
 		id = USA_70s_US_Air_Force_Strategic_Refactoring
-		icon = GFX_goal_unknown
+		icon = GFX_USAF_Strategic_Refactoring
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3
+		offset = { y = 10 x = 7 trigger = { tag = USA } }
 		prerequisite = {
 			focus = USA_70s_American_Armed_Forces
 		}
@@ -488,9 +517,10 @@
 	}	
 	shared_focus = {
 		id = USA_70s_Strategic_Bomber_Command_Restructure
-		icon = GFX_goal_unknown
+		icon = GFX_Strategic_Bomber_Command_Restructuring
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3
+		offset = { y = 10 x = 7 trigger = { tag = USA } }
 		prerequisite = {
 			focus = USA_70s_US_Air_Force_Strategic_Refactoring
 		}
@@ -502,9 +532,10 @@
 	}
 	shared_focus = {
 		id = USA_70s_Continue_High_Speed_Bomber_Development
-		icon = GFX_goal_unknown
+		icon = GFX_Continue_High_Speed_Bomber_Development
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3
+		offset = { y = 10 x = 7 trigger = { tag = USA } }
 		prerequisite = {
 			focus = USA_70s_Strategic_Bomber_Command_Restructure
 		}
@@ -522,9 +553,10 @@
 	} 
 	shared_focus = {
 		id = USA_70s_Cancel_the_XB_70
-		icon = GFX_goal_unknown
+		icon = GFX_Cancel_the_XB_70
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3
+		offset = { y = 10 x = 7 trigger = { tag = USA } }
 		prerequisite = {
 			focus = USA_70s_Strategic_Bomber_Command_Restructure
 		}
@@ -538,16 +570,17 @@
 				name = F_15_Eagle
 				bonus = -1.50
 				uses = 1
-				technology = mach3stratbomber_equipment_1
+				technology = mach3stratbomber
 			}
 			add_to_variable = { currentMoney = 300 }
 		}
 	}
 	shared_focus = {
 		id = USA_70s_Big_Four_B_52_Enhancement
-		icon = GFX_goal_unknown
+		icon = GFX_B_52_Big_Four
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3
+		offset = { y = 10 x = 7 trigger = { tag = USA } }
 		prerequisite = {
 			focus = USA_70s_Cancel_the_XB_70
 			focus = USA_70s_Continue_High_Speed_Bomber_Development
@@ -560,9 +593,10 @@
 	}
 	shared_focus = {
 		id = USA_70s_Evaluate_Vietnam_War_Air_Combat_Experiences
-		icon = GFX_goal_unknown
+		icon = GFX_Evaluate_the_Vietnam_Air_Experience
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3
+		offset = { y = 10 x = 7 trigger = { tag = USA } }
 		prerequisite = {
 			focus = USA_70s_US_Air_Force_Strategic_Refactoring
 		}
@@ -574,9 +608,10 @@
 	}
 	shared_focus = {
 		id = USA_70s_The_F_15_Eagle
-		icon = GFX_goal_unknown
+		icon = GFX_F_15_Eagle
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3
+		offset = { y = 10 x = 7 trigger = { tag = USA } }
 		prerequisite = {
 			focus = USA_70s_Evaluate_Vietnam_War_Air_Combat_Experiences
 		}
@@ -593,9 +628,10 @@
 	} 
 	shared_focus = {
 		id = USA_70s_Paveway_Laser_Guided_Bomb_Kits
-		icon = GFX_goal_unknown
+		icon = GFX_Paveway_LGBs
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3
+		offset = { y = 10 x = 7 trigger = { tag = USA } }
 		prerequisite = {
 			focus = USA_70s_The_F_15_Eagle
 		}
@@ -615,9 +651,10 @@
 	}
 	shared_focus = {
 		id = USA_70s_The_M1_Abrams
-		icon = GFX_goal_unknown
+		icon = GFX_M1Abrams
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3
+		offset = { y = 10 x = 7 trigger = { tag = USA } }
 		prerequisite = {
 			focus = USA_70s_M113_Combat_Support_Integration
 		}
@@ -637,9 +674,10 @@
 	} 
 	shared_focus = {
 		id = USA_70s_The_Nimitz_Class_Supercarrier
-		icon = GFX_goal_unknown
+		icon = GFX_Nimitz_Supercarrier
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3
+		offset = { y = 10 x = 7 trigger = { tag = USA } }
 		prerequisite = {
 			focus = USA_70s_Spruance_Class_Destroyers
 		}
@@ -653,15 +691,16 @@
 				name = Supercarrier_advancements
 				bonus = 1.50
 				uses = 1
-				technology = carrier_hull_super
+				category = carrier_hull_super
 			}
 		}
 	}
 	shared_focus = {
 		id = USA_70s_Adopt_the_Navys_VFAX_Program
-		icon = GFX_goal_unknown
+		icon = GFX_Continue_the_VFAX_Program
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3
+		offset = { y = 10 x = 7 trigger = { tag = USA } }
 		prerequisite = {
 			focus = USA_70s_Evaluate_Vietnam_War_Air_Combat_Experiences
 		}
@@ -679,9 +718,10 @@
 	} 	
 	shared_focus = {
 		id = USA_70s_The_A_10_Thunderbolt_II_Warthog
-		icon = GFX_goal_unknown
+		icon = GFX_A_10_Warthog
 		search_filters = {IC_FILTER}
-		cost = 10.00
+		cost = 3
+		offset = { y = 10 x = 7 trigger = { tag = USA } }
 		prerequisite = {
 			focus = USA_70s_Big_Four_B_52_Enhancement
 			focus = USA_70s_Paveway_Laser_Guided_Bomb_Kits

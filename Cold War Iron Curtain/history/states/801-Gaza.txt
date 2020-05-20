@@ -22,11 +22,14 @@ state = {
 
 		}
 		victory_points = {
-			4088 10
+			4088 10 
 		}
 		1949.1.1 = {
 			owner = EGY
 
+		}
+		1956.1.1 = {
+			set_demilitarized_zone = yes
 		}
 		1960.1.1 = {
 			add_manpower = 62000
@@ -34,7 +37,7 @@ state = {
 		}
 		1967.1.1 = {
 			owner = ISR
-
+			set_demilitarized_zone = no
 		}
 		1970.1.1 = {
 			add_manpower = 66000
@@ -64,7 +67,7 @@ state = {
 	}
 
 	provinces = {
-		4088
+		4088 
 	}
 	manpower = 240000
 	buildings_max_level_factor = 1.000

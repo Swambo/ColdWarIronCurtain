@@ -18,7 +18,7 @@ FLN_decisions = {
 			divisions_in_state = {
 				size > 2
 				state = 460
-			}			
+			}
 		}
 		
 		visible = {
@@ -35,14 +35,14 @@ FLN_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-		}		
+		}
 		highlight_provinces = {
 		
 		}
 		
 		visible = {
 			
-		}		
+		}
 
 		fixed_random_seed = no
 
@@ -179,7 +179,7 @@ FLN_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-		}	
+		}
 		fire_only_once = no
 		days_re_enable = 25
 		
@@ -215,7 +215,7 @@ FLN_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-		}	
+		}
 		fire_only_once = no
 		days_re_enable = 75
 		
@@ -246,11 +246,11 @@ FLN_decisions = {
 			has_deployed_air_force_size = {
 				size > 10
 				type = cas
-			}			
+			}
 		}
 		ai_will_do = {
 			factor = 1
-		}	
+		}
 		fire_only_once = no
 		days_re_enable = 180
 		
@@ -279,7 +279,7 @@ FLN_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-		}	
+		}
 		fire_only_once = no
 		days_re_enable = 180
 		
@@ -323,7 +323,7 @@ FLN_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-		}	
+		}
 		fire_only_once = no
 		days_re_enable = 180
 		
@@ -353,7 +353,7 @@ FLN_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-		}	
+		}
 		fire_only_once = no
 		days_re_enable = 180
 		
@@ -396,7 +396,7 @@ FLN_decisions = {
 		}
 		ai_will_do = {
 			factor = 1
-		}	
+		}
 		fire_only_once = yes
 		
 		cost = 100
@@ -435,14 +435,14 @@ FLN_decisions = {
 				var = FLN_insurgency
 				value = 3
 				compare = less_than
-			}		
+			}
 		}
 		visible = {
 			tag = FRA
 		}
 		ai_will_do = {
 			factor = 1
-		}	
+		}
 		fire_only_once = yes
 		
 		cost = 100
@@ -469,7 +469,7 @@ FLN_decisions = {
 					}
 				}
 				add_state_modifier = { modifier = { local_factory_sabotage = -0.15 } }
-			}				
+			}
 			set_country_flag = FLN_crushed
 		}
 		
@@ -498,7 +498,7 @@ FLN_decisions = {
 				var = FLN_insurgency
 				value = 100
 				compare = less_than
-			}			
+			}
 		}
 
 		highlight_provinces = {
@@ -1320,7 +1320,7 @@ FRA_Algerian_War_category = {
 				custom_trigger_tooltip = {
 					tooltip = french_vietnam_tt	
 					check_variable = { FRA.victory_points > VIN.victory_points }
-					check_variable = { 2000 < FRA.victory_points }	
+					check_variable = { 2000 < FRA.victory_points }
 				}
 			}
 
@@ -1337,7 +1337,7 @@ FRA_Algerian_War_category = {
 				factor = 1000
 			}
 			complete_effect = {
-				#news_event = VIN_French.1
+				news_event = vie.1500
 				annex_country = {
 					target = VIN
 				}
@@ -1386,6 +1386,7 @@ FRA_Algerian_War_category = {
 			effect_tooltip = {
 				country_event = vie.5
 			}
+			country_event = vie.5
 		}
 
 
@@ -1393,6 +1394,7 @@ FRA_Algerian_War_category = {
 			effect_tooltip = {
 				country_event = vie.5
 			}
+			country_event = vie.5
 		}
 		
 		ai_will_do = {
@@ -1403,24 +1405,22 @@ FRA_Algerian_War_category = {
 		
 		
 		visible = {
-			OR = {
-				tag = VIN
-				tag = FRA
-			}
+			tag = FRA
 		}
 		available = {
 			always = no
 
 		}
 		cancel_trigger = {
-			has_global_flag = INDOCHINA_WAR_CONTINUE
+			OR = {
+				has_global_flag = INDOCHINA_WAR_CONTINUE
+				VIN = { owns_state = 786 }
+				VIE = { owns_state = 786 }
+			}
 		}
 		activation = {
-			OR = {
-				tag = VIN
-				tag = FRA
-			}
-			date < 1955.1.1
+			date < 1955.01.01
+			tag = FRA
 		}
 		#is_good = yes
 
@@ -1436,7 +1436,7 @@ FRA_Algerian_War_category = {
 					check_variable = { FRA.victory_points < VIN.victory_points }
 				}
 				FRA = { country_event = vie.5 }
-				complete_national_focus = VIN_Ratification_of_the_Geneva_Accords
+				VIN = { complete_national_focus = VIN_Ratification_of_the_Geneva_Accords }
 			}
 			else_if = {
 				limit = {
@@ -1452,15 +1452,16 @@ FRA_Algerian_War_category = {
 					transfer_state = 838
 					transfer_state = 786
 					transfer_state = 671
+					transfer_state = 1287
 				}
 				LOS = {
 					transfer_state = 1198
 				}
-
+				news_event = vie.1500
 			}
 			else = {
 				FRA = { country_event = vie.5 }
-				complete_national_focus = VIN_Ratification_of_the_Geneva_Accords			
+				VIN = { complete_national_focus = VIN_Ratification_of_the_Geneva_Accords }
 			}
 		}
 
@@ -1470,13 +1471,13 @@ FRA_Algerian_War_category = {
 					check_variable = { FRA.victory_points < VIN.victory_points }
 				}
 				FRA = { country_event = vie.5 }
-				complete_national_focus = VIN_Ratification_of_the_Geneva_Accords
+				VIN = { complete_national_focus = VIN_Ratification_of_the_Geneva_Accords }
 			}
-			if = {
+			else_if = {
 				limit = {
 					check_variable = { FRA.victory_points > VIN.victory_points }
 				}
-				#news_event = VIN_French.1
+				news_event = vie.1500
 				annex_country = {
 					target = VIN
 				}
@@ -1487,13 +1488,17 @@ FRA_Algerian_War_category = {
 					transfer_state = 838
 					transfer_state = 786
 					transfer_state = 671
+					transfer_state = 1287
 				}
 				LOS = {
 					transfer_state = 1198
 				}
 
 			}
-		
+			else = {
+				FRA = { country_event = vie.5 }
+				VIN = { complete_national_focus = VIN_Ratification_of_the_Geneva_Accords }
+			}
 		}
 		
 		ai_will_do = {
@@ -1505,9 +1510,12 @@ FRA_Algerian_War_category = {
 		available = {
 			tag = FRA
 			has_border_war = no
+			
 		}
 		visible = {
-			tag = FRA
+			tag = FRA	
+			country_exists = VIN
+			owns_state = 786
 		}
 		days_re_enable = 60
 
@@ -1529,7 +1537,7 @@ FRA_Algerian_War_category = {
 					on_lose = Indochina_War.101
 					on_cancel = Indochina_War.4
 				}
-			}			
+			}
 		}
 
 		ai_will_do = {
@@ -1545,6 +1553,8 @@ FRA_Algerian_War_category = {
 		}
 		visible = {
 			tag = FRA
+			country_exists = VIN
+			owns_state = 786
 		}
 		days_re_enable = 60
 
@@ -1566,7 +1576,7 @@ FRA_Algerian_War_category = {
 					on_lose = Indochina_War.101
 					on_cancel = Indochina_War.4
 				}
-			}			
+			}
 		}
 
 		ai_will_do = {
@@ -1579,6 +1589,7 @@ FRA_Algerian_War_category = {
 		available = {
 			tag = VIN
 			has_border_war = no
+			FRA = { owns_state = 786 }
 		}
 		visible = {
 			tag = VIN
@@ -1604,7 +1615,7 @@ FRA_Algerian_War_category = {
 					on_lose = Indochina_War.103
 					on_cancel = Indochina_War.4
 				}
-			}			
+			}
 		}
 
 		ai_will_do = {
@@ -1617,6 +1628,7 @@ FRA_Algerian_War_category = {
 		available = {
 			tag = VIN
 			has_border_war = no
+			FRA = { owns_state = 786 }
 		}
 		visible = {
 			tag = VIN
@@ -1641,7 +1653,7 @@ FRA_Algerian_War_category = {
 					on_lose = Indochina_War.103
 					on_cancel = Indochina_War.4
 				}
-			}			
+			}
 		}
 
 		ai_will_do = {
@@ -1654,6 +1666,7 @@ FRA_Algerian_War_category = {
 		available = {
 			tag = VIN
 			has_border_war = no
+			FRA = { owns_state = 786 }
 		}
 		visible = {
 			tag = VIN
@@ -1678,7 +1691,7 @@ FRA_Algerian_War_category = {
 					on_lose = Indochina_War.103
 					on_cancel = Indochina_War.4
 				}
-			}			
+			}
 		}
 
 		ai_will_do = {

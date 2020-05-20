@@ -386,7 +386,12 @@ focus_tree = {
 		x = 21
 		y = 3
 		completion_reward = {
-			add_ideas = press_censorship_5
+			remove_ideas = policy_media_temp_0
+			remove_ideas = policy_media_temp_1
+			remove_ideas = policy_media_temp_2
+			remove_ideas = policy_media_temp_3
+			remove_ideas = policy_media_temp_3a
+			add_ideas = remove_ideas = policy_media_temp_1
 		}
 	}
 	focus = {
@@ -836,7 +841,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = mbt_equipment_0
 				amount = 200
-				producer = SOV
+				producer = CUM
 			}		
 		}
 	}
@@ -1024,7 +1029,7 @@ focus_tree = {
 				add_equipment_to_stockpile = {
 					type = motorized_equipment_2
 					amount = 1500
-					producer = SOV
+					producer = CUM
 				}
 			}
 	}
@@ -1057,7 +1062,7 @@ focus_tree = {
 					add_equipment_to_stockpile = {
 							type = infantry_equipment_0
 							amount = 25000
-							producer = SOV
+							producer = CUM
 						}
 				
 			}
@@ -1149,7 +1154,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = CAS_equipment_4
 				amount = 300
-				producer = SOV
+				producer = CUM
 			}		
 			air_experience = 25
 		}
@@ -1168,7 +1173,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = fighter_equipment_2
 				amount = 300
-				producer = SOV
+				producer = CUM
 			}		
 			air_experience = 25
 		}
@@ -1190,7 +1195,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = fighter_equipment_3
 				amount = 350
-				producer = SOV
+				producer = CUM
 			}		
 		}
 	}
@@ -1208,7 +1213,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = jet_multirole_equipment_2
 				amount = 200
-				producer = SOV
+				producer = CUM
 			}	
 		}
 	}
@@ -1429,7 +1434,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = agri_tech_bonus
 				bonus = 0.15
-				category = agri_tech
+				category = agriculture
 			}
 		}
 	}
@@ -1834,7 +1839,12 @@ focus_tree = {
 		x = 23
 		y = 17
 		completion_reward = {
-			add_ideas = default_media_laws_0
+			remove_ideas = policy_media_temp_0
+			remove_ideas = policy_media_temp_1
+			remove_ideas = policy_media_temp_2
+			remove_ideas = policy_media_temp_3
+			remove_ideas = policy_media_temp_3a
+			add_ideas = remove_ideas = policy_media_temp_2
 		}
 	}
 	focus = {

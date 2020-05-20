@@ -1127,8 +1127,13 @@ focus_tree = {
 		x = 12
 		y = 14
 			completion_reward = {
-					add_ideas = default_media_laws_0
-				}
+				remove_ideas = policy_media_temp_0
+				remove_ideas = policy_media_temp_1
+				remove_ideas = policy_media_temp_2
+				remove_ideas = policy_media_temp_3
+				remove_ideas = policy_media_temp_3a
+				add_ideas = remove_ideas = policy_media_temp_2
+			}
 
 	}
 	focus = {
@@ -1833,7 +1838,7 @@ focus_tree = {
 					SYR = {
 							country_event = egypte.10
 						}
-					load_focus_tree = UAR_50s
+					
 				}
 
 	}
@@ -1854,7 +1859,7 @@ focus_tree = {
 					add_equipment_to_stockpile = {
 							type = infantry_equipment_0
 							amount = 25000
-							producer = SOV
+							producer = CUM
 						}
 				}
 
@@ -2120,7 +2125,9 @@ focus_tree = {
 		x = 44
 		y = 19
 		completion_reward = {
-			country_event = farouk_gang.6
+			#country_event = farouk_gang.6
+			army_experience = 35
+			air_experience = 25
 		}
 	}
 	focus = {
@@ -2172,7 +2179,7 @@ focus_tree = {
 		y = 21
 		completion_reward = {
 			add_ideas = workers_trade_union
-			add_ideas = gen_pro_employer_1
+			add_ideas = policy_union_temp_1
 		}
 	}
 	focus = {
@@ -2346,7 +2353,12 @@ focus_tree = {
 		x = 53
 		y = 20
 		completion_reward = {
-			add_ideas = free_press_3
+			remove_ideas = policy_media_temp_0
+			remove_ideas = policy_media_temp_1
+			remove_ideas = policy_media_temp_2
+			remove_ideas = policy_media_temp_3
+			remove_ideas = policy_media_temp_3a
+			add_ideas = remove_ideas = policy_media_temp_3
 		}
 	}
 	focus = {
@@ -2386,7 +2398,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EGY_arab_socialism
-		icon = GFX_goal_unknown
+		icon = GFX_focus_red_propaganda
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2401,7 +2413,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EGY_defend_against_others
-		icon = GFX_goal_unknown
+		icon = GFX_Sandy_Tanks
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2415,7 +2427,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EGY_red_officers
-		icon = GFX_goal_unknown
+		icon = GFX_RedArmy
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2429,7 +2441,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EGY_spread_to_libya
-		icon = GFX_goal_unknown
+		icon = GFX_rise_of_the_free_officers
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2445,7 +2457,7 @@ focus_tree = {
 	}
 	focus = {
 		id = EGY_support_israel_communists
-		icon = GFX_goal_unknown
+		icon = GFX_Communist_Subterfuge
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -2542,7 +2554,7 @@ focus_tree = {
 		y = 20
 		completion_reward = {
 			add_ideas = workers_trade_union
-			add_ideas = gen_pro_employer_1
+			add_ideas = policy_union_temp_1
 		}
 	}
 	focus = {

@@ -1,6 +1,6 @@
-division_template = {
-	name = "Dywizja Piechoty"
-
+﻿division_template = {
+	name = "Dywizja Piechoty"			
+										
 	regiments = {
 		motorized_infantry = { x = 0 y = 0 }
 		motorized_infantry = { x = 0 y = 1 }
@@ -19,8 +19,8 @@ division_template = {
 		auto_cannon = { x = 3 y = 4 }
 	}
 	support = {
-		recon = { x = 0 y = 0 }
-		engineer = { x = 0 y = 1 }
+		recon = { x = 0 y = 0 } 		
+		engineer = { x = 0 y = 1 } 		
 		logistics_company = { x = 0 y = 2 }
 		field_hospital = { x = 0 y = 3 }
 		signal_company = { x = 0 y = 4 }
@@ -29,7 +29,7 @@ division_template = {
 }
 division_template = {
 	name = "Dywizja Artylerii" 				# Artillery Division
-
+	
 	regiments = {
 		rocket_sp_artillery = { x = 0 y = 0 }
 		artillery = { x = 1 y = 0 }
@@ -57,8 +57,8 @@ division_template = {
 	}
 }
 division_template = {
-	name = "Pulk Piechoty Morskiej"
-
+	name = "Pulk Piechoty Morskiej" 
+	
 	regiments = {
 		marine = { x = 0 y = 0 }
 		marine = { x = 0 y = 1 }
@@ -79,14 +79,14 @@ division_template = {
 		airborne = { x = 0 y = 2 }
 		light_artillery = { x = 0 y = 3 }
 	}
-	priority = 2
+	priority = 2	
 	support = {
 			recon = { x = 0 y = 0 }
 	}
 }
 division_template = {
 	name = "Dywizja Zmechanizowana A"
-
+	
 	regiments = {
 		mechanized_infantry = { x = 0 y = 0 }
 		mechanized_infantry = { x = 0 y = 1 }
@@ -110,8 +110,8 @@ division_template = {
 		auto_cannon = { x = 3 y = 4 }
 	}
 	support = {
-		recon_mechanized = { x = 0 y = 0 }
-		engineer = { x = 0 y = 1 }
+		recon_mechanized = { x = 0 y = 0 } 		
+		engineer = { x = 0 y = 1 } 		
 		logistics_company = { x = 0 y = 2 }
 		field_hospital = { x = 0 y = 3 }
 		signal_company = { x = 0 y = 4 }
@@ -120,7 +120,7 @@ division_template = {
 }
 division_template = {
 	name = "Dywizja Zmechanizowana B"
-
+	
 	regiments = {
 		armored_infantry = { x = 0 y = 0 }
 		armored_infantry = { x = 0 y = 1 }
@@ -144,8 +144,8 @@ division_template = {
 		auto_cannon = { x = 3 y = 4 }
 	}
 	support = {
-		recon_mechanized = { x = 0 y = 0 }
-		engineer = { x = 0 y = 1 }
+		recon_mechanized = { x = 0 y = 0 } 		
+		engineer = { x = 0 y = 1 } 		
 		logistics_company = { x = 0 y = 2 }
 		field_hospital = { x = 0 y = 3 }
 		signal_company = { x = 0 y = 4 }
@@ -172,8 +172,8 @@ division_template = {
 		rocket_sp_artillery = { x = 2 y = 4 }
 	}
 	support = {
-		recon_mechanized = { x = 0 y = 0 }
-		engineer = { x = 0 y = 1 }
+		recon_mechanized = { x = 0 y = 0 } 		
+		engineer = { x = 0 y = 1 } 		
 		logistics_company = { x = 0 y = 2 }
 		field_hospital = { x = 0 y = 3 }
 		signal_company = { x = 0 y = 4 }
@@ -185,28 +185,28 @@ division_template = {
 units = {
 	######## Warsaw Military District ########
 	division = {
-		name = "1. Dywizja Zmechanizowana"
+		name = "1. Dywizja Zmechanizowana"					
 		location = 3544
  		division_template = "Dywizja Zmechanizowana A"
  		start_experience_factor = 0.6
 		start_equipment_factor = 0.8
 	}
-	division = {
-		name = "3. Dywizja Piechoty"
+	division = {	
+		name = "3. Dywizja Piechoty"					
 		location = 3544
  		division_template = "Dywizja Piechoty"
  		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
 	}
-	division = {
-		name = "6. Dywizja Powietrznodesantowa"
+	division = {	
+		name = "6. Dywizja Powietrznodesantowa"					
 		location = 6558
  		division_template = "Dywizja Powietrznodesantowa"
  		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
 	}
- 	division = {
-		name = "9. Dywizja Piechoty"
+ 	division = {	
+		name = "9. Dywizja Piechoty"					
 		location = 3473
 		division_template = "Dywizja Piechoty"
  		start_experience_factor = 0.3
@@ -217,16 +217,16 @@ units = {
 		location = 6558
  		division_template = "Dywizja Zmechanizowana A"
  		start_experience_factor = 0.3
-		start_equipment_factor = 0.5
+		start_equipment_factor = 0.5	
 	 }
- 	division = {
-		name = "8. Dywizja Artylerii"
+ 	division = {	
+		name = "8. Dywizja Artylerii"					
  		location = 11558
 		division_template = "Dywizja Artylerii"
 		start_equipment_factor = 0.3
 		start_equipment_factor = 0.5
 	}
-	######## Pomeranian Military District ########
+	######## Pomeranian Military District ########	
  	division = {
 		name = "8. Dywizja Zmechanizowana"
 		location = 11413
@@ -234,7 +234,7 @@ units = {
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
 	}
-	division = {
+	division = {	
 		name = "12. Dywizja Zmechanizowana"
 		location = 6464
 		division_template = "Dywizja Zmechanizowana A"
@@ -248,15 +248,15 @@ units = {
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
 	}
-	division = {
-		name = "20. Dywizja Pancerna"
+	division = {	
+		name = "20. Dywizja Pancerna"	
 		location = 552
 		division_template = "Dywizja Pancerna"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.5
 	}
  	division = {
-		name = "23. Dywizja Piechoty"
+		name = "23. Dywizja Piechoty"					
 		location = 3572
 		division_template = "Dywizja Piechoty"
  		start_experience_factor = 0.3
@@ -264,7 +264,7 @@ units = {
 	}
 		######## Silesian Military District ########
  	division = {
-		name = "2. Dywizja Zmechanizowana"
+		name = "2. Dywizja Zmechanizowana"				
 		location = 3473
  		division_template = "Dywizja Zmechanizowana A"
  		start_experience_factor = 0.2
@@ -275,17 +275,17 @@ units = {
 		location = 3473
  		division_template = "Dywizja Piechoty"
  		start_experience_factor = 0.2
-		start_equipment_factor = 0.5
+		start_equipment_factor = 0.5	
 	 }
  	division = {
-		name = "5. Dywizja Pancerna"
+		name = "5. Dywizja Pancerna"				
 		location = 6558
  		division_template = "Dywizja Pancerna"
  		start_experience_factor = 0.2
 		start_equipment_factor = 0.5
 	}
  	division = {
-		name = "10. Dywizja Pancerna"
+		name = "10. Dywizja Pancerna"			
 		location = 537
  		division_template = "Dywizja Pancerna"
  		start_experience_factor = 0.3
@@ -296,13 +296,13 @@ units = {
 		location = 362
  		division_template = "Dywizja Zmechanizowana A"
  		start_experience_factor = 0.3
-		start_equipment_factor = 0.5
+		start_equipment_factor = 0.5	
 	}
 }
 
 ##### Wojska Lotnicze i Obrony Powietrzne (CO: Zajec) #####
 air_wings = {
-	89 = {		#Stanislawow
+	89 = {		#Stanislawow						
 		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
 		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
 		fighter_equipment_3 = { owner = "SOV" amount = 40 version_name = "Yak-9" }
@@ -328,7 +328,7 @@ instant_effect = {
 	add_equipment_production = {
 		equipment = {
 			type = mechanized_equipment_2
-			creator = "POL"
+			creator = "POL" 
 		}
 		requested_factories = 1
 		progress = 0.3
@@ -337,7 +337,7 @@ instant_effect = {
 	add_equipment_production = {
 		equipment = {
 			type = mbt_equipment_2
-			creator = "POL"
+			creator = "POL" 
 		}
 		requested_factories = 1
 		progress = 0.4
@@ -346,7 +346,7 @@ instant_effect = {
 	add_equipment_production = {
 		equipment = {
 			type = motorized_equipment_1
-			creator = "POL"
+			creator = "POL" 
 		}
 		requested_factories = 1
 		progress = 0.4

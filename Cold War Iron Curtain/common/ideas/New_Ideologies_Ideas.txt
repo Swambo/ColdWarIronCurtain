@@ -13,7 +13,8 @@ ideas = {
 				drift_defence_factor = -0.15
 			}			
 
-		}	
+		}
+	
 		One_Unit = {	
 			picture = generic_production_bonus
 			allowed = {
@@ -3164,7 +3165,25 @@ ideas = {
 				always = no # Triggered via event
 			}
 
-			picture = neutrality_idea
+			picture = payup
+			
+			modifier = {
+				stability_factor = -0.2
+				production_speed_arms_factory_factor = -0.15
+				production_speed_industrial_complex_factor = -0.15
+				consumer_goods_factor = 0.2
+				production_speed_buildings_factor = -0.15
+			}
+	
+
+		}
+		soviet_reparations2 = {	
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = payup
 			
 			modifier = {
 				stability_factor = -0.15
@@ -3177,13 +3196,13 @@ ideas = {
 
 		}
 		
-		soviet_reparations2 = {	
+		soviet_reparations3 = {	
 			
 			allowed = {
 				always = no # Triggered via event
 			}
 
-			picture = neutrality_idea
+			picture = payup
 			
 			modifier = {
 				stability_factor = -0.10
@@ -3195,6 +3214,26 @@ ideas = {
 	
 
 		}
+		
+		soviet_reparations4 = {	
+			
+			allowed = {
+				always = no # Triggered via event
+			}
+
+			picture = payup
+			
+			modifier = {
+				stability_factor = -0.05
+				production_speed_arms_factory_factor = -0.025
+				production_speed_industrial_complex_factor = -0.025
+				consumer_goods_factor = 0.05
+				production_speed_buildings_factor = -0.025
+			}
+	
+
+		}
+		
 		SOVROMS = {	
 			
 			allowed = {
@@ -4624,7 +4663,7 @@ ideas = {
 			}			
 
 		}
-		Gun_Control_Act  = {	
+		Gun_Control_Act = {	
 			picture = generic_production_bonus
 			allowed = {
 				always = no 
@@ -6338,10 +6377,6 @@ ideas = {
 
 			allowed_civil_war = {  }
 
-			cancel = {
-				has_war = no
-			}
-
 			removal_cost = -1
 
 			modifier = {
@@ -6822,10 +6857,10 @@ ideas = {
 			picture = generic_production_bonus
 			
 			modifier = {
-				MONTHLY_POPULATION = -0.1
-				production_speed_industrial_complex_factor = 0.05
-				production_speed_arms_factory_factor = 0.05
-				industrial_capacity_factory = 0.05
+				MONTHLY_POPULATION = -10
+				production_speed_industrial_complex_factor = 0.25
+				production_speed_arms_factory_factor = 0.25
+				industrial_capacity_factory = 0.25
 			}
 		}
 		four_pests = {
@@ -7263,7 +7298,7 @@ ideas = {
 			modifier = {
 				conscription_factor = 0.1
 				consumer_goods_factor = 0.05
-				production_factory_max_efficiency_factor = 0.25
+				production_factory_max_efficiency_factor = 0.1
 			}		
 		}
 		SACTU = {
@@ -7541,7 +7576,78 @@ ideas = {
 				production_speed_buildings_factor = -0.2
 				local_resources_factor = 0.1
 			}
-				targeted_modifier = { tag = USA extra_trade_to_target_factor = 0.5 }
-		    }
-	    }
-    }
+			targeted_modifier = { tag = USA extra_trade_to_target_factor = 0.5 }
+		}
+		The_Vietnam_War_VIE = {
+
+
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+			
+			modifier = {
+				army_speed_factor = 0.25
+				army_attack_factor = -0.25
+				army_defence_factor = 0.50
+				army_org = 20
+				resistance_damage_to_garrison = 0.25	
+				compliance_gain	 = -0.01
+				resistance_target = 0.05
+				ai_focus_aggressive_factor = -0.25
+				ai_focus_defense_factor = 10
+				weekly_manpower = 5000	
+			}
+		}
+        The_Vietnam_War_NLF = {
+
+
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.75 
+				army_org = 20
+				army_defence_factor = 0.35
+				army_attack_factor = -0.25
+				out_of_supply_factor = -1
+				ai_focus_aggressive_factor = -0.5
+				ai_focus_defense_factor = 10
+				army_speed_factor = -0.95
+				weekly_manpower = 1000	
+			}
+			targeted_modifier = { tag = USA defense_bonus_against = 3 }
+			targeted_modifier = { tag = USA attack_bonus_against = -1 }
+			targeted_modifier = { tag = VIE attack_bonus_against = -0.25 }
+			targeted_modifier = { tag = VIE defense_bonus_against = 8 }
+		}
+		maintain_airlift = {
+			
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via event
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.01
+			}
+		}
+		suspend_deutsche_mark = {
+
+			removal_cost = -1
+
+			allowed = {
+				always = no # Added via event 
+			}
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+	}
+}

@@ -25,9 +25,16 @@ country_event = {		#Coup Start
 		name = "Round up the suspected plotters"
 		hidden_effect = {
 			news_event = Afghani_Coup.4
-			country_event = Afghani_Coup.2
+			country_event = Afghani_Coup.3
 			complete_national_focus = AFG_The_1950_Coup_Attempt
 			complete_national_focus = AFG_Crackdown_on_Hizb_I_Sirri_Ittihad
+			ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 1000
+				is_historical_focus_on = yes
+			}
+		}
 		}
 	}
 	option = {
@@ -60,7 +67,7 @@ country_event = {
 
 country_event = {
 	id = AFG_REP.1
-	title = "The Decleration of the Republic of Afghanistan"
+	title = "The Declaration of the Republic of Afghanistan"
 	desc = AFG_REP.1.d
 	picture = GFX_Afghan_Radio
 
@@ -158,13 +165,20 @@ country_event = {		#Coup Start
 
 	option = {
 		name = "Appoint Mohammed Daoud Khan"
-		complete_national_focus = AFG_Appoint_Ghulam_Muhammad_Ghobar_Prime_Minister
+		complete_national_focus = AFG_Appoint_Daud_Prime_Minister
 		create_country_leader = {
 			name = "Mohammed Daoud Khan"
 			picture = "Mohammed_Daoud_Khan.dds"
 			ideology = monarchy
 		}
-	}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 1000
+				is_historical_focus_on = yes
+			}
+		}
+	}   
 	option = {
 		name = "Appoint Ghulam Muhammad Ghobar"
 		set_politics = {

@@ -12,15 +12,16 @@ state = {
 		buildings = {
 			infrastructure = 2
 			state_infrastructure = 2
+			water_infrastructure = 1
 
-
+			agri_industrial_complex = 1
 		}
 		add_core_of = PER
 
 	}
 
 	provinces = {
-		4580 7602 10385 10768 13312
+		4580 7602 10385 10768 13312 
 	}
 	manpower = 3073943
 	buildings_max_level_factor = 1.000

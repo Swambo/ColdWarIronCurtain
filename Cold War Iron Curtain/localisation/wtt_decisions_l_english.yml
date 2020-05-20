@@ -3,13 +3,16 @@
  # RGO DEVELOPMENT ## RGO DEVELOPMENT ## RGO DEVELOPMENT ## RGO DEVELOPMENT #
  
  prospect_for_resources:0 "RGO (Resource Gathering Operation) Development"
- prospect_for_resources_desc:0 "There are numerous Resource Gathering Operations (RGOs) that are able to be expanded. For a price, these states can hold greater levels of resources and states which were once barren or lack resources can become productive."
+ prospect_for_resources_desc:0 "There are numerous Resource Gathering Operations (RGOs) that are able to be expanded. For a price, these states can hold greater levels of resources and states which were once barren or lack resources can become productive.§RSpending more money than you have will incur high-interest debt§!\n\nCurrent Treasury Reserves [?CurrentMoney|§+§=2§!§!]B"
  
  renewable_energy_project:0 "(ELECTRICITY)(§C$360§!)Renewable Energy Project"
  renewable_energy_project_desc:0 "Initiate and fund a project to convert 5 fossil fuel power plants into renewable power stations. All usable electrical, management, maintenance, etc infrastructure will be converted for use and a renewable generating farm/station will be constructed using the facilities of the old fossil fuel plant.\n\nCosts §R5§! §YIndustrial Parks§! for §Y215§! days and §Y60M§!"
  
  fusion_energy_project:0 "(ELECTRICITY)(§C$4000§!)Tokamak Fusion Reactor Project"
  fusion_energy_project_desc:0 "Begin a tremendous effort to construct a Tokamak fusion reactor to supply the country with immense levels of renewable power.\n\nCosts §R10§! §YIndustrial Parks§! for §Y10§! years and §YB§!"
+ 
+ fusion_energy_project_wtt:0 "(ELECTRICITY)(§C$4000§!)Tokamak Fusion Reactor Project"
+ fusion_energy_project_wtt_desc:0 "Begin a tremendous effort to construct a Tokamak fusion reactor to supply the country with immense levels of renewable power.\n\nCosts §R10§! §YIndustrial Parks§! for §Y10§! years and §YB§!"
  
  # NORTH AMERICA #
  
@@ -599,7 +602,6 @@
  JAP_tora_tora_tora_desc:0 "The first blow awaits. Afterwards, we must continue swiftly, using the momentum we have gained to cripple our enemies before they know what has happened."
  JAP_war_with_soviet_union:0 "Declare War on Soviet Union"
  JAP_war_with_soviet_union_desc:0 "Our allies in Europe have signed a non-aggression pact with the Soviet Union. However, our war cannot wait; we must unilaterally pursue a conflict with the Communists, even if it risks alienating our allies."
- economy_decisions:0 "Economic Policy"
  institute_press_censorship_fascist_state:0 "Institute Press Censorship"
  institute_press_censorship_fascist_state_desc:0 "These are dangerous times and we can't allow dissenting voices to tear our country apart. Restricting the freedom of the press is necessary to ensure that the truth is heard loud and clear."
  institute_press_censorship_democratic_state:0 "Institute Press Censorship"

@@ -25,14 +25,14 @@ division_template = {
 	}
 }
 units = {
-	division = {
+	division = {	
 		name = "1st British-Kenyan Expeditionaries"
 		location = 13790
 		division_template = "British Infantry Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1.0
 	}
-	division = {
+	division = {	
 		name = "2nd British-Kenyan Expeditionaries"
 		location = 13790
 		division_template = "British Infantry Division"

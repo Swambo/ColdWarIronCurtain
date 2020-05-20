@@ -50,7 +50,7 @@ focus_tree = {
 		completion_reward = {
 			country_event = Ford.6
 			remove_ideas = Inflation_Crisis
-			add_timed_idea =  {
+			add_timed_idea = {
 				idea = Inflation_Crisis2
 				days = 750
 			}	
@@ -58,7 +58,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_FORD_Revenue_Adjustment_Act
-		icon = GFX_goal_unknown
+		icon = GFX_ISR_Focus_Tax_Cuts
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -70,13 +70,12 @@ focus_tree = {
 		x = 1
 		y = 2
 		completion_reward = {
-			add_ideas = Progressive_Taxation
+			add_ideas = policy_taxrate_temp_3
 			hidden_effect = {
-				remove_ideas = Austrian_Taxation
-				remove_ideas = Light_Taxation
-				remove_ideas = Moderate_Taxation
-				remove_ideas = Heavy_Taxation
-				remove_ideas = Marxist_Taxation			
+				remove_ideas = policy_taxrate_temp_1
+				remove_ideas = policy_taxrate_temp_2
+				remove_ideas = policy_taxrate_temp_4
+				remove_ideas = policy_taxrate_temp_5			
 			}
 		}	
 	}
@@ -100,7 +99,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_FORD_Combat_Inflation
-		icon = GFX_goal_unknown
+		icon = GFX_Fight_Hyperinflation
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -114,7 +113,7 @@ focus_tree = {
 		completion_reward = {
 			remove_ideas = Inflation_Crisis
 			remove_ideas = Inflation_Crisis2
-			add_timed_idea =  {
+			add_timed_idea = {
 				idea = Inflation_Crisis3
 				days = 750
 			}
@@ -123,7 +122,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_FORD_Trade_Act_of_1974
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_positive_trade_relations
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -138,7 +137,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_FORD_Mass_Transit_Revitilization_Act
-		icon = GFX_goal_unknown
+		icon = GFX_Amtrak_Icon
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -186,7 +185,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_FORD_Government_in_the_Sunshine_Act
-		icon = GFX_goal_unknown
+		icon = GFX_expand_legal_power
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -204,7 +203,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_FORD_Resource_Conservation_Act
-		icon = GFX_goal_unknown
+		icon = GFX_Adopt_New_Constitiution
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -222,7 +221,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_FORD_Federal_Land_Reform
-		icon = GFX_goal_unknown
+		icon = GFX_Paper_Two
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {

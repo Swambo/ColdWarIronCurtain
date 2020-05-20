@@ -34,22 +34,37 @@ starting_policies = {
 		limit = {
 			NOT = {
 				OR = {
-					has_idea = Austrian_Taxation
-					has_idea = Light_Taxation
-					has_idea = Moderate_Taxation
-					has_idea = Progressive_Taxation
-					has_idea = Heavy_Taxation
-					has_idea = Marxist_Taxation
+					has_idea = policy_taxrate_temp_1
+					has_idea = policy_taxrate_temp_2
+					has_idea = policy_taxrate_temp_3
+					has_idea = policy_taxrate_temp_4
+					has_idea = policy_taxrate_temp_5
 				}
 			}
+			is_ai = yes
 		}
-		add_ideas = Moderate_Taxation
+		add_ideas = policy_taxrate_temp_3
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				OR = {
+					has_idea = policy_taxrate_temp_1
+					has_idea = policy_taxrate_temp_2
+					has_idea = policy_taxrate_temp_3
+					has_idea = policy_taxrate_temp_4
+					has_idea = policy_taxrate_temp_5
+				}
+			}
+			is_ai = no
+		}
+		add_ideas = policy_taxrate_temp_2
 	}
 	
 	tax_rate = yes
 	edict_expenditure = yes
 	corruption_idea_calc = yes
-	policy_plan_8 = yes
+	policy_plan_9 = yes
 }
 policy_plan_0 = { #total cost = none
 	add_ideas = policy_military_temp_1
@@ -58,6 +73,13 @@ policy_plan_0 = { #total cost = none
 	add_ideas = policy_education_temp_0
 	add_ideas = policy_healthcare_temp_0
 	add_ideas = policy_services_temp_0
+	military_expenditure = yes
+	welfare_expenditure = yes
+	cpi_expenditure = yes
+	edu_expenditure = yes
+	health_expenditure = yes
+	public_expenditure = yes
+	set_variable = { bogocheck = 10 }
 }
 policy_plan_1 = { #total cost = 3.33
 	add_ideas = policy_military_temp_1
@@ -65,13 +87,14 @@ policy_plan_1 = { #total cost = 3.33
 	add_ideas = policy_cpi_temp_1
 	add_ideas = policy_education_temp_1
 	add_ideas = policy_healthcare_temp_1
-	add_ideas = policy_services_temp_1
-	miitary_expenditure = yes
+	add_ideas = policy_services_temp_0
+	military_expenditure = yes
 	welfare_expenditure = yes
 	cpi_expenditure = yes
 	edu_expenditure = yes
 	health_expenditure = yes
 	public_expenditure = yes
+	set_variable = { bogocheck = 20 }
 	if = {
 		limit = {
 			check_variable = { IncomeCheck < 1 }
@@ -82,17 +105,18 @@ policy_plan_1 = { #total cost = 3.33
 }
 policy_plan_2 = { #total cost = 8.4
 	add_ideas = policy_military_temp_2
-	add_ideas = policy_welfare_temp_2
+	add_ideas = policy_welfare_temp_1
 	add_ideas = policy_cpi_temp_1
 	add_ideas = policy_education_temp_1
-	add_ideas = policy_healthcare_temp_2
+	add_ideas = policy_healthcare_temp_1
 	add_ideas = policy_services_temp_1
-	miitary_expenditure = yes
+	military_expenditure = yes
 	welfare_expenditure = yes
 	cpi_expenditure = yes
 	edu_expenditure = yes
 	health_expenditure = yes
 	public_expenditure = yes
+	set_variable = { bogocheck = 30 }
 	if = {
 		limit = {
 			check_variable = { IncomeCheck < 1 }
@@ -104,16 +128,17 @@ policy_plan_2 = { #total cost = 8.4
 policy_plan_3 = { #total cost = 8.4
 	add_ideas = policy_military_temp_2
 	add_ideas = policy_welfare_temp_2
-	add_ideas = policy_cpi_temp_2
+	add_ideas = policy_cpi_temp_1
 	add_ideas = policy_education_temp_1
 	add_ideas = policy_healthcare_temp_2
 	add_ideas = policy_services_temp_1
-	miitary_expenditure = yes
+	military_expenditure = yes
 	welfare_expenditure = yes
 	cpi_expenditure = yes
 	edu_expenditure = yes
 	health_expenditure = yes
 	public_expenditure = yes
+	set_variable = { bogocheck = 40 }
 	if = {
 		limit = {
 			check_variable = { IncomeCheck < 1 }
@@ -126,10 +151,11 @@ policy_plan_4 = { #total cost = 12.8
 	add_ideas = policy_military_temp_2
 	add_ideas = policy_welfare_temp_2
 	add_ideas = policy_cpi_temp_2
-	add_ideas = policy_education_temp_2
+	add_ideas = policy_education_temp_1
 	add_ideas = policy_healthcare_temp_2
-	add_ideas = policy_services_temp_2
-	miitary_expenditure = yes
+	add_ideas = policy_services_temp_1
+	set_variable = { bogocheck = 50 }
+	military_expenditure = yes
 	welfare_expenditure = yes
 	cpi_expenditure = yes
 	edu_expenditure = yes
@@ -145,12 +171,13 @@ policy_plan_4 = { #total cost = 12.8
 }
 policy_plan_5 = { #total cost = 12.8
 	add_ideas = policy_military_temp_2
-	add_ideas = policy_welfare_temp_3
+	add_ideas = policy_welfare_temp_2
 	add_ideas = policy_cpi_temp_2
-	add_ideas = policy_education_temp_3
-	add_ideas = policy_healthcare_temp_3
+	add_ideas = policy_education_temp_2
+	add_ideas = policy_healthcare_temp_2
 	add_ideas = policy_services_temp_2
-	miitary_expenditure = yes
+	set_variable = { bogocheck = 60 }
+	military_expenditure = yes
 	welfare_expenditure = yes
 	cpi_expenditure = yes
 	edu_expenditure = yes
@@ -165,13 +192,14 @@ policy_plan_5 = { #total cost = 12.8
 	}
 }
 policy_plan_6 = { 
-	add_ideas = policy_military_temp_3
-	add_ideas = policy_welfare_temp_4
-	add_ideas = policy_cpi_temp_4
+	add_ideas = policy_military_temp_2
+	add_ideas = policy_welfare_temp_3
+	add_ideas = policy_cpi_temp_2
 	add_ideas = policy_education_temp_3
-	add_ideas = policy_healthcare_temp_4
+	add_ideas = policy_healthcare_temp_3
 	add_ideas = policy_services_temp_2
-	miitary_expenditure = yes
+	set_variable = { bogocheck = 70 }
+	military_expenditure = yes
 	welfare_expenditure = yes
 	cpi_expenditure = yes
 	edu_expenditure = yes
@@ -187,17 +215,19 @@ policy_plan_6 = {
 }
 policy_plan_7 = { 
 	add_ideas = policy_military_temp_3
-	add_ideas = policy_welfare_temp_3
+	add_ideas = policy_welfare_temp_4
 	add_ideas = policy_cpi_temp_4
-	add_ideas = policy_education_temp_4
+	add_ideas = policy_education_temp_3
 	add_ideas = policy_healthcare_temp_4
-	add_ideas = policy_services_temp_3
-	miitary_expenditure = yes
+	add_ideas = policy_services_temp_2
+	military_expenditure = yes
 	welfare_expenditure = yes
 	cpi_expenditure = yes
 	edu_expenditure = yes
 	health_expenditure = yes
 	public_expenditure = yes
+	
+	set_variable = { bogocheck = 80 }
 	if = {
 		limit = {
 			check_variable = { IncomeCheck < 1 }
@@ -208,12 +238,13 @@ policy_plan_7 = {
 }
 policy_plan_8 = { #total cost = 26.2
 	add_ideas = policy_military_temp_3
-	add_ideas = policy_welfare_temp_4
-	add_ideas = policy_cpi_temp_5
+	add_ideas = policy_welfare_temp_3
+	add_ideas = policy_cpi_temp_4
 	add_ideas = policy_education_temp_4
 	add_ideas = policy_healthcare_temp_4
 	add_ideas = policy_services_temp_3
-	miitary_expenditure = yes
+	set_variable = { bogocheck = 90 }
+	military_expenditure = yes
 	welfare_expenditure = yes
 	cpi_expenditure = yes
 	edu_expenditure = yes
@@ -225,6 +256,28 @@ policy_plan_8 = { #total cost = 26.2
 		}
 		clear_all_policies = yes
 		policy_plan_7 = yes
+	}
+}
+policy_plan_9 = { #total cost = 26.2
+	add_ideas = policy_military_temp_3
+	add_ideas = policy_welfare_temp_4
+	add_ideas = policy_cpi_temp_5
+	add_ideas = policy_education_temp_4
+	add_ideas = policy_healthcare_temp_4
+	add_ideas = policy_services_temp_3
+	set_variable = { bogocheck = 1000 }
+	military_expenditure = yes
+	welfare_expenditure = yes
+	cpi_expenditure = yes
+	edu_expenditure = yes
+	health_expenditure = yes
+	public_expenditure = yes
+	if = {
+		limit = {
+			check_variable = { IncomeCheck < 1 }
+		}
+		clear_all_policies = yes
+		policy_plan_8 = yes
 	}
 }
 
@@ -274,86 +327,128 @@ default_social_policies = {
 		limit = {
 			NOT = {
 				OR = {
-					has_idea = Oppressive
-					has_idea = Repressive
-					has_idea = Segregated
-					has_idea = Equal_Rights
+					has_idea = policy_minorities_temp_0
+					has_idea = policy_minorities_temp_1
+					has_idea = policy_minorities_temp_2
+					has_idea = policy_minorities_temp_3
+					has_idea = policy_minorities_temp_3a
 				}
 			}
 		}
-		add_ideas = Repressive
+		add_ideas = policy_minorities_temp_1
 	}
 	if = {
 		limit = {
 			NOT = {
 				OR = {
-					has_idea = Patriarchy
-					has_idea = Cognitive_Patriarchy
-					has_idea = Traditional
-					has_idea = Womens_Rights_Policy
-					has_idea = Equality
-					has_idea = Positive_Action
+					has_idea = policy_women_temp_1
+					has_idea = policy_women_temp_0
+					has_idea = policy_women_temp_2
+					has_idea = policy_women_temp_3
+					has_idea = policy_women_temp_4
+					has_idea = policy_women_temp_4a
 				}
 			}
 		}
-		add_ideas = Traditional
+		add_ideas = policy_women_temp_2
 	}
 	if = {
 		limit = {
 			NOT = {
 				OR = {
-					has_idea = State_Press
-					has_idea = Regulated_Press
-					has_idea = State_Shareholder
-					has_idea = Free_Press
-					has_idea = Corporate_Press
+					has_idea = policy_media_temp_0
+					has_idea = policy_media_temp_1
+					has_idea = policy_media_temp_2
+					has_idea = policy_media_temp_3
+					has_idea = policy_media_temp_3a
 				}
 			}
 		}
-		add_ideas = State_Press
+		add_ideas = policy_media_temp_0
 	}
 	if = {
 		limit = {
 			NOT = {
 				OR = {
-					has_idea = State_Theocracy
-					has_idea = state_religion
-					has_idea = moralism
-					has_idea = pluarlism
-					has_idea = secularism
-					has_idea = atheist_state
+					has_idea = policy_religion_temp_0a
+					has_idea = policy_religion_temp_0
+					has_idea = policy_religion_temp_1
+					has_idea = policy_religion_temp_2
+					has_idea = policy_religion_temp_3
+					has_idea = policy_religion_temp_3a
 				}
 			}
 		}
-		add_ideas = moralism
+		add_ideas = policy_religion_temp_2
 	}
 	if = {
 		limit = {
 			NOT = {
 				OR = {
-					has_idea = No_Voting
-					has_idea = Elites_Only
-					has_idea = Restricted_Voting
-					has_idea = Universal_Sufferage
+					has_idea = policy_saga_temp_1
+					has_idea = policy_saga_temp_0
+					has_idea = policy_saga_temp_2
+					has_idea = policy_saga_temp_3
+					has_idea = policy_saga_temp_4
+					has_idea = policy_saga_temp_4a
 				}
 			}
 		}
-		add_ideas = Restricted_Voting
+		add_ideas = policy_saga_temp_0
 	}
 	if = {
 		limit = {
 			NOT = {
 				OR = {
-					has_idea = gen_notsaga_1
-					has_idea = gen_notsaga_2
-					has_idea = gen_semighey_1
-					has_idea = gen_semighey_2
-					has_idea = gen_ghey_1
-					has_idea = gen_ghey_2
+					has_idea = policy_union_temp_0
+					has_idea = policy_union_temp_1
+					has_idea = policy_union_temp_2
+					has_idea = policy_union_temp_3
+					has_idea = policy_union_temp_4
+					has_idea = policy_union_temp_5
+				}
+			}
+			OR = {
+				has_government = communism
+				has_government = maoism
+				has_government = trotskyism
+			}
+		}
+		add_ideas = policy_union_temp_5
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				OR = {
+					has_idea = policy_union_temp_0
+					has_idea = policy_union_temp_1
+					has_idea = policy_union_temp_2
+					has_idea = policy_union_temp_3
+					has_idea = policy_union_temp_4
+					has_idea = policy_union_temp_5
+				}
+			}
+			OR = {
+				has_government = democratic
+				has_government = socialist
+			}
+		}
+		add_ideas = policy_union_temp_4
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				OR = {
+					has_idea = policy_union_temp_0
+					has_idea = policy_union_temp_1
+					has_idea = policy_union_temp_2
+					has_idea = policy_union_temp_3
+					has_idea = policy_union_temp_4
+					has_idea = policy_union_temp_5
 				}
 			}
 		}
-		add_ideas = gen_notsaga_2
+		add_ideas = policy_union_temp_1
 	}
 	
 	set_country_flag = flag_default_social_set

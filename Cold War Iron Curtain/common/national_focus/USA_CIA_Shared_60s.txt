@@ -1,7 +1,7 @@
 
 	shared_focus = {
 		id = USA_60s_The_CIA
-		icon = GFX_goal_unknown
+		icon = GFX_cia
 		search_filters = {IC_FILTER}
 		cost = 1
 		offset = { x = 8 trigger = { tag = USA } }	
@@ -25,7 +25,7 @@
 	}
 	shared_focus = {
 		id = USA_60s_Latin_America_Desk
-		icon = GFX_goal_unknown
+		icon = GFX_CIA_Latin_America
 		search_filters = {IC_FILTER}
 		cost = 1
 		offset = { x = 9 trigger = { tag = USA } }	
@@ -57,7 +57,7 @@
 	}
 	shared_focus = {
 		id = USA_Attempt_to_Assasinate_Castro
-		icon = GFX_goal_unknown
+		icon = GFX_Attempt_to_Assasinate_Castro
 		search_filters = {IC_FILTER}
 		cost = 1
 		offset = { x = 9 trigger = { tag = USA } }	
@@ -96,7 +96,7 @@
 	}
 	shared_focus = {
 		id = USA_Deal_with_the_Underworld
-		icon = GFX_goal_unknown
+		icon = GFX_Work_with_the_Mafia
 		search_filters = {IC_FILTER}
 		cost = 1
 		offset = { x = 9 trigger = { tag = USA } }	
@@ -129,7 +129,7 @@
 	}
 	shared_focus = {
 		id = USA_Re_Establish_Mafia_in_Cuba
-		icon = GFX_goal_unknown
+		icon = GFX_Cuban_Mafia
 		search_filters = {IC_FILTER}
 		cost = 1
 		offset = { x = 9 trigger = { tag = USA } }	
@@ -157,7 +157,7 @@
 	}
 	shared_focus = {
 		id = USA_60s_Cuban_Deathsquads
-		icon = GFX_goal_unknown
+		icon = GFX_Cuban_Deathsquads
 		search_filters = {IC_FILTER}
 		cost = 1
 		offset = { x = 9 trigger = { tag = USA } }	
@@ -177,7 +177,7 @@
 	}
 	shared_focus = {
 		id = USA_60s_Depose_Jose_Velesco
-		icon = GFX_goal_unknown
+		icon = GFX_Depose_Jose_Valesco
 		search_filters = {IC_FILTER}
 		cost = 1
 		offset = { x = 9 trigger = { tag = USA } }	
@@ -194,7 +194,7 @@
 	}		
 	shared_focus = {
 		id = USA_60s_Establish_Ecuadorian_Junta
-		icon = GFX_goal_unknown
+		icon = GFX_MilitaryGovernment
 		search_filters = {IC_FILTER}
 		cost = 1
 		offset = { x = 9 trigger = { tag = USA } }	
@@ -211,7 +211,7 @@
 	}
 	shared_focus = {
 		id = USA_60s_Operation_POWER_PACK
-		icon = GFX_goal_unknown
+		icon = GFX_Operation_Power_Pack
 		search_filters = {IC_FILTER}
 		cost = 1
 		offset = { x = 9 trigger = { tag = USA } }	
@@ -228,7 +228,7 @@
 	}
 	shared_focus = {
 		id = USA_60s_Crush_The_Dominican_Rebellion
-		icon = GFX_goal_unknown
+		icon = GFX_SwingtheSword
 		search_filters = {IC_FILTER}
 		cost = 1
 		offset = { x = 9 trigger = { tag = USA } }	
@@ -282,7 +282,7 @@
 	}
 	shared_focus = {
 		id = USA_60s_Train_Brazilian_Deathsquads
-		icon = GFX_goal_unknown
+		icon = GFX_CrushResistance
 		search_filters = {IC_FILTER}
 		cost = 1
 		offset = { x = 8 trigger = { tag = USA } }	
@@ -322,7 +322,7 @@
 	}
 	shared_focus = {
 		id = USA_60s_Project_MKUltra
-		icon = GFX_goal_unknown
+		icon = GFX_Operation_MKULTRA
 		search_filters = {IC_FILTER}
 		cost = 1
 		offset = { x = 8 trigger = { tag = USA } }	
@@ -499,7 +499,7 @@
 	}
 	shared_focus = {
 		id = USA_60s_African_and_European_Desks
-		icon = GFX_goal_unknown
+		icon = GFX_American_Influence_Europe
 		search_filters = {IC_FILTER}
 		cost = 1
 		offset = { x = 8 trigger = { tag = USA } }	
@@ -529,12 +529,12 @@
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_0
 					amount = 3500
-					producer = USA
+					producer = CAP
 				}		
 				add_equipment_to_stockpile = {
 					type = motorized_equipment
 					amount = 500
-					producer = USA
+					producer = CAP
 				}	
 			}
 		}
@@ -576,12 +576,12 @@
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_0
 					amount = 3500
-					producer = USA
+					producer = CAP
 				}		
 				add_equipment_to_stockpile = {
 					type = motorized_equipment
 					amount = 500
-					producer = USA
+					producer = CAP
 				}	
 			}
 		}
@@ -603,19 +603,19 @@
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_0
 					amount = 3500
-					producer = USA
+					producer = CAP
 				}		
 				add_equipment_to_stockpile = {
 					type = motorized_equipment
 					amount = 500
-					producer = USA
+					producer = CAP
 				}	
 			}
 		}
 	}
 	shared_focus = {
 		id = USA_60s_Aid_the_FNLA
-		icon = GFX_goal_unknown
+		icon = GFX_American_Influence_in_Africa
 		search_filters = {IC_FILTER}
 		cost = 1
 		offset = { x = 8 trigger = { tag = USA } }	
@@ -632,12 +632,12 @@
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_0
 					amount = 3500
-					producer = USA
+					producer = CAP
 				}		
 				add_equipment_to_stockpile = {
 					type = motorized_equipment
 					amount = 500
-					producer = USA
+					producer = CAP
 				}	
 			}
 		}
@@ -658,19 +658,19 @@
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_0
 					amount = 3500
-					producer = USA
+					producer = CAP
 				}		
 				add_equipment_to_stockpile = {
 					type = motorized_equipment
 					amount = 500
-					producer = USA
+					producer = CAP
 				}	
 			}
 		}
 	}
 	shared_focus = {
 		id = USA_60s_Asian_Desk
-		icon = GFX_goal_unknown
+		icon = GFX_American_Influence_Asia
 		search_filters = {IC_FILTER}
 		cost = 1
 		offset = { x = 8 trigger = { tag = USA } }	
@@ -685,7 +685,7 @@
 	}
 	shared_focus = {
 		id = USA_60s_The_Secret_War
-		icon = GFX_goal_unknown
+		icon = GFX_The_Secret_War
 		search_filters = {IC_FILTER}
 		cost = 1
 		offset = { x = 8 trigger = { tag = USA } }	
@@ -702,7 +702,7 @@
 	}
 	shared_focus = {
 		id = USA_60s_Operation_PINCUSHION
-		icon = GFX_goal_unknown
+		icon = GFX_Arm_the_Hmong
 		search_filters = {IC_FILTER}
 		cost = 1
 		offset = { x = 8 trigger = { tag = USA } }	
@@ -729,7 +729,7 @@
 	}
 	shared_focus = {
 		id = USA_60s_Operation_MOMENTUM
-		icon = GFX_goal_unknown
+		icon = GFX_Arm_Laos
 		search_filters = {IC_FILTER}
 		cost = 1
 		offset = { x = 8 trigger = { tag = USA } }	
@@ -773,19 +773,19 @@
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_0
 					amount = 3500
-					producer = USA
+					producer = CAP
 				}		
 				add_equipment_to_stockpile = {
 					type = motorized_equipment
 					amount = 500
-					producer = USA
+					producer = CAP
 				}	
 			}
 		}
 	}
 	shared_focus = {
 		id = USA_60s_Air_America_Drug_Smuggling
-		icon = GFX_goal_unknown
+		icon = GFX_South_East_Asian_Drug_Smuggling
 		search_filters = {IC_FILTER}
 		cost = 1
 		offset = { x = 8 trigger = { tag = USA } }	
@@ -805,7 +805,7 @@
 	}
 	shared_focus = {
 		id = USA_60s_Aid_Royalist_Drug_Smuggling
-		icon = GFX_goal_unknown
+		icon = GFX_Golden_Triangle_Opium_Flower
 		search_filters = {IC_FILTER}
 		cost = 1
 		offset = { x = 8 trigger = { tag = USA } }	
@@ -842,7 +842,7 @@
 	}
 	shared_focus = {
 		id = USA_60s_Provide_Hit_List_to_Indonesia
-		icon = GFX_goal_unknown
+		icon = GFX_generic_arrests
 		search_filters = {IC_FILTER}
 		cost = 1
 		offset = { x = 8 trigger = { tag = USA } }	
@@ -862,7 +862,7 @@
 	}
 	shared_focus = {
 		id = USA_60s_Aid_SAVAK
-		icon = GFX_goal_unknown
+		icon = GFX_American_Influence_Middle_East
 		search_filters = {IC_FILTER}
 		cost = 1
 		offset = { x = 8 trigger = { tag = USA } }	
@@ -896,12 +896,12 @@
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_0
 					amount = 3500
-					producer = USA
+					producer = CAP
 				}		
 				add_equipment_to_stockpile = {
 					type = motorized_equipment
 					amount = 500
-					producer = USA
+					producer = CAP
 				}	
 			}
 		}
@@ -922,12 +922,12 @@
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_0
 					amount = 5000
-					producer = USA
+					producer = CAP
 				}		
 				add_equipment_to_stockpile = {
 					type = motorized_equipment
 					amount = 500
-					producer = USA
+					producer = CAP
 				}	
 			}
 		}
@@ -952,12 +952,12 @@
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_0
 					amount = 3500
-					producer = USA
+					producer = CAP
 				}		
 				add_equipment_to_stockpile = {
 					type = motorized_equipment
 					amount = 500
-					producer = USA
+					producer = CAP
 				}	
 			}
 		}
@@ -1073,7 +1073,7 @@
 	}
 	shared_focus = {
 		id = USA_60s_Bribe_the_An_Quang_Buddhists
-		icon = GFX_goal_unknown
+		icon = GFX_Bribery_Alt
 		search_filters = {IC_FILTER}
 		cost = 1
 		offset = { x = 8 trigger = { tag = USA } }	
@@ -1092,7 +1092,7 @@
 	}
 	shared_focus = {
 		id = USA_60s_Launch_the_PHOENIX_Program
-		icon = GFX_goal_unknown
+		icon = GFX_Phoenix_Program
 		search_filters = {IC_FILTER}
 		cost = 1
 		offset = { x = 8 trigger = { tag = USA } }	

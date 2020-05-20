@@ -168,10 +168,11 @@ technologies = {
 	
 	logistics_I = {
 	
-		global_building_slots_factor = 0.05
 		industrial_capacity_factory = 0.02
 		industrial_capacity_dockyard = 0.02
+		repair_speed_factor = 0.03
 		max_fuel_factor = 0.05
+		boost_resistance_factor = 0.05
 	
 		path = {
 			leads_to_tech = logistics_II 
@@ -182,7 +183,7 @@ technologies = {
 			custom_effect_tooltip = industry_logistics_tt
 		}
 	
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1950
 		folder = {
 			name = industry_folder
@@ -203,10 +204,11 @@ technologies = {
 
 	logistics_II = {
 	
-		global_building_slots_factor = 0.05
 		industrial_capacity_factory = 0.02
 		industrial_capacity_dockyard = 0.02
+		repair_speed_factor = 0.03
 		max_fuel_factor = 0.05
+		boost_resistance_factor = 0.05
 	
 		path = {
 			leads_to_tech = logistics_III 
@@ -217,7 +219,7 @@ technologies = {
 			custom_effect_tooltip = industry_logistics_tt
 		}
 	
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1955
 		folder = {
 			name = industry_folder
@@ -237,10 +239,11 @@ technologies = {
 	
 	logistics_III = {
 	
-		global_building_slots_factor = 0.05
 		industrial_capacity_factory = 0.02
 		industrial_capacity_dockyard = 0.02
+		repair_speed_factor = 0.03
 		max_fuel_factor = 0.05
+		boost_resistance_factor = 0.05
 	
 		path = {
 			leads_to_tech = logistics_IV_A 
@@ -256,7 +259,7 @@ technologies = {
 			custom_effect_tooltip = industry_logistics_tt
 		}
 	
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1960
 		folder = {
 			name = industry_folder
@@ -276,11 +279,12 @@ technologies = {
 	
 	logistics_IV_A = {
 	
-		global_building_slots_factor = 0.075
 		industrial_capacity_factory = 0.02
 		industrial_capacity_dockyard = 0.02
+		repair_speed_factor = 0.03
 		equipment_conversion_speed = 0.15
 		max_fuel_factor = 0.05
+		boost_resistance_factor = 0.05
 		
 		path = {
 			leads_to_tech = logistics_V_A 
@@ -291,7 +295,7 @@ technologies = {
 			custom_effect_tooltip = industry_logistics_tt
 		}
 
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1965
 		allow = {
 			NOT = { is_researching_technology = logistics_IV_B }
@@ -316,11 +320,12 @@ technologies = {
 	
 	logistics_IV_B = {
 	
-		global_building_slots_factor = 0.05
 		industrial_capacity_factory = 0.04
 		industrial_capacity_dockyard = 0.04
+		repair_speed_factor = 0.03
 		equipment_conversion_speed = 0.10
 		max_fuel_factor = 0.05
+		boost_resistance_factor = 0.05
 		
 		path = {
 			leads_to_tech = logistics_V_B 
@@ -331,7 +336,7 @@ technologies = {
 			custom_effect_tooltip = industry_logistics_tt
 		}
 
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1965
 		allow = {
 			NOT = { is_researching_technology = logistics_IV_A }
@@ -353,14 +358,15 @@ technologies = {
 			production
 		}
 	}
-		
+	
 	logistics_V_A = {
 	
-		global_building_slots_factor = 0.075
 		industrial_capacity_factory = 0.02
 		industrial_capacity_dockyard = 0.02
+		repair_speed_factor = 0.03
 		equipment_conversion_speed = 0.15
 		max_fuel_factor = 0.05
+		boost_resistance_factor = 0.05
 		
 		path = {
 			leads_to_tech = logistics_VI 
@@ -375,7 +381,7 @@ technologies = {
 			custom_effect_tooltip = industry_logistics_tt
 		}
 
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1970
 
 		folder = {
@@ -396,11 +402,12 @@ technologies = {
 		
 	logistics_V_B = {
 	
-		global_building_slots_factor = 0.05
 		industrial_capacity_factory = 0.04
 		industrial_capacity_dockyard = 0.04
+		repair_speed_factor = 0.03
 		equipment_conversion_speed = 0.10
 		max_fuel_factor = 0.05
+		boost_resistance_factor = 0.05
 		
 		path = {
 			leads_to_tech = logistics_VI 
@@ -415,7 +422,7 @@ technologies = {
 			custom_effect_tooltip = industry_logistics_tt
 		}
 
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1970
 
 		folder = {
@@ -433,12 +440,13 @@ technologies = {
 			production
 		}
 	}
-		
+	
 	logistics_VI = {
 	
-		global_building_slots_factor = 0.05
 		industrial_capacity_factory = 0.02
 		industrial_capacity_dockyard = 0.02
+		repair_speed_factor = 0.03
+		boost_resistance_factor = 0.05
 		
 		path = {
 			leads_to_tech = logistics_VII_A 
@@ -454,7 +462,7 @@ technologies = {
 			custom_effect_tooltip = industry_logistics_tt
 		}
 	
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1975
 
 		folder = {
@@ -491,7 +499,7 @@ technologies = {
 			custom_effect_tooltip = industry_logistics_tt
 		}
 	
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1975
 
 		folder = {
@@ -517,11 +525,12 @@ technologies = {
 	
 	logistics_VII_A = {
 	
-		global_building_slots_factor = 0.075
 		industrial_capacity_factory = 0.02
 		industrial_capacity_dockyard = 0.02
+		repair_speed_factor = 0.03
 		equipment_conversion_speed = 0.15
 		max_fuel_factor = 0.05
+		boost_resistance_factor = 0.05
 		
 		path = {
 			leads_to_tech = logistics_VIII_A 
@@ -536,7 +545,7 @@ technologies = {
 			interwebs_I = 1
 		}
 
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1980
 		allow = {
 			NOT = { is_researching_technology = logistics_VII_B }
@@ -561,11 +570,12 @@ technologies = {
 		
 	logistics_VII_B = {
 	
-		global_building_slots_factor = 0.05
 		industrial_capacity_factory = 0.04
 		industrial_capacity_dockyard = 0.04
+		repair_speed_factor = 0.03
 		equipment_conversion_speed = 0.10
 		max_fuel_factor = 0.05
+		boost_resistance_factor = 0.05
 		
 		path = {
 			leads_to_tech = logistics_VIII_B 
@@ -580,7 +590,7 @@ technologies = {
 			interwebs_I = 1
 		}
 
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1980
 		allow = {
 			NOT = { is_researching_technology = logistics_VII_A }
@@ -606,11 +616,12 @@ technologies = {
 	
 	logistics_VIII_A = {
 	
-		global_building_slots_factor = 0.075
 		industrial_capacity_factory = 0.02
 		industrial_capacity_dockyard = 0.02
+		repair_speed_factor = 0.03
 		equipment_conversion_speed = 0.15
 		max_fuel_factor = 0.05
+		boost_resistance_factor = 0.05
 		
 		path = {
 			leads_to_tech = logistics_IX
@@ -625,7 +636,7 @@ technologies = {
 			interwebs_II = 1
 		}
 
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1985
 		
 		folder = {
@@ -646,11 +657,12 @@ technologies = {
 		
 	logistics_VIII_B = {
 	
-		global_building_slots_factor = 0.05
 		industrial_capacity_factory = 0.04
 		industrial_capacity_dockyard = 0.04
+		repair_speed_factor = 0.03
 		equipment_conversion_speed = 0.10
 		max_fuel_factor = 0.05
+		boost_resistance_factor = 0.05
 		
 		path = {
 			leads_to_tech = logistics_IX 
@@ -665,7 +677,7 @@ technologies = {
 			interwebs_II = 1
 		}
 	
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1985
 		
 		folder = {
@@ -686,10 +698,11 @@ technologies = {
 	
 	logistics_IX = {
 	
-		global_building_slots_factor = 0.05
 		industrial_capacity_factory = 0.02
 		industrial_capacity_dockyard = 0.02
+		repair_speed_factor = 0.03
 		max_fuel_factor = 0.05
+		boost_resistance_factor = 0.05
 		
 		path = {
 			leads_to_tech = logistics_X
@@ -704,7 +717,7 @@ technologies = {
 			interwebs_IV = 1
 		}
 		
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1990
 		
 		folder = {
@@ -725,12 +738,13 @@ technologies = {
 	
 	logistics_X = {
 	
-		global_building_slots_factor = 0.05
 		industrial_capacity_factory = 0.02
 		industrial_capacity_dockyard = 0.02
+		repair_speed_factor = 0.03
 		max_fuel_factor = 0.05
+		boost_resistance_factor = 0.05
 		
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1995
 		
 		path = {
@@ -764,12 +778,13 @@ technologies = {
 	
 	logistics_XI = {
 	
-		global_building_slots_factor = 0.05
 		industrial_capacity_factory = 0.02
 		industrial_capacity_dockyard = 0.02
+		repair_speed_factor = 0.03
 		max_fuel_factor = 0.05
+		boost_resistance_factor = 0.05
 		
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 2000
 		
 		path = {
@@ -802,13 +817,13 @@ technologies = {
 	}
 	
 	logistics_XII = {
-	
-		global_building_slots_factor = 0.05
 		industrial_capacity_factory = 0.02
 		industrial_capacity_dockyard = 0.02
+		repair_speed_factor = 0.03
 		max_fuel_factor = 0.05
+		boost_resistance_factor = 0.05
 		
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 2005
 		
 		dependencies = {
@@ -843,7 +858,6 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.05	
 		industrial_capacity_factory = 0.02
 		industrial_capacity_dockyard = 0.02
-		repair_speed_factor = 0.03
 	
 		path = {
 			leads_to_tech = production_efficiency_II 
@@ -854,7 +868,7 @@ technologies = {
 			custom_effect_tooltip = industry_production_efficiency_tt
 		}
 	
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1950
 		folder = {
 			name = industry_folder
@@ -877,7 +891,6 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.05	
 		industrial_capacity_factory = 0.02
 		industrial_capacity_dockyard = 0.02
-		repair_speed_factor = 0.03
 	
 		path = {
 			leads_to_tech = production_efficiency_III 
@@ -888,7 +901,7 @@ technologies = {
 			custom_effect_tooltip = industry_production_efficiency_tt
 		}
 	
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1955
 		folder = {
 			name = industry_folder
@@ -911,7 +924,6 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.05	
 		industrial_capacity_factory = 0.02
 		industrial_capacity_dockyard = 0.02
-		repair_speed_factor = 0.03
 	
 		path = {
 			leads_to_tech = production_efficiency_IV 
@@ -922,7 +934,7 @@ technologies = {
 			custom_effect_tooltip = industry_production_efficiency_tt
 		}
 	
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1960
 		folder = {
 			name = industry_folder
@@ -945,7 +957,6 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.05	
 		industrial_capacity_factory = 0.02
 		industrial_capacity_dockyard = 0.02
-		repair_speed_factor = 0.03
 	
 		path = {
 			leads_to_tech = production_efficiency_V
@@ -956,7 +967,7 @@ technologies = {
 			custom_effect_tooltip = industry_production_efficiency_tt
 		}
 	
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1965
 		folder = {
 			name = industry_folder
@@ -979,7 +990,6 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.05	
 		industrial_capacity_factory = 0.02
 		industrial_capacity_dockyard = 0.02
-		repair_speed_factor = 0.03
 	
 		path = {
 			leads_to_tech = production_efficiency_VI
@@ -995,7 +1005,7 @@ technologies = {
 			research_cost_coeff = 1.0
 		}
 		
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1970
 		folder = {
 			name = industry_folder
@@ -1018,7 +1028,6 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.05	
 		industrial_capacity_factory = 0.02
 		industrial_capacity_dockyard = 0.02
-		repair_speed_factor = 0.03
 	
 		path = {
 			leads_to_tech = production_efficiency_VII
@@ -1033,7 +1042,7 @@ technologies = {
 			software_V = 1
 		}
 		
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1975
 		folder = {
 			name = industry_folder
@@ -1056,7 +1065,6 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.05	
 		industrial_capacity_factory = 0.02
 		industrial_capacity_dockyard = 0.02
-		repair_speed_factor = 0.03
 	
 		path = {
 			leads_to_tech = production_efficiency_VIII
@@ -1071,7 +1079,7 @@ technologies = {
 			software_VI = 1
 		}
 	
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1980
 		folder = {
 			name = industry_folder
@@ -1094,7 +1102,6 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.05	
 		industrial_capacity_factory = 0.02
 		industrial_capacity_dockyard = 0.02
-		repair_speed_factor = 0.03
 	
 		path = {
 			leads_to_tech = production_efficiency_IX
@@ -1109,7 +1116,7 @@ technologies = {
 			software_VII = 1
 		}
 	
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1985
 		folder = {
 			name = industry_folder
@@ -1132,7 +1139,6 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.05	
 		industrial_capacity_factory = 0.02
 		industrial_capacity_dockyard = 0.02
-		repair_speed_factor = 0.03
 	
 		path = {
 			leads_to_tech = production_efficiency_X
@@ -1147,7 +1153,7 @@ technologies = {
 			software_VIII = 1
 		}
 	
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1990
 		folder = {
 			name = industry_folder
@@ -1170,10 +1176,9 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.05	
 		industrial_capacity_factory = 0.02
 		industrial_capacity_dockyard = 0.02
-		repair_speed_factor = 0.03
 	
 	
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1995
 		folder = {
 			name = industry_folder
@@ -1210,7 +1215,6 @@ technologies = {
 	industrial_robots_I = {
 	
 		production_factory_max_efficiency_factor = 0.05	
-		repair_speed_factor = 0.03
 
 		path = {
 			leads_to_tech = industrial_robots_II
@@ -1225,7 +1229,7 @@ technologies = {
 			hardware_V = 1
 		}
 		
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1975
 		folder = {
 			name = industry_folder
@@ -1245,8 +1249,7 @@ technologies = {
 	
 	industrial_robots_II = {
 	
-		production_factory_max_efficiency_factor = 0.05	
-		repair_speed_factor = 0.03
+		production_factory_max_efficiency_factor = 0.05
 		
 		path = {
 			leads_to_tech = industrial_robots_III
@@ -1261,7 +1264,7 @@ technologies = {
 			hardware_VI = 1
 		}
 		
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1980
 		folder = {
 			name = industry_folder
@@ -1281,8 +1284,7 @@ technologies = {
 	
 	industrial_robots_III = {
 	
-		production_factory_max_efficiency_factor = 0.05	
-		repair_speed_factor = 0.03
+		production_factory_max_efficiency_factor = 0.05
 		
 		path = {
 			leads_to_tech = industrial_robots_IV
@@ -1297,7 +1299,7 @@ technologies = {
 			hardware_VII = 1
 		}
 		
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1985
 		folder = {
 			name = industry_folder
@@ -1317,8 +1319,7 @@ technologies = {
 	
 	industrial_robots_IV = {
 	
-		production_factory_max_efficiency_factor = 0.05	
-		repair_speed_factor = 0.03
+		production_factory_max_efficiency_factor = 0.05
 		
 		path = {
 			leads_to_tech = industrial_robots_V
@@ -1333,7 +1334,7 @@ technologies = {
 			hardware_VIII = 1
 		}
 		
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1990
 		folder = {
 			name = industry_folder
@@ -1353,14 +1354,13 @@ technologies = {
 	
 	industrial_robots_V = {
 	
-		production_factory_max_efficiency_factor = 0.05	
-		repair_speed_factor = 0.03
+		production_factory_max_efficiency_factor = 0.05
 		
 		on_research_complete = {
 			custom_effect_tooltip = industry_production_efficiency_tt
 		}
 		
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1995
 		folder = {
 			name = industry_folder
@@ -1394,7 +1394,6 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.05	
 		industrial_capacity_factory = 0.02
 		industrial_capacity_dockyard = 0.02
-		repair_speed_factor = 0.03
 		
 		on_research_complete = {
 			custom_effect_tooltip = industry_production_efficiency_tt
@@ -1407,7 +1406,7 @@ technologies = {
 			hardware_X = 1
 		}
 	
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 2000
 		folder = {
 			name = industry_folder
@@ -1435,13 +1434,12 @@ technologies = {
 		production_factory_max_efficiency_factor = 0.05	
 		industrial_capacity_factory = 0.02
 		industrial_capacity_dockyard = 0.02
-		repair_speed_factor = 0.03
 		
 		on_research_complete = {
 			custom_effect_tooltip = industry_production_efficiency_tt
 		}
 
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 2005
 		folder = {
 			name = industry_folder
@@ -1480,7 +1478,7 @@ technologies = {
 			research_cost_coeff = 1.0
 		}
 	
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1950
 		folder = {
 			name = industry_folder
@@ -1516,7 +1514,7 @@ technologies = {
 			research_cost_coeff = 1.0
 		}
 
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1955
 		folder = {
 			name = industry_folder
@@ -1547,7 +1545,7 @@ technologies = {
 			research_cost_coeff = 1.0
 		}
 		
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1960
 		folder = {
 			name = industry_folder
@@ -1584,7 +1582,7 @@ technologies = {
 			research_cost_coeff = 1.0
 		}
 		
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1960
 		folder = {
 			name = industry_folder
@@ -1630,7 +1628,7 @@ technologies = {
 			research_cost_coeff = 1.0
 		}
 		
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1970
 		folder = {
 			name = industry_folder
@@ -1656,7 +1654,7 @@ technologies = {
 		MONTHLY_POPULATION = 0.05
 		navy_refit_speed = 0.05
 		
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1970
 		folder = {
 			name = industry_folder
@@ -1692,7 +1690,7 @@ technologies = {
 			NOT = { has_tech = management_V_B }
 		}
 
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1975
 		folder = {
 			name = industry_folder
@@ -1729,7 +1727,7 @@ technologies = {
 			NOT = { has_tech = management_V_A }
 		}
 		
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1975
 		folder = {
 			name = industry_folder
@@ -1765,7 +1763,7 @@ technologies = {
 			research_cost_coeff = 1.0
 		}
 
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1985
 		folder = {
 			name = industry_folder
@@ -1801,7 +1799,7 @@ technologies = {
 			NOT = { is_researching_technology = management_VII_B }
 			NOT = { has_tech = management_VII_B }
 		}
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1990
 		folder = {
 			name = industry_folder
@@ -1837,7 +1835,7 @@ technologies = {
 			NOT = { has_tech = management_VII_A }
 		}
 
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1990
 		folder = {
 			name = industry_folder
@@ -1864,7 +1862,7 @@ technologies = {
 		navy_refit_speed = 0.05
 	
 		
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1995
 		folder = {
 			name = industry_folder
@@ -1899,7 +1897,7 @@ technologies = {
 			custom_effect_tooltip = industry_plastics_III_tt
 		}
 		
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 2000
 		folder = {
 			name = industry_folder
@@ -1930,7 +1928,7 @@ technologies = {
 		industrial_capacity_dockyard = 0.02
 		navy_refit_speed = 0.05
 		
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 2005
 		folder = {
 			name = industry_folder
@@ -1953,8 +1951,6 @@ technologies = {
 	
 	agriculture_I = {
 	
-		global_building_slots_factor = 0.05
-	
 		path = {
 			leads_to_tech = agriculture_II 
 			research_cost_coeff = 1.0
@@ -1968,7 +1964,7 @@ technologies = {
 			research_cost_coeff = 1.0
 		}
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 1950
 		folder = {
 			name = industry_folder
@@ -1992,8 +1988,6 @@ technologies = {
 
 	agriculture_II = {
 	
-		global_building_slots_factor = 0.05
-	
 		path = {
 			leads_to_tech = agriculture_III 
 			research_cost_coeff = 1.0
@@ -2007,7 +2001,7 @@ technologies = {
 			research_cost_coeff = 1.0
 		}
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 1960
 		folder = {
 			name = industry_folder
@@ -2030,8 +2024,6 @@ technologies = {
 	
 	agriculture_III = {
 	
-		global_building_slots_factor = 0.05
-	
 		path = {
 			leads_to_tech = agriculture_IV 
 			research_cost_coeff = 1.0
@@ -2045,7 +2037,7 @@ technologies = {
 			research_cost_coeff = 1.0
 		}
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 1970
 		folder = {
 			name = industry_folder
@@ -2068,8 +2060,6 @@ technologies = {
 	
 	agriculture_IV = {
 	
-		global_building_slots_factor = 0.05
-	
 		path = {
 			leads_to_tech = agriculture_V 
 			research_cost_coeff = 1.0
@@ -2083,7 +2073,7 @@ technologies = {
 			research_cost_coeff = 1.0
 		}
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 1980
 		folder = {
 			name = industry_folder
@@ -2105,8 +2095,6 @@ technologies = {
 	}
 	
 	agriculture_V = {
-	
-		global_building_slots_factor = 0.05
 		
 		path = {
 			leads_to_tech = agriculture_VI
@@ -2125,7 +2113,7 @@ technologies = {
 			research_cost_coeff = 1.0
 		}
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 1990
 		folder = {
 			name = industry_folder
@@ -2147,8 +2135,6 @@ technologies = {
 	}
 	
 	agriculture_VI = {
-	
-		global_building_slots_factor = 0.05
 		
 		path = {
 			leads_to_tech = water_VI
@@ -2159,7 +2145,7 @@ technologies = {
 			research_cost_coeff = 1.0
 		}
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 2000
 		folder = {
 			name = industry_folder
@@ -2667,7 +2653,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1950
 		folder = {
 			name = industry_folder
@@ -2699,7 +2685,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1955
 		folder = {
 			name = industry_folder
@@ -2726,7 +2712,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1960
 		folder = {
 			name = industry_folder
@@ -2758,7 +2744,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1965
 		folder = {
 			name = industry_folder
@@ -2785,7 +2771,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1970
 		folder = {
 			name = industry_folder
@@ -2817,7 +2803,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1975
 		folder = {
 			name = industry_folder
@@ -2845,7 +2831,7 @@ technologies = {
 		}
 		
 		
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1980
 		folder = {
 			name = industry_folder
@@ -2877,7 +2863,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1985
 		folder = {
 			name = industry_folder
@@ -2905,7 +2891,7 @@ technologies = {
 		}
 		
 		
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1990
 		folder = {
 			name = industry_folder
@@ -2941,7 +2927,7 @@ technologies = {
 			software_IX = 1
 		}
 		
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1995
 		
 		folder = {
@@ -2973,7 +2959,7 @@ technologies = {
 			interwebs_VII = 1
 		}
 		
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 2000
 		
 		folder = {
@@ -3001,7 +2987,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 2005
 		
 		folder = {
@@ -3025,7 +3011,7 @@ technologies = {
 	
 		#on_research_complete = { add_to_variable = { resourceEfficiencyGain = 0.10  }}
 	
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1955
 		folder = {
 			name = industry_folder
@@ -3052,7 +3038,7 @@ technologies = {
 	
 		#on_research_complete = { add_to_variable = { resourceEfficiencyGain = 0.10  }}
 	
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1965
 		folder = {
 			name = industry_folder
@@ -3078,7 +3064,7 @@ technologies = {
 	
 		#on_research_complete = { add_to_variable = { resourceEfficiencyGain = 0.10  }}
 	
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1975
 		folder = {
 			name = industry_folder
@@ -3104,7 +3090,7 @@ technologies = {
 	
 		#on_research_complete = { add_to_variable = { resourceEfficiencyGain = 0.10  }}
 	
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1985
 		folder = {
 			name = industry_folder
@@ -3130,7 +3116,7 @@ technologies = {
 	
 		#on_research_complete = { add_to_variable = { resourceEfficiencyGain = 0.10  }}
 	
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1995
 		folder = {
 			name = industry_folder
@@ -3156,7 +3142,7 @@ technologies = {
 	
 		#on_research_complete = { add_to_variable = { resourceEfficiencyGain = 0.10  }}
 	
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 2005
 		
 		folder = {
@@ -3207,7 +3193,7 @@ technologies = {
 			custom_effect_tooltip = industry_materials_tt
 		}
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 1950
 		folder = {
 			name = industry_folder
@@ -3240,12 +3226,6 @@ technologies = {
 				resource = aluminium 
 				amount = 1
 			}
-			modify_building_resources = {
-				building = steel_factory
-				resource = electricity
-				amount = -1
-			}
-			
 		}
 	
 		path = {
@@ -3257,7 +3237,7 @@ technologies = {
 			custom_effect_tooltip = industry_materials_tt
 		}
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 1960
 		folder = {
 			name = industry_folder
@@ -3299,7 +3279,7 @@ technologies = {
 			custom_effect_tooltip = industry_materials_tt
 		}
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 1970
 		folder = {
 			name = industry_folder
@@ -3326,11 +3306,6 @@ technologies = {
 				resource = steel
 				amount = 1
 			}
-			modify_building_resources = {
-				building = steel_factory
-				resource = electricity
-				amount = -1
-			}
 		}
 		
 		on_research_complete = {
@@ -3346,7 +3321,7 @@ technologies = {
 			custom_effect_tooltip = industry_materials_tt
 		}
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 1980
 		folder = {
 			name = industry_folder
@@ -3375,7 +3350,7 @@ technologies = {
 			}
 		}
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 1990
 		
 		folder = {
@@ -3417,18 +3392,13 @@ technologies = {
 				resource = aluminium 
 				amount = 1
 			}
-			modify_building_resources = {
-				building = steel_factory
-				resource = electricity
-				amount = -1
-			}
 		}
 		
 		on_research_complete = {
 			custom_effect_tooltip = industry_materials_tt
 		}
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 2000
 		
 		folder = {
@@ -3479,7 +3449,7 @@ technologies = {
 			custom_effect_tooltip = industry_chemistry_tt
 		}
 		
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 1950
 		folder = {
 			name = industry_folder
@@ -3508,11 +3478,6 @@ technologies = {
 				amount = 1
 			}
 			modify_building_resources = {
-				building = synthetic_refinery
-				resource = electricity
-				amount = -1
-			}
-			modify_building_resources = {
 				building = tungsten_factory
 				resource = tungsten
 				amount = 1
@@ -3534,7 +3499,7 @@ technologies = {
 			custom_effect_tooltip = industry_chemistry_tt
 		}
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 1965
 		folder = {
 			name = industry_folder
@@ -3577,7 +3542,7 @@ technologies = {
 			custom_effect_tooltip = industry_chemistry_tt
 		}
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 1975
 		folder = {
 			name = industry_folder
@@ -3605,19 +3570,9 @@ technologies = {
 				amount = 1
 			}
 			modify_building_resources = {
-				building = synthetic_refinery
-				resource = electricity
-				amount = -1
-			}
-			modify_building_resources = {
 				building = tungsten_factory
 				resource = tungsten
 				amount = 1
-			}
-			modify_building_resources = {
-				building = tungsten_factory
-				resource = electricity
-				amount = -1
 			}
 		}
 	
@@ -3630,7 +3585,7 @@ technologies = {
 			custom_effect_tooltip = industry_chemistry_tt
 		}
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 1985
 		folder = {
 			name = industry_folder
@@ -3668,7 +3623,7 @@ technologies = {
 			custom_effect_tooltip = industry_chemistry_tt
 		}
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 1995
 		folder = {
 			name = industry_folder
@@ -3695,18 +3650,13 @@ technologies = {
 				resource = oil
 				amount = 1
 			}
-			modify_building_resources = {
-				building = synthetic_refinery
-				resource = electricity
-				amount = -1
-			}
 		}
 		
 		on_research_complete = {
 			custom_effect_tooltip = industry_chemistry_tt
 		}
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 2005
 		folder = {
 			name = industry_folder
@@ -3741,7 +3691,7 @@ technologies = {
 			custom_effect_tooltip = industry_plastics_tt
 		}
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 1960
 		folder = {
 			name = industry_folder
@@ -3775,7 +3725,7 @@ technologies = {
 			custom_effect_tooltip = industry_plastics_tt
 		}
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 1970
 		folder = {
 			name = industry_folder
@@ -3812,7 +3762,7 @@ technologies = {
 			research_cost_coeff = 1.0
 		}
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 1980
 		folder = {
 			name = industry_folder
@@ -3845,7 +3795,7 @@ technologies = {
 			custom_effect_tooltip = industry_plastics_tt
 		}
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 1990
 		folder = {
 			name = industry_folder
@@ -3877,7 +3827,7 @@ technologies = {
 			custom_effect_tooltip = industry_plastics_tt
 		}
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 2000
 		folder = {
 			name = industry_folder
@@ -3914,7 +3864,7 @@ technologies = {
 		production_speed_fossil_fuel_powerplant_factor = 0.05
 		production_speed_nuclear_powerplant_factor = 0.05
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 1950
 		folder = {
 			name = industry_folder
@@ -3956,7 +3906,7 @@ technologies = {
 		production_speed_fossil_fuel_powerplant_factor = 0.05
 		production_speed_nuclear_powerplant_factor = 0.05
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 1960
 		folder = {
 			name = industry_folder
@@ -3997,7 +3947,7 @@ technologies = {
 		production_speed_fossil_fuel_powerplant_factor = 0.05
 		production_speed_nuclear_powerplant_factor = 0.05
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 1970
 		folder = {
 			name = industry_folder
@@ -4034,7 +3984,7 @@ technologies = {
 		production_speed_fossil_fuel_powerplant_factor = 0.05
 		production_speed_nuclear_powerplant_factor = 0.05
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 1980
 		folder = {
 			name = industry_folder
@@ -4075,7 +4025,7 @@ technologies = {
 		production_speed_fossil_fuel_powerplant_factor = 0.05
 		production_speed_nuclear_powerplant_factor = 0.05
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 1990
 		folder = {
 			name = industry_folder
@@ -4112,7 +4062,7 @@ technologies = {
 		production_speed_fossil_fuel_powerplant_factor = 0.05
 		production_speed_nuclear_powerplant_factor = 0.05
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 2000
 		folder = {
 			name = industry_folder
@@ -4144,7 +4094,7 @@ technologies = {
 			grid_I = 1
 		}
 	
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1955
 		folder = {
 			name = industry_folder
@@ -4187,7 +4137,7 @@ technologies = {
 			renewables_I = 1
 		}
 	
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1965
 		folder = {
 			name = industry_folder
@@ -4224,7 +4174,7 @@ technologies = {
 			renewables_II = 1
 		}
 	
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1975
 		folder = {
 			name = industry_folder
@@ -4263,7 +4213,7 @@ technologies = {
 			renewables_III = 1
 		}
 	
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1985
 		folder = {
 			name = industry_folder
@@ -4305,7 +4255,7 @@ technologies = {
 			level = 5
 		}
 	
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1995
 		folder = {
 			name = industry_folder
@@ -4347,7 +4297,7 @@ technologies = {
 			}
 		}
 	
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 2005
 		folder = {
 			name = industry_folder
@@ -4404,14 +4354,14 @@ technologies = {
 			modify_building_resources = {
 				building = industrial_complex
 				resource = electricity
-				amount = 0.2
+				amount = 0.1
 			}
 		}
 		on_research_complete = {
 			modify_building_resources = {
 				building = office_park
 				resource = electricity
-				amount = 0.2
+				amount = 0.1
 			}
 		}
 		
@@ -4419,7 +4369,7 @@ technologies = {
 			custom_effect_tooltip = industry_ecoenergy_I_tt
 		}
 	
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1955
 		folder = {
 			name = industry_folder
@@ -4452,14 +4402,14 @@ technologies = {
 			modify_building_resources = {
 				building = industrial_complex
 				resource = electricity
-				amount = 0.2
+				amount = 0.1
 			}
 		}
 		on_research_complete = {
 			modify_building_resources = {
 				building = office_park
 				resource = electricity
-				amount = 0.2
+				amount = 0.1
 			}
 		}
 		
@@ -4467,7 +4417,7 @@ technologies = {
 			custom_effect_tooltip = industry_ecoenergy_II_tt
 		}
 	
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1965
 		folder = {
 			name = industry_folder
@@ -4499,7 +4449,7 @@ technologies = {
 			modify_building_resources = {
 				building = dockyard
 				resource = electricity
-				amount = 0.2
+				amount = 0.1
 			}
 		}
 		
@@ -4507,7 +4457,7 @@ technologies = {
 			custom_effect_tooltip = industry_ecoenergy_III_tt
 		}
 	
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1975
 		folder = {
 			name = industry_folder
@@ -4543,7 +4493,7 @@ technologies = {
 			}
 		}
 	
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1985
 		folder = {
 			name = industry_folder
@@ -4575,14 +4525,14 @@ technologies = {
 			modify_building_resources = {
 				building = industrial_complex
 				resource = electricity
-				amount = 0.2
+				amount = 0.1
 			}
 		}
 		on_research_complete = {
 			modify_building_resources = {
 				building = office_park
 				resource = electricity
-				amount = 0.2
+				amount = 0.1
 			}
 		}
 		
@@ -4590,7 +4540,7 @@ technologies = {
 			modify_building_resources = {
 				building = dockyard
 				resource = electricity
-				amount = 0.2
+				amount = 0.1
 			}
 		}
 		
@@ -4598,7 +4548,7 @@ technologies = {
 			custom_effect_tooltip = industry_ecoenergy_V_tt
 		}
 	
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 1995
 		folder = {
 			name = industry_folder
@@ -4626,7 +4576,7 @@ technologies = {
 			modify_building_resources = {
 				building = dockyard
 				resource = electricity
-				amount = 0.2
+				amount = 0.1
 			}
 		}
 		
@@ -4634,7 +4584,7 @@ technologies = {
 			custom_effect_tooltip = industry_ecoenergy_VI_tt
 		}
 	
-		research_cost = 2
+		research_cost = 2.5
 		start_year = 2005
 		folder = {
 			name = industry_folder
@@ -4940,7 +4890,7 @@ technologies = {
 			research_cost_coeff = 1.0
 		}
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 1950
 		folder = {
 			name = industry_folder
@@ -4969,7 +4919,7 @@ technologies = {
 			research_cost_coeff = 1.0
 		}
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 1960
 		folder = {
 			name = industry_folder
@@ -4997,7 +4947,7 @@ technologies = {
 			research_cost_coeff = 1.0
 		}
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 1970
 		folder = {
 			name = industry_folder
@@ -5020,7 +4970,7 @@ technologies = {
 	
 	inframunicipal_IV = {
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 1980
 		
 		path = {
@@ -5053,7 +5003,7 @@ technologies = {
 	
 	inframunicipal_V = {
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 1990
 		
 		path = {
@@ -5082,7 +5032,7 @@ technologies = {
 	
 	inframunicipal_VI = {
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 2000
 		folder = {
 			name = industry_folder
@@ -5110,7 +5060,7 @@ technologies = {
 			research_cost_coeff = 1.0
 		}
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 1955
 		
 		folder = {
@@ -5138,7 +5088,7 @@ technologies = {
 			research_cost_coeff = 1.0
 		}
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 1965
 		
 		folder = {
@@ -5165,7 +5115,7 @@ technologies = {
 			research_cost_coeff = 1.0
 		}
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 1975
 		
 		folder = {
@@ -5192,7 +5142,7 @@ technologies = {
 			research_cost_coeff = 1.0
 		}
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 1985
 		
 		folder = {
@@ -5219,7 +5169,7 @@ technologies = {
 			research_cost_coeff = 1.0
 		}
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 1995
 		
 		folder = {
@@ -5241,7 +5191,7 @@ technologies = {
 	
 	infrastate_VI = {
 	
-		research_cost = 2.5
+		research_cost = 2.5.5
 		start_year = 2005
 		
 		folder = {

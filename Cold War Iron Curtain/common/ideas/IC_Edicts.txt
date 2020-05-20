@@ -169,7 +169,7 @@ ideas = {
 				has_country_flag = legislative_mandate
 			}
 			modifier = {
-				research_speed_factor = 0.1
+				research_speed_factor = 0.05
 				MONTHLY_POPULATION = -0.1
 				#requires funding
 			}
@@ -181,7 +181,7 @@ ideas = {
 			}
 			modifier = {
 				MONTHLY_POPULATION = -0.1
-				research_speed_factor = 0.1
+				research_speed_factor = 0.05
 				#requires funding
 			}
 		}
@@ -204,7 +204,7 @@ ideas = {
 			}
 			modifier = {
 				production_speed_buildings_factor = 0.2
-				research_speed_factor = 0.2
+				research_speed_factor = 0.1
 				political_power_gain = -0.2
 				#requires funding
 			}
@@ -250,7 +250,7 @@ ideas = {
 				has_country_flag = legislative_mandate
 			}
 			modifier = {
-				production_factory_max_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
 				conscription = 0.005
 				#Requires Funding
 			}
@@ -283,7 +283,7 @@ ideas = {
 				#CANCELLED IF HOSPITALS+ [policy_healthcare_temp_3]
 			}
 			modifier = {
-				production_factory_max_efficiency_factor = 0.15
+				production_factory_max_efficiency_factor = 0.1
 				MONTHLY_POPULATION = 0.2
 				political_power_gain = -0.1
 				#requires funding

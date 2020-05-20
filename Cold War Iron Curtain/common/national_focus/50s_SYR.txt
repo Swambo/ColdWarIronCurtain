@@ -267,6 +267,10 @@ prerequisite = { focus = SYR_befriendneutralpowers }
 prerequisite = { focus = SYR_turntoeasternsupport }
 
 completion_reward = { 
+add_opinion_modifier = {
+target = SAU
+modifier = large_increase
+}
 SAU = {
 add_opinion_modifier = {
 target = SYR
@@ -308,6 +312,10 @@ prerequisite = { focus = SYR_confronttheleftistinfluence }
 
 completion_reward = { 
 remove_ideas = idea_SYR_CIA_Influence
+add_opinion_modifier = {
+target = USA
+modifier = large_increase
+}
 USA = {
 add_opinion_modifier = {
 target = SYR
@@ -386,6 +394,10 @@ available_if_capitulated = yes
 prerequisite = { focus = SYR_bowtothebaghdadpact } 
 
 completion_reward = { 
+add_opinion_modifier = {
+target = EGY
+modifier = large_increase
+}
 EGY = {
 add_opinion_modifier = {
 target = SYR
@@ -408,6 +420,10 @@ available_if_capitulated = yes
 prerequisite = { focus = SYR_restoredemocracy } 
 
 completion_reward = { 
+add_opinion_modifier = {
+target = EGY
+modifier = large_increase
+}
 EGY = {
 add_opinion_modifier = {
 target = SYR
@@ -488,13 +504,13 @@ completion_reward = {
 add_equipment_to_stockpile = {
  type = infantry_equipment_0
 amount = 1000
-producer = SOV 
+producer = CUM 
 }
 
 add_equipment_to_stockpile = {
  type = infantry_equipment_1
 amount = 1500
-producer = SOV 
+producer = CUM 
 }
 
 add_equipment_to_stockpile = {
@@ -506,13 +522,13 @@ producer = SPR
 add_equipment_to_stockpile = {
  type = mbt_equipment_0 
 amount = 100
-producer = SOV 
+producer = CUM 
 }
 
 add_equipment_to_stockpile = {
  type = ht_equipment_2 
 amount = 35
-producer = SOV 
+producer = CUM 
 }
  } 
 
@@ -673,25 +689,25 @@ completion_reward = {
 add_equipment_to_stockpile = {
  type = infantry_equipment_1
 amount = 1500
-producer = SOV 
+producer = CUM 
 }
 
 add_equipment_to_stockpile = {
  type = mbt_equipment_2 
 amount = 150
-producer = SOV 
+producer = CUM 
 }
 
 add_equipment_to_stockpile = {
  type = mechanized_equipment_3 
 amount = 100
-producer = SOV 
+producer = CUM 
 }
 
 add_equipment_to_stockpile = {
  type = mechanized_equipment_4 
 amount = 100
-producer = SOV 
+producer = CUM 
 }
  } 
 
@@ -872,6 +888,14 @@ available_if_capitulated = yes
 prerequisite = { focus = SYR_husnialzaim } 
 
 completion_reward = { 
+add_opinion_modifier = {
+target = USA
+modifier = large_increase
+}
+add_opinion_modifier = {
+target = FRA
+modifier = large_increase
+}
 USA = {
 add_opinion_modifier = {
 target = SYR
@@ -911,14 +935,18 @@ country_event = {
 days = 1 
 id = syria.3 
 }
-set_politics = {
- ruling_party = nationalism 
-elections_allowed = no 
-}
+kill_country_leader = yes
+	create_country_leader = {
+		name = "Adib Shishakli"
+		desc = "POLITICS_ADIB_SHISHAKLI_DESC"
+		picture = "Adib_Shishakli.dds"
+		ideology = nationalist_ideology
+   	}
 add_stability = -0.04
- } 
+}
 
- } 
+} 
+ 
 
 #Focus for Purge the military
 focus = { 
@@ -970,6 +998,10 @@ available_if_capitulated = yes
 prerequisite = { focus = SYR_adibshishakli } 
 
 completion_reward = { 
+add_opinion_modifier = {
+target = IRQ
+modifier = large_decrease
+}
 IRQ = {
 add_opinion_modifier = {
 target = SYR
@@ -993,6 +1025,14 @@ available_if_capitulated = yes
 prerequisite = { focus = SYR_restoredemocracy } 
 
 completion_reward = { 
+add_opinion_modifier = {
+target = RAJ
+modifier = large_increase
+}
+add_opinion_modifier = {
+target = YUG
+modifier = large_increase
+}
 RAJ = {
 add_opinion_modifier = {
 target = SYR
@@ -1104,6 +1144,38 @@ available_if_capitulated = yes
 prerequisite = { focus = SYR_restoredemocracy } 
 
 completion_reward = { 
+add_opinion_modifier = {
+target = SOV
+modifier = large_increase
+}
+add_opinion_modifier = {
+target = DDR
+modifier = large_increase
+}
+add_opinion_modifier = {
+target = POL
+modifier = large_increase
+}
+add_opinion_modifier = {
+target = CZE
+modifier = large_increase
+}
+add_opinion_modifier = {
+target = ROM
+modifier = large_increase
+}
+add_opinion_modifier = {
+target = BUL
+modifier = large_increase
+}
+add_opinion_modifier = {
+target = ALB
+modifier = large_increase
+}
+add_opinion_modifier = {
+target = HUN
+modifier = large_increase
+}
 SOV = {
 add_opinion_modifier = {
 target = SYR
@@ -1187,6 +1259,38 @@ available_if_capitulated = yes
 prerequisite = { focus = SYR_cuttieswithegypt } 
 
 completion_reward = { 
+add_opinion_modifier = {
+target = SOV
+modifier = large_decrease
+}
+add_opinion_modifier = {
+target = DDR
+modifier = large_decrease
+}
+add_opinion_modifier = {
+target = POL
+modifier = large_decrease
+}
+add_opinion_modifier = {
+target = CZE
+modifier = large_decrease
+}
+add_opinion_modifier = {
+target = ROM
+modifier = large_decrease
+}
+add_opinion_modifier = {
+target = BUL
+modifier = large_decrease
+}
+add_opinion_modifier = {
+target = ALB
+modifier = large_decrease
+}
+add_opinion_modifier = {
+target = HUN
+modifier = large_decrease
+}
 SOV = {
 add_opinion_modifier = {
 target = SYR
@@ -1255,7 +1359,7 @@ add_tech_bonus = {
 name = agri_tech_bonus
 bonus = 0.15
 uses = 1
-category = agri_tech
+category = agriculture
 }
  } 
 
@@ -1273,10 +1377,10 @@ available_if_capitulated = yes
 prerequisite = { focus = SYR_reactingtotheworld } 
 
 bypass = { 
-has_global_flag = suez_crisis
+has_global_flag = SuezCrisis
  } 
 available = { 
-has_global_flag = suez_crisis
+has_global_flag = SuezCrisis
  } 
 
  } 
@@ -1313,13 +1417,13 @@ completion_reward = {
 add_equipment_to_stockpile = {
  type = jet_multirole_equipment_2
 amount = 25
-producer = SOV
+producer = CUM
 }
 
 add_equipment_to_stockpile = {
  type = jet_multirole_equipment_3
 amount = 40
-producer = SOV 
+producer = CUM 
 }
  } 
 
@@ -1460,11 +1564,8 @@ search_filters = {IC_FILTER}
 available_if_capitulated = yes 
 prerequisite = { focus = SYR_suezcrisis } 
 
-available = { 
-EGY = { has_defensive_war = yes }
- } 
 completion_reward = { 
-EGY = { add_manpower = 7000 }
+EGY = { add_manpower = 5000 }
  } 
 
  } 
@@ -1550,6 +1651,18 @@ available_if_capitulated = yes
 prerequisite = { focus = SYR_cuttieswiththeeasternbloc } 
 
 completion_reward = { 
+add_opinion_modifier = {
+target = USA
+modifier = large_increase
+}
+add_opinion_modifier = {
+target = FRA
+modifier = large_increase
+}
+add_opinion_modifier = {
+target = ENG
+modifier = large_increase
+}
 USA = {
 add_opinion_modifier = {
 target = SYR
@@ -1568,6 +1681,8 @@ target = SYR
 modifier = large_increase
 }
 }
+set_country_flag = weapon_purchasing_USA_permit
+set_country_flag = weapon_purchasing_SOV_disallowed
  } 
 
  } 
@@ -1890,6 +2005,14 @@ available_if_capitulated = yes
 prerequisite = { focus = SYR_unitethehashemitekingdoms } 
 
 completion_reward = { 
+add_opinion_modifier = {
+target = TUR
+modifier = large_increase
+}
+add_opinion_modifier = {
+target = PER
+modifier = large_increase
+}
 TUR = {
 add_opinion_modifier = {
 target = SYR

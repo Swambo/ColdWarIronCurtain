@@ -12,7 +12,7 @@ state = {
 		set_state_flag = basic
 		set_state_flag = micro
 		set_state_flag = undeveloped
-
+		
 		buildings = {
 			infrastructure = 1
 			state_infrastructure = 2
@@ -36,6 +36,7 @@ state = {
 		}
 		1961.1.1 = {
 			owner = SYR
+			remove_core_of = EGY
 
 		}
 		add_core_of = SYR
@@ -50,7 +51,7 @@ state = {
 	}
 
 	provinces = {
-		1074
+		1074 
 	}
 	manpower = 73754
 	buildings_max_level_factor = 1.000

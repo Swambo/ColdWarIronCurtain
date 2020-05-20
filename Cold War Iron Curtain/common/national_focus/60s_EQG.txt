@@ -432,9 +432,8 @@ focus_tree = {
 		completion_reward = {
 					
 			add_equipment_to_stockpile = {
-				type = convoy
+				type = convoy1
 				amount = 5
-				producer = EQG
 			}
 			
 		}
@@ -817,7 +816,7 @@ focus_tree = {
 	focus = {
 		
 		id = EQG_crown_malabo_ii
-		icon = GFX_goal_unknown
+		icon = GFX_focus_puppet_monarchy
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		
@@ -906,7 +905,7 @@ focus_tree = {
 	focus = {
 		
 		id = EQG_the_cult_of_morim
-		icon = GFX_goal_unknown
+		icon = GFX_StolenPapers
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		
@@ -966,7 +965,7 @@ focus_tree = {
 	focus = {
 		
 		id = EQG_employ_bubi_peasants
-		icon = GFX_goal_unknown
+		icon = GFX_wheat
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		
@@ -1660,21 +1659,21 @@ focus_tree = {
 				
 				type = infantry_equipment_1
 				amount = 10000
-				producer = USA
+				producer = CAP
 			}
 		
 			add_equipment_to_stockpile = {
 				
 				type = jet_multirole_equipment_2
 				amount = 50
-				producer = USA
+				producer = CAP
 			}
 		
 			add_equipment_to_stockpile = {
 				
 				type = mbt_equipment_2
 				amount = 50
-				producer = USA
+				producer = CAP
 			}
 		
 		}
@@ -1885,7 +1884,7 @@ focus_tree = {
 	focus = {
 		
 		id = EQG_there_is_no_god_but_nguema
-		icon = GFX_goal_unknown
+		icon = GFX_SwingtheSword
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		
@@ -2096,7 +2095,7 @@ focus_tree = {
 	focus = {
 		
 		id = EQG_nguemize_colonial_names
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Ripping_Papers
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		
@@ -2247,19 +2246,19 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment_1
 				amount = 10000
-				producer = SOV
+				producer = CUM
 			}
 		
 			add_equipment_to_stockpile = {
 				type = jet_multirole_equipment_1
 				amount = 50
-				producer = SOV
+				producer = CUM
 			}
 		
 			add_equipment_to_stockpile = {
 				type = mbt_equipment_1
 				amount = 50
-				producer = SOV
+				producer = CUM
 			}
 			
 		}

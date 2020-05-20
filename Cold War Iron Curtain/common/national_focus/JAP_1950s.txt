@@ -208,7 +208,7 @@ focus_tree = {
 					add_equipment_to_stockpile = {
 							type = nav_bomber_equipment_4
 							amount = 250
-							producer = USA
+							producer = CAP
 						}
 				}
 
@@ -470,12 +470,12 @@ focus_tree = {
 					add_equipment_to_stockpile = {
 							type = jet_strat_bomber_equipment_1
 							amount = 200
-							producer = USA
+							producer = CAP
 						}
 					add_equipment_to_stockpile = {
 							type = jet_tac_bomber_equipment_1
 							amount = 800
-							producer = USA
+							producer = CAP
 						}
 				}
 
@@ -577,7 +577,7 @@ focus_tree = {
 					add_equipment_to_stockpile = {
 							type = infantry_equipment_0
 							amount = 4000
-							producer = USA
+							producer = CAP
 						}
 				}
 
@@ -1102,7 +1102,7 @@ focus_tree = {
 		x = 31
 		y = 9
 			completion_reward = {
-					add_ideas = gen_pro_union_1
+					add_ideas = policy_union_temp_4
 				}
 
 	}
@@ -1238,8 +1238,8 @@ focus_tree = {
 		x = 32
 		y = 17
 			completion_reward = {
-					remove_ideas = gen_pro_union_1
-					add_ideas = gen_pro_union_2
+					remove_ideas = policy_union_temp_4
+					add_ideas = policy_union_temp_5
 				}
 
 	}
@@ -4739,7 +4739,7 @@ focus_tree = {
 					add_tech_bonus = {
 							name = agri_tech_bonus
 							bonus = 1
-							category = agri_tech
+							category = agriculture
 						}
 				}
 
@@ -4839,7 +4839,12 @@ focus_tree = {
 		x = 29
 		y = 9
 			completion_reward = {
-					add_ideas = free_press_5
+			remove_ideas = policy_media_temp_0
+			remove_ideas = policy_media_temp_1
+			remove_ideas = policy_media_temp_2
+			remove_ideas = policy_media_temp_3
+			remove_ideas = policy_media_temp_3a
+			add_ideas = remove_ideas = policy_media_temp_3
 				}
 
 	}

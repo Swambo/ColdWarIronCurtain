@@ -1,13 +1,14 @@
 equipments = {
 
-	screen_hull_small = {
+	screen_hull_medium = {
 		year = 1940
 
 		is_archetype = yes
 		is_buildable = no
 		type = screen_ship
 		interface_category = interface_category_screen_ships
-		alias = frigate
+		alias = screen_hull_medium
+		sprite = screen_hull_medium
 		priority = 2000
 
 		upgrades = {
@@ -33,7 +34,7 @@ equipments = {
 			}
 			fixed_ship_engine_slot = {
 				required = yes
-				allowed_module_categories = { light_screen_engine }
+				allowed_module_categories = { screen_engine_light }
 			}
 			
 			front_2_custom_slot = {
@@ -116,22 +117,24 @@ equipments = {
 		manpower = 150
 	}
 
-	screen_hull_small_0 = {
+	screen_hull_medium_0 = {
 		year = 1940
 
-		archetype = screen_hull_small
+		archetype = screen_hull_medium
 		priority = 2000
-		#alias = frigate_0
+		visual_level = 1
+		visual_tech_level_addition = 2
 		
 		module_slots = inherit
 	}
 
-	screen_hull_small_1 = {
+	screen_hull_medium_1 = {
 		year = 1955
 
-		archetype = screen_hull_small
+		archetype = screen_hull_medium
 		priority = 2000
-		parent = screen_hull_small_0
+		parent = screen_hull_medium_0
+		visual_level = 1
 		
 		module_slots = {
 			fixed_ship_battery_slot = inherit
@@ -205,12 +208,13 @@ equipments = {
 		manpower = 200
 	}
 
-	screen_hull_small_2 = {
+	screen_hull_medium_2 = {
 		year = 1970
 
-		archetype = screen_hull_small
+		archetype = screen_hull_medium
 		priority = 2000
-		parent = screen_hull_small_1
+		parent = screen_hull_medium_1
+		visual_level = 1
 
 		module_slots = {
 			fixed_ship_battery_slot = inherit
@@ -279,12 +283,13 @@ equipments = {
 		manpower = 250
 	}
 
-	screen_hull_small_3 = {
+	screen_hull_medium_3 = {
 		year = 1985
 
-		archetype = screen_hull_small
+		archetype = screen_hull_medium
 		priority = 2000
-		parent = screen_hull_small_2
+		parent = screen_hull_medium_2
+		visual_level = 1
 		
 		module_slots = {
 			fixed_ship_battery_slot = inherit
@@ -356,12 +361,13 @@ equipments = {
 		}
 	}
 	
-	screen_hull_small_4 = {
+	screen_hull_medium_4 = {
 		year = 2000
 
-		archetype = screen_hull_small
+		archetype = screen_hull_medium
 		priority = 2000
-		parent = screen_hull_small_3
+		parent = screen_hull_medium_3
+		visual_level = 1
 		
 		module_slots = {
 			fixed_ship_battery_slot = inherit
@@ -431,14 +437,15 @@ equipments = {
 		}
 	}
 	
-	screen_hull_medium = {
+	screen_hull_heavy = {
 		year = 1945
 
 		is_archetype = yes
 		is_buildable = no
 		type = screen_ship
 		interface_category = interface_category_screen_ships
-		alias = destroyer
+		alias = screen_hull_heavy
+		sprite = screen_hull_heavy
 		priority = 2000
 
 		upgrades = {
@@ -555,22 +562,24 @@ equipments = {
 		manpower = 400
 	}
 
-	screen_hull_medium_0 = {
+	screen_hull_heavy_0 = {
 		year = 1945
 
-		archetype = screen_hull_medium
+		archetype = screen_hull_heavy
 		priority = 2000
-		#alias = frigate_0
+		visual_level = 1
+		visual_tech_level_addition = 2
 		
 		module_slots = inherit
 	}
 
-	screen_hull_medium_1 = {
+	screen_hull_heavy_1 = {
 		year = 1955
 
-		archetype = screen_hull_medium
+		archetype = screen_hull_heavy
 		priority = 2000
-		parent = screen_hull_medium_0
+		parent = screen_hull_heavy_0
+		visual_level = 1
 		
 		module_slots = {
 			fixed_ship_battery_slot = inherit
@@ -657,12 +666,13 @@ equipments = {
 		manpower = 450
 	}
 
-	screen_hull_medium_2 = {
+	screen_hull_heavy_2 = {
 		year = 1970
 
-		archetype = screen_hull_medium
+		archetype = screen_hull_heavy
 		priority = 2000
-		parent = screen_hull_medium_1
+		parent = screen_hull_heavy_1
+		visual_level = 1
 
 		module_slots = {
 			fixed_ship_battery_slot = inherit
@@ -743,12 +753,13 @@ equipments = {
 		manpower = 500
 	}
 
-	screen_hull_medium_3 = {
+	screen_hull_heavy_3 = {
 		year = 1985
 
-		archetype = screen_hull_medium
+		archetype = screen_hull_heavy
 		priority = 2000
-		parent = screen_hull_medium_2
+		parent = screen_hull_heavy_2
+		visual_level = 1
 		
 		module_slots = {
 			fixed_ship_battery_slot = inherit
@@ -833,12 +844,13 @@ equipments = {
 		}
 	}
 	
-	screen_hull_medium_4 = {
+	screen_hull_heavy_4 = {
 		year = 2000
 
-		archetype = screen_hull_medium
+		archetype = screen_hull_heavy
 		priority = 2000
-		parent = screen_hull_medium_3
+		parent = screen_hull_heavy_3
+		visual_level = 1
 		
 		module_slots = {
 			fixed_ship_battery_slot = inherit
@@ -917,544 +929,6 @@ equipments = {
 		resources = {
 			steel = 4
 			aluminium = 1
-		}
-	}
-	
-	screen_hull_large = {
-		year = 1940
-
-		is_archetype = yes
-		is_buildable = no
-		type = capital_ship
-		interface_category = interface_category_screen_ships
-		alias = cruiser
-		priority = 2000
-
-		upgrades = {
-			
-		}
-
-		module_slots = {
-			fixed_ship_battery_slot = {
-				required = yes
-				allowed_module_categories = { ship_armament_light ship_armament_medium ship_armament_asm }
-			}
-			fixed_ship_anti_air_slot = {
-				required = no
-				allowed_module_categories = { ship_AA_gun ship_SAM_mid_range }
-			}
-			fixed_maritime_slot = {
-				required = no
-				allowed_module_categories = { maritime_ew_ss maritime_sonar maritime_navigation maritime_ta_fcs }
-			}
-			fixed_maritime_slot_2 = {
-				required = no
-				allowed_module_categories = { maritime_ew_ss maritime_sonar maritime_navigation maritime_ta_fcs }
-			}
-			fixed_ship_torpedo_slot = {
-				required = no
-				allowed_module_categories = { ship_torpedo_medium ship_torpedo_small }
-			}
-			fixed_ship_engine_slot = {
-				required = yes
-				allowed_module_categories = { screen_engine }
-			}
-			front_1_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					ship_torpedo_medium
-					ship_torpedo_small
-					ship_armament_medium
-					ship_armament_asm
-					ship_armament_light
-				}
-			}
-			front_2_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					countermeasures
-				}
-			}
-			mid_1_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					ship_torpedo_medium
-					ship_torpedo_small
-					ship_SAM_mid_range
-					ship_subkiller
-					ship_AA_gun
-				}
-			}
-			rear_1_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					ship_SAM_mid_range
-					ship_subkiller
-					ship_armament_light
-					ship_AA_gun
-				}
-			}
-		}
-		
-		module_count_limit = {
-			category = maritime_ta_fcs
-			count < 2
-		}
-		
-		module_count_limit = {
-			category = maritime_ew_ss
-			count < 2
-		}
-		
-		module_count_limit = {
-			category = maritime_sonar
-			count < 2
-		}
-		
-		module_count_limit = {
-			category = maritime_navigation
-			count < 2
-		}
-		
-		default_modules = {
-			fixed_ship_battery_slot = empty
-			fixed_ship_ciws_slot = empty
-			fixed_maritime_slot = empty
-			fixed_maritime_slot_2 = empty
-			fixed_ship_engine_slot = empty
-			fixed_ship_torpedo_slot = empty
-			front_1_custom_slot = empty
-			front_2_custom_slot = empty
-			mid_1_custom_slot = empty
-			rear_1_custom_slot = empty
-			rear_2_custom_slot = empty
-		}
-		
-		lg_armor_piercing = 0
-		lg_attack = 0
-		
-		hg_armor_piercing = 0
-		hg_attack = 0
-		
-		torpedo_attack = 0
-		sub_attack = 1
-		armor_value = 0
-		surface_detection = 30
-		sub_detection = 10
-		surface_visibility = 20
-		naval_speed = 40
-		reliability = 0.8
-		naval_range = 2400
-		max_strength = 720
-		fuel_consumption = 8
-		build_cost_ic = 2400
-		resources = {
-			steel = 3
-		}
-		
-		manpower = 400
-	}
-
-	screen_hull_large_0 = {
-		year = 1945
-
-		archetype = screen_hull_large
-		priority = 2000
-		#alias = frigate_0
-		
-		module_slots = inherit
-	}
-
-	screen_hull_large_1 = {
-		year = 1970
-
-		archetype = screen_hull_large
-		priority = 2000
-		parent = screen_hull_large_0
-		
-		module_slots = {
-			fixed_ship_battery_slot = inherit
-			fixed_ship_anti_air_slot = inherit
-			fixed_maritime_slot = inherit
-			fixed_maritime_slot_2 = inherit
-			fixed_ship_engine_slot = inherit
-			fixed_ship_torpedo_slot = inherit
-			front_1_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					ship_torpedo_medium
-					ship_torpedo_small
-					ship_armament_medium
-					ship_armament_asm
-					ship_armament_light
-				}
-			}
-			front_2_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					countermeasures
-				}
-			}
-			mid_1_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					ship_torpedo_medium
-					ship_torpedo_small
-					ship_SAM_mid_range
-					ship_subkiller
-					ship_AA_gun
-				}
-			}
-			rear_1_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					ship_SAM_mid_range
-					ship_subkiller
-					ship_armament_light
-					ship_AA_gun
-				}
-			}
-			rear_2_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					ship_screen_aviation
-					ship_rhib_launch
-				}
-			}
-		}
-
-		default_modules = {
-			front_1_custom_slot = empty
-			front_2_custom_slot = empty
-			mid_1_custom_slot = empty
-			rear_1_custom_slot = empty
-			rear_2_custom_slot = empty
-		}
-		
-		module_count_limit = {
-			category = maritime_ta_fcs
-			count < 2
-		}
-		
-		module_count_limit = {
-			category = maritime_ew_ss
-			count < 2
-		}
-		
-		module_count_limit = {
-			category = maritime_sonar
-			count < 2
-		}
-		
-		module_count_limit = {
-			category = maritime_navigation
-			count < 2
-		}
-
-
-		reliability = 0.85
-		surface_detection = 30
-		sub_detection = 10
-		surface_visibility = 22
-		naval_speed = 42
-		naval_range = 2800
-		max_strength = 840
-		fuel_consumption = 12
-		build_cost_ic = 3200
-		resources = {
-			steel = 5
-		}
-		manpower = 575
-	}
-
-	screen_hull_large_2 = {
-		year = 1970
-
-		archetype = screen_hull_large
-		priority = 2000
-		parent = screen_hull_large_1
-
-		module_slots = {
-			fixed_ship_battery_slot = inherit
-			fixed_ship_anti_air_slot = inherit
-			fixed_maritime_slot = inherit
-			fixed_maritime_slot_2 = inherit
-			fixed_ship_engine_slot = inherit
-			fixed_ship_torpedo_slot = inherit
-			front_1_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					ship_torpedo_medium
-					ship_torpedo_small
-					ship_armament_medium
-					ship_armament_asm
-					ship_armament_light
-				}
-			}
-			front_2_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					countermeasures
-				}
-			}
-			mid_1_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					ship_torpedo_medium
-					ship_torpedo_small
-					ship_SAM_mid_range
-					ship_subkiller
-					ship_AA_gun
-				}
-			}
-			rear_1_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					ship_SAM_mid_range
-					ship_subkiller
-					ship_armament_light
-					ship_AA_gun
-				}
-			}
-			rear_2_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					ship_screen_aviation
-					ship_rhib_launch
-				}
-			}
-		}
-		
-		module_count_limit = {
-			category = maritime_ta_fcs
-			count < 2
-		}
-		
-		module_count_limit = {
-			category = maritime_ew_ss
-			count < 2
-		}
-		
-		module_count_limit = {
-			category = maritime_sonar
-			count < 2
-		}
-		
-		module_count_limit = {
-			category = maritime_navigation
-			count < 2
-		}
-
-		
-		resources = {
-			steel = 5
-			aluminium = 1
-		}
-
-		reliability = 0.85
-		surface_detection = 40
-		sub_detection = 13
-		surface_visibility = 24
-		naval_speed = 44
-		naval_range = 3200
-		max_strength = 960
-		fuel_consumption = 16
-		build_cost_ic = 4000
-		manpower = 650
-	}
-
-	screen_hull_large_3 = {
-		year = 1985
-
-		archetype = screen_hull_large
-		priority = 2000
-		parent = screen_hull_large_2
-		
-		module_slots = {
-			fixed_ship_battery_slot = inherit
-			fixed_ship_anti_air_slot = inherit
-			fixed_maritime_slot = inherit
-			fixed_maritime_slot_2 = inherit
-			fixed_ship_engine_slot = inherit
-			fixed_ship_torpedo_slot = inherit
-			fixed_ship_CIWS_slot = {
-				required = no
-				allowed_module_categories = { ciws }
-			}
-			front_1_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					ship_torpedo_medium
-					ship_torpedo_small
-					ship_armament_medium
-					ship_armament_asm
-					ship_armament_light
-				}
-			}
-			front_2_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					countermeasures
-				}
-			}
-			mid_1_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					ship_torpedo_medium
-					ship_torpedo_small
-					ship_SAM_mid_range
-					ship_subkiller
-					ship_AA_gun
-				}
-			}
-			rear_1_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					ship_SAM_mid_range
-					ship_subkiller
-					ship_armament_light
-					ship_AA_gun
-				}
-			}
-			rear_2_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					ship_screen_aviation
-					ship_rhib_launch
-				}
-			}
-		}
-		
-		module_count_limit = {
-			category = maritime_ta_fcs
-			count < 2
-		}
-		
-		module_count_limit = {
-			category = maritime_ew_ss
-			count < 2
-		}
-		
-		module_count_limit = {
-			category = maritime_sonar
-			count < 2
-		}
-		
-		module_count_limit = {
-			category = maritime_navigation
-			count < 2
-		}
-
-
-		reliability = 0.95
-		surface_detection = 50
-		sub_detection = 16
-		surface_visibility = 26
-		naval_speed = 46
-		naval_range = 3600
-		max_strength = 1080
-		fuel_consumption = 20
-		build_cost_ic = 4800
-		manpower = 575
-		resources = {
-			steel = 5
-			aluminium = 1
-		}
-	}
-	
-	screen_hull_large_4 = {
-		year = 2000
-
-		archetype = screen_hull_large
-		priority = 2000
-		parent = screen_hull_large_3
-		
-		module_slots = {
-			fixed_ship_battery_slot = inherit
-			fixed_ship_anti_air_slot = inherit
-			fixed_maritime_slot = inherit
-			fixed_maritime_slot_2 = inherit
-			fixed_ship_engine_slot = inherit
-			fixed_ship_torpedo_slot = inherit
-			fixed_ship_CIWS_slot = inherit
-			front_1_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					ship_torpedo_medium
-					ship_torpedo_small
-					ship_armament_medium
-					ship_armament_asm
-					ship_armament_light
-				}
-			}
-			front_2_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					countermeasures
-				}
-			}
-			mid_1_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					ship_torpedo_medium
-					ship_torpedo_small
-					ship_SAM_mid_range
-					ship_subkiller
-					ship_AA_gun
-				}
-			}
-			rear_1_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					ship_SAM_mid_range
-					ship_subkiller
-					ship_armament_light
-					ship_AA_gun
-				}
-			}
-			rear_2_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					ship_screen_aviation
-					ship_rhib_launch
-				}
-			}
-		}
-		
-		module_count_limit = {
-			category = maritime_ta_fcs
-			count < 2
-		}
-		
-		module_count_limit = {
-			category = maritime_ew_ss
-			count < 2
-		}
-		
-		module_count_limit = {
-			category = maritime_sonar
-			count < 2
-		}
-		
-		module_count_limit = {
-			category = maritime_navigation
-			count < 2
-		}
-
-
-		reliability = 1.00
-		surface_detection = 50
-		sub_detection = 16
-		surface_visibility = 27
-		naval_speed = 48
-		naval_range = 4000
-		max_strength = 1200
-		fuel_consumption = 24
-		build_cost_ic = 6400
-		manpower = 500
-		resources = {
-			steel = 5
-			aluminium = 2
 		}
 	}
 }

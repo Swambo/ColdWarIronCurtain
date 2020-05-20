@@ -370,8 +370,6 @@ country_event = {
 	title = "A CIA Backed Coup Attempt"
 	desc = CIA_60s.2.d
 	picture = GFX_Velasco_Coup
-	
-	major = yes
 
 	is_triggered_only = yes
 
@@ -409,7 +407,7 @@ country_event = {
 
 country_event = {
 	id = pbsuccess.2
-	title = "Coup d'état Attempt"
+	title = "Coup d'ï¿½tat Attempt"
 	desc = pbsuccess.2.d
 	picture = report_event_notecrisis7
 
@@ -437,6 +435,7 @@ country_event = {
 		if = {
 			limit = {
 				date > 1956.1.1
+				NOT = { date > 1961.1.1 }
 			}
 			load_focus_tree = USA_Eisenhower_1956
 		}
@@ -1800,6 +1799,7 @@ country_event = {
 		}
 		set_politics = { ruling_party = conservative elections_allowed = yes }
 		set_global_flag = nixon_68
+		set_country_flag = watergate_trigger_1
 		every_country = {
 			limit = { is_ai = no }
 			set_country_flag = Super_Event_Visible
@@ -1951,6 +1951,18 @@ country_event = {
 		}
 		set_global_flag = wallace_dem_nominee_72
 	}
+	option = {
+		name = "Edmund Muskie"
+		ai_chance = {
+			factor = 30
+				modifier = {
+					factor = 0
+					is_historical_focus_on = yes
+				}
+		}
+		set_global_flag = muskie_dem_nominee_72
+	}
+	
 }
 
 
@@ -2000,19 +2012,6 @@ country_event = {
 		}
 		set_global_flag = reagen_nominee_1972
 	}
-	option = {
-		name = "John M. Ashbrook"
-		trigger = {
-		}
-		ai_chance = {
-			factor = 35
-				modifier = {
-					factor = 0
-					is_historical_focus_on = yes
-				}
-		}
-		set_global_flag = ashbrook_nominee_1972
-	}
 }
 # Election of 1972
 country_event = {
@@ -2050,7 +2049,7 @@ country_event = {
 			ideology = democratic_america
 		}
 		set_politics = { ruling_party = Social_Democratic elections_allowed = yes }
-		set_global_flag = humphrey_72
+		load_focus_tree = USA_Humphrey_1972
 	}
 
 	option = {
@@ -2072,7 +2071,7 @@ country_event = {
 			picture = "Robert_F_Kennedy.dds"
 			ideology = democratic_america
 		}
-		set_global_flag = rfk_72
+		load_focus_tree = USA_RFK_1972
 	}
 
 	option = {
@@ -2095,6 +2094,8 @@ country_event = {
 		}
 		set_politics = { ruling_party = conservative elections_allowed = yes }
 		set_global_flag = nixon_72
+		set_country_flag = watergate_trigger_2
+		load_focus_tree = USA_Nixon_1972
 	}
 	option = {
 		name = "Ronald Reagan"
@@ -2115,28 +2116,7 @@ country_event = {
 				}
 		}
 		set_politics = { ruling_party = conservative elections_allowed = yes }
-		set_global_flag = reagen_72
-	}
-	option = {
-		name = "John M. Ashbrook"
-		trigger = {
-			has_global_flag = ashbrook_nominee_1972
-		}
-		retire_country_leader = yes
-		create_country_leader = {
-			name = "John M. Ashbrook"
-			picture = "John_M_Ashbrook.dds"
-			ideology = republican
-		}
-		ai_chance = {
-			factor = 35
-				modifier = {
-					factor = 0
-					is_historical_focus_on = yes
-				}
-		}
-		set_politics = { ruling_party = conservative elections_allowed = yes }
-		set_global_flag = ashbrook_72
+		load_focus_tree = USA_Reagen_1972
 	}
 	option = {
 		name = "George Wallace"
@@ -2163,6 +2143,7 @@ country_event = {
 			set_country_flag = Super_Event_Visible
 			set_country_flag = Wallace_Elected
 		}
+		load_focus_tree = USA_Wallace_1972
 	}
 	option = {
 		name = "George Wallace"
@@ -2189,6 +2170,7 @@ country_event = {
 			set_country_flag = Super_Event_Visible
 			set_country_flag = Wallace_Elected
 		}
+		load_focus_tree = USA_Wallace_1972
 	}
 	option = {
 		name = "George McGovern"
@@ -2210,6 +2192,29 @@ country_event = {
 		}
 		set_politics = { ruling_party = Social_Democratic elections_allowed = yes }
 		set_global_flag = mcgovern_72
+		load_focus_tree = USA_McGovern_1972
+	}
+	option = {
+		name = "Edmund Muskie"
+		ai_chance = {
+			factor = 35
+				modifier = {
+					factor = 0
+					is_historical_focus_on = yes
+				}
+		}
+		trigger = {
+			has_global_flag = muskie_dem_nominee_72
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Edmund Muskie"
+			picture = "Edmund_Muskie.dds"
+			ideology = democratic_america
+		}
+		set_politics = { ruling_party = Social_Democratic elections_allowed = yes }
+		set_global_flag = muskie_72
+		load_focus_tree = USA_Muskie_1972
 	}
 }
 # Election of 1976: Democratic Nomination
@@ -2243,21 +2248,6 @@ country_event = {
 			set_global_flag = brown_dem_nominee_76
 	}
 	option = {
-		name = "Robert F. Kennedy"
-		trigger = {
-			NOT = { has_global_flag = rfk_68 }
-		}
-
-		ai_chance = {
-			factor = 35
-				modifier = {
-					factor = 0
-					is_historical_focus_on = yes
-				}
-		}
-		set_global_flag = rfk_dem_nominee_76
-	}
-	option = {
 		name = "George McGovern"
 		trigger = {
 			has_global_flag = mcgovern_72
@@ -2287,7 +2277,7 @@ country_event = {
 		set_global_flag = wallace_dem_nominee_76
 		}
 	option = {
-		name = "Walter Mondale"
+		name = "Edmund Muskie"
 		trigger = {
 			OR = {
 				has_global_flag = nixon_72
@@ -2301,7 +2291,7 @@ country_event = {
 					is_historical_focus_on = yes
 				}
 		}
-		set_global_flag = mondale_dem_nominee_76
+		set_global_flag = muskie_dem_nominee_76
 	}
 	option = {
 		name = "Jimmy Carter"
@@ -2365,6 +2355,20 @@ country_event = {
 		}
 		set_global_flag = ford_nominee_1976
 	}
+	option = {
+		name = "Spiro Agnew"
+		trigger = {
+			has_global_flag = Agnew_President
+		}
+		ai_chance = {
+			factor = 35
+				modifier = {
+					factor = 1000
+					is_historical_focus_on = yes
+				}
+		}
+		set_global_flag = agnew_nominee_1976
+	}
 }
 
 # Election of 1976
@@ -2404,29 +2408,9 @@ country_event = {
 			ideology = democratic_america
 		}
 		set_global_flag = brown_76
+		load_focus_tree = USA_Brown_1976
 	}
 
-	option = {
-		name = "Robert F. Kennedy"
-		ai_chance = {
-			factor = 35
-				modifier = {
-					factor = 0
-					is_historical_focus_on = yes
-				}
-		}
-		trigger = {
-			has_global_flag = rfk_dem_nominee_76
-		}
-		set_politics = { ruling_party = Social_Democratic elections_allowed = yes }
-		retire_country_leader = yes
-		create_country_leader = {
-			name = "Robert F. Kennedy"
-			picture = "Robert_F_Kennedy.dds"
-			ideology = democratic_america
-		}
-		set_global_flag = rfk_76
-	}
 	option = {
 		name = "George McGovern"
 		ai_chance = {
@@ -2447,6 +2431,7 @@ country_event = {
 		}
 		set_politics = { ruling_party = Social_Democratic elections_allowed = yes }
 		set_global_flag = mcgovern_76
+		load_focus_tree = USA_McGovern_1976
 	}
 	option = {
 		name = "George Wallace"
@@ -2473,6 +2458,7 @@ country_event = {
 			set_country_flag = Super_Event_Visible
 			set_country_flag = Wallace_Elected
 		}
+		load_focus_tree = USA_Wallace_1976
 	}
 	option = {
 		name = "George Wallace"
@@ -2499,9 +2485,10 @@ country_event = {
 			set_country_flag = Super_Event_Visible
 			set_country_flag = Wallace_Elected
 		}
+		load_focus_tree = USA_Wallace_1976
 	}
 	option = {
-		name = "Walter Mondale"
+		name = "Edmund Muskie"
 		ai_chance = {
 			factor = 35
 				modifier = {
@@ -2510,16 +2497,17 @@ country_event = {
 				}
 		}
 		trigger = {
-			has_global_flag = mondale_dem_nominee_76
+			has_global_flag = muskie_dem_nominee_76
 		}
 		retire_country_leader = yes
 		create_country_leader = {
-			name = "Walter Mondale"
-			picture = "Walter_Mondale.dds"
+			name = "Edmund Muskie"
+			picture = "Edmund_Muskie.dds"
 			ideology = democratic_america
 		}
 		set_politics = { ruling_party = Social_Democratic elections_allowed = yes }
-		set_global_flag = mondale_76
+		set_global_flag = muskie_76
+		load_focus_tree = USA_Muskie_1976
 	}
 	option = {
 		name = "Jimmy Carter"
@@ -2541,6 +2529,7 @@ country_event = {
 		}
 		set_politics = { ruling_party = Social_Democratic elections_allowed = yes }
 		set_global_flag = carter_76
+		load_focus_tree = USA_Carter_1976
 	}
 	option = {
 		name = "Ronald Reagan"
@@ -2562,6 +2551,7 @@ country_event = {
 		}
 		set_politics = { ruling_party = conservative elections_allowed = yes }
 		set_global_flag = reagen_76
+		load_focus_tree = USA_Reagen_1976
 	}
 	option = {
 		name = "Gerald Ford"
@@ -2583,6 +2573,29 @@ country_event = {
 		}
 		set_politics = { ruling_party = conservative elections_allowed = yes }
 		set_global_flag = ford_76
+		load_focus_tree = USA_Ford_1976
+	}
+	option = {
+		name = "Spiro Agnew"
+		trigger = {
+			has_global_flag = agnew_nominee_1976
+		}
+		retire_country_leader = yes
+		create_country_leader = {
+			name = "Spiro Agnew"
+			picture = "Spiro_Agnew.dds"
+			ideology = republican
+		}
+		ai_chance = {
+			factor = 35
+				modifier = {
+					factor = 0
+					is_historical_focus_on = yes
+				}
+		}
+		set_politics = { ruling_party = conservative elections_allowed = yes }
+		set_global_flag = agnew_1976
+		load_focus_tree = USA_Agnew_1976
 	}
 }
 # Election of 1980: Democratic Nomination
@@ -5472,7 +5485,7 @@ country_event = {
 }
 country_event = {
 	id = Operation_Shock.1
-	title = "[GetNewspaperHeader]The End of the Dominican Civil War"
+	title = "[GetNewspaperHeader]Operation Shock"
 	desc = Operation_Shock.1.d
 	picture = GFX_Operation_Shock
 
@@ -5942,14 +5955,14 @@ country_event = {
 
 
 	immediate = {
-	random_list = {
-		80 = {
-			news_event = { hours = 6 id = swf.2 }
+		random_list = {
+			99 = {
+				news_event = { hours = 6 id = swf.2 }
+			}
+			1 = {
+				news_event = { hours = 6 id = swf.3 }
+			}
 		}
-		20 = {
-			news_event = { hours = 6 id = swf.3 }
-		}
-	}
 	}
 }
 news_event = {
@@ -6159,36 +6172,61 @@ news_event = {
 ###########################
 
 add_namespace = tonkin
-
-
 news_event = {
+	id = tonkin.2
+	title = "[GetNewspaperHeader]American Intervention in Vietnam"
+	desc = tonkin.2.d
+	picture = GFX_Gulf_of_Tonkin
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "Time for War?"
+		trigger = {
+			has_idea = nato_member
+		}
+	}
+
+	option = {
+		name = "What Happens Now?"
+		trigger = {
+			OR = {
+				tag = SOV
+				is_in_faction_with = SOV
+				tag = VIN
+			}
+		}
+	}
+	option = {
+		name = "Well that escalated quickly"
+		trigger = {
+			NOT = {
+				tag = SOV
+				is_in_faction_with = SOV
+				has_idea = nato_member
+			}
+		}
+	}
+}
+country_event = {
 	id = tonkin.1
-	title = tonkin.1.t
+	title = "The Gulf of Tonkin Incident"
 	desc = tonkin.1.d
 	picture = GFX_news_event_tonkin
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	major = yes
-
 	immediate = {
 		set_global_flag = vietnam_war_america
 		set_global_flag = vietnam_war
-	}
-
-	option = {
-		name = "Time for War"
-		trigger = {
-			tag = USA
-		}
-		complete_national_focus = USA_60s_The_Gulf_of_Tonkin_Incident
-		complete_national_focus = USA_60s_Begin_The_Vietnam_War
 	}
 	option = {
 		name = "We must not rush into this...."
 		trigger = {
 			tag = USA
 		}
+		add_stability = 0.03
 		complete_national_focus = USA_60s_The_Gulf_of_Tonkin_Incident
 		complete_national_focus = USA_60s_Restrict_Involvement
 	}
@@ -6222,6 +6260,59 @@ news_event = {
 				has_idea = nato_member
 			}
 		}
+	}
+
+	option = {
+		name = "Time for War"
+		trigger = {
+			tag = USA
+		}
+		ai_chance = {
+			factor = 100
+		}
+		news_event = tonkin.2
+		1200 = {
+			set_state_flag = Vietnam_War_Protest_Center
+			start_resistance = yes
+			add_resistance = 5
+		}
+		361 = {
+			set_state_flag = Vietnam_War_Protest_Center
+			start_resistance = yes
+			add_resistance = 5
+		}
+		395 = {
+			set_state_flag = Vietnam_War_Protest_Center
+			start_resistance = yes
+			add_resistance = 5
+		}
+		393 = {
+			set_state_flag = Vietnam_War_Protest_Center
+			start_resistance = yes
+			add_resistance = 5
+		}
+		391 = {
+			set_state_flag = Vietnam_War_Protest_Center
+			start_resistance = yes
+			add_resistance = 5	
+		}
+		358 = {
+			set_state_flag = Vietnam_War_Protest_Center
+			start_resistance = yes
+			add_resistance = 5	
+		}
+		357 = {
+			set_state_flag = Vietnam_War_Protest_Center
+			start_resistance = yes
+			add_resistance = 5	
+		}
+		378 = {
+			set_state_flag = Vietnam_War_Protest_Center
+			start_resistance = yes
+			add_resistance = 5	
+		}
+		complete_national_focus = USA_60s_The_Gulf_of_Tonkin_Incident
+		complete_national_focus = USA_60s_Begin_The_Vietnam_War
 	}
 }
 

@@ -184,7 +184,7 @@ focus_tree = {
 		x = 2
 		y = 3
 		completion_reward = {
-			add_ideas = gen_pro_union_2
+			add_ideas = policy_union_temp_5
 		}
 	}
 	focus = {
@@ -233,7 +233,11 @@ focus_tree = {
 		y = 3
 		completion_reward = {
 			
-			add_ideas = communism_banned
+			add_timed_idea = {
+				idea = communism_banned
+				days = 100
+
+			}
 		}
 	}
 	focus = {
@@ -267,7 +271,7 @@ focus_tree = {
 		y = 4
 		completion_reward = {
 
-			add_ideas = gen_pro_employer_1	   
+			add_ideas = policy_union_temp_1	   
 
 		}
 	}

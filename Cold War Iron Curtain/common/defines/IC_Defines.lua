@@ -40,6 +40,7 @@ NDefines.NCountry.PROVINCE_SCORE_MULTIPLIER = 0.1 -- Based on number of controll
 NDefines.NCountry.STATE_VALUE_NON_CORE_STATE_FRACTION = 1
 NDefines.NCountry.POPULATION_YEARLY_GROWTH_BASE = 0.008
 NDefines.NCountry.MIN_COUP_SUCCESS_STABILITY = -2 -- NO COUPS ALLOWED!!!!
+NDefines.NCountry.BASE_FUEL_GAIN_PER_OIL = 4 -- VANILLA 2
 
 NDefines.NCountry.AIR_VOLUNTEER_PLANES_LIMIT = 0.5	-- Ratio for volunteer planes available for sending in relation to sender air force
 NDefines.NCountry.AIR_VOLUNTEER_BASES_CAPACITY_LIMIT = 0.75	-- Ratio for volunteer planes available for sending in relation to receiver air base capacity
@@ -68,12 +69,13 @@ NDefines.NDiplomacy.VOLUNTEERS_DIVISIONS_REQUIRED = 1 -- This many divisons are 
 NDefines.NDiplomacy.VOLUNTEERS_PER_COUNTRY_ARMY = 0.10 -- Each army unit owned by the source country contributes this amount of volunteers to the limit.
 NDefines.NDiplomacy.VOLUNTEERS_PER_TARGET_PROVINCE = 0.10 -- Each province owned by the target country contributes this amount of volunteers to the limit.
 
-NDefines.NDiplomacy.VOLUNTEERS_TRANSFER_SPEED = 7
+NDefines.NDiplomacy.VOLUNTEERS_TRANSFER_SPEED = 14
 
 NDefines.NGame.END_DATE = "2050.5.23.12"
 NDefines.NGame.START_DATE = "1945.5.23.12"
 
 NDefines.NMilitary.MAX_DIVISION_SUPPORT_WIDTH = 2 -- Max width of support in division designer.
+NDefines.NMilitary.MAX_DIVISION_SUPPORT_HEIGHT = 5 -- Max width of support in division designer.
 NDefines.NMilitary.MAX_ARMY_EXPERIENCE = 9999999;
 NDefines.NMilitary.MAX_NAVY_EXPERIENCE = 9999999;
 NDefines.NMilitary.MAX_AIR_EXPERIENCE = 9999999;
@@ -112,10 +114,11 @@ NDefines.NAI.DIPLOMACY_IMPROVE_RELATION_COST_FACTOR = 0.0-- Desire to boost rela
 NDefines.NAI.DIPLOMACY_IMPROVE_RELATION_PP_FACTOR = 0.0	-- Desire to boost relations adds total PP multiplied by this
 NDefines.NAI.DIVISION_UPGRADE_MIN_XP = 9999999
 NDefines.NAI.DIVISION_CREATE_MIN_XP = 9999999
-NDefines.NAI.MAX_AHEAD_RESEARCH_PENALTY = 2
+NDefines.NAI.MAX_AHEAD_RESEARCH_PENALTY = 1
 NDefines.NAI.RESEARCH_AHEAD_OF_TIME_FACTOR = 9999999
 
 NDefines.NProduction.MAX_EQUIPMENT_RESOURCES_NEED = 4
+NDefines.NProduction.MAX_CIV_FACTORIES_PER_LINE = 10
 NDefines.NProduction.INFRA_MAX_CONSTRUCTION_COST_EFFECT = 0.7
 NDefines.NProduction.EQUIPMENT_MODULE_ADD_XP_COST = 2.0
 NDefines.NProduction.EQUIPMENT_MODULE_REPLACE_XP_COST = 2.0
@@ -126,8 +129,17 @@ NDefines.NAI.ROCKET_MIN_ASSIGN_SCORE = 0
 NDefines.NAI.ROCKET_MIN_PRIO_ASSIGN_SCORE = 0
 NDefines.NAI.ROCKET_ASSIGN_SCORE_REDUCTION_PER_ASSIGNMENT = 0
 NDefines.NAI.ROCKETSITE_CAPACITY_MULT = 0
-NDefines.NAI.NUM_SILOS_PER_CIVILIAN_FACTORIES = 0.1
+NDefines.NAI.NUM_SILOS_PER_CIVILIAN_FACTORIES = 0.2
 
-NDefines.NOperatives.AGENCY_CREATION_DAYS = 150
-NDefines.NOperatives.AGENCY_UPGRADE_DAYS = 150
-NDefines.NOperatives.AGENCY_OPERATIVE_RECRUITMENT_TIME = 60
+NDefines.NOperatives.AGENCY_CREATION_DAYS = 200
+NDefines.NOperatives.AGENCY_UPGRADE_DAYS = 100
+NDefines.NOperatives.AGENCY_OPERATIVE_RECRUITMENT_TIME = 120
+NDefines.NOperatives.AGENCY_CREATION_FACTORIES = 15
+NDefines.NOperatives.AGENCY_UPGRADE_PER_OPERATIVE_SLOT = 10
+
+NDefines.NMilitary.LAND_COMBAT_STR_DAMAGE_MODIFIER = 0.025
+NDefines.NMilitary.LAND_COMBAT_ORG_DAMAGE_MODIFIER = 0.025
+NDefines.NMilitary.LAND_AIR_COMBAT_STR_DAMAGE_MODIFIER = 0.08
+NDefines.NMilitary.LAND_AIR_COMBAT_ORG_DAMAGE_MODIFIER = 0.12
+NDefines.NMilitary.LAND_COMBAT_STR_ARMOR_ON_SOFT_DICE_SIZE = 6
+NDefines.NMilitary.LAND_COMBAT_COLLATERAL_FACTOR = 0.02

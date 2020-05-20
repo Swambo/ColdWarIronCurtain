@@ -89,7 +89,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_Bolster_Domestic_Industry
-		icon = GFX_goal_unknown
+		icon = GFX_Industrial_Articles
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Kickstart_Reconsturction
@@ -117,7 +117,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_Reconstruction_in_Lappland
-		icon = GFX_goal_unknown
+		icon = GFX_lapland
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Bolster_Domestic_Industry
@@ -318,7 +318,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_Resettle_the_Displace_Finns
-		icon = GFX_focus_public_housing
+		icon = GFX_refugee_crisis
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Renegotiate_Soviet_Reperations
@@ -368,7 +368,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_Expand_Exports
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Maritime_Trade
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_New_Land_Clearings
@@ -537,7 +537,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_End_Rationing
-		icon = GFX_goal_unknown
+		icon = GFX_end_property_rights
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Seek_American_Credit
@@ -563,7 +563,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_Join_the_Nordic_Union
-		icon = GFX_goal_unknown
+		icon = GFX_goal_estoniaapplyingfornordic
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Strengthen_the_Banking_Sector
@@ -580,7 +580,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_New_Houses_for_Veterans
-		icon = GFX_goal_unknown
+		icon = GFX_focus_public_housing
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Strengthen_the_Banking_Sector
@@ -635,7 +635,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_SDP_Domination_of_SAK
-		icon = GFX_goal_unknown
+		icon = GFX_SP_focus_trade_unions
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_New_Houses_for_Veterans
@@ -647,12 +647,12 @@ focus_tree = {
 				ideology = Social_Democratic
 				popularity = 0.03
 			}
-			add_ideas = gen_pro_union_2
+			add_ideas = policy_union_temp_5
 		}
 	}
 	focus = {
 		id = FIN_Encourage_Athelticism
-		icon = GFX_goal_unknown
+		icon = GFX_Soviet_Athelticism
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Apply_to_Join_the_UN
@@ -662,11 +662,14 @@ focus_tree = {
 		}
 		x = 25
 		y = 7
-
+		completion_reward = {
+			add_political_power = 75
+			add_stability = 0.01
+		}
 	}
 	focus = {
 		id = FIN_Advocate_for_Finnish_Sovereiegnty
-		icon = GFX_goal_unknown
+		icon = GFX_goal_continuous_boost_freedom
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Encourage_Athelticism
@@ -676,7 +679,11 @@ focus_tree = {
 		}
 		x = 23
 		y = 8
-
+		completion_reward = {
+			add_stability = 0.02
+			add_to_variable = { var = domestic_influence_amount value = 300 }
+			recalculate_influence = yes	
+		}
 	}
 	focus = {
 		id = FIN_Fagerholm_Victory
@@ -700,11 +707,46 @@ focus_tree = {
 		}
 		x = 25
 		y = 14
-
+		completion_reward = {
+			add_popularity = {
+				ideology = Social_Democratic
+				popularity = 0.05
+			}
+				USA = {
+					FIN = {
+						for_loop_effect = {
+							end = influence_array^num
+							value = v
+							if = {
+								limit = {
+									check_variable = { influence_array^v = PREV }
+								}
+								add_to_variable = { influence_array_val^v = 250 }
+								set_country_flag = found
+							}
+						}
+						if = {
+							limit = { NOT = { has_country_flag = found } }
+								add_to_array = { influence_array = PREV.id }
+								add_to_array = { influence_array_val = 250 }
+						}
+						clr_country_flag = found
+						recalculate_influence = yes
+						capital_scope = {
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+								type = office_park
+								level = 2
+								instant_build = yes
+							}		
+						}
+				}
+			}			
+		}
 	}
 	focus = {
 		id = FIN_finno_swedish_friendship
-		icon = GFX_goal_unknown
+		icon = GFX_Room_Meeting
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Accept_CIA_Funding
@@ -712,7 +754,6 @@ focus_tree = {
 		x = 25
 		y = 15
 		completion_reward = {
-			country_event = fin.4
 			FIN = {
 					add_opinion_modifier = {
 							target = SWE
@@ -729,7 +770,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_Covert_CIA_Collaboration
-		icon = GFX_goal_unknown
+		icon = GFX_cia
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Accept_CIA_Funding
@@ -745,7 +786,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_Liquidate_Communist_Agitators
-		icon = GFX_goal_unknown
+		icon = GFX_Repress_Student_Protestors
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Covert_CIA_Collaboration
@@ -794,18 +835,53 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_Seek_Soviet_Credit
-		icon = GFX_goal_unknown
+		icon = GFX_Soviet_Loans
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Placate_the_Communists
 		}
 		x = 31
 		y = 5
-
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.05
+			}
+				SOV = {
+					FIN = {
+						for_loop_effect = {
+							end = influence_array^num
+							value = v
+							if = {
+								limit = {
+									check_variable = { influence_array^v = PREV }
+								}
+								add_to_variable = { influence_array_val^v = 250 }
+								set_country_flag = found
+							}
+						}
+						if = {
+							limit = { NOT = { has_country_flag = found } }
+								add_to_array = { influence_array = PREV.id }
+								add_to_array = { influence_array_val = 250 }
+						}
+						clr_country_flag = found
+						recalculate_influence = yes
+						capital_scope = {
+							add_extra_state_shared_building_slots = 2
+							add_building_construction = {
+								type = office_park
+								level = 2
+								instant_build = yes
+							}		
+						}
+				}
+			}			
+		}
 	}
 	focus = {
 		id = FIN_Suspend_Rationing
-		icon = GFX_goal_unknown
+		icon = GFX_wheat
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Seek_Soviet_Credit
@@ -818,18 +894,23 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_Priortize_Industrial_Development
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Industrialization
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Kekkonen_Victory
 		}
 		x = 35
 		y = 4
-
+		completion_reward = {
+			add_timed_idea = {
+				idea = industrial_growth
+				days = 1250
+			}
+		}
 	}
 	focus = {
 		id = FIN_Join_The_Nordic_Union2
-		icon = GFX_goal_unknown
+		icon = GFX_goal_estoniaapplyingfornordic
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Priortize_Industrial_Development
@@ -846,18 +927,27 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_Currency_Reforms
-		icon = GFX_goal_unknown
+		icon = GFX_Monetary_Reform
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Priortize_Industrial_Development
 		}
 		x = 37
 		y = 5
-
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = office_park
+					level = 2
+					instant_build = yes
+				}		
+			}		
+		}
 	}
 	focus = {
 		id = FIN_Apply_to_Join_the_UN2
-		icon = GFX_goal_unknown
+		icon = GFX_un
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Join_The_Nordic_Union2
@@ -876,7 +966,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_A_Civic_Peace
-		icon = GFX_goal_unknown
+		icon = GFX_focus_peace_talks
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Apply_to_Join_the_UN2
@@ -886,7 +976,13 @@ focus_tree = {
 		}
 		x = 32
 		y = 7
-
+		completion_reward = {
+			add_stability = 0.05
+			add_named_threat = { 
+				threat = -1
+				name = "Finnish Advocacy for Peace"
+			}
+		}
 	}
 	focus = {
 		id = FIN_Kekkonen_Victory_1956
@@ -903,14 +999,17 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_Repress_the_General_Strike
-		icon = GFX_goal_unknown
+		icon = GFX_Crush_Strikers
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Kekkonen_Victory_1956
 		}
 		x = 35
 		y = 14
-
+		completion_reward = {
+			remove_ideas = strikes_1
+			country_event = fin.27
+		}
 	}
 	focus = {
 		id = FIN_Increase_Pensions
@@ -935,19 +1034,18 @@ focus_tree = {
 		x = 38
 		y = 6
 		completion_reward = {
-			remove_ideas = Austrian_Taxation
-			remove_ideas = Light_Taxation
-			remove_ideas = Moderate_Taxation
-			remove_ideas = Progressive_Taxation
-			remove_ideas = Heavy_Taxation
-			remove_ideas = Marxist_Taxation
-			add_ideas = Light_Taxation
+			remove_ideas = policy_taxrate_temp_1
+			remove_ideas = policy_taxrate_temp_2
+			remove_ideas = policy_taxrate_temp_3
+			remove_ideas = policy_taxrate_temp_4
+			remove_ideas = policy_taxrate_temp_5
+			add_ideas = policy_taxrate_temp_1
 			tax_rate = yes		
 		}
 	}
 	focus = {
 		id = FIN_Delay_Wage_and_Price_Adjustments
-		icon = GFX_goal_unknown
+		icon = GFX_RootoutFunding
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Apply_to_Join_the_UN2
@@ -961,7 +1059,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_Active_Neutrality
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_neutrality_focus
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Delay_Wage_and_Price_Adjustments
@@ -977,18 +1075,20 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_Tour_The_West
-		icon = GFX_goal_unknown
+		icon = GFX_European_Relations
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Kekkonen_Victory_1956
 		}
 		x = 39
 		y = 14
-
+		completion_reward = {
+			add_ideas = neutrality_idea
+		}
 	}
 	focus = {
 		id = FIN_Placate_Leftist_Parties
-		icon = GFX_goal_unknown
+		icon = GFX_ally_with_the_leftists
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Tour_The_West
@@ -1002,7 +1102,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_Expand_Medical_Access
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Medicine02
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Placate_Leftist_Parties
@@ -1012,11 +1112,16 @@ focus_tree = {
 		}
 		x = 36
 		y = 16
-
+		completion_reward = {
+			add_timed_idea = {
+				idea = access_to_health_care
+				days = 2250
+			}
+		}
 	}
 	focus = {
 		id = FIN_Solidify_Political_Power
-		icon = GFX_goal_unknown
+		icon = GFX_fist
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Tour_The_West
@@ -1029,7 +1134,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_Unemployment_Aid
-		icon = GFX_goal_unknown
+		icon = GFX_Cash_and_Carry
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Placate_Leftist_Parties
@@ -1039,11 +1144,16 @@ focus_tree = {
 		}
 		x = 38
 		y = 16
-
+		completion_reward = {
+			add_timed_idea = {
+				idea = fight_unemployment
+				days = 1250
+			}
+		}
 	}
 	focus = {
 		id = FIN_Increase_Education_Funding
-		icon = GFX_goal_unknown
+		icon = GFX_prioritize_western_education
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Unemployment_Aid
@@ -1053,11 +1163,13 @@ focus_tree = {
 		}
 		x = 37
 		y = 17
-
+		completion_reward = {
+			add_research_slot = 1
+		}
 	}
 	focus = {
 		id = FIN_Encourage_Consumerism
-		icon = GFX_goal_unknown
+		icon = GFX_rebrandbanks
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Solidify_Political_Power
@@ -1068,7 +1180,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_Increase_Banking_Regulations
-		icon = GFX_goal_unknown
+		icon = GFX_Paper_Two
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Unemployment_Aid
@@ -1082,7 +1194,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_Strengthen_Nordic_Relations
-		icon = GFX_goal_unknown
+		icon = GFX_focus_peace_talks
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Increase_Banking_Regulations
@@ -1157,18 +1269,25 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_Censor_Anti_Communist_Propaganda
-		icon = GFX_goal_unknown
+		icon = GFX_Press_Censorship
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_The_Paasikivi_Kekkonen_Doctrine
 		}
 		x = 48
 		y = 1
-
+		completion_reward = {
+			remove_ideas = policy_media_temp_0
+			remove_ideas = policy_media_temp_1
+			remove_ideas = policy_media_temp_2
+			remove_ideas = policy_media_temp_3
+			remove_ideas = policy_media_temp_3a
+			add_ideas = remove_ideas = policy_media_temp_1
+		}
 	}
 	focus = {
 		id = FIN_Begin_Further_Economic_Negotiations
-		icon = GFX_goal_unknown
+		icon = GFX_Soviet_Industrial_Aid
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Censor_Anti_Communist_Propaganda
@@ -1178,11 +1297,24 @@ focus_tree = {
 		}
 		x = 46
 		y = 2
-
+		completion_reward = {
+		FIN = {
+					add_opinion_modifier = {
+							target = SOV
+							modifier = small_increase
+						}
+				}
+			SOV = {
+				add_opinion_modifier = {
+					target = FIN
+					modifier = small_increase
+				}
+			}
+		}
 	}
 	focus = {
 		id = FIN_Lobby_for_The_Return_of_Pokkala
-		icon = GFX_goal_unknown
+		icon = GFX_American_Soviet_Outreach
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Begin_Further_Economic_Negotiations
@@ -1195,18 +1327,20 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_Request_Return_of_Karelia
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_sovietagreement
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Begin_Further_Economic_Negotiations
 		}
 		x = 47
 		y = 3
-
+		completion_reward = {
+			country_event = fin.25
+		}
 	}
 	focus = {
 		id = FIN_The_Yopakkaset_Crisis
-		icon = GFX_goal_unknown
+		icon = GFX_Communist_Reduce_Working_Hours
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Request_Return_of_Karelia
@@ -1216,11 +1350,13 @@ focus_tree = {
 		}
 		x = 46
 		y = 4
-
+		available = {
+			always = no
+		}
 	}
 	focus = {
 		id = FIN_resist_soviet_pressure
-		icon = GFX_goal_unknown
+		icon = GFX_anti_founders
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_The_Yopakkaset_Crisis
@@ -1234,29 +1370,36 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_Seek_American_Nuclear_Protection
-		icon = GFX_goal_unknown
+		icon = GFX_nuclear_detonation
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_resist_soviet_pressure
 		}
 		x = 42
 		y = 6
+		completion_reward = {
+			add_nuclear_bombs = 10
+			remove_ideas = paris_paris_treaty_FIN
+		}
 
 	}
 	focus = {
 		id = FIN_American_Trade_Deal
-		icon = GFX_goal_unknown
+		icon = GFX_American_Influence_Europe
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_resist_soviet_pressure
 		}
 		x = 44
 		y = 6
-
+		completion_reward = {
+			add_ideas = trade_treaty_USA
+			USA = { add_ideas = trade_treaty_FIN }
+		}
 	}
 	focus = {
 		id = FIN_cave_to_soviet_pressure
-		icon = GFX_goal_unknown
+		icon = GFX_focus_cze_german_puppet
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_The_Yopakkaset_Crisis
@@ -1270,18 +1413,20 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_Sack_the_Prime_Minister
-		icon = GFX_goal_unknown
+		icon = GFX_The_Purge
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_cave_to_soviet_pressure
 		}
 		x = 48
 		y = 6
-
+		completion_reward = {
+			country_event = nfc.7
+		}
 	}
 	focus = {
 		id = FIN_Placate_Soviet_Pressure
-		icon = GFX_goal_unknown
+		icon = GFX_TheRussianBear
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_cave_to_soviet_pressure
@@ -1292,7 +1437,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_Ratify_Soviet_Trade_Deals
-		icon = GFX_goal_unknown
+		icon = GFX_Commie_Treaty
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Placate_Soviet_Pressure
@@ -1302,18 +1447,23 @@ focus_tree = {
 		}
 		x = 49
 		y = 7
-
+		completion_reward = {
+			add_ideas = trade_treaty_SOV
+			SOV = { add_ideas = trade_treaty_FIN }
+		}
 	}
 	focus = {
 		id = FIN_end_of_the_crisis
-		icon = GFX_goal_unknown
+		icon = GFX_focus_world_peace
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Ratify_Soviet_Trade_Deals
 		}
 		x = 49
 		y = 8
-
+		completion_reward = {
+			country_event = nfc.8
+		}
 	}
 	focus = {
 		id = FIN_The_Finnish_Navy
@@ -1330,18 +1480,46 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_Purchase_Riga_Class_Frigates
-		icon = GFX_goal_unknown
+		icon = GFX_SOV_Modernize_Black_Sea_Shipyard
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_The_Finnish_Navy
 		}
 		x = 51
 		y = 2
-
-	}
+		completion_reward = {
+			if = {
+				limit = { has_dlc = "Man the Guns" }
+				create_ship = {
+					type = screen_hull_medium_1
+					equipment_variant = "Riga class"
+					creator = SOV
+					name = "Uusimaa"
+				}
+				create_ship = {
+					type = screen_hull_medium_1
+					equipment_variant = "Riga class"
+					creator = SOV
+					name = "Hämeenmaa"
+				}
+			}
+			else = {
+				create_ship = {
+					type = frigate_1
+					creator = SOV
+					name = "Uusimaa"
+				}
+				create_ship = {
+					type = frigate_1
+					creator = SOV
+					name = "Hämeenmaa"
+				}			
+			}
+		}
+	}	
 	focus = {
 		id = FIN_Inrease_Domestic_Shipyard_Production
-		icon = GFX_goal_unknown
+		icon = GFX_NavalOperations
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_The_Finnish_Navy
@@ -1351,16 +1529,6 @@ focus_tree = {
 		completion_reward = {
 					if = {
 							limit = {
-									NOT = {
-											any_owned_state = {
-													dockyard > 0
-													free_building_slots = {
-															building = dockyard
-															size > 2
-															include_locked = yes
-														}
-												}
-										}
 									any_owned_state = {
 											is_coastal = yes
 										}
@@ -1387,7 +1555,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_Import_Bay_Class_Frigate
-		icon = GFX_goal_unknown
+		icon = GFX_SpruanceClass
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Purchase_Riga_Class_Frigates
@@ -1397,18 +1565,42 @@ focus_tree = {
 		}
 		x = 53
 		y = 3
-
+		completion_reward = {
+			if = {
+				limit = { has_dlc = "Man the Guns" }
+				create_ship = {
+					type = screen_hull_medium_0
+					equipment_variant = "Bay-Class"
+					creator = ENG
+					name = "FNS Matti Kurki"
+				}
+			}
+			else = {
+				create_ship = {
+					type = frigate_ww
+					creator = ENG
+					name = "FNS Matti Kurki"
+				}
+			}
+		}
 	}
 	focus = {
 		id = FIN_Invest_in_Anti_Submarine_Warfare
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_navy_anti_submarine
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Import_Bay_Class_Frigate
 		}
 		x = 53
 		y = 4
-
+		completion_reward = {
+			add_tech_bonus = {
+				name = anti_ship_missle_bonus
+				bonus = 1.75
+				uses = 2
+				category = asw_tech
+			}		
+		}
 	}
 	focus = {
 		id = FIN_The_Finnish_Army
@@ -1425,7 +1617,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_Import_British_Rifles
-		icon = GFX_goal_unknown
+		icon = GFX_falisthicc
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_The_Finnish_Army
@@ -1463,6 +1655,9 @@ focus_tree = {
 		prerequisite = {
 			focus = FIN_Import_British_Rifles
 		}
+		available = {
+			SOV = {has_tech = main_battle_tanks_3}
+		}
 		x = 60
 		y = 3
 		completion_reward = {
@@ -1475,14 +1670,16 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_Military_Modernization_Campaign
-		icon = GFX_goal_unknown
+		icon = GFX_RenewedArms
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Acquire_Soviet_T55s
 		}
 		x = 60
 		y = 4
-
+		completion_reward = {
+				add_offsite_building = { type = arms_factory level = 2 }
+		}
 	}
 	focus = {
 		id = FIN_The_FInnish_Air_Force
@@ -1536,7 +1733,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_Acquire_French_CM170_Magisters
-		icon = GFX_goal_unknown
+		icon = GFX_goal_FRA_deal
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Import_the_Folland_Gnat
@@ -1559,29 +1756,55 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_Secret_Negotiations_with_Sweeden
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Jet
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Acquire_French_CM170_Magisters
 		}
 		x = 67
 		y = 4
-
+		completion_reward = {
+			FIN = {
+					add_opinion_modifier = {
+							target = SWE
+							modifier = sent_equipment
+						}
+				}
+			SWE = {
+				add_opinion_modifier = {
+					target = FIN
+					modifier = sent_equipment
+				}
+			}			
+		}
 	}
 	focus = {
 		id = FIN_Combat_Inflation
-		icon = GFX_goal_unknown
+		icon = GFX_econ_expension
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Revitilize_Textile_Production
 		}
 		x = 5
 		y = 7
-
+			completion_reward = {
+					capital_scope = {
+						add_extra_state_shared_building_slots = 2
+						add_building_construction = {
+							type = office_park
+							level = 1
+							instant_build = yes
+						}
+					}
+					add_timed_idea = {
+							idea = combat_inflation
+							days = 365
+						}
+				}
 	}
 	focus = {
 		id = FIN_Revitilize_Textile_Production
-		icon = GFX_goal_unknown
+		icon = GFX_FocusExpandTextileIndustry
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Housing_Expansion
@@ -1591,11 +1814,20 @@ focus_tree = {
 		}
 		x = 4
 		y = 6
-
+		completion_reward = {
+			capital_scope = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
 	}
 	focus = {
 		id = FIN_Industrial_Subsidies
-		icon = GFX_goal_unknown
+		icon = GFX_industrial_subsidies
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Increase_Pensions
@@ -1611,7 +1843,7 @@ focus_tree = {
 	}		
 	focus = {
 		id = FIN_City_Economics
-		icon = GFX_goal_unknown
+		icon = GFX_Tribal_Subsidies
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Expand_Medical_Access
@@ -1630,7 +1862,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_Enshrine_The_YYA_Agreement
-		icon = GFX_goal_unknown
+		icon = GFX_Soviet_Bastion
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_City_Economics
@@ -1640,11 +1872,39 @@ focus_tree = {
 		}
 		x = 35
 		y = 18
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = 0.02
+			}
+				SOV = {
+					FIN = {
+						for_loop_effect = {
+							end = influence_array^num
+							value = v
+							if = {
+								limit = {
+									check_variable = { influence_array^v = PREV }
+								}
+								add_to_variable = { influence_array_val^v = 200 }
+								set_country_flag = found
+							}
+						}
+						if = {
+							limit = { NOT = { has_country_flag = found } }
+								add_to_array = { influence_array = PREV.id }
+								add_to_array = { influence_array_val = 200 }
+						}
+						clr_country_flag = found
+						recalculate_influence = yes
 
+				}
+			}		
+		}
 	}
 	focus = {
 		id = FIN_Economic_Growth
-		icon = GFX_goal_unknown
+		icon = GFX_industrial_methods
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Strengthen_Nordic_Relations
@@ -1663,17 +1923,24 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_Seek_Former_Far_Right_Support
-		icon = GFX_goal_unknown
+		icon = GFX_Fascist_Bills
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Fagerholm_Victory
 		}
 		x = 21
 		y = 14
+		completion_reward = {
+			add_popularity = {
+				ideology = Social_Democratic
+				popularity = 0.05
+			}
+			add_political_power = 50
+		}
 	}
 	focus = {
 		id = FIN_Subsidize_the_SAK
-		icon = GFX_goal_unknown
+		icon = GFX_Tribal_Subsidies
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Accept_CIA_Funding
@@ -1683,22 +1950,28 @@ focus_tree = {
 		}
 		x = 23
 		y = 15
-
+		completion_reward = {
+			add_ideas = state_unions
+			remove_ideas = strikes_1
+		}	
 	}
 	focus = {
 		id = FIN_Expand_the_Welfare_State
-		icon = GFX_goal_unknown
+		icon = GFX_Welfare_State
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Seek_Former_Far_Right_Support
 		}
 		x = 19
 		y = 15
-
+		completion_reward = {
+			remove_ideas = basic_welfare_state
+			add_ideas = welfare_state_plus
+		}
 	}
 	focus = {
 		id = FIN_Investigate_Communist_Corruption
-		icon = GFX_goal_unknown
+		icon = GFX_Stamp_out_Corruption
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Subsidize_the_SAK
@@ -1708,11 +1981,17 @@ focus_tree = {
 		}
 		x = 24
 		y = 16
-
+		completion_reward = {
+			add_popularity = {
+				ideology = communism
+				popularity = -0.03
+			}
+			add_political_power = 50
+		}
 	}
 	focus = {
 		id = FIN_Criticize_Soviet_Influence
-		icon = GFX_goal_unknown
+		icon = GFX_anti_founders
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Subsidize_the_SAK
@@ -1725,11 +2004,27 @@ focus_tree = {
 		}
 		x = 22
 		y = 16
+		completion_reward = {
+			add_to_variable = { var = domestic_influence_amount value = 300 }
+			recalculate_influence = yes	
 
+			FIN = {
+					add_opinion_modifier = {
+							target = SOV
+							modifier = large_decrease
+						}
+				}
+			SOV = {
+				add_opinion_modifier = {
+					target = FIN
+					modifier = large_decrease
+				}
+			}			
+		}
 	}
 	focus = {
 		id = FIN_Increase_Government_Spending
-		icon = GFX_goal_unknown
+		icon = GFX_Money
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Expand_the_Welfare_State
@@ -1739,11 +2034,16 @@ focus_tree = {
 		}
 		x = 18
 		y = 16
-
+		completion_reward = {
+			add_timed_idea = {
+				idea = increase_spending
+				days = 1250
+			}
+		}
 	}
 	focus = {
 		id = FIN_Sign_Trade_Deals_with_Western_Europe
-		icon = GFX_goal_unknown
+		icon = GFX_European_Relations
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Increase_Government_Spending
@@ -1753,11 +2053,27 @@ focus_tree = {
 		}
 		x = 20
 		y = 17
-
+		completion_reward = {
+			add_ideas = trade_treaty_ENG
+			add_ideas = trade_treaty_ITA
+			add_ideas = trade_treaty_BEL
+			add_ideas = trade_treaty_HOL
+			add_ideas = trade_treaty_LUX
+			add_ideas = trade_treaty_FRA
+			add_ideas = trade_treaty_WGR
+			ENG = { add_ideas = trade_treaty_FIN }
+			FRA = { add_ideas = trade_treaty_FIN }
+			WGR = { add_ideas = trade_treaty_FIN }
+			LUX = { add_ideas = trade_treaty_FIN }
+			HOL = { add_ideas = trade_treaty_FIN }
+			BEL = { add_ideas = trade_treaty_FIN }
+			ITA = { add_ideas = trade_treaty_FIN }
+			
+		}
 	}
 	focus = {
 		id = FIN_Increase_Mlitary_Defenses
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Military_Production	
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Censor_Communist_Propaganda
@@ -1767,7 +2083,12 @@ focus_tree = {
 		}
 		x = 25
 		y = 18
-
+		completion_reward = {
+			add_timed_idea = {
+				idea = fortification_build_up
+				days = 1250
+			}
+		}
 	}
 	focus = {
 		id = FIN_Recognize_The_Federal_Republic_of_Germany
@@ -1798,7 +2119,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_Censor_Communist_Propaganda
-		icon = GFX_goal_unknown
+		icon = GFX_FocusCensorship
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Investigate_Communist_Corruption
@@ -1808,11 +2129,26 @@ focus_tree = {
 		}
 		x = 26
 		y = 17
-
+		completion_reward = {
+			remove_ideas = policy_media_temp_0
+			remove_ideas = policy_media_temp_1
+			remove_ideas = policy_media_temp_2
+			remove_ideas = policy_media_temp_3
+			remove_ideas = policy_media_temp_3a
+			add_ideas = remove_ideas = policy_media_temp_1
+			add_popularity = {
+				ideology = Social_Democratic
+				popularity = 0.05
+			}	
+			add_popularity = {
+				ideology = communism
+				popularity = -0.05
+			}	
+		}
 	}
 	focus = {
 		id = FIN_Circumvent_the_Treaty_of_Paris
-		icon = GFX_goal_unknown
+		icon = GFX_Subterfuge
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Investigate_Communist_Corruption
@@ -1822,11 +2158,13 @@ focus_tree = {
 		}
 		x = 23
 		y = 17
-
+		completion_reward = {
+			remove_ideas = paris_paris_treaty_FIN
+		}
 	}
 	focus = {
 		id = FIN_Dismiss_the_Communists_From_Government_Posts
-		icon = GFX_goal_unknown
+		icon = GFX_Anti_Communist
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Increase_Mlitary_Defenses
@@ -1836,7 +2174,17 @@ focus_tree = {
 		}
 		x = 23
 		y = 19
-
+		completion_reward = {
+			add_war_support = 0.05
+			add_popularity = {
+				ideology = communism
+				popularity = -0.03
+			}
+			add_popularity = {
+				ideology = Social_Democratic
+				popularity = 0.03
+			}
+		}
 	}
 	focus = {
 		id = FIN_Nationalize_the_Steel_Industry
@@ -1898,7 +2246,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_The_Death_of_President_Pekkala
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Power_Struggle
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Begin_COMECON_Negotiations
@@ -1940,29 +2288,39 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_Preserve_Finnish_Sovereignty
-		icon = GFX_goal_unknown
+		icon = GFX_Finnish_Spirit
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_President_Kilpi
 		}
 		x = 16
 		y = 9
-
+		completion_reward = {
+			add_stability = 0.02
+			add_to_variable = { var = domestic_influence_amount value = 300 }
+			recalculate_influence = yes	
+		}
 	}
 	focus = {
 		id = FIN_Outmaneavor_the_Communists
-		icon = GFX_goal_unknown
+		icon = GFX_Communist_Repression_2
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_President_Kilpi
 		}
 		x = 18
 		y = 9
-
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = {
+				ideology = communism
+				popularity = -0.05
+			}
+		}
 	}
 	focus = {
 		id = FIN_Oust_Communists_From_Government_Positions
-		icon = GFX_goal_unknown
+		icon = GFX_Anti_Communist
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Preserve_Finnish_Sovereignty
@@ -1972,7 +2330,9 @@ focus_tree = {
 		}
 		x = 17
 		y = 10
-
+		completion_reward = {
+			country_event = fin.24
+		}
 	}
 	focus = {
 		id = FIN_Allow_Soviet_Basing
@@ -2134,7 +2494,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_Outlaw_Right_Wing_Parties
-		icon = GFX_goal_unknown
+		icon = GFX_CrushResistance
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Exile_Prominent_Social_Democrats
@@ -2270,8 +2630,8 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = state_atheism
 			swap_ideas = { 
-				remove_idea = state_religion 
-				add_idea = atheist_state 
+				remove_idea = policy_religion_temp_1 
+				add_idea = policy_religion_temp_0a 
 			}
 		}
 	}
@@ -2286,14 +2646,14 @@ focus_tree = {
 		y = 16
 		completion_reward = {
 			swap_ideas = { 
-				remove_idea = Traditional 
-				add_idea = Womens_Rights_Policy 
+				remove_idea = policy_women_temp_2 
+				add_idea = policy_women_temp_3 
 			}
 		}
 	}
 	focus = {
 		id = FIN_Embrace_True_Neutrality
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_neutrality_focus
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Rescind_the_YYA
@@ -2303,11 +2663,17 @@ focus_tree = {
 		}
 		x = 45
 		y = 8
+		completion_reward = {
+			add_ideas = neutrality_idea
+			add_stability = 0.05
+			add_to_variable = { var = domestic_influence_amount value = 300 }
+			recalculate_influence = yes	
 
+		}
 	}
 	focus = {
 		id = FIN_Apply_to_Join_NATO
-		icon = GFX_goal_unknown
+		icon = GFX_nato
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Rescind_the_YYA
@@ -2317,11 +2683,14 @@ focus_tree = {
 		}
 		x = 41
 		y = 8
-
+		completion_reward = {
+			add_ideas = nato_member
+			#Should Prob have an event for this
+		}
 	}
 	focus = {
 		id = FIN_Rescind_the_YYA
-		icon = GFX_goal_unknown
+		icon = GFX_Generic_Ripping_Papers
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_American_Trade_Deal
@@ -2331,7 +2700,21 @@ focus_tree = {
 		}
 		x = 43
 		y = 7
-
+		completion_reward = {
+			news_event = fin.28
+			FIN = {
+					add_opinion_modifier = {
+							target = SOV
+							modifier = faction_traitor
+						}
+				}
+			SOV = {
+				add_opinion_modifier = {
+					target = FIN
+					modifier = faction_traitor
+				}
+			}
+		}
 	}
 	focus = {
 		id = FIN_Return_of_red_valpo
@@ -2361,7 +2744,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_relax_alcohol_laws
-		icon = GFX_goal_unknown
+		icon = GFX_Paper
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_Seek_Former_Far_Right_Support
@@ -2372,14 +2755,17 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_audit_the_police
-		icon = GFX_goal_unknown
+		icon = GFX_focus_police
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_President_Kilpi
 		}
 		x = 20
 		y = 9
-
+		completion_reward = {
+			add_stability = 0.03
+			add_political_power = 50
+		}
 	}
 	focus = {
 		id = FIN_establish_pioneerit
@@ -2396,14 +2782,16 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_improve_welfare
-		icon = GFX_goal_unknown
+		icon = GFX_Welfare_State
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_President_Kilpi
 		}
 		x = 14
 		y = 9
-
+		completion_reward = {
+			add_ideas = basic_welfare_state
+		}
 	}
 	focus = {
 		id = FIN_explore_automated_computing
@@ -2421,7 +2809,7 @@ focus_tree = {
 			country_event = fin.2
 				add_tech_bonus = {
 						name = Computers
-						bonus = 0.15
+						bonus = 1.25
 						uses = 1
 						category = electronics
 					}
@@ -2429,7 +2817,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_rural_development
-		icon = GFX_goal_unknown
+		icon = GFX_Focus_RuralHousing
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_improve_welfare
@@ -2439,11 +2827,16 @@ focus_tree = {
 		}
 		x = 15
 		y = 10
-
+		completion_reward = {
+			add_timed_idea = {
+				idea = rural_development_spirit
+				days = 2250
+			}			
+		}
 	}
 	focus = {
 		id = FIN_peace_forever
-		icon = GFX_goal_unknown
+		icon = GFX_focus_peace_talks
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_audit_the_police
@@ -2453,7 +2846,10 @@ focus_tree = {
 		}
 		x = 19
 		y = 10
-
+		completion_reward = {
+			add_stability = 0.08
+			add_war_support = -0.1
+		}
 	}
 	focus = {
 		id = FIN_criticize_right_parties
@@ -2485,7 +2881,7 @@ focus_tree = {
 	}
 	focus = {
 		id = FIN_invest_in_lapland
-		icon = GFX_goal_unknown
+		icon = GFX_lapland
 		cost = 10.00
 		prerequisite = {
 			focus = FIN_peace_forever

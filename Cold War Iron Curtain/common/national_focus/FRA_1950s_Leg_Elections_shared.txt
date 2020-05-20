@@ -110,7 +110,7 @@
 				ideology = conservative
 				popularity = 0.02
 			}
-			add_ideas = gen_balanced_workers_2
+			add_ideas = policy_union_temp_3
 		}
 	}
 	shared_focus = {
@@ -199,14 +199,14 @@
 				remove_ideas = fiscal_collapse_3
 				add_ideas = fiscal_collapse_2
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = fiscal_collapse_2
 				}
 				remove_ideas = fiscal_collapse_2
 				add_ideas = fiscal_collapse_1
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = fiscal_collapse_1
 				}
@@ -335,14 +335,14 @@
 				remove_ideas = fiscal_collapse_3
 				add_ideas = fiscal_collapse_2
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = fiscal_collapse_2
 				}
 				remove_ideas = fiscal_collapse_2
 				add_ideas = fiscal_collapse_1
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = fiscal_collapse_1
 				}
@@ -493,14 +493,14 @@
 				remove_ideas = fiscal_collapse_3
 				add_ideas = fiscal_collapse_2
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = fiscal_collapse_2
 				}
 				remove_ideas = fiscal_collapse_2
 				add_ideas = fiscal_collapse_1
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = fiscal_collapse_1
 				}
@@ -704,14 +704,14 @@
 				remove_ideas = fiscal_collapse_3
 				add_ideas = fiscal_collapse_2
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = fiscal_collapse_2
 				}
 				remove_ideas = fiscal_collapse_2
 				add_ideas = fiscal_collapse_1
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = fiscal_collapse_1
 				}
@@ -738,14 +738,14 @@
 				remove_ideas = fiscal_collapse_3
 				add_ideas = fiscal_collapse_2
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = fiscal_collapse_2
 				}
 				remove_ideas = fiscal_collapse_2
 				add_ideas = fiscal_collapse_1
 			}
-			if = {
+			else_if = {
 				limit = {
 					has_idea = fiscal_collapse_1
 				}
@@ -1982,7 +1982,7 @@
 				name = agri_tech_bonus
 				bonus = 1.25
 				uses = 1
-				category = agri_tech
+				category = agriculture
 			}			
 		}
 	}
@@ -2080,7 +2080,7 @@
 				name = agri_tech_bonus
 				bonus = 1.25
 				uses = 1
-				category = agri_tech
+				category = agriculture
 			}	
 			every_owned_state = {
 				limit = {
@@ -3495,14 +3495,14 @@
 			completion_reward = {
 					add_tech_bonus = {
 							name = dd_bonus
-							category = screen_hull_medium
+							category = screen_hull_heavy
 							bonus = 1.25
 							uses = 2
 						}
 					PRC = {
 						add_tech_bonus = {
 							name = dd_bonus
-							category = screen_hull_medium
+							category = screen_hull_heavy
 							bonus = 1.25
 							uses = 2
 						}					

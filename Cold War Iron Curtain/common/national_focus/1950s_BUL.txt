@@ -29,6 +29,9 @@ focus_tree = {
 		completion_reward = {
 			add_political_power = 100
 		}
+		available = {
+			always = no
+		}
 	}
 	focus = {
 		id = BUL_The_20th_Congress_of_the_CPSU
@@ -149,9 +152,16 @@ focus_tree = {
 		icon = GFX_CrushResistance
 		search_filters = {IC_FILTER}
 		cost = 10.00
+		available = {
+			NOT = {
+			has_completed_focus = BUL_Secretary_Yugov
+			has_completed_focus = BUL_Secretary_Zhivkov
+		}
+		}
 		prerequisite = {
 			focus = BUL_The_20th_Congress_of_the_CPSU
 		}
+		
 		x = 7
 		y = 10
 		completion_reward = {
@@ -483,7 +493,7 @@ focus_tree = {
 				name = agri_tech_bonus
 				bonus = 1.75
 				uses = 1
-				category = agri_tech
+				category = agriculture
 			}
 		}
 	}
@@ -492,6 +502,12 @@ focus_tree = {
 		icon = GFX_Yugov_Bulgaria
 		search_filters = {IC_FILTER}
 		cost = 10.00
+		available = {
+			NOT = {
+				has_completed_focus = BUL_Crush_Internal_Opposition
+				has_completed_focus = BUL_Secretary_Zhivkov
+			}	
+			}
 		prerequisite = {
 			focus = BUL_The_20th_Congress_of_the_CPSU
 		}
@@ -503,6 +519,7 @@ focus_tree = {
 				name = "Anton Yugov" 
 				picture = "Anton_Yugov.dds"
 				ideology = marxism_leninism 
+				picture = "temporary_yugov.dds"
 			}	
 		}
 	}
@@ -926,9 +943,16 @@ focus_tree = {
 		icon = GFX_Secretary_Zhikov
 		search_filters = {IC_FILTER}
 		cost = 10.00
+		available = {
+			NOT = {
+				has_completed_focus = BUL_Crush_Internal_Opposition
+				has_completed_focus = BUL_Secretary_Yugov
+			}
+		}
 		prerequisite = {
 			focus = BUL_The_20th_Congress_of_the_CPSU
 		}
+
 		x = 34
 		y = 10
 		completion_reward = {
@@ -1262,7 +1286,7 @@ focus_tree = {
 				add_equipment_to_stockpile = {
 						type = jet_multirole_equipment_2
 						amount = 200
-						producer = SOV
+						producer = CUM
 					}
 			}
 	}
@@ -1310,9 +1334,9 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 				add_equipment_to_stockpile = {
-					type = infantry_equipment_0
+					type = infantry_equipment_1
 					amount = 10000
-					producer = SOV
+					producer = CUM
 				}			
 		}
 	}	
@@ -1364,9 +1388,9 @@ focus_tree = {
 		y = 4
 		completion_reward = {
 			add_equipment_to_stockpile = {
-				type = mbt_equipment_1
+				type = mbt_equipment_2
 				amount = 200
-				producer = SOV
+				producer = CUM
 			}		
 		}
 	}
@@ -1439,41 +1463,18 @@ focus_tree = {
 		y = 3
 		completion_reward = {
 			navy_experience = 10
-					if = {
-							limit = {
-									NOT = {
-											any_owned_state = {
-													dockyard > 0
-													free_building_slots = {
-															building = dockyard
-															size > 2
-															include_locked = yes
-														}
-												}
-										}
-									any_owned_state = {
-											is_coastal = yes
-										}
-								}
-							random_owned_controlled_state = {
-									limit = {
-											is_coastal = yes
-											free_building_slots = {
-													building = dockyard
-													size > 2
-													include_locked = yes
-												}
-										}
-									add_extra_state_shared_building_slots = 2
-									add_building_construction = {
-											type = dockyard
-											level = 2
-											instant_build = yes
-										}
-								}
-							set_country_flag = naval_effort_built
-						}
+			random_owned_controlled_state = {
+				limit = {
+						is_coastal = yes
+					}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
 				}
+			}
+		}
 	}
 	focus = {
 		id = BUL_Naval_Fortification_Effort
@@ -1541,7 +1542,7 @@ focus_tree = {
 				name = agri_tech_bonus
 				bonus = 0.75
 				uses = 1
-				category = agri_tech
+				category = agriculture
 			}		
 		}
 	}

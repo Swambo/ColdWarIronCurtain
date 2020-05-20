@@ -1,4 +1,4 @@
-start_equipment_factor = 0.1
+﻿start_equipment_factor = 0.1
 ##### Division Templates #####
 division_template = {
 	name = "Infantry Brigade"
@@ -122,7 +122,7 @@ division_template = {
 		recon = { x = 0 y = 1 }
 		artillery_support = { x = 0 y = 2 }
 		logistics_company = { x = 0 y = 3 }
-		field_hospital = { x = 0 y = 4 }
+		field_hospital = { x = 0 y = 4 }   
 	}
 	priority = 0
 }
@@ -135,7 +135,7 @@ division_template = {
 		infantry = { x = 0 y = 2 }
 	}
 	support = {
-		engineer = { x = 0 y = 0 }
+		engineer = { x = 0 y = 0 }   
 	}
 	priority = 0
 }
@@ -157,7 +157,7 @@ division_template = {
 		artillery_support = { x = 0 y = 1 }
 		logistics_company = { x = 0 y = 2 }
 	}
-
+	
 }
 division_template = {
 	name = "Armored Division"
@@ -572,7 +572,7 @@ units = {
 		division_template = "Infantry Brigade"
 		start_experience_factor = 0.8
 		start_equipment_factor = 1
-	}
+	} 
 	division = {
 		name = "11th Angels Division"
 		location = 6994
@@ -672,7 +672,7 @@ units = {
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
 	}
-
+	
 	division = {
 		name = "1st Blue Diamond Division"
 		location = 1562
@@ -698,8 +698,8 @@ units = {
 
 
 }
-
-### Air Wings
+			
+### Air Wings		
 air_wings = {
 		##### U.S. Air Force (USAF) #####
 	 861 = { 		#Maine
@@ -756,7 +756,7 @@ air_wings = {
 		CAS_equipment_4 = { owner = "USA" amount = 20 }
 		jet_CAS_equipment_1 = { owner = "USA" amount = 20 }
 	}
-	 261 = { 		#Ohio
+	 261 = { 		#Ohio 
 		tac_bomber_equipment_3 = { owner = "USA" amount = 20 }
 		fighter_equipment_3 = { owner = "USA" amount = 20 }
 		jet_multirole_equipment_1 = { owner = "USA" amount = 20 }
@@ -772,7 +772,7 @@ air_wings = {
 		jet_CAS_equipment_1 = { owner = "USA" amount = 20 }
 		jet_CAS_equipment_1 = { owner = "USA" amount = 20 }
 	}
-	362 = { 		#Virgina
+	362 = { 		#Virgina 
 		strat_bomber_equipment_3 = { owner = "USA" amount = 20 }
 		strat_bomber_equipment_3 = { owner = "USA" amount = 20 }
 		jet_tac_bomber_equipment_1 = { owner = "USA" amount = 20 }
@@ -790,14 +790,14 @@ air_wings = {
 		jet_multirole_equipment_2 = { owner = "USA" amount = 10 }
 		CAS_equipment_4 = { owner = "USA" amount = 20 }
 	}
-	363 = { 		#North Carolina
+	363 = { 		#North Carolina 
 		strat_bomber_equipment_3 = { owner = "USA" amount = 20 }
 		fighter_equipment_3 = { owner = "USA" amount = 20 }
 		jet_multirole_equipment_1 = { owner = "USA" amount = 20 }
 		jet_multirole_equipment_1 = { owner = "USA" amount = 20 }
 		jet_CAS_equipment_1 = { owner = "USA" amount = 20 }
 	}
-	364 = { 		#South Carolina
+	364 = { 		#South Carolina 
 		jet_CAS_equipment_1 = { owner = "USA" amount = 20 }
 		jet_multirole_equipment_1 = { owner = "USA" amount = 20 }
 		jet_CAS_equipment_1 = { owner = "USA" amount = 20 }
@@ -821,7 +821,7 @@ air_wings = {
 		jet_multirole_equipment_2 = { owner = "USA" amount = 10 }
 		jet_CAS_equipment_1 = { owner = "USA" amount = 20 }
 	}
-	 365 = { 		#Georgia
+	 365 = { 		#Georgia 
 		strat_bomber_equipment_3 = { owner = "USA" amount = 20 }
 		strat_bomber_equipment_3 = { owner = "USA" amount = 20 }
 		strat_bomber_equipment_3 = { owner = "USA" amount = 20 }
@@ -860,7 +860,7 @@ air_wings = {
 		strat_bomber_equipment_3 = { owner = "USA" amount = 20 }
 		CAS_equipment_4 = { owner = "USA" amount = 20 }
 		jet_CAS_equipment_1 = { owner = "USA" amount = 20 }
-
+	
 	}
 	 393 = { 		#Michigan
 		heavy_fighter_equipment_3 = { owner = "USA" amount = 20 }
@@ -899,7 +899,7 @@ air_wings = {
 		jet_strat_bomber_equipment_1 = { owner = "USA" amount = 20 }
 		jet_strat_bomber_equipment_1 = { owner = "USA" amount = 20 }
 		jet_strat_bomber_equipment_1 = { owner = "USA" amount = 20 }
-		jet_strat_bomber_equipment_1 = { owner = "USA" amount = 20 }
+		jet_strat_bomber_equipment_1 = { owner = "USA" amount = 20 } 
 		strat_bomber_equipment_3 = { owner = "USA" amount = 20 }
 		strat_bomber_equipment_3 = { owner = "USA" amount = 20 }
 		strat_bomber_equipment_3 = { owner = "USA" amount = 20 }
@@ -908,13 +908,13 @@ air_wings = {
 		heavy_fighter_equipment_3 = { owner = "USA" amount = 20 }
 		heavy_fighter_equipment_3 = { owner = "USA" amount = 20 }
 	}
-	 390 = { 		#South Dakota
+	 390 = { 		#South Dakota 
 		jet_strat_bomber_equipment_1 = { owner = "USA" amount = 20 }
 	}
-	 380 = { 		#Utah
+	 380 = { 		#Utah 
 		strat_bomber_equipment_3 = { owner = "USA" amount = 20 }
 	}
-	 387 = { 		#Idaho
+	 387 = { 		#Idaho 
 		strat_bomber_equipment_3 = { owner = "USA" amount = 20 }
 	}
 	 377 = { 		#Arizona
@@ -941,7 +941,7 @@ air_wings = {
 		heavy_fighter_equipment_3 = { owner = "USA" amount = 20 }
 		heavy_fighter_equipment_3 = { owner = "USA" amount = 20 }
 	}
-	 385 = {		#Oregon
+	 385 = {		#Oregon 
 		tac_bomber_equipment_3 = { owner = "USA" amount = 20 }
 		jet_multirole_equipment_1 = { owner = "USA" amount = 20 }
 		CAS_equipment_4 = { owner = "USA" amount = 20 }
@@ -991,7 +991,7 @@ air_wings = {
 		heavy_fighter_equipment_3 = { owner = "USA" amount = 10 }
 		jet_CAS_equipment_1 = { owner = "USA" amount = 20 }
 	}
-	 629 = {		#Hawaii
+	 629 = {		#Hawaii 
 		strat_bomber_equipment_3 = { owner = "USA" amount = 20 }
 		jet_multirole_equipment_1 = { owner = "USA" amount = 20 }
 		jet_multirole_equipment_2 = { owner = "USA" amount = 20 }
@@ -1008,7 +1008,7 @@ air_wings = {
 	 327 = {		#Manila
 		fighter_equipment_2 = { owner = "USA" amount = 20 }
 		fighter_equipment_3 = { owner = "USA" amount = 20 }
-
+		
 	}
 	 533 = { 		#Tohoku
 		jet_multirole_equipment_1 = { owner = "USA" amount = 10 }
@@ -1040,7 +1040,7 @@ air_wings = {
 		heavy_fighter_equipment_3 = { owner = "USA" amount = 10 }
 		CAS_equipment_4 = { owner = "USA" amount = 20 }
 	}
-	 530 = { 		#Shikoku
+	 530 = { 		#Shikoku 
 		tac_bomber_equipment_3 = { owner = "USA" amount = 20 }
 		tac_bomber_equipment_3 = { owner = "USA" amount = 20 }
 		fighter_equipment_3 = { owner = "USA" amount = 20 }
@@ -1082,13 +1082,13 @@ air_wings = {
 	 129 = { 		#East Midlands
 		strat_bomber_equipment_3 = { owner = "USA" amount = 30 }
 	}
-	 125 = { 		#East Anglia
+	 125 = { 		#East Anglia 
 		jet_strat_bomber_equipment_1 = { owner = "USA" amount = 20 }
 		strat_bomber_equipment_3 = { owner = "USA" amount = 20 }
 		strat_bomber_equipment_3 = { owner = "USA" amount = 20 }
 		strat_bomber_equipment_3 = { owner = "USA" amount = 20 }
 	}
-	 4 = { 		#Lower Austria
+	 4 = { 		#Lower Austria 
 		jet_multirole_equipment_1 = { owner = "USA" amount = 20 }
 		jet_multirole_equipment_1 = { owner = "USA" amount = 10 }
 		jet_CAS_equipment_1 = { owner = "USA" amount = 20 }
@@ -1116,7 +1116,7 @@ instant_effect = {
 	}
 	add_equipment_production = {
 		equipment = {
-			type = support_equipment
+			type = support_equipment_1
 			creator = "USA"
 		}
 		requested_factories = 3
@@ -1336,6 +1336,11 @@ instant_effect = {
 		producer = USA
 	}
 	add_equipment_to_stockpile = {
+		type = spaag_equipment_1
+		amount = 2000
+		producer = USA
+	}
+	add_equipment_to_stockpile = {
 		type = direct_fire_gun_equipment_1
 		amount = 3200
 		producer = USA
@@ -1346,13 +1351,18 @@ instant_effect = {
 		producer = USA
 	}
 	add_equipment_to_stockpile = {
-		type = artillery_equipment_1
+		type = sp_artillery_equipment_1
 		amount = 1600
 		producer = USA
 	}
 	add_equipment_to_stockpile = {
 		type = light_artillery_equipment_1
 		amount = 1600
+		producer = USA
+	}
+	add_equipment_to_stockpile = {
+		type = light_sp_artillery_equipment_1
+		amount = 800
 		producer = USA
 	}
 	add_equipment_to_stockpile = {
@@ -1371,7 +1381,7 @@ instant_effect = {
 		producer = USA
 	}
 	add_equipment_to_stockpile = {
-		type = support_equipment
+		type = support_equipment_1
 		amount = 5000
 		producer = USA
 	}
@@ -1412,7 +1422,7 @@ instant_effect = {
 		producer = USA
 	}
 	add_equipment_to_stockpile = {
-		type = tank_destroyer_equipment_1
+		type = medium_tank_destroyer_equipment_1
 		amount = 1000
 		producer = USA
 	}

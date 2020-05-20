@@ -31,13 +31,13 @@ Laotion_Civil_War_Decisions_category = {
 				}
 
 				set_temp_variable = { inf_equp_gain = global_los_funding }
-				multiply_temp_variable = { inf_equp_gain = 10 }	
+				multiply_temp_variable = { inf_equp_gain = 10 }
 
 				set_temp_variable = { artillery_gain = global_los_funding }
-				multiply_temp_variable = { artillery_gain = 5 }	
+				multiply_temp_variable = { artillery_gain = 5 }
 				
 				set_temp_variable = { anti_air_gain = global_los_funding }
-				multiply_temp_variable = { anti_air_gain = 2 }	
+				multiply_temp_variable = { anti_air_gain = 2 }
 			}
 						
 			meta_effect = {
@@ -60,7 +60,7 @@ Laotion_Civil_War_Decisions_category = {
 					}
 				}
 				AMNT = "artillery_gain"
-			}			
+			}
 			
 			meta_effect = {
 				text = {
@@ -79,7 +79,7 @@ Laotion_Civil_War_Decisions_category = {
 	Increase_LOS_Funding = {
 				
 		visible = {
-			country_exists  = LOS
+			country_exists = LOS
 			country_exists = LAO
 			OR = {
 				NOT = { has_government = communism }
@@ -88,7 +88,7 @@ Laotion_Civil_War_Decisions_category = {
 			}
 		}
 		available = {
-			country_exists  = LOS
+			country_exists = LOS
 			country_exists = LAO
 			NOT = { has_government = communism }
 			NOT = { has_government = maoism }
@@ -103,7 +103,7 @@ Laotion_Civil_War_Decisions_category = {
 	Decrease_LOS_Funding = {
 				
 		visible = {
-			country_exists  = LOS
+			country_exists = LOS
 			country_exists = LAO
 			OR = {
 				NOT = { has_government = communism }
@@ -113,7 +113,7 @@ Laotion_Civil_War_Decisions_category = {
 		}
 		available = {
 			check_variable = { los_funding > 0 }
-			country_exists  = LOS
+			country_exists = LOS
 			country_exists = LAO
 			NOT = { has_government = communism }
 			NOT = { has_government = maoism }
@@ -124,7 +124,7 @@ Laotion_Civil_War_Decisions_category = {
 			add_to_variable = { los_funding = -1 }
 			custom_effect_tooltip = insurgency_funding_dec_tt
 		}
-	}	
+	}
 
 }
 Vietnam_War_Decisions_category = {
@@ -159,13 +159,13 @@ Vietnam_War_Decisions_category = {
 				}
 
 				set_temp_variable = { inf_equp_gain = global_vie_funding }
-				multiply_temp_variable = { inf_equp_gain = 10 }	
+				multiply_temp_variable = { inf_equp_gain = 10 }
 
 				set_temp_variable = { artillery_gain = global_vie_funding }
-				multiply_temp_variable = { artillery_gain = 5 }	
+				multiply_temp_variable = { artillery_gain = 5 }
 				
 				set_temp_variable = { anti_air_gain = global_vie_funding }
-				multiply_temp_variable = { anti_air_gain = 2 }	
+				multiply_temp_variable = { anti_air_gain = 2 }
 			}
 						
 			meta_effect = {
@@ -188,7 +188,7 @@ Vietnam_War_Decisions_category = {
 					}
 				}
 				AMNT = "artillery_gain"
-			}			
+			}
 			
 			meta_effect = {
 				text = {
@@ -207,17 +207,9 @@ Vietnam_War_Decisions_category = {
 	Increase_NLF_Funding = {
 				
 		visible = {
-			country_exists  = VIE
+			country_exists = VIE
 			country_exists = NLF
-			OR = {
-				has_government = communism
-				has_government = maoism
-				has_government = trotskyism
-			}
-		}
-		available = {
-			country_exists  = VIE
-			country_exists = NLF
+			NOT = { tag = VIE }
 			OR = {
 				has_government = communism
 				has_government = maoism
@@ -232,30 +224,22 @@ Vietnam_War_Decisions_category = {
 	Decrease_NLF_Funding = {
 				
 		visible = {
-			country_exists  = VIE
+			country_exists = VIE
 			country_exists = NLF
+			NOT = { tag = VIE }
 			OR = {
 				has_government = communism
 				has_government = maoism
 				has_government = trotskyism
 			}
 		}
-		available = {
-			check_variable = { nlf_funding > 0 }
-			country_exists  = VIE
-			country_exists = NLF
-			OR = {
-				has_government = communism
-				has_government = maoism
-				has_government = trotskyism
-			}
-		}
+
 		days_re_enable = 60
 		complete_effect = {
 			add_to_variable = { nlf_funding = -1 }
 			custom_effect_tooltip = insurgency_funding_dec_tt
 		}
-	}	
+	}
 
 	NLF_External_Support = {
 		
@@ -284,7 +268,7 @@ Vietnam_War_Decisions_category = {
 		timeout_effect = {
 			hidden_effect = {
 				set_temp_variable = { manpower_gain = VIN.nlf_funding }
-				multiply_temp_variable = { manpower_gain = 100 }
+				multiply_temp_variable = { manpower_gain = 500 }
 
 				set_temp_variable = { army_xp_gain = VIN.nlf_funding }
 				multiply_temp_variable = { army_xp_gain = 5 }
@@ -295,13 +279,13 @@ Vietnam_War_Decisions_category = {
 				}
 
 				set_temp_variable = { inf_equp_gain = global_nlf_funding }
-				multiply_temp_variable = { inf_equp_gain = 10 }	
+				multiply_temp_variable = { inf_equp_gain = 10 }
 
 				set_temp_variable = { artillery_gain = global_nlf_funding }
-				multiply_temp_variable = { artillery_gain = 5 }	
+				multiply_temp_variable = { artillery_gain = 5 }
 				
 				set_temp_variable = { anti_air_gain = global_nlf_funding }
-				multiply_temp_variable = { anti_air_gain = 2 }	
+				multiply_temp_variable = { anti_air_gain = 2 }
 			}
 			
 			army_experience = var:army_xp_gain
@@ -327,7 +311,7 @@ Vietnam_War_Decisions_category = {
 					}
 				}
 				AMNT = "artillery_gain"
-			}			
+			}
 			
 			meta_effect = {
 				text = {
@@ -346,22 +330,16 @@ Vietnam_War_Decisions_category = {
 	Increase_VIE_Funding = {
 				
 		visible = {
-			country_exists  = VIE
+			country_exists = VIE
 			country_exists = NLF
+			NOT = { tag = NLF }
 			OR = {
 				NOT = { has_government = communism }
 				NOT = { has_government = maoism }
 				NOT = { has_government = trotskyism }
 			}
 		}
-		available = {
-			country_exists  = VIE
-			country_exists = NLF
-			NOT = { has_government = communism }
-			NOT = { has_government = maoism }
-			NOT = { has_government = trotskyism }
-			
-		}
+
 		complete_effect = {
 			add_to_variable = { vie_funding = 1 }
 			custom_effect_tooltip = insurgency_funding_inc_tt
@@ -370,28 +348,22 @@ Vietnam_War_Decisions_category = {
 	Decrease_VIE_Funding = {
 				
 		visible = {
-			country_exists  = VIE
+			country_exists = VIE
 			country_exists = NLF
+			NOT = { tag = NLF }
 			OR = {
 				NOT = { has_government = communism }
 				NOT = { has_government = maoism }
 				NOT = { has_government = trotskyism }
 			}
 		}
-		available = {
-			check_variable = { vie_funding > 0 }
-			country_exists  = VIE
-			country_exists = NLF
-			NOT = { has_government = communism }
-			NOT = { has_government = maoism }
-			NOT = { has_government = trotskyism }
-		}
+
 		days_re_enable = 60
 		complete_effect = {
 			add_to_variable = { vie_funding = -1 }
 			custom_effect_tooltip = insurgency_funding_dec_tt
 		}
-	}	
+	}
 
 }
 
@@ -399,7 +371,7 @@ Guinea_Bissau_War_of_Independence_category = {
 	Increase_PAIGC_Funding = {
 				
 		visible = {
-			country_exists  = GNB
+			country_exists = GNB
 			OR = {
 				tag = SOV
 				tag = PRC
@@ -410,7 +382,7 @@ Guinea_Bissau_War_of_Independence_category = {
 			NOT = { has_country_flag = GNB_Established_State }
 		}
 		available = {
-			country_exists  = GNB
+			country_exists = GNB
 			OR = {
 				tag = SOV
 				tag = PRC
@@ -428,7 +400,7 @@ Guinea_Bissau_War_of_Independence_category = {
 	Decrease_PAIGC_Funding = {
 				
 		visible = {
-			country_exists  = GNB
+			country_exists = GNB
 			OR = {
 				tag = SOV
 				tag = PRC
@@ -440,7 +412,7 @@ Guinea_Bissau_War_of_Independence_category = {
 		}
 		available = {
 			check_variable = { paigc_funding > 0 }
-			country_exists  = GNB
+			country_exists = GNB
 			OR = {
 				tag = SOV
 				tag = PRC
@@ -455,13 +427,13 @@ Guinea_Bissau_War_of_Independence_category = {
 			add_to_variable = { paigc_funding = -1 }
 			custom_effect_tooltip = insurgency_funding_dec_tt
 		}
-	}	
+	}
 	
 	
 	Expel_PAIGC_Camps = {
 				
 		visible = {
-			country_exists  = GNB
+			country_exists = GNB
 			OR = {
 				AND = {
 					tag = GNA
@@ -479,7 +451,7 @@ Guinea_Bissau_War_of_Independence_category = {
 			NOT = { has_country_flag = GNB_Established_State }
 		}
 		available = {
-			country_exists  = GNB
+			country_exists = GNB
 			OR = {
 				AND = {
 					tag = GNA
@@ -520,7 +492,7 @@ Guinea_Bissau_War_of_Independence_category = {
 			}
 			custom_effect_tooltip = expel_militant_bases_tt
 		}
-	}	
+	}
 	
 	Raid_PAIGC_Camps_in_Guinea = {
 		visible = {
@@ -534,7 +506,7 @@ Guinea_Bissau_War_of_Independence_category = {
 				774 = {
 					has_state_flag = PAIGC_Camp
 					check_variable = { PAIGC_Camp_level > 0 }
-				}			
+				}
 			}
 		}
 
@@ -558,7 +530,7 @@ Guinea_Bissau_War_of_Independence_category = {
 					on_lose = gbn_colonial_war.500
 					on_cancel = Indochina_War.4
 				}
-			}			
+			}
 		}
 
 		ai_will_do = {
@@ -579,7 +551,7 @@ Guinea_Bissau_War_of_Independence_category = {
 				272 = {
 					has_state_flag = PAIGC_Camp
 					check_variable = { PAIGC_Camp_level > 0 }
-				}			
+				}
 			}
 		}
 
@@ -603,7 +575,7 @@ Guinea_Bissau_War_of_Independence_category = {
 					on_lose = gbn_colonial_war.600
 					on_cancel = Indochina_War.4
 				}
-			}			
+			}
 		}
 
 		ai_will_do = {
@@ -640,7 +612,7 @@ Guinea_Bissau_War_of_Independence_category = {
 			}
 			custom_effect_tooltip = increase_camp_level_one_tt
 		}
-	}	
+	}
 	
 	Expand_Training_Camps_in_Senegal = {
 				
@@ -671,7 +643,7 @@ Guinea_Bissau_War_of_Independence_category = {
 			}
 			custom_effect_tooltip = increase_camp_level_one_tt
 		}
-	}	
+	}
 
 	PAIGC_External_Support = {
 		
@@ -712,19 +684,19 @@ Guinea_Bissau_War_of_Independence_category = {
 				
 				set_variable = { global_paigc_funding = 0 }
 				add_to_variable = { global_paigc_funding = SOV.paigc_funding }
-				add_to_variable = { global_paigc_funding = GNA.paigc_funding }		
+				add_to_variable = { global_paigc_funding = GNA.paigc_funding }
 				add_to_variable = { global_paigc_funding = SEN.paigc_funding }
-				add_to_variable = { global_paigc_funding = PRC.paigc_funding }		
-				add_to_variable = { global_paigc_funding = YUG.paigc_funding }				
+				add_to_variable = { global_paigc_funding = PRC.paigc_funding }
+				add_to_variable = { global_paigc_funding = YUG.paigc_funding }
 
 				set_temp_variable = { inf_equp_gain = global_paigc_funding }
-				multiply_temp_variable = { inf_equp_gain = 10 }	
+				multiply_temp_variable = { inf_equp_gain = 10 }
 
 				set_temp_variable = { artillery_gain = global_paigc_funding }
-				multiply_temp_variable = { artillery_gain = 5 }	
+				multiply_temp_variable = { artillery_gain = 5 }
 				
 				set_temp_variable = { anti_air_gain = global_paigc_funding }
-				multiply_temp_variable = { anti_air_gain = 2 }	
+				multiply_temp_variable = { anti_air_gain = 2 }
 			}
 			
 			army_experience = var:army_xp_gain
@@ -750,7 +722,7 @@ Guinea_Bissau_War_of_Independence_category = {
 					}
 				}
 				AMNT = "artillery_gain"
-			}			
+			}
 			
 			meta_effect = {
 				text = {
@@ -796,7 +768,7 @@ Guinea_Bissau_War_of_Independence_category = {
 					on_lose = gbn_colonial_war.103
 					on_cancel = Indochina_War.4
 				}
-			}			
+			}
 		}
 
 		ai_will_do = {
@@ -833,7 +805,7 @@ Guinea_Bissau_War_of_Independence_category = {
 					on_lose = gbn_colonial_war.103
 					on_cancel = Indochina_War.4
 				}
-			}			
+			}
 		}
 
 		ai_will_do = {
@@ -870,7 +842,7 @@ Guinea_Bissau_War_of_Independence_category = {
 					on_lose = gbn_colonial_war.101
 					on_cancel = Indochina_War.4
 				}
-			}			
+			}
 		}
 
 		ai_will_do = {
@@ -907,7 +879,7 @@ Guinea_Bissau_War_of_Independence_category = {
 					on_lose = gbn_colonial_war.101
 					on_cancel = Indochina_War.4
 				}
-			}			
+			}
 		}
 
 		ai_will_do = {
@@ -977,7 +949,7 @@ Guinea_Bissau_War_of_Independence_category = {
 		ai_will_do = {
 			factor = 1 
 		}
-	}	
+	}
 	Operation_Vulcano = {	
 		visible = {
 			tag = POR
@@ -997,7 +969,7 @@ Guinea_Bissau_War_of_Independence_category = {
 		ai_will_do = {
 			factor = 1 
 		}
-	}	
+	}
 	Operation_Little_Cat = {	
 		visible = {
 			tag = POR
@@ -1017,7 +989,7 @@ Guinea_Bissau_War_of_Independence_category = {
 		ai_will_do = {
 			factor = 1 
 		}
-	}		
+	}
 	Initiate_the_Buba_Attack = {	
 		visible = {
 			tag = POR
@@ -1037,7 +1009,7 @@ Guinea_Bissau_War_of_Independence_category = {
 		ai_will_do = {
 			factor = 1 
 		}
-	}	
+	}
 	
 	Operation_Jove = {	
 		visible = {
@@ -1058,7 +1030,7 @@ Guinea_Bissau_War_of_Independence_category = {
 		ai_will_do = {
 			factor = 1 
 		}
-	}		
+	}
 	Royal_Amethyst_Operation = {	
 		visible = {
 			tag = POR
@@ -1078,7 +1050,7 @@ Guinea_Bissau_War_of_Independence_category = {
 		ai_will_do = {
 			factor = 1 
 		}
-	}		
+	}
    Operation_Green_Sea = {
 		visible = {
 			tag = POR
@@ -1111,7 +1083,7 @@ Guinea_Bissau_War_of_Independence_category = {
 					on_lose = gbn_colonial_war.402
 					on_cancel = Indochina_War.4
 				}
-			}			
+			}
 		}
 
 		ai_will_do = {

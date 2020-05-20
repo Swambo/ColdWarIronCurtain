@@ -12,7 +12,7 @@ focus_tree = {
 	shared_focus = USA_70s_The_Paris_Peace_Accords
 	shared_focus = USA_70s_American_Armed_Forces
 	focus = {
-		id = USA_AGNEW_The_Agnew_Administration
+		id = USA_AGNEW_The_Agnew_Administration_74
 		icon = GFX_goal_unknown
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -28,7 +28,7 @@ focus_tree = {
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
-			focus = USA_AGNEW_The_Agnew_Administration
+			focus = USA_AGNEW_The_Agnew_Administration_74
 		}
 		x = 7
 		y = 1
@@ -38,11 +38,11 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_AGNEW_The_NASA_Mars_Mission
-		icon = GFX_goal_unknown
+		icon = GFX_Mars_Operation
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
-			focus = USA_AGNEW_The_Agnew_Administration
+			focus = USA_AGNEW_The_Agnew_Administration_74
 		}
 		x = 3
 		y = 1
@@ -64,7 +64,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_AGNEW_Revenue_Adjustment_Act
-		icon = GFX_goal_unknown
+		icon = GFX_ISR_Focus_Tax_Cuts
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -76,13 +76,12 @@ focus_tree = {
 		x = 1
 		y = 2
 		completion_reward = {
-			add_ideas = Progressive_Taxation
+			add_ideas = policy_taxrate_temp_3
 			hidden_effect = {
-				remove_ideas = Austrian_Taxation
-				remove_ideas = Light_Taxation
-				remove_ideas = Moderate_Taxation
-				remove_ideas = Heavy_Taxation
-				remove_ideas = Marxist_Taxation			
+				remove_ideas = policy_taxrate_temp_1
+				remove_ideas = policy_taxrate_temp_2
+				remove_ideas = policy_taxrate_temp_4
+				remove_ideas = policy_taxrate_temp_5			
 			}
 		}	
 	}
@@ -106,7 +105,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_AGNEW_Continue_Nixonian_Economics
-		icon = GFX_goal_unknown
+		icon = GFX_industrial_methods
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -126,7 +125,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_AGNEW_Trade_Act_of_1974
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_positive_trade_relations
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -141,7 +140,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_AGNEW_Mass_Transit_Revitilization_Act
-		icon = GFX_goal_unknown
+		icon = GFX_Amtrak_Icon
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -188,7 +187,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_AGNEW_Repress_the_Left
-		icon = GFX_goal_unknown
+		icon = GFX_generic_arrests
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -212,7 +211,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_AGNEW_Resource_Conservation_Act
-		icon = GFX_goal_unknown
+		icon = GFX_Adopt_New_Constitiution
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -230,7 +229,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_AGNEW_Federal_Land_Reform
-		icon = GFX_goal_unknown
+		icon = GFX_Paper_Two
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -246,7 +245,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_AGNEW_Increase_NASA_Funding
-		icon = GFX_goal_unknown
+		icon = GFX_spacerace
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {

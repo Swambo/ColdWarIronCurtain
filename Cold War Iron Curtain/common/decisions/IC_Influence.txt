@@ -4,7 +4,7 @@ influence_desicions = {
 		icon = generic_independence
 		
 		cost = 100
-		days_remove = 90
+		days_remove = 5
 		days_re_enable = 0
 		
 		complete_effect = {
@@ -19,7 +19,7 @@ influence_desicions = {
 		icon = generic_independence
 		
 		cost = 200
-		days_remove = 90
+		days_remove = 5
 		days_re_enable = 0
 		
 		visible = {
@@ -43,11 +43,11 @@ influence_desicions = {
 		icon = generic_independence
 		
 		cost = 200
-		days_remove = 90
+		days_remove = 5
 		days_re_enable = 0
 		visible = {
 			has_variable = influence_array^1 
-		}		
+		}
 		complete_effect = {
 			set_variable = { subtractInf = 50 }
 			multiply_variable = { subtractInf = encryptTotal }
@@ -65,11 +65,11 @@ influence_desicions = {
 		icon = generic_independence
 		
 		cost = 200
-		days_remove = 90
+		days_remove = 5
 		days_re_enable = 0
 		visible = {
 			has_variable = influence_array^2 
-		}	
+		}
 		complete_effect = {
 			set_variable = { subtractInf = 50 }
 			multiply_variable = { subtractInf = encryptTotal }
@@ -87,11 +87,11 @@ influence_desicions = {
 		icon = generic_independence
 		
 		cost = 200
-		days_remove = 90
+		days_remove = 5
 		days_re_enable = 0
 		visible = {
 			has_variable = influence_array^3 
-		}		
+		}
 		complete_effect = {
 			set_variable = { subtractInf = 50 }
 			multiply_variable = { subtractInf = encryptTotal }
@@ -109,11 +109,11 @@ influence_desicions = {
 		icon = generic_independence
 		
 		cost = 200
-		days_remove = 90
+		days_remove = 5
 		days_re_enable = 0
 		visible = {
 			has_variable = influence_array^4 
-		}		
+		}
 		complete_effect = {
 			set_variable = { subtractInf = 50 }
 			multiply_variable = { subtractInf = encryptTotal }
@@ -131,11 +131,11 @@ influence_desicions = {
 		icon = generic_independence
 		
 		cost = 200
-		days_remove = 90
+		days_remove = 5
 		days_re_enable = 0
 		visible = {
 			has_variable = influence_array^5 
-		}		
+		}
 		complete_effect = {
 			set_variable = { subtractInf = 50 }
 			multiply_variable = { subtractInf = encryptTotal }
@@ -153,11 +153,11 @@ influence_desicions = {
 		icon = generic_independence
 		
 		cost = 200
-		days_remove = 90
+		days_remove = 5
 		days_re_enable = 0
 		visible = {
 			has_variable = influence_array^6 
-		}		
+		}
 		complete_effect = {
 			set_variable = { subtractInf = 50 }
 			multiply_variable = { subtractInf = encryptTotal }

@@ -456,6 +456,9 @@ focus_tree = {
 		}
 		x = 24
 		y = 1
+		available = {
+			date > 1953.1.1
+		}
 	completion_reward = {
 		country_event = {
 			id = IRQ.9996
@@ -675,7 +678,7 @@ focus_tree = {
 		}
 	focus = {
 		id = IRQ_work_with_aramco
-		icon = GFX_Aramco
+		icon = GFX_Aramco_Deal
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -837,6 +840,9 @@ focus_tree = {
 		}
 		x = 33
 		y = 4
+		available = {
+			always = no
+		}
 		completion_reward = {
 			country_event = IRQ.9901
 			SAU = {
@@ -883,14 +889,18 @@ focus_tree = {
 		x = 33
 		y = 5
 		available = {
-			NOT = { 
-				country_exists = SAU
-			}	
+			SAU = {
+				has_country_leader = {
+					name = "Abd al-Ilah"
+					ruling_only = yes
+				}
+				has_war = NO
+			}
 		}
 		completion_reward = {
 			IRQ = {
 				set_autonomy = {
-					target = var:ARABIA
+					target = SAU
 					autonomy_state = autonomy_associated_state
 				}			
 			}
@@ -1227,7 +1237,7 @@ focus_tree = {
 				name = agri_tech_bonus
 				bonus = 1.25
 				uses = 1
-				category = agri_tech
+				category = agriculture
 			}
 		}
 	}
@@ -1291,7 +1301,7 @@ focus_tree = {
 				name = agri_tech_bonus
 				bonus = 1.50
 				uses = 1
-				category = agri_tech
+				category = agriculture
 			}
 		}
 	}
@@ -1703,7 +1713,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = mbt_equipment_3
 				amount = 200
-				producer = SOV
+				producer = CUM
 			}		
 		}
 	}
@@ -1761,7 +1771,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = jet_interceptor_equipment_1
 				amount = 75
-				producer = ENG
+				producer = CAP
 			}
 
 		}
@@ -1783,7 +1793,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = jet_interceptor_equipment_2
 				amount = 75
-				producer = ENG
+				producer = CAP
 			}		
 		}
 	}
@@ -1840,7 +1850,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = jet_interceptor_equipment_3
 				amount = 50
-				producer = ENG
+				producer = CAP
 			}
 			air_experience = 10
 		}
@@ -2172,7 +2182,7 @@ focus_tree = {
 			completion_reward = {
 					add_tech_bonus = {
 							name = dd_bonus
-							category = screen_hull_small
+							category = screen_hull_medium
 							bonus = 1.5
 							uses = 1
 						}

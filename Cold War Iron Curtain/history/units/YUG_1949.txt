@@ -1,4 +1,4 @@
-division_template = {
+﻿division_template = {
 	name = "Pesadijska Divizija"		# Infantry Division
 	regiments = {
 		infantry = { x = 0 y = 0 }
@@ -13,15 +13,15 @@ division_template = {
 		artillery = { x = 2 y = 1 }
 	}
 	support = {
-		recon = { x = 0 y = 0 }
-		engineer = { x = 0 y = 1 }
+		recon = { x = 0 y = 0 } 		
+		engineer = { x = 0 y = 1 } 		
 		artillery_support = { x = 0 y = 2 }
 		direct_fire_gun_support = { x = 0 y = 3 }
 		auto_cannon_support = { x = 0 y = 4 }
 	}
 }
 division_template = {
-	name = "Gorska Pesadija"				# Mountain Brigade
+	name = "Gorska Pesadija"				# Mountain Brigade	
 
 	regiments = {
 		mountaineers = { x = 0 y = 0 }
@@ -30,7 +30,7 @@ division_template = {
 	}
 }
 division_template = {
-	name = "Marine Divizija"
+	name = "Marine Divizija" 		
 
 	regiments = {
 		marine = { x = 0 y = 0 }
@@ -41,7 +41,7 @@ division_template = {
 		marine = { x = 1 y = 2 }
 	}
 	support = {
-		engineer = { x = 0 y = 0 }
+		engineer = { x = 0 y = 0 }   
 	}
 	priority = 0
 }
@@ -96,7 +96,7 @@ division_template = {
 	}
 }
 division_template = {
-	name = "Te�ko Mehanizovano Pesadijska Divizija"
+	name = "Teško Mehanizovano Pesadijska Divizija"
 
 	regiments = {
 		armored_infantry = { x = 0 y = 0 }
@@ -110,11 +110,11 @@ division_template = {
 		rocket_sp_artillery = { x = 3 y = 0 }
 	}
 	support = {
-		recon_mechanized = { x = 0 y = 0 }
-		engineer = { x = 0 y = 1 }
+		recon_mechanized = { x = 0 y = 0 } 		
+		engineer = { x = 0 y = 1 } 		
 		artillery_support = { x = 0 y = 2 }
 		direct_fire_gun_support = { x = 0 y = 3 }
-		auto_cannon_support = { x = 0 y = 4 }
+		auto_cannon_support = { x = 0 y = 4 }  
 	}
 }
 division_template = {
@@ -158,7 +158,7 @@ division_template = {
 	}
 }
 division_template = {
-	name = "Te�ko Oklopljeno Divizija"
+	name = "Teško Oklopljeno Divizija"
 
 	regiments = {
 		heavy_armor = { x = 0 y = 0 }
@@ -180,7 +180,7 @@ division_template = {
 division_template = {
 	name = "Teritorijalno Odbrana"			# Represents local militias, garrisons
 										# Low experience, oldest equipment, mostly militias
-	regiments = {
+	regiments = { 
 		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
 		infantry = { x = 0 y = 2 }
@@ -196,115 +196,115 @@ units = {
 	######## LAND UNITS ########
 	###### Vojska Kraljevine Jugoslavije ######
 	division = {
-		name = "1.Pesadijska Divizija"
+		name = "1.Pesadijska Divizija"  	
 		location = 11586
 		division_template = "Pesadijska Divizija"
 		start_experience_factor = 0.3
 	}
 	division = {
-		name = "2.Pesadijska Divizija"
+		name = "2.Pesadijska Divizija"  	
 		location = 11595
 		division_template = "Pesadijska Divizija"
 		start_experience_factor = 0.3
 	}
 	division = {
-		name = "3.Pesadijska Divizija"
+		name = "3.Pesadijska Divizija"  	
 		location = 11856
 		division_template = "Pesadijska Divizija"
 		start_experience_factor = 0.3
 	}
 	division = {
-		name = "4.Pesadijska Divizija"
+		name = "4.Pesadijska Divizija"  	
 		location = 974
 		division_template = "Pesadijska Divizija"
 		start_experience_factor = 0.2
 	}
 	division = {
-		name = "5.Pesadijska Divizija"
+		name = "5.Pesadijska Divizija"  	
 		location = 3833
 		division_template = "Pesadijska Divizija"
 		start_experience_factor = 0.2
 	}
 	division = {
-		name = "6.Pesadijska Divizija"
+		name = "6.Pesadijska Divizija"  	
 		location = 6886
 		division_template = "Pesadijska Divizija"
 		start_experience_factor = 0.2
 	}
 	division = {
-		name = "7.Pesadijska Divizija"
+		name = "7.Pesadijska Divizija"  	
 		location = 599
 		division_template = "Pesadijska Divizija"
 		start_experience_factor = 0.2
 	}
 	division = {
-		name = "8.Pesadijska Divizija"
+		name = "8.Pesadijska Divizija"  	
 		location = 11735
 		division_template = "Pesadijska Divizija"
 		start_experience_factor = 0.2
 	}
 	division = {
-		name = "9.Pesadijska Divizija"
+		name = "9.Pesadijska Divizija"  	
 		location = 3924
 		division_template = "Pesadijska Divizija"
 		start_experience_factor = 0.2
 	}
 	division = {
-		name = "10.Pesadijska Divizija"
+		name = "10.Pesadijska Divizija"  	
 		location = 9809
 		division_template = "Pesadijska Divizija"
 		start_experience_factor = 0.2
 	}
 	division = {
-		name = "11.Pesadijska Divizija"
+		name = "11.Pesadijska Divizija"  	
 		location = 6672
 		division_template = "Pesadijska Divizija"
 		start_experience_factor = 0.2
 	}
 	division = {
-		name = "12.Pesadijska Divizija"
+		name = "12.Pesadijska Divizija"  	
 		location = 3882
 		division_template = "Pesadijska Divizija"
 		start_experience_factor = 0.2
 	}
 	division = {
-		name = "1.Proleterska Garda"
+		name = "1.Proleterska Garda"  	
 		location = 9599
 		division_template = "Teritorijalno Odbrana"
 		start_experience_factor = 0.1
 	}
 	division = {
-		name = "1.Mehanizovano Divizija"
+		name = "1.Mehanizovano Divizija"  	
 		location = 9599
 		division_template = "Laka Mehanizovano Pesadijska Divizija"
 		start_experience_factor = 0.2
 	}
 	division = {
-		name = "2.Mehanizovano Divizija"
+		name = "2.Mehanizovano Divizija"  	
 		location = 6647
 		division_template = "Laka Mehanizovano Pesadijska Divizija"
 		start_experience_factor = 0.2
 	}
 	division = {
-		name = "3.Mehanizovano Divizija"
+		name = "3.Mehanizovano Divizija"  	
 		location = 3592
 		division_template = "Laka Mehanizovano Pesadijska Divizija"
 		start_experience_factor = 0.2
 	}
 	division = {
-		name = "4.Mehanizovano Divizija"
+		name = "4.Mehanizovano Divizija"  	
 		location = 6940
 		division_template = "Laka Mehanizovano Pesadijska Divizija"
 		start_experience_factor = 0.2
 	}
 	division = {
-		name = "12.Marine Divizija"
+		name = "12.Marine Divizija"  	
 		location = 3924
 		division_template = "Marine Divizija"
 		start_experience_factor = 0.2
 	}
 	division = {
-		name = "1.Airborne Divizija"
+		name = "1.Airborne Divizija"  	
 		location = 11899
 		division_template = "Airborne Divizija"
 		start_experience_factor = 0.2
@@ -313,23 +313,23 @@ units = {
 
 	##### NAVAL UNITS #####
 	###### Kraljevska Jugoslovenska Ratna Mornarica (KJRM) ######
+			
 
-
-}  # Neboj?a if we get font support
+}  # Neboja if we get font support
 
 
 ###### Vazduhoplovstvo Vojske Kraljevine Jugoslavije (VVKJ) ######
 air_wings = {
 	107 = {																# Serbia
-		fighter_equipment_1 = { owner = "YUG" amount = 48 }				# 1. Vazduhoplovna Brigada -- Hawker Fury IIs, Ikarus IK-2/3s
-		tac_bomber_equipment_1 = { owner = "YUG" amount = 60 }					# 3. Vazduhoplovna Brigada  -- Do 17Ks
+		fighter_equipment_1 = { owner = "YUG" amount = 48 }# 1. Vazduhoplovna Brigada -- Hawker Fury IIs, Ikarus IK-2/3s	
+		tac_bomber_equipment_1 = { owner = "YUG" amount = 60 }# 3. Vazduhoplovna Brigada  -- Do 17Ks
 	}
 	104 = {																# Bosnia
-		heavy_fighter_equipment_1 = { owner = "YUG" creator = "ENG" amount = 48 }					# I/4. Vazduhoplovna Brigada  -- Blenheim Is
-		tac_bomber_equipment_1 = { owner = "YUG" amount = 40 }			# II/4. Vazduhoplovna Brigada  -- SM.79s
+		heavy_fighter_equipment_1 = { owner = "YUG" creator = "ENG" amount = 48 }# I/4. Vazduhoplovna Brigada  -- Blenheim Is
+		tac_bomber_equipment_1 = { owner = "YUG" amount = 40 }# II/4. Vazduhoplovna Brigada  -- SM.79s
 	}
 	106 = {																# Macedonia
-		fighter_equipment_1 = { owner = "YUG" creator = "ENG" amount = 40 }				# 2. Vazduhoplovna Brigada  -- Hurricane Is
+		fighter_equipment_1 = { owner = "YUG" creator = "ENG" amount = 40 }# 2. Vazduhoplovna Brigada  -- Hurricane Is
 	}
 }
 

@@ -1,4 +1,4 @@
-##### Division Templates #####
+﻿##### Division Templates #####
 division_template = {
 	name = "Infantry Division"  	# Standard formation for frontline divisions
 
@@ -35,5 +35,5 @@ units = {
 		start_experience_factor = 1
 		start_equipment_factor = 1
 	}
-
+		
 }

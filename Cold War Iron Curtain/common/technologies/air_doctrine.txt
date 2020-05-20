@@ -22,7 +22,7 @@ technologies = {
 
 		on_research_complete = {
 			custom_effect_tooltip = air_doctrine_versatile_tt
-		}		
+		}
 		
 		path = {
 			leads_to_tech = air_doctrine_versatile_1a
@@ -327,6 +327,10 @@ technologies = {
 	
 		air_intercept_efficiency = 0.05
 		air_interception_detect_factor = 0.1
+		category_scout_plane = {
+			reliability = 0.125
+			air_defence = 0.1
+		}
 		xp_research_type = air
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
@@ -452,6 +456,10 @@ technologies = {
 	
 		category_interdictor = {
 			air_agility = 0.1
+		}
+		category_scout_plane = {
+			reliability = 0.125
+			air_defence = 0.1
 		}
 		xp_research_type = air
 		xp_research_cost = 100
@@ -933,7 +941,7 @@ technologies = {
 			NOT = { has_tech = air_doctrine_integral }
 			NOT = { is_researching_technology = air_doctrine_versatile }
 			NOT = { has_tech = air_doctrine_versatile }
-		}			
+		}
 		
 		path = {
 			leads_to_tech = air_doctrine_systemic_1a
@@ -1063,6 +1071,10 @@ technologies = {
 	air_doctrine_systemic_2a = {
 		
 		strategic_bomb_visibility = -0.25
+		category_scout_plane = {
+			reliability = 0.125
+			air_range = 0.25
+		}
 		xp_research_type = air
 		xp_research_cost = 100
 		xp_research_bonus = 1.00
@@ -2057,14 +2069,14 @@ technologies = {
 		
 		on_research_complete = {
 			custom_effect_tooltip = air_doctrine_integral_tt
-		}		
+		}
 		
 		allow = {
 			NOT = { is_researching_technology = air_doctrine_systemic }
 			NOT = { has_tech = air_doctrine_systemic }
 			NOT = { is_researching_technology = air_doctrine_versatile }
 			NOT = { has_tech = air_doctrine_versatile }
-		}			
+		}
 		path = {
 			leads_to_tech = air_doctrine_integral_1a
 			research_cost_coeff = 1
@@ -3208,6 +3220,10 @@ technologies = {
 		air_close_air_support_agility_factor = 0.03
 		air_close_air_support_attack_factor = 0.03
 		air_close_air_support_defence_factor = 0.03
+		category_scout_plane = {
+			reliability = 0.125
+			maximum_speed = 0.25
+		}
 		xp_research_type = air
 		xp_research_cost = 100
 		xp_research_bonus = 1.00

@@ -22,18 +22,18 @@ sub_units = {
 		}
 
 		manpower = 300
-		training_time = 180	
+		training_time = 180
 		supply_consumption = 0.02
-		combat_width = 0		
-		max_organisation = 35	
-		default_morale = 0.3		
+		combat_width = 0
+		max_organisation = 35
+		default_morale = 0.3
 		max_strength = 10
-		suppression = 1
+		suppression = 2
 
 		need = {
 			infantry_equipment = 20
 			motorized_equipment = 30
-			support_equipment = 50			
+			support_equipment = 50
 		}
 		
 		
@@ -105,18 +105,18 @@ sub_units = {
 		}
 
 		manpower = 300
-		training_time = 180	
+		training_time = 180
 		supply_consumption = 0.02
-		combat_width = 0		
-		max_organisation = 35	
-		default_morale = 0.3		
+		combat_width = 0
+		max_organisation = 35
+		default_morale = 0.3
 		max_strength = 10
-		suppression = 1
+		suppression = 2
 
 		need = {
 			infantry_equipment = 20
 			mechanized_equipment = 30
-			support_equipment = 50			
+			support_equipment = 50
 		}
 		
 		
@@ -166,7 +166,7 @@ sub_units = {
 		
 	}
 	
-	armored_engineers = {
+	engineer_armored = {
 		sprite = armor
 		map_icon_category = infantry
 		priority = 0
@@ -188,16 +188,16 @@ sub_units = {
 		}
 
 		manpower = 500
-		training_time = 140	
+		training_time = 140
 		supply_consumption = 0.06
-		combat_width = 0		
-		max_organisation = 35	
-		default_morale = 0.3		
+		combat_width = 0
+		max_organisation = 35
+		default_morale = 0.3
 		max_strength = 12
-		suppression = 1
+		suppression = 2
 
 		need = {
-			infantry_equipment = 20		
+			infantry_equipment = 20
 			mbt_equipment = 20
 			support_equipment = 50
 		}
@@ -244,6 +244,14 @@ sub_units = {
 		entrenchment = 5
 		same_support_type = engineer
 		
+		###Battle modifiers
+		
+		breakthrough = -0.2
+		defense = -0.2
+		soft_attack = -0.2
+		hard_attack = -0.2
+		air_attack = -0.2
+		
 	}
 ##### RECON #####
 	recon = {
@@ -268,13 +276,13 @@ sub_units = {
 		}
 
 		manpower = 300
-		training_time = 120	
+		training_time = 120
 		supply_consumption = 0.02
-		combat_width = 0		
-		max_organisation = 30	
-		default_morale = 0.3		
+		combat_width = 0
+		max_organisation = 30
+		default_morale = 0.3
 		max_strength = 2
-		suppression = 1
+		suppression = 2
 		
 		can_be_parachuted = yes		
 
@@ -311,11 +319,11 @@ sub_units = {
 		
 		###Battle modifiers
 		
-		breakthrough = -0.3
-		defense = -0.5
-		soft_attack = -0.5
-		hard_attack = -0.5
-		air_attack = -0.5
+		breakthrough = -0.2
+		defense = -0.2
+		soft_attack = -0.2
+		hard_attack = -0.2
+		air_attack = -0.2
 		
 		###Extra ability
 		recon = 1
@@ -347,13 +355,13 @@ sub_units = {
 		can_be_parachuted = yes
 
 		manpower = 500
-		training_time = 140	
+		training_time = 140
 		supply_consumption = 0.03
-		combat_width = 0		
-		max_organisation = 30	
-		default_morale = 0.3		
+		combat_width = 0
+		max_organisation = 30
+		default_morale = 0.3
 		max_strength = 3
-		suppression = 1
+		suppression = 3
 
 		need = {
 			motorized_equipment = 12
@@ -389,11 +397,11 @@ sub_units = {
 		
 		###Battle modifiers
 		
-		breakthrough = -0.3
-		defense = -0.5
-		soft_attack = -0.5
-		hard_attack = -0.5
-		air_attack = -0.5
+		breakthrough = -0.2
+		defense = -0.2
+		soft_attack = -0.2
+		hard_attack = -0.2
+		air_attack = -0.2
 		
 		###Extra ability
 		recon = 1.5
@@ -425,13 +433,13 @@ sub_units = {
 		can_be_parachuted = yes
 
 		manpower = 500
-		training_time = 140	
+		training_time = 140
 		supply_consumption = 0.04
-		combat_width = 0		
-		max_organisation = 30	
-		default_morale = 0.3		
+		combat_width = 0
+		max_organisation = 30
+		default_morale = 0.3
 		max_strength = 3
-		suppression = 1
+		suppression = 3
 
 		need = {
 			mechanized_equipment = 12
@@ -467,11 +475,11 @@ sub_units = {
 		
 		###Battle modifiers
 		
-		breakthrough = -0.3
-		defense = -0.5
-		soft_attack = -0.5
-		hard_attack = -0.5
-		air_attack = -0.5
+		breakthrough = -0.2
+		defense = -0.2
+		soft_attack = -0.2
+		hard_attack = -0.2
+		air_attack = -0.2
 		
 		###Extra ability
 		recon = 1.5
@@ -502,16 +510,16 @@ sub_units = {
 		}
 
 		manpower = 500
-		training_time = 180	
+		training_time = 180
 		supply_consumption = 0.04
-		combat_width = 0		
-		max_organisation = 20	
-		default_morale = 0.3		
+		combat_width = 0
+		max_organisation = 20
+		default_morale = 0.3
 		max_strength = 2
 		suppression = 4
 
 		need = {
-			support_equipment = 20		
+			support_equipment = 20
 			scout_helicopter_equipment = 12
 		}
 		
@@ -531,7 +539,7 @@ sub_units = {
 		marsh = {
 			attack = -0.1
 			defence = -0.2
-		}		
+		}
 		urban = {
 			attack = -0.1
 			defence = -0.2
@@ -544,18 +552,12 @@ sub_units = {
 			defence = -0.2
 		}
 		
-		###Battle modifiers
-		breakthrough = -0.3
-		defense = -0.5
-		soft_attack = -0.5
-		hard_attack = -0.5
-		
 		
 		###Extra ability
 		recon = 2
 		same_support_type = recon
 
-	}	
+	}
 ##### SIGNAL/COMMAND #####
 
 	signal_company = {
@@ -578,11 +580,11 @@ sub_units = {
 		}
 
 		manpower = 500
-		training_time = 120	
+		training_time = 120
 		supply_consumption = 0.02
-		combat_width = 0		
-		max_organisation = 60	
-		default_morale = 0.3		
+		combat_width = 0
+		max_organisation = 60
+		default_morale = 0.3
 		max_strength = 1
 		suppression = 0
 		
@@ -618,11 +620,11 @@ sub_units = {
 		}
 
 		manpower = 500
-		training_time = 180	
+		training_time = 180
 		supply_consumption = 0.02
-		combat_width = 0		
-		max_organisation = 0	
-		default_morale = 0.3		
+		combat_width = 0
+		max_organisation = 0
+		default_morale = 0.3
 		max_strength = 1
 		suppression = 4
 		
@@ -657,11 +659,11 @@ sub_units = {
 		}
 
 		manpower = 300
-		training_time = 120	
+		training_time = 120
 		supply_consumption = 0.01
-		combat_width = 0		
-		max_organisation = 20	
-		default_morale = 0.3		
+		combat_width = 0
+		max_organisation = 20
+		default_morale = 0.3
 		max_strength = 1
 		suppression = 0
 		
@@ -701,11 +703,11 @@ sub_units = {
 		}
 
 		manpower = 300
-		training_time = 180	
+		training_time = 180
 		supply_consumption = 0.05
-		combat_width = 0		
-		max_organisation = 10	
-		default_morale = 0.03	
+		combat_width = 0
+		max_organisation = 10
+		default_morale = 0.03
 		max_strength = 1
 		suppression = 0
 		
@@ -722,9 +724,9 @@ sub_units = {
 			support_equipment = 10
 		}
 		
-		transport = support_equipment
+		transport = cargo_helicopter_equipment
 
-	}	
+	}
 ##### MAINTENANCE #####
 	maintenance_company = {
 		sprite = infantry
@@ -746,11 +748,11 @@ sub_units = {
 		}
 	
 		manpower = 500
-		training_time = 120	
+		training_time = 120
 		supply_consumption = 0.03
-		combat_width = 0		
-		max_organisation = 35	
-		default_morale = 0.3		
+		combat_width = 0
+		max_organisation = 35
+		default_morale = 0.3
 		max_strength = 1
 		suppression = 0
 		
@@ -764,7 +766,7 @@ sub_units = {
 			motorized_equipment = 20
 		}
 		
-		transport = support_equipment
+		transport = motorized_equipment
 
 	}
 ##### MEDICINE #####
@@ -788,11 +790,11 @@ sub_units = {
 		}
 
 		manpower = 500
-		training_time = 120	
+		training_time = 120
 		supply_consumption = 0.05
-		combat_width = 0		
-		max_organisation = 35	
-		default_morale = 0.5		
+		combat_width = 0
+		max_organisation = 35
+		default_morale = 0.5
 		max_strength = 2
 		suppression = 0
 		
@@ -832,11 +834,11 @@ sub_units = {
 		}
 
 		manpower = 500
-		training_time = 120	
+		training_time = 120
 		supply_consumption = 0.05
-		combat_width = 0		
-		max_organisation = 35	
-		default_morale = 0.5		
+		combat_width = 0
+		max_organisation = 35
+		default_morale = 0.5
 		max_strength = 2
 		suppression = 0
 		
@@ -848,7 +850,7 @@ sub_units = {
 
 		need = {
 			support_equipment = 50
-			mechanized_equipment = 20
+			mechanized_equipment = 40
 		}
 		same_support_type = field_hospital
 		
@@ -856,7 +858,7 @@ sub_units = {
 		
 	}
 	
-	helicopter_medical_support = {
+	field_hospital_helicopter = {
 		sprite = infantry
 		map_icon_category = infantry
 		priority = 0
@@ -877,13 +879,21 @@ sub_units = {
 		}
 
 		manpower = 550
-		training_time = 150	
+		training_time = 150
 		supply_consumption = 0.06
-		combat_width = 0		
-		max_organisation = 20	
-		default_morale = 0.5		
+		combat_width = 0
+		max_organisation = 20
+		default_morale = 0.5
 		max_strength = 2
 		suppression = 0
+		
+		###Battle modifiers
+		
+		breakthrough = -0.9
+		defense = -0.9
+		soft_attack = -0.9
+		hard_attack = -0.9
+		air_attack = -0.9
 
 		###Extra ability
 		casualty_trickleback = 0.30
@@ -923,10 +933,10 @@ sub_units = {
 		}
 
 		manpower = 300
-		training_time = 120	
+		training_time = 120
 		supply_consumption = 0.14
-		combat_width = 0		
-		max_organisation = 0	
+		combat_width = 0
+		max_organisation = 0
 		default_morale = 0.1		
 		max_strength = 0.2
 		suppression = 0
@@ -934,11 +944,12 @@ sub_units = {
 		can_be_parachuted = yes		
 
 		need = {
-			artillery_equipment = 12
+			artillery_equipment = 36
+			motorized_equipment = 18
 			support_equipment = 10
 		}
 		
-		transport = support_equipment
+		transport = motorized_equipment
 	}
 	
 	light_artillery_support = {
@@ -964,10 +975,10 @@ sub_units = {
 		}
 
 		manpower = 300
-		training_time = 120	
+		training_time = 120
 		supply_consumption = 0.08
-		combat_width = 0		
-		max_organisation = 0	
+		combat_width = 0
+		max_organisation = 0
 		default_morale = 0.1		
 		max_strength = 0.2
 		suppression = 0
@@ -975,11 +986,12 @@ sub_units = {
 		can_be_parachuted = yes		
 
 		need = {
-			light_artillery_equipment = 16
+			light_artillery_equipment = 48
+			motorized_equipment = 18
 			support_equipment = 10
 		}
 		
-		transport = support_equipment
+		transport = motorized_equipment
 	}
 	
 	heavy_artillery_support = {
@@ -1005,21 +1017,22 @@ sub_units = {
 		}
 
 		manpower = 300
-		training_time = 120	
+		training_time = 120
 		supply_consumption = 0.45
-		combat_width = 0		
-		max_organisation = 0	
+		combat_width = 0
+		max_organisation = 0
 		default_morale = 0.1		
 		max_strength = 0.2
 		suppression = 0
 
 		need = {
-			heavy_artillery_equipment = 8
+			heavy_artillery_equipment = 24
+			motorized_equipment = 24
 			support_equipment = 10
 		}
 		
-		transport = support_equipment
-	}	
+		transport = motorized_equipment
+	}
 	
 	atgm_support = {
 		sprite = anti_tank
@@ -1045,10 +1058,10 @@ sub_units = {
 		}
 
 		manpower = 300
-		training_time = 120	
+		training_time = 120
 		supply_consumption = 0.08
-		combat_width = 0		
-		max_organisation = 0	
+		combat_width = 0
+		max_organisation = 0
 		default_morale = 0.1		
 		max_strength = 0.2
 		suppression = 0
@@ -1056,11 +1069,12 @@ sub_units = {
 		can_be_parachuted = yes	
 
 		need = {
-			atgm_equipment = 12
+			atgm_equipment = 36
+			motorized_equipment = 9
 			support_equipment = 10
 		}
 		
-		transport = support_equipment
+		transport = motorized_equipment
 	}
 	
 	direct_fire_gun_support = {
@@ -1086,10 +1100,10 @@ sub_units = {
 		}
 
 		manpower = 300
-		training_time = 120	
+		training_time = 120
 		supply_consumption = 0.08
-		combat_width = 0		
-		max_organisation = 0	
+		combat_width = 0
+		max_organisation = 0
 		default_morale = 0.1		
 		max_strength = 0.2
 		suppression = 0
@@ -1097,12 +1111,13 @@ sub_units = {
 		can_be_parachuted = yes	
 
 		need = {
-			direct_fire_gun_equipment = 12
+			direct_fire_gun_equipment = 36
+			motorized_equipment = 18
 			support_equipment = 10
 		}
 		
-		transport = support_equipment
-	}	
+		transport = motorized_equipment
+	}
 	
 	auto_cannon_support = {
 		sprite = infantry
@@ -1127,10 +1142,10 @@ sub_units = {
 		}
 
 		manpower = 300
-		training_time = 120	
+		training_time = 120
 		supply_consumption = 0.10
-		combat_width = 0		
-		max_organisation = 0	
+		combat_width = 0
+		max_organisation = 0
 		default_morale = 0.1		
 		max_strength = 0.2
 		suppression = 0
@@ -1138,11 +1153,12 @@ sub_units = {
 		can_be_parachuted = yes	
 
 		need = {
-			auto_cannon_equipment = 20
+			auto_cannon_equipment = 36
+			motorized_equipment = 18
 			support_equipment = 10
 		}
 		
-		transport = support_equipment
+		transport = motorized_equipment
 	}
 	
 	army_special_force = {
@@ -1170,11 +1186,11 @@ sub_units = {
 		}
 		
 		manpower = 500
-		training_time = 180	
+		training_time = 180
 		supply_consumption = 0.04
-		combat_width = 0		
-		max_organisation = 60	
-		default_morale = 0.0.40	
+		combat_width = 0
+		max_organisation = 60
+		default_morale = 0.0.40
 		max_strength = 10
 		suppression = 5
 		
@@ -1228,15 +1244,16 @@ sub_units = {
 		
 		###Battle modifiers
 		
-		breakthrough = -0.2
-		defense = -0.2
-		soft_attack = -0.2
-		hard_attack = -0.2
-		air_attack = -0.5
+		breakthrough = 2
+		defense = 2
+		soft_attack = 2
+		hard_attack = 2
+		air_attack = 2
 		
 		###Extra ability
 		recon = 0.5
 		
+		same_support_type = military_police
 	}
 	
 	navy_special_force = {
@@ -1265,10 +1282,10 @@ sub_units = {
 		}
 		
 		manpower = 500
-		training_time = 180	
+		training_time = 180
 		supply_consumption = 0.04
-		combat_width = 0		
-		max_organisation = 60	
+		combat_width = 0
+		max_organisation = 60
 		default_morale = 0.0.40
 		max_strength = 2
 		suppression = 3
@@ -1309,18 +1326,19 @@ sub_units = {
 		
 		###Battle modifiers
 		
-		breakthrough = -0.2
-		defense = -0.2
-		soft_attack = -0.2
-		hard_attack = -0.2
-		air_attack = -0.5
+		breakthrough = 2
+		defense = 2
+		soft_attack = 2
+		hard_attack = 2
+		air_attack = 2
 		
 		###Extra ability
 		recon = 0.5
 		initiative = 0.10
 		
 		
-	}	
+		same_support_type = military_police
+	}
 	
 	airforce_special_force = {
 		sprite = infantry
@@ -1347,11 +1365,11 @@ sub_units = {
 		}
 		
 		manpower = 500
-		training_time = 180	
+		training_time = 180
 		supply_consumption = 0.04
-		combat_width = 0	
-		max_organisation = 60	
-		default_morale = 0.40	
+		combat_width = 0
+		max_organisation = 60
+		default_morale = 0.40
 		max_strength = 2
 		suppression = 2
 		
@@ -1399,17 +1417,83 @@ sub_units = {
 		
 		###Battle modifiers
 		
-		breakthrough = -0.2
-		defense = -0.2
-		soft_attack = -0.2
-		hard_attack = -0.2
-		air_attack = -0.5
+		breakthrough = 2
+		defense = 2
+		soft_attack = 2
+		hard_attack = 2
+		air_attack = 2
 		
 		###Extra ability
 		recon = 0.5
 		initiative = 0.10
 		
 		
+		same_support_type = military_police
+	}
+	
+	cavalry_special_force = {
+		sprite = cavalry_special_force
+		map_icon_category = other
+		priority = 599
+		ai_priority = 200
+		active = no
+		cavalry = yes
+		special_forces = yes
+
+		type = {
+			infantry
+			support
+		}
+		
+		group = support
+		transport = support_equipment
+		
+		categories = {
+			category_front_line
+			category_all_infantry
+			category_army
+			category_special_forces
+			category_mounted
+			category_support_battalions
+		}
+
+		manpower = 500
+		training_time = 180
+		supply_consumption = 0
+		weight = 0.5
+		combat_width = 0
+		max_organisation = 60
+		default_morale = 0.4		
+		max_strength = 4
+		suppression = 8
+		
+		essential = {
+			infantry_equipment
+			support_equipment
+		}
+		###Extra ability
+		recon = 1
+	
+		need = {
+			infantry_equipment = 50
+			support_equipment = 40
+		}
+		
+		mountain = {
+			attack = 0.3
+			defence = 0.2
+			movement = 0.1
+		}
+		urban = {
+			attack = 0.1
+			defence = 0.1
+		}
+		desert = {
+			attack = 0.3
+			defence = 0.2
+		}
+		
+		same_support_type = military_police
 	}
 	
 	attack_helicopter_support = {
@@ -1439,18 +1523,18 @@ sub_units = {
 		training_time = 180
 		supply_consumption = 0.5
 		weight = 1.5
-		combat_width = 0		
-		max_organisation = 0	
+		combat_width = 0
+		max_organisation = 0
 		default_morale = 0.2		
 		max_strength = 0.6
-		suppression = 0	
+		suppression = 0
 
 		# this is what moves us and sets speed
 		transport = attack_helicopter_equipment
 
 		need = {
 			attack_helicopter_equipment = 20
-			support_equipment = 20	
+			support_equipment = 20
 		}
 		forest = {
 			attack = -0.1
@@ -1467,7 +1551,7 @@ sub_units = {
 		marsh = {
 			attack = -0.1
 			defence = -0.2
-		}		
+		}
 		urban = {
 			attack = -0.1
 			defence = -0.2
@@ -1479,6 +1563,14 @@ sub_units = {
 			attack = -0.05
 			defence = -0.2
 		}
+		
+		###Battle modifiers
+		
+		breakthrough = 1.5
+		defense = 1.5
+		soft_attack = 1.5
+		hard_attack = 1.5
+		air_attack = 1.5
 
 	}
 }

@@ -1,5 +1,5 @@
-division_template = {
-	name = "羘h s醤g Co gioi h骯 Bo binh Su do鄋"
+锘縟ivision_template = {
+	name = "脕nh s谩ng Co gioi h贸a Bo binh Su 膽o脿n"
 
 	regiments = {
 		motorized_infantry = { x = 0 y = 0 }
@@ -23,58 +23,58 @@ division_template = {
 units = {
 
 	division = {
-		name = "1st 羘h s醤g Co gioi h骯 Bo binh Su do鄋"
+		name = "1st 脕nh s谩ng Co gioi h贸a Bo binh Su 膽o脿n"
 		location = 4401
-		division_template = "羘h s醤g Co gioi h骯 Bo binh Su do鄋"
+		division_template = "脕nh s谩ng Co gioi h贸a Bo binh Su 膽o脿n"
 		start_experience_factor = 1.0
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "2nd 羘h s醤g Co gioi h骯 Bo binh Su do鄋"
+		name = "2nd 脕nh s谩ng Co gioi h贸a Bo binh Su 膽o脿n"
 		location = 4401
-		division_template = "羘h s醤g Co gioi h骯 Bo binh Su do鄋"
+		division_template = "脕nh s谩ng Co gioi h贸a Bo binh Su 膽o脿n"
 		start_experience_factor = 1.0
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "3rd 羘h s醤g Co gioi h骯 Bo binh Su do鄋"
+		name = "3rd 脕nh s谩ng Co gioi h贸a Bo binh Su 膽o脿n"
 		location = 4401
-		division_template = "羘h s醤g Co gioi h骯 Bo binh Su do鄋"
+		division_template = "脕nh s谩ng Co gioi h贸a Bo binh Su 膽o脿n"
 		start_experience_factor = 1.0
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "4th 羘h s醤g Co gioi h骯 Bo binh Su do鄋"
+		name = "4th 脕nh s谩ng Co gioi h贸a Bo binh Su 膽o脿n"
 		location = 4401
-		division_template = "羘h s醤g Co gioi h骯 Bo binh Su do鄋"
+		division_template = "脕nh s谩ng Co gioi h贸a Bo binh Su 膽o脿n"
 		start_experience_factor = 1.0
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "5th 羘h s醤g Co gioi h骯 Bo binh Su do鄋"
+		name = "5th 脕nh s谩ng Co gioi h贸a Bo binh Su 膽o脿n"
 		location = 4401
-		division_template = "羘h s醤g Co gioi h骯 Bo binh Su do鄋"
+		division_template = "脕nh s谩ng Co gioi h贸a Bo binh Su 膽o脿n"
 		start_experience_factor = 1.0
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "6th 羘h s醤g Co gioi h骯 Bo binh Su do鄋"
+		name = "6th 脕nh s谩ng Co gioi h贸a Bo binh Su 膽o脿n"
 		location = 4401
-		division_template = "羘h s醤g Co gioi h骯 Bo binh Su do鄋"
+		division_template = "脕nh s谩ng Co gioi h贸a Bo binh Su 膽o脿n"
 		start_experience_factor = 1.0
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "7th 羘h s醤g Co gioi h骯 Bo binh Su do鄋"
+		name = "7th 脕nh s谩ng Co gioi h贸a Bo binh Su 膽o脿n"
 		location = 4401
-		division_template = "羘h s醤g Co gioi h骯 Bo binh Su do鄋"
+		division_template = "脕nh s谩ng Co gioi h贸a Bo binh Su 膽o脿n"
 		start_experience_factor = 1.0
 		start_equipment_factor = 1.0
 	}
 	division = {
-		name = "8th 羘h s醤g Co gioi h骯 Bo binh Su do鄋"
+		name = "8th 脕nh s谩ng Co gioi h贸a Bo binh Su 膽o脿n"
 		location = 4401
-		division_template = "羘h s醤g Co gioi h骯 Bo binh Su do鄋"
+		division_template = "脕nh s谩ng Co gioi h贸a Bo binh Su 膽o脿n"
 		start_experience_factor = 1.0
 		start_equipment_factor = 1.0
 	}

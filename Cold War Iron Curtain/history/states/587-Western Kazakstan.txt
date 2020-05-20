@@ -4,7 +4,7 @@ state = {
 
 	history = {
 		owner = SOV
-		set_state_flag = lushdesert
+		set_state_flag = desertlush
 		set_state_flag = basic
 		set_state_flag = nominal
 		set_state_flag = undeveloped
@@ -12,7 +12,7 @@ state = {
 			infrastructure = 1
 			state_infrastructure = 2
 			water_infrastructure = 1
-
+			
 			agri_industrial_complex = 1
 
 			fossil_fuel_powerplant = 1
@@ -28,7 +28,7 @@ state = {
 	}
 
 	provinces = {
-		642 1517 4523 4620 10262 11701
+		642 1517 4523 4620 10262 11701 
 	}
 	manpower = 245133
 	buildings_max_level_factor = 1.000

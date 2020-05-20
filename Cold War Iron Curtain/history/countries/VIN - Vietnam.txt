@@ -1,4 +1,4 @@
-capital = 881
+﻿capital = 881
 
 oob = "VIN_1949"
 
@@ -18,21 +18,21 @@ if = {
 	set_technology = {
 		subkiller_0 = 1
 		maritime_sonar_0 = 1
-		ww_detection = 1
+		detection_ww = 1
 		maritime_ew_ss_0 = 1
 		ww_armaments = 1
 		ship_armament_light_0 = 1
 		ship_armament_medium_0 = 1
-
+		
 		ww_capitals = 1
-
+		
 		ww_submarines = 1
 		torpedo_ww = 1
 		sub_hull_large_single_0 = 1
 		torpedo_small_0 = 1
 		ww_screens = 1
-		screen_hull_small_0 = 1
 		screen_hull_medium_0 = 1
+		screen_hull_heavy_0 = 1
 	}
 }
 
@@ -42,33 +42,33 @@ set_technology = {
 	ww_infra = 1
 
 ##Infantry##
-
-	infantry_equip_1 = 1
+	
+	infantry_equip_1 = 1 
 	team_weapons_1 = 1
 	specialist_1 = 1
 	ammo_explosives_1 = 1
 	squad_weapons_1 = 1
 	hmg_1 = 1
-
-	special_operations = 1
+	
+	special_operations = 1 
 	mountain_warfare_1 = 1
 	amphibious_warfare_1 = 1
 	airborne_operations_1 = 1
 	army_sp_forces_1 = 1
-
+	
 ##Support##
-
+	
 	tech_support = 1
 	combat_support = 1
 	tech_engineers = 1
 	tech_recon = 1
 	tech_military_police = 1
-
+	
 	combat_service_support = 1
 	tech_field_hospital = 1
 	tech_logistics_company = 1
 	tech_maintenance_company = 1
-
+	
 ##Armor##
 
 	iw_armored_vehicles = 1
@@ -77,36 +77,36 @@ set_technology = {
 	main_battle_tanks = 1
 	main_battle_tanks_1 = 1
 	main_battle_tanks_2 = 1
-
+	
 	mechanized_infantry = 1
 	mechanized_infantry2 = 1
 	motorised_infantry = 1
-
+	
 	sp_rocket1 = 1
-
+	
 ##Artillery##
-
+	
 	autocannon_1 = 1
 	spaag_1 = 1
-
+	
 	artillery_1 = 1
 	light_artillery_1 = 1
 	light_sp_artillery_1 = 1
-
+	
 	direct_fire_gun_1 = 1
-
+	
 ##Land Doc##
-
+	
 ##Naval##
-
-
+	
+	
 
 ##Naval Doc##
-
+	
 ##Light Air##
 
 	early_fighter = 1
-
+	
 	CAS1 = 1
 	CAS2 = 1
 	CAS3 = 1
@@ -118,7 +118,7 @@ set_technology = {
 	heavy_fighter1 = 1
 	heavy_fighter2 = 1
 	heavy_fighter3 = 1
-
+	
 ##Air##
 
 	early_bomber = 1
@@ -129,25 +129,25 @@ set_technology = {
 	tactical_bomber1 = 1
 	tactical_bomber2 = 1
 	tactical_bomber3 = 1
-
+	
 ##Air Doc##
-
+	
 ##Helicopters##
-
+	
 ##Engineering##
-
-	radio = 1
-
+	
+	radio = 1 
+	
 ##Industry##
-
-
+	
+	
 ##Rocketry##
 
 	rocket_engines = 1
 	jet_engines = 1
-
+	
 ##Space##
-
+	
 
 ##WMD##
 
@@ -155,15 +155,14 @@ set_technology = {
 
 set_convoys = 50
 
-set_cosmetic_tag = VIN_FRA
 
 give_military_access = PRC
 give_military_access = NLF
 give_military_access = LAO
 
 
-add_ideas = {
-	cold_war_civil_war_ideological_idea
+add_ideas = { 
+	cold_war_civil_war_ideological_idea 
 	paramilitarism_focus
 	limited_conscription
 	VIN_peoples_army
@@ -176,7 +175,7 @@ add_ideas = {
 
 
 
-	set_popularities = {
+	set_popularities = { 
 		democratic = 0
 		communism = 0
 		fascism = 0
@@ -196,7 +195,7 @@ add_ideas = {
 		liberal = 0
 		trotskyism = 0
 		maoism = 0
-
+		
 	}
 
 	set_politics = {
@@ -211,6 +210,12 @@ create_country_leader = {
 	desc = "pol_desc_minh"
 	picture = "Ho_Chi_Minh.dds"
 	ideology = marxism_leninism
+	traits = {
+		uncle_ho
+		cosmopolitan_lettered
+		anticolonialist_roots
+		father_of_vietnamese_independence
+	}
 }
 
 create_field_marshal = {
@@ -221,8 +226,8 @@ create_field_marshal = {
 	skill = 5
 	attack_skill = 4
 	defense_skill = 4
-	#planning_skill = 5
-	#logistics_skill = 5
+	planning_skill = 5
+	logistics_skill = 5 
 }
 init_influence = yes
 set_variable = { var = domestic_influence_amount value = 2500 }
@@ -253,8 +258,8 @@ add_dynamic_modifier = {
 
 1946.1.1 = {
 	set_cosmetic_tag = DRV
-
-		set_popularities = {
+	
+		set_popularities = { 
 			democratic = 0
 			communism = 100
 			fascism = 0
@@ -263,7 +268,7 @@ add_dynamic_modifier = {
 			neutrality = 0
 			islamism = 0
 			radical_shiaism = 0
-
+			
 			Social_Democratic = 0
 			Social_Liberalism = 0
 			Salafism = 0
@@ -275,17 +280,17 @@ add_dynamic_modifier = {
 			liberal = 0
 			trotskyism = 0
 			maoism = 0
-
+			
 
 		}
-
+	
 		set_politics = {
 	ruling_party = communism
 		last_election = "1946.1.1"
 		election_frequency = 48
 		elections_allowed = no
 	}
-
+	
 }
 
 1954.1.1 = {
@@ -343,12 +348,12 @@ create_corps_commander = {
 	name = "Le Trong Tan"
 	id = 4002
 	portrait_path = "gfx/leaders/VIN/GENERALS/Le_Trong_Tan.dds"
-	traits = {  }
+	traits = { ambusher }
 	skill = 4
 	attack_skill = 5
 	defense_skill = 2
-	#planning_skill = 4
-	#logistics_skill = 3
+	planning_skill = 4
+	logistics_skill = 3 
 }
 
 1986.1.1 = {
@@ -359,12 +364,12 @@ create_corps_commander = {
 	name = "Hoang Van Thai"
 	id = 4003
 	portrait_path = "gfx/leaders/VIN/GENERALS/Hoang_Van_Thai.dds"
-	traits = {  }
+	traits = { ambusher }
 	skill = 3
 	attack_skill = 2
 	defense_skill = 5
-	#planning_skill = 3
-	#logistics_skill = 5
+	planning_skill = 3
+	logistics_skill = 5 
 }
 
 1986.1.1 = {
@@ -375,12 +380,12 @@ create_corps_commander = {
 	name = "Van Tien Dung"
 	id = 4004
 	portrait_path = "gfx/leaders/VIN/GENERALS/Van_Tien_Dung.dds"
-	traits = {  }
+	traits = { ambusher }
 	skill = 3
 	attack_skill = 3
 	defense_skill = 3
-	#planning_skill = 4
-	#logistics_skill = 4
+	planning_skill = 4
+	logistics_skill = 4
 }
 
 1986.1.1 = {
@@ -391,12 +396,12 @@ create_corps_commander = {
 	name = "Dao Huy Vu"
 	id = 4005
 	portrait_path = "gfx/leaders/VIN/GENERALS/Dao_Huy_Vu.dds"
-	traits = {  }
+	traits = { ambusher }
 	skill = 2
 	attack_skill = 2
 	defense_skill = 2
-	#planning_skill = 2
-	#logistics_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
 }
 
 1986.1.1 = {
@@ -407,12 +412,12 @@ create_corps_commander = {
 	name = "Nguyen Huu An"
 	id = 4006
 	portrait_path = "gfx/leaders/VIN/GENERALS/Nguyen_Huu_An.dds"
-	traits = { }
+	traits = { ambusher}
 	skill = 2
 	attack_skill = 4
 	defense_skill = 3
-	#planning_skill = 3
-	#logistics_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
 }
 
 1995.1.1 = {
@@ -423,12 +428,12 @@ create_navy_leader = {
 	name = "Ta Xuan Thu"
 	id = 4007
 	portrait_path = "gfx/leaders/VIN/ADMIRALS/Ta_Xuan_Thu.dds"
-	traits = { }
+	traits = { ambusher}
 	skill = 2
 	attack_skill = 2
 	defense_skill = 2
-	#planning_skill = 2
-	#logistics_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
 }
 
 1971.1.1 = {
@@ -439,12 +444,12 @@ create_navy_leader = {
 	name = "Nguyen Ba Phat"
 	id = 4008
 	portrait_path = "gfx/leaders/VIN/ADMIRALS/Nguyen_Ba_Phat.dds"
-	traits = { }
+	traits = { ambusher }
 	skill = 2
 	attack_skill = 2
 	defense_skill = 2
-	#planning_skill = 2
-	#logistics_skill = 2
+	planning_skill = 2
+	logistics_skill = 2
 }
 
 1976.1.1 = {

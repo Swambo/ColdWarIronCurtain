@@ -559,6 +559,14 @@ ai_unit_production_limiter = {
 		id = armor_heavy
 		value = -420
 	}
+	ai_strategy = {
+		type = air_factory_balance
+		value = 50
+	}
+	ai_strategy = {
+		type = dockyard_to_military_factory_ratio
+		value = 50
+	}
 }
 
 save_admiral_pp_for_later = {
@@ -623,5 +631,194 @@ default_pp_spend_amount = {
 		type = pp_spend_amount
 		id = decision
 		value = 150
+	}
+}
+
+##### VANILLA #####
+default_garrison_production = {
+	enable = {
+		always = yes
+	}
+
+	ai_strategy = {
+		type = role_ratio
+		id = garrison
+		value = 5
+	}
+}
+stellar_garrison = {
+	enable = {
+		always = yes
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = garrison 
+		value = 25 
+	}
+}
+
+build_intelligence_agency = {
+	enable = {
+		num_of_civilian_factories_available_for_projects > 24
+	}
+	abort = {
+		OR = {
+			num_of_civilian_factories_available_for_projects < 25
+		}
+	}
+
+	ai_strategy = {
+		type = intelligence_agency_usable_factories
+		value = 5
+	}
+
+}
+build_intelligence_agency2 = {
+	enable = {
+		OR = {
+			num_of_civilian_factories_available_for_projects > 49
+			AND = {
+				num_of_civilian_factories_available_for_projects > 24
+				agency_upgrade_number < 5
+			}
+		}
+	}
+	abort = {
+		OR = {
+			num_of_civilian_factories_available_for_projects < 50
+		}
+	}
+
+	ai_strategy = {
+		type = intelligence_agency_usable_factories
+		value = 15
+	}
+
+}
+build_intelligence_agency3 = {
+	enable = {
+		OR = {
+			num_of_civilian_factories_available_for_projects > 74
+			AND = {
+				num_of_civilian_factories_available_for_projects > 49
+				agency_upgrade_number < 15
+			}
+		}
+	}
+	abort = {
+		OR = {
+			num_of_civilian_factories_available_for_projects < 75
+		}
+	}
+
+	ai_strategy = {
+		type = intelligence_agency_usable_factories
+		value = 30
+	}
+
+}
+addintelligence_agency_normal_upgrade_prio = {
+	enable = {
+		always = yes
+	}
+
+	ai_strategy = {
+		type = intelligence_agency_branch_desire_factor
+		id = branch_intelligence
+		value = 1500
+	}
+	ai_strategy = {
+		type = intelligence_agency_branch_desire_factor
+		id = branch_defense
+		value = 1000
+	}
+	ai_strategy = {
+		type = intelligence_agency_branch_desire_factor
+		id = branch_operation
+		value = 1000
+	}
+	ai_strategy = {
+		type = intelligence_agency_branch_desire_factor
+		id = branch_operative
+		value = 250
+	}
+	ai_strategy = {
+		type = intelligence_agency_branch_desire_factor
+		id = branch_crypto
+		value = 1500
+	}	
+}
+
+put_garrisons_on_high_prio = {
+	enable = {
+		always = yes
+	}
+	
+	ai_strategy = {
+		type = garrison_reinforcement_priority
+		value = 100 # positive is high prio, negative is low prio
+	}
+}
+
+stellar_peacetime_economics = { #Peacetime Economy Ratios
+	enable = {
+		has_war = no
+	}
+	abort_when_not_enabled = yes
+	
+	ai_strategy = {
+		type = added_military_to_civilian_factory_ratio
+		value = -50
+	}
+	ai_strategy = {
+		type = dockyard_to_military_factory_ratio
+		value = 15
+	}
+}
+stellar_building_targets = { #Building Targets for Custom Buildings
+	enable = { num_of_civilian_factories > 9 }
+	ai_strategy = {
+		type = building_target
+		id = office_park
+		value = 1
+	}
+	ai_strategy = {
+		type = building_target
+		id = agri_industrial_complex
+		value = 1
+	}
+}
+stellar_small_economy_power = { #Small AI-Controlled Economies' Powerplant Construction Targets
+	enable = {
+		NOT = { num_of_civilian_factories > global.ai_renewable_point }
+	}
+	abort = { num_of_civilian_factories > global.ai_renewable_point }
+	ai_strategy = {
+		type = building_target
+		id = fossil_fuel_powerplant
+		value = 1
+	}
+}
+stellar_large_economy_power = { #Large AI-Controlled Economies' Powerplant Construction Targets
+	enable = {
+		num_of_civilian_factories > global.ai_renewable_point
+		NOT = { num_of_civilian_factories < global.ai_renewable_point }
+	}
+	abort = { num_of_civilian_factories > global.ai_renewable_point }
+	ai_strategy = {
+		type = building_target
+		id = fossil_fuel_powerplant
+		value = 1
+	}
+	ai_strategy = {
+		type = building_target
+		id = renewable_powerplant
+		value = 1
+	}
+	ai_strategy = {
+		type = building_target
+		id = nuclear_powerplant
+		value = 1
 	}
 }

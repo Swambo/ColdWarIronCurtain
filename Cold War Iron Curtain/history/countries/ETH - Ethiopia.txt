@@ -1,4 +1,4 @@
-capital = 271
+﻿capital = 271
 
 #TECH CULTURE#
 set_country_flag = tech_gfx_african
@@ -22,21 +22,21 @@ if = {
 	set_technology = {
 		subkiller_0 = 1
 		maritime_sonar_0 = 1
-		ww_detection = 1
+		detection_ww = 1
 		maritime_ew_ss_0 = 1
 		ww_armaments = 1
 		ship_armament_light_0 = 1
 		ship_armament_medium_0 = 1
-
+		
 		ww_capitals = 1
-
+		
 		ww_submarines = 1
 		torpedo_ww = 1
 		sub_hull_large_single_0 = 1
 		torpedo_small_0 = 1
 		ww_screens = 1
-		screen_hull_small_0 = 1
 		screen_hull_medium_0 = 1
+		screen_hull_heavy_0 = 1
 	}
 }
 
@@ -47,42 +47,60 @@ set_technology = {
 
 
 ##Infantry##
-
-	infantry_equip_1 = 1
+	
+	infantry_equip_1 = 1 
 	team_weapons_1 = 1
 	squad_weapons_1 = 1
 	hmg_1 = 1
-	autocannon_1 = 1
-	direct_fire_gun_1 = 1
-
+	
+	special_operations = 1 
+	mountain_warfare_1 = 1
+	amphibious_warfare_1 = 1
+	airborne_operations_1 = 1
+	
 ##Support##
-
+	
 	tech_support = 1
-
+	
 	combat_support = 1
 	tech_engineers = 1
 	tech_recon = 1
 	tech_military_police = 1
-
+	
 ##Armor##
 
 	iw_armored_vehicles = 1
-
+	
+	light_tanks_1 = 1
+	main_battle_tanks = 1
+	
+	mechanized_infantry = 1
+	motorised_infantry = 1
+	
 ##Artillery##
-
+	
+	autocannon_1 = 1
+	spaag_1 = 1
+	
 	artillery_1 = 1
+	sp_artillery_1 = 1
 	light_artillery_1 = 1
-
+	light_sp_artillery_1 = 1
+	heavy_artillery_1 = 1
+	
+	direct_fire_gun_1 = 1
+	tank_destroyer_1 = 1
+	
 ##Land Doc##
-
+	
 ##Naval##
-
+	
 ##Naval Doc##
-
+	
 ##Light Air##
 
 	early_fighter = 1
-
+	
 ##Air##
 
 	early_bomber = 1
@@ -113,7 +131,7 @@ set_convoys = 0
 
 
 
-	set_popularities = {
+	set_popularities = { 
 		democratic = 0
 		communism = 0
 		fascism = 0
@@ -344,7 +362,7 @@ if = {
 	}
 
 	ERI = {
-		set_popularities = {
+		set_popularities = { 
 			democratic = 0
 			communism = 0
 			fascism = 0
@@ -601,7 +619,7 @@ if = {
 }
 1968.1.1 = {
 	drop_cosmetic_tag = yes
-
+	
 	create_country_leader = {
 		name = "Germame Neway"
 		picture = "Germame_Neway.dds"
@@ -627,7 +645,7 @@ if = {
 		long_name = "All-Ethiopia Socialist Movement"
 		name = "MEISON"
 	}
-		set_popularities = {
+		set_popularities = { 
 			democratic = 0
 			communism = 10
 			fascism = 0
@@ -647,7 +665,7 @@ if = {
 			liberal = 0
 			trotskyism = 0
 			maoism = 0
-
+			
 
 		}
 }
@@ -665,7 +683,7 @@ if = {
 		long_name = "Ethiopian People's Revolutionary Party"
 		name = "EPRP"
 	}
-		set_popularities = {
+		set_popularities = { 
 			democratic = 0
 			communism = 10
 			fascism = 0
@@ -685,7 +703,7 @@ if = {
 			liberal = 0
 			trotskyism = 10
 			maoism = 0
-
+			
 
 		}
 }
@@ -699,7 +717,7 @@ if = {
 	remove_unit_leader = 734521
 	remove_unit_leader = 783612
 	remove_unit_leader = 983434
-		set_popularities = {
+		set_popularities = { 
 			democratic = 0
 			communism = 10
 			fascism = 0
@@ -719,7 +737,7 @@ if = {
 			liberal = 0
 			trotskyism = 70
 			maoism = 20
-
+			
 
 		}
 	set_politics = {
@@ -867,7 +885,7 @@ if = {
 		picture = "Mengistu_Haile_Mariam.dds"
 		ideology = marxism_leninism
 	}
-	set_popularities = {
+	set_popularities = { 
 			democratic = 0
 			communism = 70
 			fascism = 0
@@ -939,7 +957,7 @@ if = {
 }
 
 1995.7.1. = {
-	set_popularities = {
+	set_popularities = { 
 		democratic = 0
 		communism = 0
 		fascism = 0
@@ -988,7 +1006,7 @@ if = {
 	}
 }
 2012.1.1 = {
-	set_popularities = {
+	set_popularities = { 
 		democratic = 0
 		communism = 0
 		fascism = 0

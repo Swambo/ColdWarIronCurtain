@@ -1,1628 +1,1633 @@
-division_template = {
-	name = "Jundui Shi" # Infantry Division
-
+Ôªødivision_template = {
+	name = "Jundui Shi" #Conscript Spam - Division - 40 width
+	division_names_group = generic_militia	
+	
 	regiments = {
-		infantry = { x = 0 y = 0 }
-		infantry = { x = 0 y = 1 }
-		infantry = { x = 0 y = 2 }
-		infantry = { x = 0 y = 3 }
-		infantry = { x = 0 y = 4 }
+		#Brigade 1 - Armor (militia)
+		light_armor = { x = 0 y = 0 }
+		
+		#Brigade 2 - Infantry (militia)
 		infantry = { x = 1 y = 0 }
-		infantry = { x = 1 y = 1 }
-		infantry = { x = 1 y = 2 }
-		infantry = { x = 1 y = 3 }
-	   	artillery = { x = 1 y = 4 }
-	   	heavy_artillery = { x = 2 y = 0 }
-	   	light_artillery = { x = 2 y = 1 }
-	   	light_artillery = { x = 2 y = 2 }
-	   	light_artillery = { x = 2 y = 3 }
-	   	light_artillery = { x = 2 y = 4 }
-	   	medium_armor = { x = 3 y = 0 }
-	   	sp_artillery = { x = 3 y = 1 }
-	}
-	support = {
-		recon = { x = 0 y = 0 }
-		engineer = { x = 0 y = 1 }
-		logistics_company = { x = 0 y = 2 }
-		field_hospital = { x = 0 y = 3 }
-		signal_company = { x = 0 y = 4 }
-		direct_fire_gun_support = { x = 1 y = 0 }
-		auto_cannon_support = { x = 1 y = 1 }
-	}
-}
-division_template = {
-	name = "Renmin Jundui" # People's Army Division
-
-	regiments = {
-		militia = { x = 0 y = 0 }
-		militia = { x = 0 y = 1 }
-		militia = { x = 0 y = 2 }
-		militia = { x = 1 y = 0 }
 		militia = { x = 1 y = 1 }
 		militia = { x = 1 y = 2 }
-		militia = { x = 2 y = 0 }
+		militia = { x = 1 y = 3 }
+		direct_fire_gun = { x = 1 y = 4 }
+		
+		#Brigade 3 - Infantry (militia)
+		infantry = { x = 2 y = 0 }
 		militia = { x = 2 y = 1 }
 		militia = { x = 2 y = 2 }
-		artillery = { x = 3 y = 0 }
-		light_artillery = { x = 3 y = 1 }
-		light_artillery = { x = 3 y = 2 }
-	}
-	support = {
-		recon = { x = 0 y = 0 }
-		engineer = { x = 0 y = 1 }
-		signal_company = { x = 0 y = 2 }
-		direct_fire_gun_support = { x = 0 y = 3 }
-		auto_cannon_support = { x = 0 y = 4 }
-	}
-	priority = 0
-}
-division_template = {
-	name = "Paobing Shi" 				# Artillery Division
-
-	regiments = {
-		rocket_sp_artillery = { x = 0 y = 0 }
-		artillery = { x = 1 y = 0 }
-		artillery = { x = 1 y = 1 }
-		artillery = { x = 1 y = 2 }
-		artillery = { x = 1 y = 3 }
-		artillery = { x = 1 y = 4 }
-		light_artillery = { x = 2 y = 0 }
-		light_artillery = { x = 2 y = 1 }
-		light_artillery = { x = 2 y = 2 }
-		light_artillery = { x = 2 y = 3 }
-		light_artillery = { x = 2 y = 4 }
-		artillery = { x = 3 y = 0 }
-		artillery = { x = 3 y = 1 }
-		artillery = { x = 3 y = 2 }
-		artillery = { x = 3 y = 3 }
-		artillery = { x = 3 y = 4 }
+		militia = { x = 2 y = 3 }
+		auto_cannon = { x = 2 y = 4 }
+		
+		#Brigade 4 - Infantry (militia)
+		infantry = { x = 3 y = 0 }
+		militia = { x = 3 y = 1 }
+		militia = { x = 3 y = 2 }
+		militia = { x = 3 y = 3 }
+		light_artillery = { x = 3 y = 4 }
+		
+		#Brigade 5 - Infantry (militia)
 		infantry = { x = 4 y = 0 }
-		infantry = { x = 4 y = 1 }
+		militia = { x = 4 y = 1 }
+		militia = { x = 4 y = 2 }
+		light_artillery = { x = 4 y = 3 }
 	}
 	support = {
-		recon = { x = 0 y = 0 }
-		maintenance_company = { x = 0 y = 1 }
-		logistics_company = { x = 0 y = 2 }
-		signal_company = { x = 0 y = 3 }
-		engineer = { x = 0 y = 4 }
+		#Support Brigade
+	 	recon = { x = 0 y = 0 }
+		
+		#Fire Support Brigade/Maintenance
 		auto_cannon_support = { x = 1 y = 0 }
+		light_artillery_support = { x = 1 y = 1 }
+		direct_fire_gun_support = { x = 1 y = 2 }
 	}
 }
 division_template = {
-	name = "Haiyun Bubing Shi" # Naval Infantry Division
+	name = "Renmin Jundui" #Conscript Spam - Brigade - 20 Width
+	division_names_group = generic_militia_independent
+	
+	regiments = {
+		#Brigade 1 - Infantry (militia) - No support
+		infantry = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+		militia = { x = 0 y = 3 }
+		militia = { x = 0 y = 4 }
+		
+		#Brigade 2 - Infantry (militia) - No support
+		infantry = { x = 0 y = 0 }
+		militia = { x = 0 y = 1 }
+		militia = { x = 0 y = 2 }
+		militia = { x = 0 y = 3 }
+		militia = { x = 0 y = 4 }
+	}
+	support = {
+		#Support Brigade
+	 	recon = { x = 0 y = 0 }
+		
+		#Fire Support Brigade/Maintenance
+		auto_cannon_support = { x = 1 y = 0 }
+		light_artillery_support = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Haiyun Bubing Shi" #MARINES EARLY#
+	name = "Naval Infantry" #Marine - Unit - 20 Width
+	division_names_group = generic_marine
 
 	regiments = {
+		#Brigade 1 - Marine (Naval Infantry)
 		marine = { x = 0 y = 0 }
 		marine = { x = 0 y = 1 }
 		marine = { x = 0 y = 2 }
+		marine = { x = 0 y = 3 }
+		marine = { x = 0 y = 4 }
+		
+		#Brigade 1 - Marine (Naval Infantry)
 		marine = { x = 1 y = 0 }
 		marine = { x = 1 y = 1 }
 		marine = { x = 1 y = 2 }
-		marine = { x = 2 y = 0 }
-		marine = { x = 2 y = 1 }
-		marine = { x = 2 y = 2 }
-	   	light_artillery = { x = 3 y = 0 }
-	   	light_artillery = { x = 3 y = 1 }
-	   	light_artillery = { x = 3 y = 2 }
+		marine = { x = 1 y = 3 }
+		marine = { x = 1 y = 4 }
 	}
 	support = {
-		recon = { x = 0 y = 0 }
-		engineer = { x = 0 y = 1 }
-		logistics_company = { x = 0 y = 2 }
-		field_hospital = { x = 0 y = 3 }
-		signal_company = { x = 0 y = 4 }
-		direct_fire_gun_support = { x = 1 y = 0 }
-		auto_cannon_support = { x = 1 y = 1 }
+		#Support Brigade
+	 	recon = { x = 0 y = 0 }
+		
+		#Fire Support Brigade/Maintenance
+		auto_cannon_support = { x = 1 y = 0 }
+		light_artillery_support = { x = 1 y = 1 }
+		direct_fire_gun_support = { x = 1 y = 2 }
 	}
-	priority = 2
 }
 division_template = {
-	name = "Kongjiang Shi" # Airborne Division
+	name = "Kongjiang Shi" #Airborne - Unit - 10 Width
+	division_names_group = generic_airborne
 
 	regiments = {
+		#Brigade 1 - airborne (airborne)
 		airborne = { x = 0 y = 0 }
 		airborne = { x = 0 y = 1 }
 		airborne = { x = 0 y = 2 }
-		airborne = { x = 1 y = 0 }
-		airborne = { x = 1 y = 1 }
-		airborne = { x = 1 y = 2 }
-		airborne = { x = 2 y = 0 }
-		airborne = { x = 2 y = 1 }
-		airborne = { x = 2 y = 2 }
-	   	light_artillery = { x = 3 y = 0 }
-	   	light_artillery = { x = 3 y = 1 }
-	   	light_artillery = { x = 3 y = 2 }
+		airborne = { x = 0 y = 3 }
+		airborne = { x = 0 y = 4 }
 	}
 	support = {
-		recon = { x = 0 y = 0 }
-		engineer = { x = 0 y = 1 }
-		logistics_company = { x = 0 y = 2 }
-		field_hospital = { x = 0 y = 3 }
-		signal_company = { x = 0 y = 4 }
-		direct_fire_gun_support = { x = 1 y = 0 }
-		auto_cannon_support = { x = 1 y = 1 }
+		#Support Brigade
+	 	recon = { x = 0 y = 0 }
+		
+		#Fire Support Brigade/Maintenance
+		light_artillery_support = { x = 1 y = 0 }
+		direct_fire_gun_support = { x = 1 y = 1 }
 	}
 }
 division_template = {
-	name = "Jidong Bubing Shi" # Motorized Infantry Division
-
+	name = "Jidong Bubing Shi" #Motor - Brigade - 10 Width
+	division_names_group = generic_motorized_independant
+	
 	regiments = {
-		motorized_infantry = { x = 0 y = 0 }
+		#Brigade 1 - Motorized - No support
+		mechanized_infantry = { x = 0 y = 0 }
 		motorized_infantry = { x = 0 y = 1 }
 		motorized_infantry = { x = 0 y = 2 }
 		motorized_infantry = { x = 0 y = 3 }
 		motorized_infantry = { x = 0 y = 4 }
-		motorized_infantry = { x = 1 y = 0 }
-		motorized_infantry = { x = 1 y = 1 }
-		motorized_infantry = { x = 1 y = 2 }
-		motorized_infantry = { x = 1 y = 3 }
-		rocket_sp_artillery = { x = 1 y = 4 }
-		medium_armor = { x = 2 y = 0 }
-		sp_artillery = { x = 2 y = 1 }
-		light_sp_artillery = { x = 2 y = 2 }
-		light_sp_artillery = { x = 2 y = 3 }
-		light_sp_artillery = { x = 2 y = 4 }
-		sp_artillery = { x = 3 y = 0 }
-		light_sp_artillery = { x = 3 y = 1 }
 	}
 	support = {
-		recon_mechanized = { x = 0 y = 0 }
-		engineer = { x = 0 y = 1 }
-		logistics_company = { x = 0 y = 2 }
-		field_hospital = { x = 0 y = 3 }
-		signal_company = { x = 0 y = 4 }
-		direct_fire_gun_support = { x = 1 y = 0 }
-		auto_cannon_support = { x = 1 y = 1 }
+		#Support Brigade
+	 	recon = { x = 0 y = 0 }
+		
+		#Fire Support Brigade/Maintenance
+		auto_cannon_support = { x = 1 y = 0 }
+		artillery_support = { x = 1 y = 1 }
+		direct_fire_gun_support = { x = 1 y = 2 }
 	}
 }
 division_template = {
-	name = "Zhuangjia Bubing Shi" # Armored Infantry Division
-
+	name = "Zhuangjia Bubing Shi" #Lt_Armor - Unit - 20 width
+	division_names_group = generic_lt_armor	
+	
 	regiments = {
-		armored_infantry = { x = 0 y = 0 }
-		armored_infantry = { x = 0 y = 1 }
-		armored_infantry = { x = 0 y = 2 }
-		armored_infantry = { x = 0 y = 3 }
-		motorized_infantry = { x = 0 y = 4 }
-		armored_infantry = { x = 1 y = 0 }
-		armored_infantry = { x = 1 y = 1 }
-		motorized_infantry = { x = 1 y = 2 }
-		motorized_infantry = { x = 1 y = 3 }
-		rocket_sp_artillery = { x = 1 y = 4 }
-		medium_armor = { x = 2 y = 0 }
-		sp_artillery = { x = 2 y = 1 }
-		light_sp_artillery = { x = 2 y = 2 }
-		light_sp_artillery = { x = 2 y = 3 }
-		light_sp_artillery = { x = 2 y = 4 }
-		sp_artillery = { x = 3 y = 0 }
-		light_sp_artillery = { x = 3 y = 1 }
-	}
-	support = {
-		recon_mechanized = { x = 0 y = 0 }
-		engineer = { x = 0 y = 1 }
-		logistics_company = { x = 0 y = 2 }
-		field_hospital = { x = 0 y = 3 }
-		signal_company = { x = 0 y = 4 }
-		direct_fire_gun_support = { x = 1 y = 0 }
-		auto_cannon_support = { x = 1 y = 1 }
-	}
-}
-division_template = {
-	name = "Jixiehua Bubing Shi" # Mechanized Infantry Division
-
-	regiments = {
-		mechanized_infantry = { x = 0 y = 0 }
-		mechanized_infantry = { x = 0 y = 1 }
-		mechanized_infantry = { x = 0 y = 2 }
-		mechanized_infantry = { x = 0 y = 3 }
-		motorized_infantry = { x = 0 y = 4 }
-		mechanized_infantry = { x = 1 y = 0 }
-		mechanized_infantry = { x = 1 y = 1 }
-		motorized_infantry = { x = 1 y = 2 }
-		motorized_infantry = { x = 1 y = 3 }
-		rocket_sp_artillery = { x = 1 y = 4 }
-		medium_armor = { x = 2 y = 0 }
-		sp_artillery = { x = 2 y = 1 }
-		light_sp_artillery = { x = 2 y = 2 }
-		light_sp_artillery = { x = 2 y = 3 }
-		light_sp_artillery = { x = 2 y = 4 }
-		sp_artillery = { x = 3 y = 0 }
-		light_sp_artillery = { x = 3 y = 1 }
-	}
-	support = {
-		recon_mechanized = { x = 0 y = 0 }
-		engineer = { x = 0 y = 1 }
-		logistics_company = { x = 0 y = 2 }
-		field_hospital = { x = 0 y = 3 }
-		signal_company = { x = 0 y = 4 }
-		direct_fire_gun_support = { x = 1 y = 0 }
-		auto_cannon_support = { x = 1 y = 1 }
-	}
-}
-division_template = {
-	name = "Shandi Bubing Shi" # Mountain Infantry Division
-
-	regiments = {
-		mountaineers = { x = 0 y = 0 }
-		mountaineers = { x = 0 y = 1 }
-	  	mountaineers = { x = 0 y = 2 }
-		mountaineers = { x = 0 y = 3 }
-		mountaineers = { x = 0 y = 4 }
-	  	mountaineers = { x = 1 y = 0 }
-		mountaineers = { x = 1 y = 1 }
-		mountaineers = { x = 1 y = 2 }
-	  	mountaineers = { x = 1 y = 3 }
-	   	artillery = { x = 1 y = 4 }
-	   	heavy_artillery = { x = 2 y = 0 }
-	   	artillery = { x = 2 y = 1 }
-	   	artillery = { x = 2 y = 2 }
-	   	artillery = { x = 2 y = 3 }
-	   	light_artillery = { x = 2 y = 4 }
-	   	light_armor = { x = 3 y = 0 }
-	   	light_sp_artillery = { x = 3 y = 1 }
-	}
-	support = {
-		recon = { x = 0 y = 0 }
-		engineer = { x = 0 y = 1 }
-		logistics_company = { x = 0 y = 2 }
-		field_hospital = { x = 0 y = 3 }
-		signal_company = { x = 0 y = 4 }
-		direct_fire_gun_support = { x = 1 y = 0 }
-		auto_cannon_support = { x = 1 y = 1 }
-	}
-}
-division_template = {
-	name = "Qing Zhuangjia Shi" # Ligh Tank Division
-
-	regiments = {
+		#Brigade 1 - Armor (light)
 		light_armor = { x = 0 y = 0 }
 		light_armor = { x = 0 y = 1 }
 		light_armor = { x = 0 y = 2 }
 		light_armor = { x = 0 y = 3 }
-		light_armor = { x = 0 y = 4 }
-		light_armor = { x = 1 y = 0 }
-		medium_armor = { x = 1 y = 1 }
-		medium_armor = { x = 1 y = 2 }
-		medium_armor = { x = 1 y = 3 }
-		mechanized_infantry = { x = 2 y = 0 }
-	   	mechanized_infantry = { x = 2 y = 1 }
-		rocket_sp_artillery = { x = 2 y = 2 }
-		light_sp_artillery = { x = 3 y = 0 }
-		light_sp_artillery = { x = 3 y = 1 }
-	   	artillery = { x = 4 y = 0 }
-	   	artillery = { x = 4 y = 1 }
-	   	artillery = { x = 4 y = 2 }
-	   	artillery = { x = 4 y = 3 }
+		tank_destroyer = { x = 0 y = 4 }
+		
+		#Brigade 2 - Mechanized (Mechanized)
+		mechanized_infantry = { x = 1 y = 0 }
+		mechanized_infantry = { x = 1 y = 1 }
+		motorized_infantry = { x = 1 y = 2 }
+		motorized_infantry = { x = 1 y = 3 }
+		motorized_infantry = { x = 1 y = 4 }
+		
+		#Brigade 3 - Tank Destroyer (SP DFG)
+		tank_destroyer = { x = 2 y = 0 }
 	}
 	support = {
-		recon_mechanized = { x = 0 y = 0 }
-		engineer = { x = 0 y = 1 }
-		logistics_company = { x = 0 y = 2 }
-		field_hospital = { x = 0 y = 3 }
-		signal_company = { x = 0 y = 4 }
+		#Support Brigade
+	 	recon = { x = 0 y = 0 }
+		
+		#Fire Support Brigade/Maintenance
 		auto_cannon_support = { x = 1 y = 0 }
+		light_artillery_support = { x = 1 y = 1 }
+		direct_fire_gun_support = { x = 1 y = 2 }
 	}
 }
 division_template = {
-	name = "ZhongxÌng Zhuangjia Shi" # Tank Division
-
+	name = "Jixiehua Bubing Shi" #Lt_Armor - Unit - 20 width
+	division_names_group = generic_lt_armor	
+	
 	regiments = {
+		#Brigade 1 - Armor (light)
 		medium_armor = { x = 0 y = 0 }
-		medium_armor = { x = 0 y = 1 }
-		medium_armor = { x = 0 y = 2 }
-		medium_armor = { x = 0 y = 3 }
-		medium_armor = { x = 0 y = 4 }
-		medium_armor = { x = 1 y = 0 }
-		medium_armor = { x = 1 y = 1 }
-		medium_armor = { x = 1 y = 2 }
-		medium_armor = { x = 1 y = 3 }
-		armored_infantry = { x = 2 y = 0 }
-	   	armored_infantry = { x = 2 y = 1 }
-		rocket_sp_artillery = { x = 2 y = 2 }
-		sp_artillery = { x = 3 y = 0 }
-		sp_artillery = { x = 3 y = 1 }
-	   	artillery = { x = 4 y = 0 }
-	   	artillery = { x = 4 y = 1 }
-	   	artillery = { x = 4 y = 2 }
-	   	artillery = { x = 4 y = 3 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		light_armor = { x = 0 y = 3 }
+		tank_destroyer = { x = 0 y = 4 }
+		
+		#Brigade 2 - Mechanized (Mechanized)
+		mechanized_infantry = { x = 1 y = 0 }
+		mechanized_infantry = { x = 1 y = 1 }
+		mechanized_infantry = { x = 1 y = 2 }
+		mechanized_infantry = { x = 1 y = 3 }
+		motorized_infantry = { x = 1 y = 4 }
+		
+		#Brigade 3 - Tank Destroyer (SP DFG)
+		tank_destroyer = { x = 2 y = 0 }
 	}
 	support = {
-		recon_mechanized = { x = 0 y = 0 }
-		engineer = { x = 0 y = 1 }
-		logistics_company = { x = 0 y = 2 }
-		field_hospital = { x = 0 y = 3 }
-		signal_company = { x = 0 y = 4 }
+		#Support Brigade
+	 	recon = { x = 0 y = 0 }
+		
+		#Fire Support Brigade/Maintenance
 		auto_cannon_support = { x = 1 y = 0 }
+		light_artillery_support = { x = 1 y = 1 }
+		direct_fire_gun_support = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Shandi Bubing Shi" #Mountaineer - Unit - 20 Width
+	division_names_group = generic_mountaineer
+
+	regiments = {
+		#Brigade 1 - mountaineers (mountaineers)
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 0 y = 3 }
+		mountaineers = { x = 0 y = 4 }
+		
+		#Brigade 1 - mountaineers (mountaineers)
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 1 y = 3 }
+		mountaineers = { x = 1 y = 4 }
+	}
+	support = {
+		#Support Brigade
+	 	recon_motorized = { x = 0 y = 0 }
+		
+		#Fire Support Brigade/Maintenance
+		auto_cannon_support = { x = 1 y = 0 }
+		light_artillery_support = { x = 1 y = 1 }
+		direct_fire_gun_support = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Qing Zhuangjia Shi" #Lt_Armor - Unit - 20 width
+	division_names_group = generic_lt_armor	
+	
+	regiments = {
+		#Brigade 1 - Armor (light)
+		tank_destroyer = { x = 0 y = 0 }
+		tank_destroyer = { x = 0 y = 1 }
+		tank_destroyer = { x = 0 y = 2 }
+		tank_destroyer = { x = 0 y = 3 }
+		tank_destroyer = { x = 0 y = 4 }
+		
+		#Brigade 2 - Mechanized (Mechanized)
+		motorized_infantry = { x = 1 y = 0 }
+		motorized_infantry = { x = 1 y = 1 }
+		motorized_infantry = { x = 1 y = 2 }
+		motorized_infantry = { x = 1 y = 3 }
+		motorized_infantry = { x = 1 y = 4 }
+		
+		#Brigade 3 - Tank Destroyer (SP DFG)
+		tank_destroyer = { x = 2 y = 0 }
+		light_armor = { x = 2 y = 1 }
+		
+		motorized_infantry = { x = 3 y = 0 }
+	}
+	support = {
+		#Support Brigade
+	 	recon = { x = 0 y = 0 }
+		
+		#Fire Support Brigade/Maintenance
+		auto_cannon_support = { x = 1 y = 0 }
+		light_artillery_support = { x = 1 y = 1 }
+		direct_fire_gun_support = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Zhongx√≠ng Zhuangjia Shi" #Med_Armor - Unit - 20 width
+	division_names_group = generic_lt_armor	
+	
+	regiments = {
+		#Brigade 1 - Armor (light)
+		medium_armor = { x = 0 y = 0 }
+		tank_destroyer = { x = 0 y = 1 }
+		
+		#Brigade 2 - Mechanized (Mechanized)
+		motorized_infantry = { x = 1 y = 0 }
+		motorized_infantry = { x = 1 y = 1 }
+		motorized_infantry = { x = 1 y = 2 }
+		motorized_infantry = { x = 1 y = 3 }
+		motorized_infantry = { x = 1 y = 4 }
+		
+		#Brigade 3 - Tank Destroyer (SP DFG)
+		medium_armor = { x = 2 y = 0 }
+		tank_destroyer = { x = 2 y = 1 }
+		
+		motorized_infantry = { x = 3 y = 0 }
+		motorized_infantry = { x = 3 y = 1 }
+		motorized_infantry = { x = 3 y = 2 }
+	}
+	support = {
+		#Support Brigade
+	 	recon = { x = 0 y = 0 }
+		
+		#Fire Support Brigade/Maintenance
+		auto_cannon_support = { x = 1 y = 0 }
+		light_artillery_support = { x = 1 y = 1 }
+		direct_fire_gun_support = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "Zh√≤ng ZhuƒÅngji«é Shƒ´" #Hev_Armor - Unit - 20 width
+	division_names_group = generic_lt_armor	
+	
+	regiments = {
+		#Brigade 1 - Armor (light)
+		heavy_armor = { x = 0 y = 0 }
+		tank_destroyer = { x = 0 y = 1 }
+		tank_destroyer = { x = 0 y = 2 }
+		
+		#Brigade 2 - Mechanized (Mechanized)
+		motorized_infantry = { x = 1 y = 0 }
+		motorized_infantry = { x = 1 y = 1 }
+		motorized_infantry = { x = 1 y = 2 }
+		motorized_infantry = { x = 1 y = 3 }
+		motorized_infantry = { x = 1 y = 4 }
+		
+		#Brigade 3 - Tank Destroyer (SP DFG)
+		tank_destroyer = { x = 2 y = 0 }
+		medium_armor = { x = 2 y = 1 }
+		
+		motorized_infantry = { x = 3 y = 0 }
+		motorized_infantry = { x = 3 y = 1 }
+	}
+	support = {
+		#Support Brigade
+	 	recon = { x = 0 y = 0 }
+		
+		#Fire Support Brigade/Maintenance
+		auto_cannon_support = { x = 1 y = 0 }
+		light_artillery_support = { x = 1 y = 1 }
+		direct_fire_gun_support = { x = 1 y = 2 }
 	}
 }
 
 ###### OOB ######
 units = {
-	division = {
+	division = {	
 		name = "1st Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "2nd Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "4th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "5th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "6th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "7th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "11st Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "12th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "13th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "14th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "15th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "16th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "17th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "18th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "19th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "21st Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "22nd Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "23rd Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "24th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "28th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "29th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "30th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "31st Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "32th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "33rd Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "34th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "35th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "36th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "37th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "38th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "39th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "40th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "41st Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "42nd Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "43rd Kongjiang Shi"
 		location = 10034
-		division_template = "Kongjiang Shi"
+		division_template = "Kongjiang Shi"			
 		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "44th Kongjiang Shi"
 		location = 10034
-		division_template = "Kongjiang Shi"
+		division_template = "Kongjiang Shi"			
 		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "45th Kongjiang Shi"
 		location = 10034
-		division_template = "Kongjiang Shi"
+		division_template = "Kongjiang Shi"			
 		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "46th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "47th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "48th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "49th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "50th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "51st Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "52nd Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "53rd Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "54th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "55th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "56th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "57th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "58th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "59th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "60th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "61st Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "62nd Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "63rd Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "64th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "65th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "66th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "67th Jidong Bubing Shi"
 		location = 10034
-		division_template = "Jidong Bubing Shi"
+		division_template = "Jidong Bubing Shi"			
 		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "68th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "69th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "70th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "71st Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "72nd Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "73rd Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "74th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "75th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "76th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "77th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "78thJundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "79th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "80th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "81st Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "82nd Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "83rd Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "84th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "85th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "86th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "87th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "88th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "90th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "91st Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "92nd Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "93rd Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "96th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "97th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "105th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "106th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "107th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "108th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "109th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "110th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "111st Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "112nd Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "113rd Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "114th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "115th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "116th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "117th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "118th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "119th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "120th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "121st Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "122nd Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "123rd Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "124th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "125th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "126th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "127th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "128th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "129th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "130th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "131st Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "132nd Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "139th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "140th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "141st Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "148th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "149th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "150th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "153rd Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "154th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "155th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "157th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "158th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "159th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "160th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "161st Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "162nd Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "163rd Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "164th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "165th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "167th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "179th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "180th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "181st Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "187th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "188th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "189th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "190th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "191st Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "192nd Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "193rd Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "194th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "195th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "196th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "197th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "198th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "199th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "200th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "201st Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "202nd Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "203rd Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "204th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "205th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "206th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "207th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "208th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "209th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "210th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "211st Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "212th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "213rd Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "214th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "215th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "216th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "218th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "219th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "220thJundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
+		division_template = "Jundui Shi"			
+		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
+	division = {	
 		name = "250th Jundui Shi"
 		location = 10034
-		division_template = "Jundui Shi"
-		start_experience_factor = 0.2
-		start_equipment_factor = 1
-	}
-	division = {
-		name = "1st ZhongxÌng Zhuangjia Shi"
-		location = 10034
-		division_template = "ZhongxÌng Zhuangjia Shi"
+		division_template = "Jundui Shi"			
 		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
-		name = "2nd ZhongxÌng Zhuangjia Shi"
+	division = {	
+		name = "1st Zhongx√≠ng Zhuangjia Shi"
 		location = 10034
-		division_template = "ZhongxÌng Zhuangjia Shi"
+		division_template = "Zhongx√≠ng Zhuangjia Shi"			
 		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
-		name = "3rd ZhongxÌng Zhuangjia Shi"
+	division = {	
+		name = "2nd Zhongx√≠ng Zhuangjia Shi"
 		location = 10034
-		division_template = "ZhongxÌng Zhuangjia Shi"
+		division_template = "Zhongx√≠ng Zhuangjia Shi"			
 		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
-		name = "4th ZhongxÌng Zhuangjia Shi"
+	division = {	
+		name = "3rd Zhongx√≠ng Zhuangjia Shi"
 		location = 10034
-		division_template = "ZhongxÌng Zhuangjia Shi"
+		division_template = "Zhongx√≠ng Zhuangjia Shi"			
 		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
-		name = "6th ZhongxÌng Zhuangjia Shi"
+	division = {	
+		name = "4th Zhongx√≠ng Zhuangjia Shi"
 		location = 10034
-		division_template = "ZhongxÌng Zhuangjia Shi"
+		division_template = "Zhongx√≠ng Zhuangjia Shi"			
 		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
-		name = "10th ZhongxÌng Zhuangjia Shi"
+	division = {	
+		name = "6th Zhongx√≠ng Zhuangjia Shi"
 		location = 10034
-		division_template = "ZhongxÌng Zhuangjia Shi"
+		division_template = "Zhongx√≠ng Zhuangjia Shi"			
 		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
-		name = "11st ZhongxÌng Zhuangjia Shi"
+	division = {	
+		name = "10th Zhongx√≠ng Zhuangjia Shi"
 		location = 10034
-		division_template = "ZhongxÌng Zhuangjia Shi"
+		division_template = "Zhongx√≠ng Zhuangjia Shi"			
 		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
-		name = "12nd ZhongxÌng Zhuangjia Shi"
+	division = {	
+		name = "11st Zhongx√≠ng Zhuangjia Shi"
 		location = 10034
-		division_template = "ZhongxÌng Zhuangjia Shi"
+		division_template = "Zhongx√≠ng Zhuangjia Shi"			
 		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
-	division = {
-		name = "1st Paobing Shi"
+	division = {	
+		name = "12nd Zhongx√≠ng Zhuangjia Shi"
 		location = 10034
-		division_template = "Paobing Shi"
+		division_template = "Zhongx√≠ng Zhuangjia Shi"			
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {	
+		name = "1st Jundui Shi"
+		location = 10034
+		division_template = "Jundui Shi"			
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
-	division = {
-		name = "2nd Paobing Shi"
+	division = {	
+		name = "2nd Jundui Shi"
 		location = 10034
-		division_template = "Paobing Shi"
+		division_template = "Jundui Shi"			
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
-	division = {
-		name = "3rd Paobing Shi"
+	division = {	
+		name = "3rd Jundui Shi"
 		location = 10034
-		division_template = "Paobing Shi"
+		division_template = "Jundui Shi"			
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
-	division = {
-		name = "7th Paobing Shi"
+	division = {	
+		name = "7th Jundui Shi"
 		location = 10034
-		division_template = "Paobing Shi"
+		division_template = "Jundui Shi"			
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
-	division = {
-		name = "8th Paobing Shi"
+	division = {	
+		name = "8th Jundui Shi"
 		location = 10034
-		division_template = "Paobing Shi"
+		division_template = "Jundui Shi"			
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}
-	division = {
-		name = "9th Paobing Shi"
+	division = {	
+		name = "9th Jundui Shi"
 		location = 10034
-		division_template = "Paobing Shi"
+		division_template = "Jundui Shi"			
 		start_experience_factor = 0.1
 		start_equipment_factor = 1
 	}

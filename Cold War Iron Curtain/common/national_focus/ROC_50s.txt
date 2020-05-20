@@ -197,7 +197,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = fighter_equipment_3
 				amount = 250
-				producer = USA
+				producer = CAP
 			}		
 		}
 	}
@@ -215,7 +215,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = jet_multirole_equipment_1
 				amount = 250
-				producer = USA
+				producer = CAP
 			}		
 		}
 	}
@@ -279,12 +279,12 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment_0
 				amount = 10000
-				producer = USA
+				producer = CAP
 			}		
 			add_equipment_to_stockpile = {
 				type = motorized_equipment_2
 				amount = 200
-				producer = USA
+				producer = CAP
 			}			
 			
 		}
@@ -499,7 +499,7 @@ focus_tree = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_0
 					amount = 25000
-					producer = USA
+					producer = CAP
 				}
 			}
 		}
@@ -519,7 +519,7 @@ focus_tree = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_0
 					amount = 25000
-					producer = USA
+					producer = CAP
 				}
 				army_experience = 50
 				add_manpower = 5000
@@ -1010,7 +1010,12 @@ focus_tree = {
 		x = 33
 		y = 9
 		completion_reward = {
-			add_ideas = press_censorship_5
+			remove_ideas = policy_media_temp_0
+			remove_ideas = policy_media_temp_1
+			remove_ideas = policy_media_temp_2
+			remove_ideas = policy_media_temp_3
+			remove_ideas = policy_media_temp_3a
+			add_ideas = remove_ideas = policy_media_temp_0
 		}
 	}
 	focus = {
@@ -1100,7 +1105,7 @@ focus_tree = {
 		x = 29
 		y = 13
 		completion_reward = {
-			add_ideas = gen_pro_employer_2
+			add_ideas = policy_union_temp_0
 		}
 	}
 	focus = {
@@ -1512,12 +1517,12 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment_0
 				amount = 10000
-				producer = USA
+				producer = CAP
 			}		
 			add_equipment_to_stockpile = {
 				type = motorized_equipment_2
 				amount = 200
-				producer = USA
+				producer = CAP
 			}			
 			
 		}
@@ -1619,6 +1624,11 @@ focus_tree = {
 				ruling_party = nationalism
 				elections_allowed = no
 			}
+			set_party_name = { 
+				ideology = nationalism 
+				long_name = "Taiwan Zaijiefang Lianmeng" 
+				name = "TZL" 
+			}
 			create_country_leader = {
 				name = "The Formosan League for Reemancipation"
 				picture = "Council.dds"
@@ -1686,7 +1696,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = CHI_Equal_Rights
+		id = CHI_policy_minorities_temp_3
 		icon = GFX_Freedom
 		search_filters = {IC_FILTER}
 		cost = 10.00
@@ -1769,7 +1779,7 @@ focus_tree = {
 			focus = CHI_Formation_of_the_Democratic_Progressive_Party
 		}
 		prerequisite = {
-			focus = CHI_Equal_Rights
+			focus = CHI_policy_minorities_temp_3
 		}
 		prerequisite = {
 			focus = CHI_Ban_The_KMT
@@ -2372,8 +2382,13 @@ focus_tree = {
 		x = 71
 		y = 14
 			completion_reward = {
-					add_ideas = free_press_5
-				}
+				remove_ideas = policy_media_temp_0
+				remove_ideas = policy_media_temp_1
+				remove_ideas = policy_media_temp_2
+				remove_ideas = policy_media_temp_3
+				remove_ideas = policy_media_temp_3a
+				add_ideas = remove_ideas = policy_media_temp_2
+			}
 	}
 	focus = {
 		id = CHI_Infrastructure_Modernization
@@ -2722,7 +2737,7 @@ focus_tree = {
 		x = 58
 		y = 13
 		completion_reward = {
-			add_ideas = gen_pro_union_2
+			add_ideas = policy_union_temp_5
 		}
 	}
 	focus = {
@@ -2997,7 +3012,12 @@ focus_tree = {
 		x = 23
 		y = 11
 		completion_reward = {
-            add_ideas = default_media_laws_0
+			remove_ideas = policy_media_temp_0
+			remove_ideas = policy_media_temp_1
+			remove_ideas = policy_media_temp_2
+			remove_ideas = policy_media_temp_3
+			remove_ideas = policy_media_temp_3a
+			add_ideas = remove_ideas = policy_media_temp_2
         }
 	}
 	focus = {

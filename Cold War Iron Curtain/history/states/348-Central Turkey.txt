@@ -10,7 +10,7 @@ state = {
 
 	history = {
 		owner = TUR
-		set_state_flag = lushdesert
+		set_state_flag = desertlush
 		set_state_flag = river
 		set_state_flag = small
 		set_state_flag = semideveloped
@@ -23,15 +23,15 @@ state = {
 		}
 		add_core_of = TUR
 		victory_points = {
-			921 5
+			921 5 
 		}
 
 	}
 
 	provinces = {
-		869 921 961 6888 6977 9830 9861
+		869 921 961 6888 6977 9830 9861 
 	}
 	manpower = 858452
 	buildings_max_level_factor = 1.000
-	state_category = pop1dev2
+	state_category = pop1dev1
 }

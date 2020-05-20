@@ -2,6 +2,7 @@ ideas = {
 
 	economy = { 
 		law = yes
+		use_list_view = yes
 		undisturbed_isolation = {
 			
 			
@@ -75,7 +76,7 @@ ideas = {
 		low_economic_mobilisation = {
 			
 			available = {
-				has_war_support > 0.35
+				has_war_support > 0.3
 			}
 			
 			cost = 150
@@ -84,13 +85,13 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = 0.25
 				
-				production_speed_industrial_complex_factor = -0.15
-				production_speed_arms_factory_factor = -0.15
-				production_speed_dockyard_factor = -0.15
-				production_speed_office_park_factor = -0.15
-				production_speed_agri_industrial_complex_factor = -0.15
-				production_speed_infrastructure_factor = -0.15
-				production_speed_water_infrastructure_factor = -0.15
+				production_speed_industrial_complex_factor = -0.05
+				production_speed_arms_factory_factor = -0.05
+				production_speed_dockyard_factor = -0.05
+				production_speed_office_park_factor = -0.10
+				production_speed_agri_industrial_complex_factor = -0.05
+				production_speed_infrastructure_factor = -0.05
+				production_speed_water_infrastructure_factor = -0.05
 				
 				production_speed_bunker_factor = 0.15
 				production_speed_coastal_bunker_factor = 0.15
@@ -101,9 +102,13 @@ ideas = {
 			}
 			
 			cancel_if_invalid = no
-
 			ai_will_do = {
    				factor = 0
+
+				modifier = {
+					add = 100
+					has_war = yes
+				}
    			}
 		}
 		
@@ -119,13 +124,13 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = 0.25
 				
-				production_speed_industrial_complex_factor = -0.30
-				production_speed_arms_factory_factor = -0.30
-				production_speed_dockyard_factor = -0.30
-				production_speed_office_park_factor = -0.30
-				production_speed_agri_industrial_complex_factor = -0.30
-				production_speed_infrastructure_factor = -0.30
-				production_speed_water_infrastructure_factor = -0.30
+				production_speed_industrial_complex_factor = -0.10
+				production_speed_arms_factory_factor = -0.10
+				production_speed_dockyard_factor = -0.10
+				production_speed_office_park_factor = -0.20
+				production_speed_agri_industrial_complex_factor = -0.10
+				production_speed_infrastructure_factor = -0.10
+				production_speed_water_infrastructure_factor = -0.10
 				
 				production_speed_bunker_factor = 0.3
 				production_speed_coastal_bunker_factor = 0.3
@@ -136,9 +141,13 @@ ideas = {
 			}
 			
 			cancel_if_invalid = no
-			
 			ai_will_do = {
    				factor = 0
+
+				modifier = {
+					add = 150
+					has_war = yes
+				}
    			}
 		}
 		
@@ -155,13 +164,13 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = 0.25
 				
-				production_speed_industrial_complex_factor = -0.45
-				production_speed_arms_factory_factor = -0.45
-				production_speed_dockyard_factor = -0.45
-				production_speed_office_park_factor = -0.45
-				production_speed_agri_industrial_complex_factor = -0.45
-				production_speed_infrastructure_factor = -0.45
-				production_speed_water_infrastructure_factor = -0.45
+				production_speed_industrial_complex_factor = -0.20
+				production_speed_arms_factory_factor = -0.20
+				production_speed_dockyard_factor = -0.20
+				production_speed_office_park_factor = -0.35
+				production_speed_agri_industrial_complex_factor = -0.20
+				production_speed_infrastructure_factor = -0.20
+				production_speed_water_infrastructure_factor = -0.20
 				
 				production_speed_bunker_factor = 0.45
 				production_speed_coastal_bunker_factor = 0.45
@@ -173,11 +182,11 @@ ideas = {
 			
 			cancel_if_invalid = no
 			ai_will_do = {
-   				factor = 10
+   				factor = 0
 
 				modifier = {
-					factor = 20
-					
+					add = 200
+					has_war = yes
 				}
    			}
 		}
@@ -189,7 +198,7 @@ ideas = {
 				has_war_support > 0.95
 			}
 			ai_will_do = {
-   				factor = 1
+   				factor = 0
    			}
 			
 			cost = 150
@@ -198,13 +207,13 @@ ideas = {
 			modifier = {
 				consumer_goods_factor = 0.25
 				
-				production_speed_industrial_complex_factor = -0.60
-				production_speed_arms_factory_factor = -0.60
-				production_speed_dockyard_factor = -0.60
+				production_speed_industrial_complex_factor = -0.45
+				production_speed_arms_factory_factor = -0.45
+				production_speed_dockyard_factor = -0.45
 				production_speed_office_park_factor = -0.60
-				production_speed_agri_industrial_complex_factor = -0.60
-				production_speed_infrastructure_factor = -0.60
-				production_speed_water_infrastructure_factor = -0.60
+				production_speed_agri_industrial_complex_factor = -0.45
+				production_speed_infrastructure_factor = -0.45
+				production_speed_water_infrastructure_factor = -0.45
 				
 				production_speed_bunker_factor = 0.6
 				production_speed_coastal_bunker_factor = 0.6
@@ -220,7 +229,7 @@ ideas = {
 	
 	trade_laws = { 
 		law = yes
-
+		use_list_view = yes
 		free_trade = {
 			
 			cost = 150
@@ -228,10 +237,10 @@ ideas = {
 			
 			modifier = {
 				min_export = 0.7
-				industrial_capacity_factory = -0.10
+				industrial_capacity_factory = -0.15
 				industrial_capacity_dockyard = 0.15
 				production_speed_buildings_factor = 0.10
-				research_speed_factor = -0.10
+				research_speed_factor = 0.05
 				civilian_intel_to_others = 40.0
 				navy_intel_to_others = 40.0
 			}
@@ -239,7 +248,7 @@ ideas = {
 			cancel_if_invalid = no
 
 			ai_will_do = {
-   				factor = 10
+   				factor = 0
    			}
 		}
 		
@@ -249,7 +258,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				min_export = 0.5
+				min_export = 0.6
 			}
 			
 			default = yes
@@ -257,7 +266,7 @@ ideas = {
 			cancel_if_invalid = no
 
 			ai_will_do = {
-   				factor = 50
+   				factor = 500
    			}
 		}
 		
@@ -270,7 +279,7 @@ ideas = {
 				min_export = 0.5
 				industrial_capacity_factory = 0.05
 				industrial_capacity_dockyard = -0.1
-				production_speed_buildings_factor = -0.1
+				production_speed_buildings_factor = -0.15
 				research_speed_factor = -0.05
 				civilian_intel_to_others = -20.0
 				navy_intel_to_others = -20.0
@@ -279,7 +288,7 @@ ideas = {
 			cancel_if_invalid = no
 
 			ai_will_do = {
-   				factor = 10
+   				factor = 0
    			}
 		}
 		
@@ -293,7 +302,7 @@ ideas = {
 				min_export = 0.3
 				industrial_capacity_factory = 0.25
 				industrial_capacity_dockyard = -0.15
-				production_speed_buildings_factor = -0.15
+				production_speed_buildings_factor = -0.20
 				research_speed_factor = -0.15
 				civilian_intel_to_others = -40.0
 				navy_intel_to_others = -60.0
@@ -302,7 +311,7 @@ ideas = {
 			cancel_if_invalid = no
 
 			ai_will_do = {
-   				factor = 1
+   				factor = 0
    			}
 		}
 	}

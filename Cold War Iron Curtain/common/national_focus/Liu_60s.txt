@@ -11,6 +11,7 @@ focus_tree = {
 	shared_focus = PRC_60s_Total_Failure_of_the_Great_Leap_Forward
 	shared_focus = PRC_60s_Diplomatic_Spell_in_the_Wildnerness
 	shared_focus = PRC_60s_Peoples_Liberation_Army
+	shared_focus = PRC_60s_Industrial_Collapse
 	focus = {
 		id = PRC_60s_The_Beijing_Spring
 		icon = GFX_Beijing_Spring
@@ -200,7 +201,12 @@ focus_tree = {
 		x = 20
 		y = 10
 		completion_reward = {
-			add_ideas = censorship_2
+			remove_ideas = policy_media_temp_0
+			remove_ideas = policy_media_temp_1
+			remove_ideas = policy_media_temp_2
+			remove_ideas = policy_media_temp_3
+			remove_ideas = policy_media_temp_3a
+			add_ideas = remove_ideas = policy_media_temp_2
 		}
 	}
 	focus = {
@@ -467,7 +473,7 @@ focus_tree = {
 		x = 19
 		y = 17
 		completion_reward = {
-			country_event = PRC_Congress.3
+			news_event = PRC_Congress.3
 		}
 	}
 }

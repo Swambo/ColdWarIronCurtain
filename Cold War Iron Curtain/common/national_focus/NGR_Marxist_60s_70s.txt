@@ -168,7 +168,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = agri_tech_bonus
 				bonus = 1
-				category = agri_tech
+				category = agriculture
 			}
 		}
 	}
@@ -519,7 +519,12 @@ focus_tree = {
 		x = 18
 		y = 5
 		completion_reward = {
-			add_ideas = press_censorship_5
+			remove_ideas = policy_media_temp_0
+			remove_ideas = policy_media_temp_1
+			remove_ideas = policy_media_temp_2
+			remove_ideas = policy_media_temp_3
+			remove_ideas = policy_media_temp_3a
+			add_ideas = remove_ideas = policy_media_temp_1
 		}
 	}
 	focus = {
@@ -670,17 +675,17 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment_1
 				amount = 5000
-				producer = SOV
+				producer = CUM
 			}	
 			add_equipment_to_stockpile = {
 				type = mbt_equipment_1
 				amount = 20
-				producer = SOV
+				producer = CUM
 			}	
 			add_equipment_to_stockpile = {
 				type = motorized_equipment_2
 				amount = 100
-				producer = SOV
+				producer = CUM
 			}			
 		}
 	}
@@ -880,7 +885,12 @@ focus_tree = {
 		x = 16
 		y = 14
 		completion_reward = {
-			add_ideas = default_media_laws_0
+			remove_ideas = policy_media_temp_0
+			remove_ideas = policy_media_temp_1
+			remove_ideas = policy_media_temp_2
+			remove_ideas = policy_media_temp_3
+			remove_ideas = policy_media_temp_3a
+			add_ideas = remove_ideas = policy_media_temp_2
 		}
 	}
 	focus = {

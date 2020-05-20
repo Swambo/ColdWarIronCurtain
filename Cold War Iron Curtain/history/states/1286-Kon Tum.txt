@@ -9,6 +9,7 @@ state = {
 		set_state_flag = lakes
 		set_state_flag = small
 		set_state_flag = poor
+		victory_points = { 4363 5 }
 		buildings = {
 			infrastructure = 2
 			state_infrastructure = 2
@@ -31,7 +32,7 @@ state = {
 	}
 
 	provinces={
-		4363 1248
+		4363 1248 
 	}
 	manpower=633300
 	buildings_max_level_factor=1.000

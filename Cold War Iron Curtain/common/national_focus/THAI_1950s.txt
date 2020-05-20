@@ -203,7 +203,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = cv_fighter_equipment_3
 				amount = 150
-				producer = USA
+				producer = CAP
 			}		
 		}
 	}
@@ -221,7 +221,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = jet_CAS_equipment_2
 				amount = 100
-				producer = USA
+				producer = CAP
 			}		
 		}
 	} 
@@ -254,7 +254,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = nav_bomber_equipment_3
 				amount = 100
-				producer = USA
+				producer = CAP
 			}		
 		}
 	}
@@ -330,12 +330,12 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment_0
 				amount = 10000
-				producer = USA
+				producer = CAP
 			}		
 			add_equipment_to_stockpile = {
 				type = motorized_equipment_2
 				amount = 200
-				producer = USA
+				producer = CAP
 			}			
 			
 		}
@@ -415,7 +415,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = lt_equipment_2
 				amount = 250
-				producer = USA
+				producer = CAP
 			}		
 		}
 	}
@@ -524,7 +524,12 @@ focus_tree = {
 		x = 17
 		y = 13
 		completion_reward = {
-			add_ideas = default_media_laws_0
+			remove_ideas = policy_media_temp_0
+			remove_ideas = policy_media_temp_1
+			remove_ideas = policy_media_temp_2
+			remove_ideas = policy_media_temp_3
+			remove_ideas = policy_media_temp_3a
+			add_ideas = remove_ideas = policy_media_temp_2
 		}
 	}
 	focus = {
@@ -1001,7 +1006,7 @@ focus_tree = {
 		x = 36
 		y = 24
 		completion_reward = {
-			add_ideas = gen_notsaga_2
+			add_ideas = policy_saga_temp_0
 		}
 	}
 	focus = {
@@ -1018,7 +1023,7 @@ focus_tree = {
 		x = 34
 		y = 25	
 		completion_reward = {
-			add_ideas = buddhism_state_religion 
+			add_ideas = buddhism_state_religion
 		}
 	}
 	focus = {
@@ -1565,7 +1570,12 @@ focus_tree = {
 		x = 27
 		y = 15
 		completion_reward = {
-			add_ideas = censorship_3
+			remove_ideas = policy_media_temp_0
+			remove_ideas = policy_media_temp_1
+			remove_ideas = policy_media_temp_2
+			remove_ideas = policy_media_temp_3
+			remove_ideas = policy_media_temp_3a
+			add_ideas = remove_ideas = policy_media_temp_0
 		}
 	}
 	focus = {
@@ -1607,6 +1617,11 @@ focus_tree = {
 				ideology = neutrality
 				popularity = 0.05
 			}
+			set_party_name = { 
+				ideology = neutrality 
+				long_name = "Phak Seri Manangkhasila" 
+				name = "Phak Seri Manangkhasila" 
+		}
 		}
 	}
 	focus = {
@@ -1672,7 +1687,7 @@ focus_tree = {
 			create_country_leader = {
 				name = "Sarit Thanarat"
 				desc = "POLITICS_SARIT_THANARAT_DESC"
-				picture = "gfx/leaders/SIA/Portrait_Siam_Sarit_Thanarat.tga"
+				picture = "Sarit_Thanarat.tga"
 				expire = "1963.1.1"
 				ideology = nationalist_ideology
 			}
@@ -1862,7 +1877,7 @@ focus_tree = {
 		x = 27
 		y = 24
 		completion_reward = {
-			add_ideas = gen_pro_union_1
+			add_ideas = policy_union_temp_4
 		}
 	}
 	focus = {

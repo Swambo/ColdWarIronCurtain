@@ -2,7 +2,7 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "countrydecisionview"
-		position = { x=-606 y=78 }	
+		position = { x=-606 y=78 }
 		show_position = { x=-6 y =78 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
@@ -22,7 +22,7 @@ guiTypes = {
 			spriteType = "GFX_header_bg"
 			position = { x= 5 y = 07 }
 			Orientation = "UPPER_LEFT"
-		}	
+		}
 		
 		instantTextboxType = {
 			name = "decisionview_title"
@@ -34,7 +34,7 @@ guiTypes = {
 			maxWidth = 440
 			maxHeight = 20
 			format = left	
-		}			
+		}
 			
 		buttonType = {
 			name = "close_button"
@@ -58,7 +58,7 @@ guiTypes = {
 			background = {
 				name = "Background"
 				quadTextureSprite ="GFX_tiled_window_transparent"
-			}			
+			}
 			
 			gridboxtype = {
 				name = "decision_grid"
@@ -108,6 +108,14 @@ guiTypes = {
 			#alwaystransparent = yes
 			fixedsize=yes
 		}
+		
+		#buttonType = {
+		#	name = "track_decisions_checkbox"
+		#	position = { x = 447 y = 26 }
+		#	quadTextureSprite = "GFX_checkbox_small5"
+		#	clicksound = decisions_ui_button
+		#	frame = 2
+		#}
 		
 		buttonType = {
 			name = "category_collapse_btn"
@@ -168,7 +176,7 @@ guiTypes = {
 			format = center
 			spacing = 1.0
 			Orientation = LEFT
-		}	
+		}
 	}
 
 	containerWindowType = {
@@ -192,7 +200,7 @@ guiTypes = {
 			name = "target_flag"
 			quadTextureSprite ="GFX_flag_small"
 			position = { x= 0 y = 0}
-		}	
+		}
 	}
 
 	###########################################

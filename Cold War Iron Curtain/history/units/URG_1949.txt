@@ -1,5 +1,5 @@
-division_template = {
-	name = "Divisi髇 de Infanteria"			# Divisions were at reserve levels during peacetime
+锘縟ivision_template = {
+	name = "Divisi贸n de Infanteria"			# Divisions were at reserve levels during peacetime
 	division_names_group = SPAN_INF_01
 
 	regiments = {
@@ -25,29 +25,29 @@ division_template = {
 		artillery = { x = 2 y = 1 }
 	}
 	support = {
-		recon = { x = 0 y = 0 }
-		engineer = { x = 0 y = 1 }
+		recon = { x = 0 y = 0 } 		
+		engineer = { x = 0 y = 1 } 		
 		artillery_support = { x = 0 y = 2 }
 		direct_fire_gun_support = { x = 0 y = 3 }
 		auto_cannon_support = { x = 0 y = 4 }
 	}
 }
 division_template = {
-	name = "Cavalry Division"
+	name = "Cavalry Division" 
 
 	regiments = {
-		cavalry = { x = 0 y = 0 }
-		cavalry = { x = 0 y = 1 }
-		cavalry = { x = 0 y = 2 }
-		cavalry = { x = 0 y = 3 }
-		cavalry = { x = 1 y = 0 }
-		cavalry = { x = 1 y = 1 }
-		cavalry = { x = 1 y = 2 }
-		cavalry = { x = 1 y = 3 }
+		motorized_infantry = { x = 0 y = 0 }
+		motorized_infantry = { x = 0 y = 1 }
+		motorized_infantry = { x = 0 y = 2 }
+		motorized_infantry = { x = 0 y = 3 }
+		motorized_infantry = { x = 1 y = 0 }
+		motorized_infantry = { x = 1 y = 1 }
+		motorized_infantry = { x = 1 y = 2 }
+		motorized_infantry = { x = 1 y = 3 }
 	}
 	support = {
-		recon = { x = 0 y = 0 }
-		engineer = { x = 0 y = 1 }
+		recon = { x = 0 y = 0 } 		
+		engineer = { x = 0 y = 1 } 		
 		artillery_support = { x = 0 y = 2 }
 		direct_fire_gun_support = { x = 0 y = 3 }
 		auto_cannon_support = { x = 0 y = 4 }
@@ -56,30 +56,30 @@ division_template = {
 
 units = {
 	##### Ejercito de Uruguay #####
-	division = {	# "1era Divisi髇 de Infanter韆"
+	division = {	# "1era Divisi贸n de Infanter铆a"
 		division_name = {
 				is_name_ordered = yes
 				name_order = 1
 		}
 		location = 10362 # Montevideo
-		division_template = "Divisi髇 de Infanteria"
+		division_template = "Divisi贸n de Infanteria"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.3
 
 	}
-	division = {	# "2da Divisi髇 de Infanter韆"
+	division = {	# "2da Divisi贸n de Infanter铆a"
 		division_name = {
 				is_name_ordered = yes
 				name_order = 2
 		}
 		location = 10362 # Montevideo
-		division_template = "Divisi髇 de Infanteria"
+		division_template = "Divisi贸n de Infanteria"
 		start_experience_factor = 0.1
 		start_equipment_factor = 0.3
 
 	}
 
 	##### Naval OOB #####
-
+			
 }
 

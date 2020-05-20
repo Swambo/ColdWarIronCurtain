@@ -1,4 +1,4 @@
-##### Division Templates #####
+﻿##### Division Templates #####
 division_template = {
 	name = "Infantry Division"
 
@@ -10,7 +10,7 @@ division_template = {
 	}
 }
 division_template = {
-	name = "Militia Division"
+	name = "Militia Division"		
 
 	regiments = {
 		militia = { x = 0 y = 0 }
@@ -28,7 +28,7 @@ division_template = {
 
 ###### OOB ######
 units = {
-	division = {
+	division = {	
 		name = "Royal Guard"
 		location = 7900
 		division_template = "Infantry Division"

@@ -6,48 +6,48 @@
 
 	create_equipment_variant = {
 		name = "WW Destroyer Escort" # Frigate (Patrol)
-		type = ww_screen_hull_small
-		name_group = PLACEHOLDER
+		type = screen_hull_medium_ww
+		name_group = MTG_PLACEHOLDER_screen_hull_medium
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
 			fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_ship_engine_slot = ww_screen_engine_small
+			fixed_maritime_slot = detection_ww
+			fixed_ship_engine_slot = screen_engine_light_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			mid_1_custom_slot = torpedo_ww
 			rear_1_custom_slot = ship_armament_light_ww
 		}
 	}
-
+	
 	create_equipment_variant = {
 		name = "WW Destroyer" # Destroyer (Antisub)
-		type = ww_screen_hull_medium
-		name_group = PLACEHOLDER
+		type = screen_hull_heavy_ww
+		name_group = MTG_PLACEHOLDER_screen_hull_heavy
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
 			fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			mid_1_custom_slot = torpedo_ww
 			rear_1_custom_slot = ship_subkiller_0
 		}
 	}
-
+	
 	create_equipment_variant = {
 		name = "WW Light Cruiser" # Cruiser (Antiair/Firepower)
-		type = ww_screen_hull_large
-		name_group = PLACEHOLDER
+		type = battle_hull_light_ww
+		name_group = MTG_PLACEHOLDER_battle_hull_light
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
 			fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			front_1_custom_slot = ship_armament_light_ww
 			mid_1_custom_slot = ship_AA_gun_1
@@ -59,15 +59,15 @@
 
 	create_equipment_variant = {
 		name = "WW Heavy Cruiser" # Battlecruiser (Firepower)
-		type = ww_capital_hull
-		name_group = PLACEHOLDER
+		type = battle_hull_medium_ww
+		name_group = MTG_PLACEHOLDER_battle_hull_medium
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_ww
 			fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = capital_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			front_1_custom_slot = ship_armament_light_ww
 			mid_1_custom_slot = ship_AA_gun_1
@@ -75,18 +75,18 @@
 			rear_1_custom_slot = ship_armament_light_ww
 		}
 	}
-
+	
 	create_equipment_variant = {
 		name = "WW Battleship" # Battleship (Firepower)
-		type = ww_capital_hull_large
-		name_group = PLACEHOLDER
+		type = battle_hull_heavy_ww
+		name_group = MTG_PLACEHOLDER_battle_hull_heavy
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_heavy_ww
 			fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = capital_engine_ww
 			fixed_ship_torpedo_slot = torpedo_ww
 			front_1_custom_slot = ship_armament_medium_ww
 			mid_1_custom_slot = ship_AA_gun_1
@@ -101,13 +101,13 @@
 	create_equipment_variant = {
 		name = "WW Carrier" # Carrier
 		type = carrier_hull_ww
-		name_group = PLACEHOLDER
+		name_group = MTG_PLACEHOLDER_CARRIER_HULL
 		parent_version = 0
 		modules = {
 			fixed_ship_anti_air_slot = ship_AA_gun_1
-			fixed_maritime_slot = ww_detection
-			fixed_maritime_slot_2 = ww_sonar
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_maritime_slot = detection_ww
+			fixed_maritime_slot_2 = sonar_ww
+			fixed_ship_engine_slot = capital_engine_ww
 			mid_1_custom_slot = carrier_deck_heavy_ww
 			rear_1_custom_slot = carrier_deck_light_ww
 		}
@@ -118,16 +118,16 @@
 	create_equipment_variant = {
 		name = "WW Submarine" # Small-Single Submarine
 		type = sub_hull_ww
-		name_group = PLACEHOLDER
+		name_group = MTG_PLACEHOLDER_SUB_HULL_SMALL_SINGLE
 		parent_version = 0
 		modules = {
 			fixed_sub_torpedo_slot = sub_torpedo_ww
-			fixed_maritime_slot = ww_sonar
-			fixed_sub_engine_slot = ww_sub_engine
+			fixed_maritime_slot = sonar_ww
+			fixed_sub_engine_slot = sub_engine_ww
 			mid_1_custom_slot = sub_torpedo_ww
 		}
 	}
-
+	
 ###############################
 ######## 1945 - Basic #########
 ###############################
@@ -136,50 +136,50 @@
 
 	create_equipment_variant = {
 		name = "Basic Frigate" # Frigate (Patrol)
-		type = screen_hull_small_0
-		name_group = PLACEHOLDER
+		type = screen_hull_medium_0
+		name_group = MTG_PLACEHOLDER_screen_hull_medium
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_0
 			fixed_ship_anti_air_slot = ship_AA_gun_1
 			fixed_maritime_slot = maritime_ew_ss_0
-			fixed_ship_engine_slot = ww_screen_engine_small
+			fixed_ship_engine_slot = screen_engine_light_ww
 			fixed_ship_torpedo_slot = ship_torpedo_small_0
 			front_2_custom_slot = countermeasures_0
 			mid_1_custom_slot = ship_torpedo_small_0
 			rear_1_custom_slot = ship_armament_light_0
 		}
 	}
-
+	
 	create_equipment_variant = {
 		name = "Basic Destroyer" # Destroyer (Antisub)
-		type = screen_hull_medium_0
-		name_group = PLACEHOLDER
+		type = screen_hull_heavy_0
+		name_group = MTG_PLACEHOLDER_screen_hull_heavy
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_0
 			fixed_ship_anti_air_slot = ship_AA_gun_1
 			fixed_maritime_slot = maritime_ew_ss_0
 			fixed_maritime_slot_2 = maritime_sonar_0
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = ship_torpedo_small_0
 			front_2_custom_slot = countermeasures_0
 			mid_1_custom_slot = ship_torpedo_small_0
 			rear_1_custom_slot = ship_subkiller_0
 		}
 	}
-
+	
 	create_equipment_variant = {
 		name = "Basic Cruiser" # Cruiser (Antiair/Firepower)
-		type = screen_hull_large_0
-		name_group = PLACEHOLDER
+		type = battle_hull_light_0
+		name_group = MTG_PLACEHOLDER_battle_hull_light
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_0
 			fixed_ship_anti_air_slot = ship_AA_gun_1
 			fixed_maritime_slot = maritime_ew_ss_0
 			fixed_maritime_slot_2 = maritime_ta_fcs_0
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = ship_torpedo_small_0
 			front_1_custom_slot = ship_armament_medium_0
 			front_2_custom_slot = countermeasures_0
@@ -187,55 +187,55 @@
 			rear_1_custom_slot = ship_armament_light_0
 		}
 	}
-
+	
 # Pacific
-
+	
 	create_equipment_variant = {
 		name = "Basic Pacific Frigate" # Frigate (Pacific)
-		type = screen_hull_small_0
-		name_group = PLACEHOLDER
+		type = screen_hull_medium_0
+		name_group = MTG_PLACEHOLDER_screen_hull_medium
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_0
 			fixed_ship_anti_air_slot = ship_AA_gun_1
 			fixed_maritime_slot = maritime_navigation_0
-			fixed_ship_engine_slot = ww_screen_engine_small
+			fixed_ship_engine_slot = screen_engine_light_ww
 			fixed_ship_torpedo_slot = ship_torpedo_small_0
 			front_2_custom_slot = countermeasures_0
 			mid_1_custom_slot = ship_torpedo_small_0
 			rear_1_custom_slot = ship_armament_light_0
 		}
 	}
-
+	
 	create_equipment_variant = {
 		name = "Basic Pacific Destroyer" # Destroyer (Antisub - Pacific)
-		type = screen_hull_medium_0
-		name_group = PLACEHOLDER
+		type = screen_hull_heavy_0
+		name_group = MTG_PLACEHOLDER_screen_hull_heavy
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_0
 			fixed_ship_anti_air_slot = ship_AA_gun_1
 			fixed_maritime_slot = maritime_navigation_0
 			fixed_maritime_slot_2 = maritime_sonar_0
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = ship_torpedo_small_0
 			front_2_custom_slot = countermeasures_0
 			mid_1_custom_slot = ship_torpedo_small_0
 			rear_1_custom_slot = ship_subkiller_0
 		}
 	}
-
+	
 	create_equipment_variant = {
 		name = "Basic Pacific Cruiser" # Cruiser (Antiair/Firepower - Pacific)
-		type = screen_hull_large_0
-		name_group = PLACEHOLDER
+		type = battle_hull_light_0
+		name_group = MTG_PLACEHOLDER_battle_hull_light
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_0
 			fixed_ship_anti_air_slot = ship_AA_gun_1
 			fixed_maritime_slot = maritime_navigation_0
 			fixed_maritime_slot_2 = maritime_ta_fcs_0
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = ship_torpedo_small_0
 			front_1_custom_slot = ship_armament_medium_0
 			front_2_custom_slot = countermeasures_0
@@ -248,15 +248,15 @@
 
 	create_equipment_variant = {
 		name = "Basic Battlecruiser" # Battlecruiser (Firepower)
-		type = capital_hull_0
-		name_group = PLACEHOLDER
+		type = battle_hull_medium_0
+		name_group = MTG_PLACEHOLDER_battle_hull_medium
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_heavy_0
 			fixed_ship_anti_air_slot = ship_AA_gun_1
 			fixed_maritime_slot = maritime_ew_ss_0
 			fixed_maritime_slot_2 = maritime_ta_fcs_0
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_ship_engine_slot = capital_engine_ww
 			fixed_ship_torpedo_slot = ship_torpedo_small_0
 			front_1_custom_slot = ship_armament_medium_0
 			front_2_custom_slot = countermeasures_0
@@ -265,20 +265,20 @@
 			rear_1_custom_slot = ship_armament_light_0
 		}
 	}
-
+	
 # Pacific
 
 	create_equipment_variant = {
 		name = "Basic Pacific Battlecruiser" # Battlecruiser (Firepower - Pacific)
-		type = capital_hull_0
-		name_group = PLACEHOLDER
+		type = battle_hull_medium_0
+		name_group = MTG_PLACEHOLDER_battle_hull_medium
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_heavy_0
 			fixed_ship_anti_air_slot = ship_AA_gun_1
 			fixed_maritime_slot = maritime_navigation_0
 			fixed_maritime_slot_2 = maritime_ta_fcs_0
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_ship_engine_slot = capital_engine_ww
 			fixed_ship_torpedo_slot = ship_torpedo_small_0
 			front_1_custom_slot = ship_armament_medium_0
 			front_2_custom_slot = countermeasures_0
@@ -287,19 +287,19 @@
 			rear_1_custom_slot = ship_armament_light_0
 		}
 	}
-
+	
 ##### CARRIERS #####
 
 	create_equipment_variant = {
 		name = "Basic Carrier" # Carrier
 		type = carrier_hull_0
-		name_group = PLACEHOLDER
+		name_group = MTG_PLACEHOLDER_CARRIER_HULL
 		parent_version = 0
 		modules = {
 			fixed_ship_anti_air_slot = ship_AA_gun_1
 			fixed_maritime_slot = maritime_navigation_0
 			fixed_maritime_slot_2 = maritime_ta_fcs_0
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_ship_engine_slot = capital_engine_ww
 			fixed_countermeasures_slot = countermeasures_0
 			mid_1_custom_slot = carrier_deck_heavy_ww
 			rear_1_custom_slot = carrier_deck_light_ww
@@ -311,43 +311,43 @@
 	create_equipment_variant = {
 		name = "Basic Small-Single Submarine" # Small-Single Submarine
 		type = sub_hull_small_single_0
-		name_group = PLACEHOLDER
+		name_group = MTG_PLACEHOLDER_SUB_HULL_SMALL_SINGLE
 		parent_version = 0
 		modules = {
 			fixed_sub_torpedo_slot = sub_torpedo_small_0
 			fixed_maritime_slot = maritime_ew_ss_0
-			fixed_sub_engine_slot = ww_sub_engine
+			fixed_sub_engine_slot = sub_engine_ww
 			mid_1_custom_slot = sub_torpedo_small_0
 		}
 	}
-
+	
 	create_equipment_variant = {
 		name = "Basic Large-Single Submarine" # Large-Single Submarine
 		type = sub_hull_large_single_0
-		name_group = PLACEHOLDER
+		name_group = MTG_PLACEHOLDER_SUB_HULL_LARGE_SINGLE
 		parent_version = 0
 		modules = {
 			fixed_sub_torpedo_slot = sub_torpedo_medium_0
 			fixed_maritime_slot = maritime_ew_ss_0
-			fixed_sub_engine_slot = ww_sub_engine
+			fixed_sub_engine_slot = sub_engine_ww
 			front_1_custom_slot = sub_torpedo_small_0
 			mid_1_custom_slot = sub_torpedo_small_0
 		}
 	}
-
+	
 ##### IOWA #####
 
 	create_equipment_variant = {
 		name = "Basic Battleship" # Battleship (SHEER FIREPOWER!!!!)
-		type = capital_hull_large_0
-		name_group = PLACEHOLDER
+		type = battle_hull_heavy_0
+		name_group = MTG_PLACEHOLDER_battle_hull_heavy
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_heavy_0
 			fixed_ship_anti_air_slot = ship_AA_gun_1
 			fixed_maritime_slot = maritime_navigation_0
 			fixed_maritime_slot_2 = maritime_ta_fcs_0
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_ship_engine_slot = capital_engine_ww
 			fixed_ship_torpedo_slot = ship_torpedo_small_0
 			front_1_custom_slot = ship_armament_medium_0
 			front_2_custom_slot = countermeasureS_0
@@ -358,7 +358,7 @@
 			rear_2_custom_slot = empty
 		}
 	}
-
+	
 ###############################
 ######## 1960 - _____ #########
 ###############################
@@ -367,32 +367,32 @@
 
 	create_equipment_variant = {
 		name = "Frigate" # Frigate (Patrol)
-		type = screen_hull_small_1
-		name_group = PLACEHOLDER
+		type = screen_hull_medium_1
+		name_group = MTG_PLACEHOLDER_screen_hull_medium
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_1
 			fixed_ship_anti_air_slot = ship_AA_gun_2
 			fixed_maritime_slot = maritime_ew_ss_1
-			fixed_ship_engine_slot = ww_screen_engine_small
+			fixed_ship_engine_slot = screen_engine_light_ww
 			fixed_ship_torpedo_slot = ship_torpedo_small_0
 			front_2_custom_slot = countermeasures_1
 			mid_1_custom_slot = ship_torpedo_small_0
 			rear_1_custom_slot = ship_armament_light_1
 		}
 	}
-
+	
 	create_equipment_variant = {
 		name = "Destroyer" # Destroyer (Antisub)
-		type = screen_hull_medium_1
-		name_group = PLACEHOLDER
+		type = screen_hull_heavy_1
+		name_group = MTG_PLACEHOLDER_screen_hull_heavy
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_asm_0
 			fixed_ship_anti_air_slot = ship_SAM_mid_range_0
 			fixed_maritime_slot = maritime_ew_ss_1
 			fixed_maritime_slot_2 = maritime_sonar_0
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = ship_torpedo_medium_1
 			front_2_custom_slot = countermeasures_1
 			mid_1_custom_slot = ship_subkiller_1
@@ -400,18 +400,18 @@
 			rear_2_custom_slot = ship_screen_aviation_1
 		}
 	}
-
+	
 	create_equipment_variant = {
 		name = "Cruiser" # Cruiser (Antiair/Firepower)
-		type = screen_hull_large_1
-		name_group = PLACEHOLDER
+		type = battle_hull_light_1
+		name_group = MTG_PLACEHOLDER_battle_hull_light
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_asm_0
 			fixed_ship_anti_air_slot = ship_SAM_mid_range_0
 			fixed_maritime_slot = maritime_ew_ss_1
 			fixed_maritime_slot_2 = maritime_ta_fcs_1
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = ship_torpedo_medium_1
 			front_2_custom_slot = countermeasures_1
 			front_1_custom_slot = ship_armament_medium_1
@@ -425,32 +425,32 @@
 
 	create_equipment_variant = {
 		name = "Pacific Frigate" # Frigate (Patrol/Pacific)
-		type = screen_hull_small_1
-		name_group = PLACEHOLDER
+		type = screen_hull_medium_1
+		name_group = MTG_PLACEHOLDER_screen_hull_medium
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_1
 			fixed_ship_anti_air_slot = ship_AA_gun_2
 			fixed_maritime_slot = maritime_navigation_1
-			fixed_ship_engine_slot = ww_screen_engine_small
+			fixed_ship_engine_slot = screen_engine_light_ww
 			fixed_ship_torpedo_slot = ship_torpedo_small_0
 			front_2_custom_slot = countermeasures_1
 			mid_1_custom_slot = ship_torpedo_small_0
 			rear_1_custom_slot = ship_armament_light_1
 		}
 	}
-
+	
 	create_equipment_variant = {
 		name = "Pacific Destroyer" # Destroyer (Antisub/Pacific)
-		type = screen_hull_medium_1
-		name_group = PLACEHOLDER
+		type = screen_hull_heavy_1
+		name_group = MTG_PLACEHOLDER_screen_hull_heavy
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_asm_0
 			fixed_ship_anti_air_slot = ship_SAM_mid_range_0
 			fixed_maritime_slot = maritime_navigation_1
 			fixed_maritime_slot_2 = maritime_sonar_0
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = ship_torpedo_medium_1
 			front_2_custom_slot = countermeasures_1
 			mid_1_custom_slot = ship_subkiller_1
@@ -458,18 +458,18 @@
 			rear_2_custom_slot = ship_screen_aviation_1
 		}
 	}
-
+	
 	create_equipment_variant = {
 		name = "Pacific Cruiser" # Cruiser (Antiair/Firepower/Pacific)
-		type = screen_hull_large_1
-		name_group = PLACEHOLDER
+		type = battle_hull_light_1
+		name_group = MTG_PLACEHOLDER_battle_hull_light
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_asm_0
 			fixed_ship_anti_air_slot = ship_SAM_mid_range_0
 			fixed_maritime_slot = maritime_navigation_1
 			fixed_maritime_slot_2 = maritime_ta_fcs_1
-			fixed_ship_engine_slot = ww_screen_engine
+			fixed_ship_engine_slot = screen_engine_ww
 			fixed_ship_torpedo_slot = ship_torpedo_medium_1
 			front_2_custom_slot = countermeasures_1
 			front_1_custom_slot = ship_armament_medium_1
@@ -483,15 +483,15 @@
 
 	create_equipment_variant = {
 		name = "Battlecruiser" # Battlecruiser (Firepower)
-		type = capital_hull_1
-		name_group = PLACEHOLDER
+		type = battle_hull_medium_1
+		name_group = MTG_PLACEHOLDER_battle_hull_medium
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_heavyasm_0
 			fixed_ship_anti_air_slot = ship_SAM_mid_range_0
 			fixed_maritime_slot = maritime_sonar_1
 			fixed_maritime_slot_2 = maritime_ta_fcs_1
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_ship_engine_slot = capital_engine_ww
 			fixed_ship_torpedo_slot = ship_torpedo_medium_1
 			front_2_custom_slot = countermeasures_1
 			front_1_custom_slot = ship_armament_medium_1
@@ -506,15 +506,15 @@
 
 	create_equipment_variant = {
 		name = "Pacific Battlecruiser" # Battlecruiser (Firepower/Pacific)
-		type = capital_hull_1
-		name_group = PLACEHOLDER
+		type = battle_hull_medium_1
+		name_group = MTG_PLACEHOLDER_battle_hull_medium
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_heavyasm_0
 			fixed_ship_anti_air_slot = ship_SAM_mid_range_0
 			fixed_maritime_slot = maritime_navigation_1
 			fixed_maritime_slot_2 = maritime_ta_fcs_1
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_ship_engine_slot = capital_engine_ww
 			fixed_ship_torpedo_slot = ship_torpedo_medium_1
 			front_2_custom_slot = countermeasures_1
 			front_1_custom_slot = ship_armament_medium_1
@@ -530,34 +530,34 @@
 	create_equipment_variant = {
 		name = "Single-Small Sub" # Single-Small Submarine (Raiding)
 		type = sub_hull_small_single_1
-		name_group = PLACEHOLDER
+		name_group = MTG_PLACEHOLDER_SUB_HULL_SMALL_SINGLE
 		parent_version = 0
 		modules = {
 			fixed_sub_torpedo_slot = sub_torpedo_small_1
 			fixed_maritime_slot = maritime_ew_ss_1
-			fixed_sub_engine_slot = ww_sub_engine
+			fixed_sub_engine_slot = sub_engine_ww
 			mid_1_custom_slot = sub_torpedo_medium_1
 		}
 	}
-
+	
 	create_equipment_variant = {
 		name = "Single-Large Sub" # Single-Large Submarine (Battle)
 		type = sub_hull_large_single_1
-		name_group = PLACEHOLDER
+		name_group = MTG_PLACEHOLDER_SUB_HULL_LARGE_SINGLE
 		parent_version = 0
 		modules = {
 			fixed_sub_torpedo_slot = sub_torpedo_medium_1
 			fixed_maritime_slot = maritime_ew_ss_1
-			fixed_sub_engine_slot = ww_sub_engine
+			fixed_sub_engine_slot = sub_engine_ww
 			front_1_custom_slot = sub_torpedo_small_1
 			mid_1_custom_slot = sub_torpedo_medium_1
 		}
 	}
-
+	
 	create_equipment_variant = {
 		name = "Double-Large Sub" # Double-Large Submarine (Missile)
-		type = sub_hull_large_single_1
-		name_group = PLACEHOLDER
+		type = sub_hull_large_double_1
+		name_group = MTG_PLACEHOLDER_SUB_HULL_LARGE_DOUBLE
 		parent_version = 0
 		modules = {
 			fixed_sub_torpedo_slot = sub_torpedo_medium_1
@@ -575,13 +575,13 @@
 	create_equipment_variant = {
 		name = "Helicarrier" # Light Carrier
 		type = carrier_hull_light_1
-		name_group = PLACEHOLDER
+		name_group = MTG_PLACEHOLDER_CARRIER_HULL_LIGHT
 		parent_version = 0
 		modules = {
 			fixed_ship_anti_air_slot = ship_SAM_mid_range_0
 			fixed_maritime_slot = maritime_ew_ss_1
 			fixed_maritime_slot_2 = maritime_navigation_1
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_ship_engine_slot = capital_engine_ww
 			fixed_countermeasures_slot = countermeasures_1
 			mid_1_custom_slot = carrier_deck_light_1
 			rear_1_custom_slot = carrier_deck_light_1
@@ -591,13 +591,13 @@
 	create_equipment_variant = {
 		name = "Carrier" # Carrier
 		type = carrier_hull_1
-		name_group = PLACEHOLDER
+		name_group = MTG_PLACEHOLDER_CARRIER_HULL
 		parent_version = 0
 		modules = {
 			fixed_ship_anti_air_slot = ship_SAM_mid_range_0
 			fixed_maritime_slot = maritime_ew_ss_1
 			fixed_maritime_slot_2 = maritime_navigation_1
-			fixed_ship_engine_slot = ww_capital_engine
+			fixed_ship_engine_slot = capital_engine_ww
 			fixed_countermeasures_slot = countermeasures_1
 			mid_1_custom_slot = carrier_deck_heavy_1
 			rear_1_custom_slot = carrier_deck_heavy_1
@@ -612,31 +612,31 @@
 
 	create_equipment_variant = {
 		name = "Frigate" # Frigate (Patrol)
-		type = screen_hull_small_2
-		name_group = PLACEHOLDER
+		type = screen_hull_medium_2
+		name_group = MTG_PLACEHOLDER_screen_hull_medium
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_2
 			fixed_ship_anti_air_slot = ship_AA_gun_3
 			fixed_maritime_slot = maritime_ew_ss_2
-			fixed_ship_engine_slot = ww_screen_engine_small
+			fixed_ship_engine_slot = screen_engine_light_ww
 			fixed_ship_torpedo_slot = ship_torpedo_small_1
 			front_2_custom_slot = countermeasures_2
 			mid_1_custom_slot = ship_torpedo_small_1
 			rear_1_custom_slot = ship_armament_light_2
 		}
 	}
-
+	
 	create_equipment_variant = {
 		name = "Destroyer" # Destroyer (Antisub)
-		type = screen_hull_medium_
+		type = screen_hull_heavy_
 		name_group = PLACEHOLDER
 		parent_version = 0
 	}
-
+	
 	create_equipment_variant = {
 		name = "Cruiser" # Cruiser (Antiair/Firepower)
-		type = screen_hull_large_
+		type = battle_hull_light_
 		name_group = PLACEHOLDER
 		parent_version = 0
 	}
@@ -645,31 +645,31 @@
 
 	create_equipment_variant = {
 		name = "Pacific Frigate" # Frigate (Patrol/Pacific)
-		type = screen_hull_small_2
-		name_group = PLACEHOLDER
+		type = screen_hull_medium_2
+		name_group = MTG_PLACEHOLDER_screen_hull_medium
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_2
 			fixed_ship_anti_air_slot = ship_AA_gun_3
 			fixed_maritime_slot = maritime_navigation_2
-			fixed_ship_engine_slot = ww_screen_engine_small
+			fixed_ship_engine_slot = screen_engine_light_ww
 			fixed_ship_torpedo_slot = ship_torpedo_small_1
 			front_2_custom_slot = countermeasures_2
 			mid_1_custom_slot = ship_torpedo_small_1
 			rear_1_custom_slot = ship_armament_light_2
 		}
 	}
-
+	
 	create_equipment_variant = {
 		name = "Pacific Destroyer" # Destroyer (Antisub/Pacific)
-		type = screen_hull_medium_
+		type = screen_hull_heavy_
 		name_group = PLACEHOLDER
 		parent_version = 0
 	}
-
+	
 	create_equipment_variant = {
 		name = "Pacific Cruiser" # Cruiser (Antiair/Firepower/Pacific)
-		type = screen_hull_large_
+		type = battle_hull_light_
 		name_group = PLACEHOLDER
 		parent_version = 0
 	}
@@ -678,7 +678,7 @@
 
 	create_equipment_variant = {
 		name = "Battlecruiser" # Battlecruiser (Firepower)
-		type = capital_hull_
+		type = battle_hull_medium_
 		name_group = PLACEHOLDER
 		parent_version = 0
 	}
@@ -687,7 +687,7 @@
 
 	create_equipment_variant = {
 		name = "Pacific Battlecruiser" # Battlecruiser (Firepower/Pacific)
-		type = capital_hull_
+		type = battle_hull_medium_
 		name_group = PLACEHOLDER
 		parent_version = 0
 	}
@@ -697,34 +697,34 @@
 	create_equipment_variant = {
 		name = "Single-Small Sub" # Single-Small Submarine (Raiding)
 		type = sub_hull_small_single_2
-		name_group = PLACEHOLDER
+		name_group = MTG_PLACEHOLDER_SUB_HULL_SMALL_SINGLE
 		parent_version = 0
 		modules = {
 			fixed_sub_torpedo_slot = sub_torpedo_small_2
 			fixed_maritime_slot = maritime_ew_ss_2
-			fixed_sub_engine_slot = ww_sub_engine
+			fixed_sub_engine_slot = sub_engine_ww
 			mid_1_custom_slot = sub_torpedo_medium_2
 		}
 	}
-
+	
 	create_equipment_variant = {
 		name = "Single-Large Sub" # Single-Large Submarine (Battle)
 		type = sub_hull_large_single_2
-		name_group = PLACEHOLDER
+		name_group = MTG_PLACEHOLDER_SUB_HULL_LARGE_SINGLE
 		parent_version = 0
 		modules = {
 			fixed_sub_torpedo_slot = sub_torpedo_medium_1
 			fixed_maritime_slot = maritime_ew_ss_1
-			fixed_sub_engine_slot = ww_sub_engine
+			fixed_sub_engine_slot = sub_engine_ww
 			front_1_custom_slot = sub_torpedo_small_1
 			mid_1_custom_slot = ship_armament_asm_1
 		}
 	}
-
+	
 	create_equipment_variant = {
 		name = "Double-Large Sub" # Double-Large Submarine (Ballistic/Nuclear)
 		type = sub_hull_large_double_2
-		name_group = PLACEHOLDER
+		name_group = MTG_PLACEHOLDER_SUB_HULL_LARGE_DOUBLE
 		parent_version = 0
 		modules = {
 			fixed_sub_torpedo_slot = sub_torpedo_medium_1
@@ -752,7 +752,7 @@
 		name_group = PLACEHOLDER
 		parent_version = 0
 	}
-
+	
 	create_equipment_variant = {
 		name = "Supercarrier" # Supercarrier
 		type = carrier_hull_super_
@@ -768,73 +768,95 @@
 
 	create_equipment_variant = {
 		name = "Frigate" # Frigate (Patrol)
-		type = screen_hull_small_3
-		name_group = PLACEHOLDER
+		type = screen_hull_medium_3
+		name_group = MTG_PLACEHOLDER_screen_hull_medium
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_4
 			fixed_ship_anti_air_slot = ship_AA_gun_4
 			fixed_maritime_slot = maritime_ew_ss_3
-			fixed_ship_engine_slot = ww_screen_engine_small
+			fixed_ship_engine_slot = screen_engine_light_ww
 			fixed_ship_torpedo_slot = ship_torpedo_small_2
 			fixed_ship_CIWS_slot = ciws_0
 			front_2_custom_slot = countermeasures_4
-			mid_1_custom_slot = ship_torpedo_small_1_4
+			mid_1_custom_slot = ship_torpedo_small_2
 			rear_1_custom_slot = ship_armament_light_4
 		}
 	}
-
+	
 	create_equipment_variant = {
 		name = "Destroyer" # Destroyer (Antisub)
-		type = screen_hull_medium_
-		name_group = PLACEHOLDER
+		type = screen_hull_heavy_3
+		name_group = MTG_PLACEHOLDER_screen_hull_heavy
 		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_armament_asm_2
+			fixed_ship_anti_air_slot = ship_SAM_mid_range_2
+			fixed_maritime_slot = maritime_navigation_3
+			fixed_maritime_slot_2 = maritime_sonar_2
+			fixed_ship_engine_slot = screen_engine_ww
+			fixed_ship_torpedo_slot = ship_torpedo_medium_2
+			fixed_ship_CIWS_slot = ciws_0
+			front_2_custom_slot = countermeasures_4
+			mid_1_custom_slot = ship_subkiller_4
+			rear_1_custom_slot = ship_armament_light_4
+			rear_2_custom_slot = ship_screen_aviation_2
+		}
 	}
-
+	
 	create_equipment_variant = {
 		name = "Cruiser" # Cruiser (Antiair/Firepower)
-		type = screen_hull_large_
-		name_group = PLACEHOLDER
+		type = battle_hull_light_3
+		name_group = MTG_PLACEHOLDER_battle_hull_light
 		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_armament_asm_2
+			fixed_ship_anti_air_slot = ship_SAM_mid_range_2
+			fixed_maritime_slot = maritime_navigation_3
+			fixed_maritime_slot_2 = maritime_ta_fcs_3
+			fixed_ship_engine_slot = screen_engine_ww
+			fixed_ship_torpedo_slot = ship_torpedo_medium_2
+			fixed_ship_CIWS_slot = ciws_0
+			front_2_custom_slot = countermeasures_4
+			front_1_custom_slot = ship_armament_medium_4
+			mid_1_custom_slot = ship_SAM_mid_range_2
+			rear_1_custom_slot = ship_armament_light_4
+			rear_2_custom_slot = ship_rhib_launch_2
+		}
 	}
 
 #PACIFIC
 
 	create_equipment_variant = {
 		name = "Pacific Frigate" # Frigate (Patrol/Pacific)
-		type = screen_hull_small_3
-		name_group = PLACEHOLDER
+		type = screen_hull_medium_3
+		name_group = MTG_PLACEHOLDER_screen_hull_medium
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_4
 			fixed_ship_anti_air_slot = ship_AA_gun_4
 			fixed_maritime_slot = maritime_navigation_3
-			fixed_ship_engine_slot = ww_screen_engine_small
+			fixed_ship_engine_slot = screen_engine_light_ww
 			fixed_ship_torpedo_slot = ship_torpedo_small_2
 			fixed_ship_CIWS_slot = ciws_0
 			front_2_custom_slot = countermeasures_4
-			mid_1_custom_slot = ship_torpedo_small_1_4
+			mid_1_custom_slot = ship_torpedo_small_2
 			rear_1_custom_slot = ship_armament_light_4
 		}
 	}
-
+	
 	create_equipment_variant = {
 		name = "Pacific Destroyer" # Destroyer (Antisub/Pacific)
-		type = screen_hull_medium_3
+		type = screen_hull_heavy_3
 		name_group = PLACEHOLDER
 		parent_version = 0
 		modules = {
-			fixed_sub_torpedo_slot = sub_torpedo_medium_2
-			fixed_maritime_slot = maritime_ew_ss_2
-			fixed_sub_engine_slot = ww_sub_engine
-			front_1_custom_slot = sub_torpedo_medium_2
-			mid_1_custom_slot = ship_armament_asm_2
 		}
 	}
-
+	
 	create_equipment_variant = {
 		name = "Pacific Cruiser" # Cruiser (Antiair/Firepower/Pacific)
-		type = screen_hull_large_
+		type = battle_hull_light_
 		name_group = PLACEHOLDER
 		parent_version = 0
 	}
@@ -843,7 +865,7 @@
 
 	create_equipment_variant = {
 		name = "Battlecruiser" # Battlecruiser (Firepower)
-		type = capital_hull_
+		type = battle_hull_medium_
 		name_group = PLACEHOLDER
 		parent_version = 0
 	}
@@ -852,7 +874,7 @@
 
 	create_equipment_variant = {
 		name = "Pacific Battlecruiser" # Battlecruiser (Firepower/Pacific)
-		type = capital_hull_
+		type = battle_hull_medium_
 		name_group = PLACEHOLDER
 		parent_version = 0
 	}
@@ -862,34 +884,34 @@
 	create_equipment_variant = {
 		name = "Single-Small Sub" # Single-Small Submarine (Raiding)
 		type = sub_hull_small_single_3
-		name_group = PLACEHOLDER
+		name_group = MTG_PLACEHOLDER_SUB_HULL_SMALL_SINGLE
 		parent_version = 0
 		modules = {
 			fixed_sub_torpedo_slot = sub_torpedo_small_2
 			fixed_maritime_slot = maritime_ew_ss_2
-			fixed_sub_engine_slot = ww_sub_engine
+			fixed_sub_engine_slot = sub_engine_ww
 			mid_1_custom_slot = sub_torpedo_medium_2
 		}
 	}
-
+	
 	create_equipment_variant = {
 		name = "Single-Large Sub" # Single-Large Submarine (Battle)
 		type = sub_hull_large_single_3
-		name_group = PLACEHOLDER
+		name_group = MTG_PLACEHOLDER_SUB_HULL_LARGE_SINGLE
 		parent_version = 0
 		modules = {
 			fixed_sub_torpedo_slot = sub_torpedo_medium_2
 			fixed_maritime_slot = maritime_ew_ss_2
-			fixed_sub_engine_slot = ww_sub_engine
+			fixed_sub_engine_slot = sub_engine_ww
 			front_1_custom_slot = sub_torpedo_medium_2
 			mid_1_custom_slot = ship_armament_asm_2
 		}
 	}
-
+	
 	create_equipment_variant = {
 		name = "Double-Large Sub" # Double-Large Submarine (Ballistic)
 		type = sub_hull_large_double_3
-		name_group = PLACEHOLDER
+		name_group = MTG_PLACEHOLDER_SUB_HULL_LARGE_DOUBLE
 		parent_version = 0
 		modules = {
 			fixed_sub_torpedo_slot = sub_torpedo_medium_2
@@ -906,9 +928,19 @@
 
 	create_equipment_variant = {
 		name = "Helicarrier" # Light Carrier
-		type = carrier_hull_light_
-		name_group = PLACEHOLDER
+		type = carrier_hull_light_3
+		name_group = MTG_PLACEHOLDER_CARRIER_HULL_LIGHT
 		parent_version = 0
+		modules = {
+			fixed_ship_anti_air_slot = ship_SAM_mid_range_1
+			fixed_maritime_slot = maritime_ew_ss_3
+			fixed_maritime_slot_2 = maritime_navigation_3
+			fixed_ship_engine_slot = capital_engine_ww
+			fixed_countermeasures_slot = countermeasures_4
+			fixed_ship_CIWS_slot = ciws_0
+			mid_1_custom_slot = carrier_deck_light_3
+			rear_1_custom_slot = carrier_deck_light_3
+		}
 	}
 
 	create_equipment_variant = {
@@ -917,7 +949,7 @@
 		name_group = PLACEHOLDER
 		parent_version = 0
 	}
-
+	
 	create_equipment_variant = {
 		name = "Supercarrier" # Supercarrier
 		type = carrier_hull_super_
@@ -933,14 +965,14 @@
 
 	create_equipment_variant = {
 		name = "Frigate" # Frigate (Patrol)
-		type = screen_hull_small_4
-		name_group = PLACEHOLDER
+		type = screen_hull_medium_4
+		name_group = MTG_PLACEHOLDER_screen_hull_medium
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_6
 			fixed_ship_anti_air_slot = ship_AA_gun_5
 			fixed_maritime_slot = maritime_ew_ss_3
-			fixed_ship_engine_slot = ww_screen_engine_small
+			fixed_ship_engine_slot = screen_engine_light_ww
 			fixed_ship_torpedo_slot = ship_torpedo_small_3
 			fixed_ship_CIWS_slot = ciws_1
 			front_2_custom_slot = countermeasures_5
@@ -948,17 +980,17 @@
 			rear_1_custom_slot = ship_armament_light_6
 		}
 	}
-
+	
 	create_equipment_variant = {
 		name = "Destroyer" # Destroyer (Antisub)
-		type = screen_hull_medium_
+		type = screen_hull_heavy_
 		name_group = PLACEHOLDER
 		parent_version = 0
 	}
-
+	
 	create_equipment_variant = {
 		name = "Cruiser" # Cruiser (Antiair/Firepower)
-		type = screen_hull_large_
+		type = battle_hull_light_
 		name_group = PLACEHOLDER
 		parent_version = 0
 	}
@@ -967,14 +999,14 @@
 
 	create_equipment_variant = {
 		name = "Pacific Frigate" # Frigate (Patrol/Pacific)
-		type = screen_hull_small_4
-		name_group = PLACEHOLDER
+		type = screen_hull_medium_4
+		name_group = MTG_PLACEHOLDER_screen_hull_medium
 		parent_version = 0
 		modules = {
 			fixed_ship_battery_slot = ship_armament_medium_6
 			fixed_ship_anti_air_slot = ship_AA_gun_5
 			fixed_maritime_slot = maritime_navigation_3
-			fixed_ship_engine_slot = ww_screen_engine_small
+			fixed_ship_engine_slot = screen_engine_light_ww
 			fixed_ship_torpedo_slot = ship_torpedo_small_3
 			fixed_ship_CIWS_slot = ciws_1
 			front_2_custom_slot = countermeasures_5
@@ -982,24 +1014,24 @@
 			rear_1_custom_slot = ship_armament_light_6
 		}
 	}
-
+	
 	create_equipment_variant = {
 		name = "Pacific Destroyer" # Destroyer (Antisub/Pacific)
-		type = screen_hull_medium_4
+		type = screen_hull_heavy_4
 		name_group = PLACEHOLDER
 		parent_version = 0
 		modules = {
 			fixed_sub_torpedo_slot = sub_torpedo_medium_3
 			fixed_maritime_slot = maritime_ew_ss_3
-			fixed_sub_engine_slot = ww_sub_engine
+			fixed_sub_engine_slot = sub_engine_ww
 			front_1_custom_slot = sub_torpedo_medium_3
 			mid_1_custom_slot = ship_armament_asm_3
 		}
 	}
-
+	
 	create_equipment_variant = {
 		name = "Pacific Cruiser" # Cruiser (Antiair/Firepower/Pacific)
-		type = screen_hull_large_
+		type = battle_hull_light_
 		name_group = PLACEHOLDER
 		parent_version = 0
 	}
@@ -1008,7 +1040,7 @@
 
 	create_equipment_variant = {
 		name = "Battlecruiser" # Battlecruiser (Firepower)
-		type = capital_hull_
+		type = battle_hull_medium_
 		name_group = PLACEHOLDER
 		parent_version = 0
 	}
@@ -1017,7 +1049,7 @@
 
 	create_equipment_variant = {
 		name = "Pacific Battlecruiser" # Battlecruiser (Firepower/Pacific)
-		type = capital_hull_
+		type = battle_hull_medium_
 		name_group = PLACEHOLDER
 		parent_version = 0
 	}
@@ -1027,34 +1059,34 @@
 	create_equipment_variant = {
 		name = "Single-Small Sub" # Single-Small Submarine (Raiding)
 		type = sub_hull_small_single_4
-		name_group = PLACEHOLDER
+		name_group = MTG_PLACEHOLDER_SUB_HULL_SMALL_SINGLE
 		parent_version = 0
 		modules = {
 			fixed_sub_torpedo_slot = sub_torpedo_small_3
 			fixed_maritime_slot = maritime_ew_ss_3
-			fixed_sub_engine_slot = ww_sub_engine
+			fixed_sub_engine_slot = sub_engine_ww
 			mid_1_custom_slot = sub_torpedo_medium_3
 		}
 	}
-
+	
 	create_equipment_variant = {
 		name = "Single-Large Sub" # Single-Large Submarine (Battle)
 		type = sub_hull_large_single_4
-		name_group = PLACEHOLDER
+		name_group = MTG_PLACEHOLDER_SUB_HULL_LARGE_SINGLE
 		parent_version = 0
 		modules = {
 			fixed_sub_torpedo_slot = sub_torpedo_medium_3
 			fixed_maritime_slot = maritime_ew_ss_3
-			fixed_sub_engine_slot = ww_sub_engine
+			fixed_sub_engine_slot = sub_engine_ww
 			front_1_custom_slot = sub_torpedo_medium_3
 			mid_1_custom_slot = ship_armament_asm_3
 		}
 	}
-
+	
 	create_equipment_variant = {
 		name = "Double-Large Sub" # Double-Large Submarine (Ballistic)
 		type = sub_hull_large_double_4
-		name_group = PLACEHOLDER
+		name_group = MTG_PLACEHOLDER_SUB_HULL_LARGE_DOUBLE
 		parent_version = 0
 		modules = {
 			fixed_sub_torpedo_slot = sub_torpedo_medium_3
@@ -1082,7 +1114,7 @@
 		name_group = PLACEHOLDER
 		parent_version = 0
 	}
-
+	
 	create_equipment_variant = {
 		name = "Supercarrier" # Supercarrier
 		type = carrier_hull_super_

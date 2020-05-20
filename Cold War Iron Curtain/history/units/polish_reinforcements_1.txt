@@ -1,6 +1,6 @@
-division_template = {
-	name = "Dywizja Piechoty B"
-
+﻿division_template = {
+	name = "Dywizja Piechoty B"			
+										
 	regiments = {
 		motorized_infantry = { x = 0 y = 0 }
 		motorized_infantry = { x = 0 y = 1 }
@@ -14,8 +14,8 @@ division_template = {
 		rocket_sp_artillery = { x = 4 y = 0 }
 	}
 	support = {
-		recon = { x = 0 y = 0 }
-		engineer = { x = 0 y = 1 }
+		recon = { x = 0 y = 0 } 		
+		engineer = { x = 0 y = 1 } 		
 		logistics_company = { x = 0 y = 2 }
 		field_hospital = { x = 0 y = 3 }
 		direct_fire_gun_support = { x = 0 y = 4 }
@@ -24,7 +24,7 @@ division_template = {
 }
 division_template = {
 	name = "Artyleria Korpusu" 				# Artillery Division
-
+	
 	regiments = {
 		rocket_sp_artillery = { x = 0 y = 0 }
 		sp_artillery = { x = 1 y = 0 }
@@ -46,7 +46,7 @@ division_template = {
 	}
 }
 division_template = {
-	name = "Dywizja Desantowa B"
+	name = "Dywizja Desantowa B" 		
 	regiments = {
 		mechanized_marine = { x = 0 y = 0 }
 		mechanized_marine = { x = 0 y = 1 }
@@ -70,7 +70,7 @@ division_template = {
 		airborne = { x = 1 y = 0 }
 		airborne = { x = 1 y = 1 }
 	}
-	priority = 2
+	priority = 2	
 	support = {
 			recon = { x = 0 y = 0 }
 	}
@@ -146,28 +146,28 @@ division_template = {
 ##### OOB #####
 units = {
 	division = {
-		name = "1. Dywizja Zmechanizowana"
+		name = "1. Dywizja Zmechanizowana"					
 		location = 3544
  		division_template = "Dywizja Zmechanizowana A"
  		start_experience_factor = 0.6
 		start_equipment_factor = 1
 	}
-	division = {
-		name = "3. Dywizja Piechoty"
+	division = {	
+		name = "3. Dywizja Piechoty"					
 		location = 3544
  		division_template = "Dywizja Piechoty B"
  		start_experience_factor = 0.6
 		start_equipment_factor = 1
 	}
-	division = {
-		name = "6. Pomorska Dywizja Powietrznodesantowa"
+	division = {	
+		name = "6. Pomorska Dywizja Powietrznodesantowa"					
 		location = 6558
  		division_template = "Dywizja Powietrznodesantowa"
  		start_experience_factor = 0.6
 		start_equipment_factor = 1
 	}
- 	division = {
-		name = "9. Dywizja Piechoty"
+ 	division = {	
+		name = "9. Dywizja Piechoty"					
 		location = 3473
 		division_template = "Dywizja Piechoty B"
  		start_experience_factor = 0.6
@@ -178,98 +178,98 @@ units = {
 		location = 6558
  		division_template = "Dywizja Zmechanizowana A"
  		start_experience_factor = 0.6
-		start_equipment_factor = 1
+		start_equipment_factor = 1	
 	}
  	division = {
 		name = "8. Dywizja Artylerii"
 		location = 6558
  		division_template = "Artyleria Korpusu"
  		start_experience_factor = 0.6
-		start_equipment_factor = 1
+		start_equipment_factor = 1	
 	}
  	division = {
-		name = "8. Drezdenska Dywizja Zmechanizowana"
+		name = "8. Drezdeńska Dywizja Zmechanizowana"
 		location = 6558
  		division_template = "Dywizja Zmechanizowana A"
  		start_experience_factor = 0.6
-		start_equipment_factor = 1
+		start_equipment_factor = 1	
 	}
  	division = {
 		name = "12. Dywizja Zmechanizowana"
 		location = 6558
  		division_template = "Dywizja Zmechanizowana A"
  		start_experience_factor = 0.6
-		start_equipment_factor = 1
+		start_equipment_factor = 1	
 	}
  	division = {
 		name = "16 Kaszubska Dywizja Pancerna"
 		location = 6558
  		division_template = "Dywizja Pancerna B"
  		start_experience_factor = 0.6
-		start_equipment_factor = 1
+		start_equipment_factor = 1	
 	}
  	division = {
 		name = "20. Dywizja Pancerna"
 		location = 6558
  		division_template = "Dywizja Pancerna B"
  		start_experience_factor = 0.6
-		start_equipment_factor = 1
+		start_equipment_factor = 1	
 	}
  	division = {
 		name = "23. Dywizja Piechoty"
 		location = 6558
  		division_template = "Dywizja Piechoty B"
  		start_experience_factor = 0.6
-		start_equipment_factor = 1
+		start_equipment_factor = 1	
 	}
  	division = {
 		name = "6. Brygada Artylerii Armat"
 		location = 6558
  		division_template = "Artyleria Korpusu"
  		start_experience_factor = 0.6
-		start_equipment_factor = 1
+		start_equipment_factor = 1	
 	}
  	division = {
 		name = "2. Warszawska Dywizja Zmechanizowana"
 		location = 6558
  		division_template = "Dywizja Zmechanizowana A"
  		start_experience_factor = 0.6
-		start_equipment_factor = 1
+		start_equipment_factor = 1	
 	}
  	division = {
 		name = "4. Dywizja Piechoty"
 		location = 6558
  		division_template = "Dywizja Piechoty B"
  		start_experience_factor = 0.6
-		start_equipment_factor = 1
+		start_equipment_factor = 1	
 	}
  	division = {
 		name = "5. Dywizja Pancerna"
 		location = 6558
  		division_template = "Dywizja Pancerna B"
  		start_experience_factor = 0.6
-		start_equipment_factor = 1
+		start_equipment_factor = 1	
 	}
  	division = {
 		name = "10. Dywizja Piechoty"
 		location = 6558
  		division_template = "Dywizja Piechoty B"
  		start_experience_factor = 0.6
-		start_equipment_factor = 1
+		start_equipment_factor = 1	
 	}
  	division = {
 		name = "11. Dywizja Zmechanizowana"
 		location = 6558
  		division_template = "Dywizja Zmechanizowana A"
  		start_experience_factor = 0.6
-		start_equipment_factor = 1
+		start_equipment_factor = 1	
 	}
  	division = {
 		name = "31. Brygada Artylerii Armat"
 		location = 6558
  		division_template = "Artyleria Korpusu"
  		start_experience_factor = 0.6
-		start_equipment_factor = 1
+		start_equipment_factor = 1	
 	}
 }
 

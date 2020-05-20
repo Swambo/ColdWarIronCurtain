@@ -1,23 +1,23 @@
-####### OOB #######
+﻿####### OOB #######
 units = {
 	##### NAVAL UNITS #####
 	### HOME COMMAND ###
 	fleet = {
 		name = "Mixed Fleet Early"
 		naval_base = 1550 # Scapa Flow
-		task_force = {
-			name = "Blue Fleet"					# CO: Forbes
+		task_force = {				
+			name = "Blue Fleet"					# CO: Forbes	
 			location = 1550 # Scapa Flow
-			ship = { name = "Blue CV1" definition = carrier equipment = { carrier_1 = { amount = 1 owner = CUB } }
+			ship = { name = "Blue CV1" definition = carrier equipment = { carrier_1 = { amount = 1 owner = CUB } } 
 				air_wings = {
-					cv_fighter_equipment_1 = { owner = "CUB" amount = 27 }		# Swordfish
-					cv_CAS_equipment_1 = { owner = "CUB" amount = 9 }					# Blackburn Skua
+					cv_fighter_equipment_1 = { owner = "CUB" amount = 27 }# Swordfish
+					cv_CAS_equipment_1 = { owner = "CUB" amount = 9 }# Blackburn Skua
 				}
 			}
-			ship = { name = "Blue CV2" definition = carrier equipment = { carrier_1 = { amount = 1 owner = CUB } }
+			ship = { name = "Blue CV2" definition = carrier equipment = { carrier_1 = { amount = 1 owner = CUB } } 
 				air_wings = {
-					cv_fighter_equipment_1 = { owner = "CUB" amount = 27 }		# Swordfish
-					cv_CAS_equipment_1 = { owner = "CUB" amount = 18 }					# Blackburn Skua
+					cv_fighter_equipment_1 = { owner = "CUB" amount = 27 }# Swordfish
+					cv_CAS_equipment_1 = { owner = "CUB" amount = 18 }# Blackburn Skua
 				}
 			}
 			ship = { name = "Blue CA1" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = CUB } } }

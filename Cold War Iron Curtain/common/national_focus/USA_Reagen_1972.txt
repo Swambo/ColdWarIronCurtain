@@ -24,7 +24,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_REAGEN72_Sustain_the_Apollo_Program
-		icon = GFX_goal_unknown
+		icon = GFX_spacerace
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -49,7 +49,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_REAGEN72_War_Powers_Resolution
-		icon = GFX_goal_unknown
+		icon = GFX_Adopt_New_Constitiution
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -64,7 +64,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_REAGEN72_Federal_Aid_Highway_Act
-		icon = GFX_goal_unknown
+		icon = GFX_focus_interstate
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -79,7 +79,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_REAGEN72_Amtrak_Improvement_Act
-		icon = GFX_goal_unknown
+		icon = GFX_Amtrak_Icon
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -97,7 +97,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_REAGEN72_Comprehensive_Education_and_Training_Act
-		icon = GFX_goal_unknown
+		icon = GFX_machine_tools
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -115,7 +115,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_REAGEN72_Crackdown_on_Juvenile_Delinquency
-		icon = GFX_goal_unknown
+		icon = GFX_focus_police
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -189,7 +189,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_REAGEN72_Send_Goldwater_to_the_UN
-		icon = GFX_goal_unknown
+		icon = GFX_un
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -204,7 +204,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_REAGEN72_Employee_Retirement_Income_Security_Act
-		icon = GFX_goal_unknown
+		icon = GFX_Pension_Funding
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -222,7 +222,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_REAGEN72_End_the_Draft
-		icon = GFX_goal_unknown
+		icon = GFX_military_service_reduction
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -237,7 +237,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_REAGEN72_Federal_Land_Reform
-		icon = GFX_goal_unknown
+		icon = GFX_Paper_Two
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -256,7 +256,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_REAGEN72_Revenue_Adjustment_Act
-		icon = GFX_goal_unknown
+		icon = GFX_ISR_Focus_Tax_Cuts
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -265,19 +265,18 @@ focus_tree = {
 		x = 1
 		y = 6
 		completion_reward = {
-			add_ideas = Light_Taxation 
+			add_ideas = policy_taxrate_temp_1 
 			hidden_effect = {
-				remove_ideas = Austrian_Taxation
-				remove_ideas = Progressive_Taxation
-				remove_ideas = Moderate_Taxation
-				remove_ideas = Heavy_Taxation
-				remove_ideas = Marxist_Taxation			
+				remove_ideas = policy_taxrate_temp_3
+				remove_ideas = policy_taxrate_temp_2
+				remove_ideas = policy_taxrate_temp_4
+				remove_ideas = policy_taxrate_temp_5			
 			}
 		}	
 	}
 	focus = {
 		id = USA_REAGEN72_Railroad_Revitilization_and_Regulation_Act
-		icon = GFX_goal_unknown
+		icon = GFX_FocusBuildRailroads
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -295,7 +294,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_REAGEN72_Trade_Act_of_1974
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_positive_trade_relations
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -313,7 +312,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_REAGEN72_Morning_in_America
-		icon = GFX_goal_unknown
+		icon = GFX_TorchofLiberty
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -334,7 +333,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_REAGEN72_Fight_Inflation
-		icon = GFX_goal_unknown
+		icon = GFX_Fight_Hyperinflation
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -347,7 +346,7 @@ focus_tree = {
 		y = 6
 		completion_reward = {
 			remove_ideas = Inflation_Crisis
-			add_timed_idea =  {
+			add_timed_idea = {
 				idea = Inflation_Crisis2
 				days = 750
 			}	
@@ -355,7 +354,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_REAGEN72_Copyright_Act_of_1976
-		icon = GFX_goal_unknown
+		icon = GFX_Copyright_Law
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {
@@ -370,7 +369,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_REAGEN72_Resource_Conservation_Act
-		icon = GFX_goal_unknown
+		icon = GFX_Adopt_New_Constitiution
 		search_filters = {IC_FILTER}
 		cost = 10.00
 		prerequisite = {

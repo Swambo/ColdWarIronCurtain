@@ -29,6 +29,7 @@ state = {
 		}
 		1961.1.1 = {
 			owner = SYR
+			remove_core_of = EGY
 
 		}
 		1971.1.1 = {
@@ -38,7 +39,7 @@ state = {
 			}
 		}
 		victory_points = {
-			2013 1
+			2013 1 
 		}
 
 		add_core_of = SYR
@@ -46,7 +47,7 @@ state = {
 	}
 
 	provinces = {
-		901 2013
+		901 2013 
 	}
 	manpower = 473976
 	buildings_max_level_factor = 1.000

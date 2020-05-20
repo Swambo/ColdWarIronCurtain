@@ -321,7 +321,12 @@ focus_tree = {
 		x = 6
 		y = 3
 		completion_reward = {
-			add_ideas = press_censorship_5
+			remove_ideas = policy_media_temp_0
+			remove_ideas = policy_media_temp_1
+			remove_ideas = policy_media_temp_2
+			remove_ideas = policy_media_temp_3
+			remove_ideas = policy_media_temp_3a
+			add_ideas = remove_ideas = policy_media_temp_0
 		}
 	}
 	focus = {
@@ -630,6 +635,11 @@ focus_tree = {
 		}
 		x = 12
 		y = 6
+		available = {
+			not = {
+				has_completed_focus = CZE_The_Slansky_Trials
+			}
+		}
 		completion_reward = {
 			news_event = Purge_Gottwald.1
 		}	
@@ -712,6 +722,11 @@ focus_tree = {
 		}
 		x = 30
 		y = 6
+		available = {
+			not = {
+				has_completed_focus = CZE_Purge_Gottwald
+			}
+		}
 		completion_reward = {
 			news_event = Czechoslovakia_Purge.1
 		}
@@ -985,7 +1000,7 @@ focus_tree = {
 				add_equipment_to_stockpile = {
 						type = jet_multirole_equipment_2
 						amount = 200
-						producer = SOV
+						producer = CUM
 					}
 			}
 	}
@@ -1083,7 +1098,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = mbt_equipment_3
 				amount = 300
-				producer = SOV
+				producer = CUM
 			}		
 		
 		}
@@ -1763,7 +1778,7 @@ focus_tree = {
 				name = agri_tech_bonus
 				bonus = 1.25
 				uses = 1
-				category = agri_tech
+				category = agriculture
 			}		
 		}
 	}
@@ -1991,7 +2006,12 @@ focus_tree = {
 		x = 12
 		y = 14
 		completion_reward = {
-			add_ideas = censorship_2
+			remove_ideas = policy_media_temp_0
+			remove_ideas = policy_media_temp_1
+			remove_ideas = policy_media_temp_2
+			remove_ideas = policy_media_temp_3
+			remove_ideas = policy_media_temp_3a
+			add_ideas = remove_ideas = policy_media_temp_1
 		}
 	}
 	focus = {

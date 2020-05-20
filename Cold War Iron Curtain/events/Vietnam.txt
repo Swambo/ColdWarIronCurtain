@@ -7,6 +7,80 @@ add_namespace = join_vietnam_war
 add_namespace = vie_peace
 add_namespace = vietnam_exp
 add_namespace = vin_ref
+add_namespace = NLF_Flavor
+
+country_event = {
+	id = NLF_Flavor.1
+	title = "Southern Communists take Arms"
+	desc = NLF_Flavor.1.d
+	picture = GFX_NLF_1
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = {
+		name = "Damn It All"
+		hidden_effect = {
+			set_global_flag = Vietnam_War
+			set_variable = { VIN.nlf_funding = 5 }
+			set_variable = { SOV.nlf_funding = 20 }
+			set_variable = { PRC.nlf_funding = 5 }
+			
+			set_variable = { NLF.global_nlf_funding = 30 }
+		
+			set_variable = { USA.vie_funding = 20 }
+			
+			set_variable = { VIE.global_vie_funding = 20 }
+			NLF = { 
+				transfer_state = 296 
+				add_ideas = The_Vietnam_War_NLF
+				declare_war_on = { target = VIE type = annex_everything }
+			}
+			NLF = {
+				load_oob = NLF_1960
+			}
+			add_ideas = The_Vietnam_War_VIE
+			286 = { set_state_flag = NLF_Crushed }
+			every_owned_state = {
+				limit = {
+					is_capital = no
+				}
+				start_resistance = yes
+				add_resistance = 30
+			}
+		}
+	}
+}
+
+news_event = {
+	id = vie.1500
+	title = "[GetNewspaperHeader]French Victory in Indochina"
+	desc = vie.1500.d
+	picture = GFX_vie_1500
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "A Major Victory for France"
+	}
+}
+news_event = {
+	id = NLF_Flavor.2
+	title = "[GetNewspaperHeader]The National Liberation Front"
+	desc = NLF_Flavor.2.d
+	picture = GFX_NLF_2
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Interesting"
+	}
+}
+
 country_event = {
 	id = vietnam_exp.1
 	title = "Vietnam Demands Southern China"
@@ -232,12 +306,12 @@ country_event = {
 		}
 		VIE = {
 			white_peace = VIN
-			transfer_state = 788
 			transfer_state = 757
 			transfer_state = 982
 			transfer_state = 286
 			transfer_state = 1287
 			transfer_state = 983
+			leave_faction = yes
 
 		}
 		VIN = {
@@ -248,14 +322,19 @@ country_event = {
 			transfer_state = 1280
 			transfer_state = 1281
 			set_capital = 786
+			complete_national_focus = VIN_Ratification_of_the_Geneva_Accords
 		}
 		CAM = {
 			drop_cosmetic_tag = yes
 			white_peace = VIN
+			leave_faction = yes
+
 		}
 		LOS = {
 			drop_cosmetic_tag = yes
 			white_peace = VIN
+			leave_faction = yes
+
 		}
 
 		country_event = { id = vie.6 days = 1 }

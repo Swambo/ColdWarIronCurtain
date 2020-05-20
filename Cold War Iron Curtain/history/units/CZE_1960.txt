@@ -1,4 +1,4 @@
-division_template = {
+﻿division_template = {
 	name = "Pesi Divize"					# Infantry Division
 
 	regiments = {
@@ -19,8 +19,8 @@ division_template = {
 		auto_cannon = { x = 3 y = 4 }
 	}
 	support = {
-		recon = { x = 0 y = 0 }
-		engineer = { x = 0 y = 1 }
+		recon = { x = 0 y = 0 } 		
+		engineer = { x = 0 y = 1 } 		
 		logistics_company = { x = 0 y = 2 }
 		field_hospital = { x = 0 y = 3 }
 		direct_fire_gun_support = { x = 0 y = 4 }
@@ -36,8 +36,8 @@ division_template = {
 }
 division_template = {
 	name = "Delostrrlecka Divize" 				# Artillery Division
-
-	regiments = {
+	
+	regiments = {			
 		artillery = { x = 0 y = 0 }
 		artillery = { x = 0 y = 1 }
 		artillery = { x = 0 y = 2 }
@@ -94,8 +94,8 @@ division_template = {
 		light_artillery = { x = 4 y = 4 }
 	}
 	support = {
-		recon_mechanized = { x = 0 y = 0 }
-		engineer = { x = 0 y = 1 }
+		recon_mechanized = { x = 0 y = 0 } 		
+		engineer = { x = 0 y = 1 } 		
 		logistics_company = { x = 0 y = 2 }
 		field_hospital = { x = 0 y = 3 }
 		signal_company = { x = 0 y = 4 }
@@ -127,8 +127,8 @@ division_template = {
 		auto_cannon = { x = 3 y = 0 }
 	}
 	support = {
-		recon_mechanized = { x = 0 y = 0 }
-		engineer = { x = 0 y = 1 }
+		recon_mechanized = { x = 0 y = 0 } 		
+		engineer = { x = 0 y = 1 } 		
 		logistics_company = { x = 0 y = 2 }
 		field_hospital = { x = 0 y = 3 }
 		signal_company = { x = 0 y = 4 }
@@ -255,17 +255,17 @@ units = {
 air_wings = {
 	# Letectvo I.Armady -- Prague
 	# Letectvo Hlavniho Velitelstivi -- Prague
-	9 = {
+	9 = { 
 		fighter_equipment_0 = {		# Avia B.534
-			owner = "CZE"
+			owner = "CZE" 
 			amount = 36
 		}
 		tac_bomber_equipment_0 = {	# Bloch MB.200
-			owner = "CZE"
+			owner = "CZE" 
 			amount = 72
 		}
 		CAS_equipment_1 = {		# Aero A-101
-			owner = "CZE"
+			owner = "CZE" 
 			amount = 24
 		}
 	}
@@ -273,15 +273,15 @@ air_wings = {
 	# Letectvo III.Armady -- Bratislava
 	70 = {
 		fighter_equipment_0 = {		# Avia B.534
-			owner = "CZE"
+			owner = "CZE" 
 			amount = 36
 		}
 		fighter_equipment_0 = {		# Avia B.534
-			owner = "CZE"
+			owner = "CZE" 
 			amount = 72
 		}
 		CAS_equipment_1 = {		# Aero A-101
-			owner = "CZE"
+			owner = "CZE" 
 			amount = 24
 		}
 	}

@@ -13,9 +13,9 @@ state={
 		buildings = {
 			infrastructure = 2
 			state_infrastructure = 2
-			industrial_complex = 2
-			arms_factory = 2
-			agri_industrial_complex = 1
+			industrial_complex = 1
+			arms_factory = 1
+			agri_industrial_complex = 2
 
 		}
 		add_core_of = VIE
@@ -30,12 +30,12 @@ state={
 
 		}
 		victory_points = {
-			12176 1
+			12176 1 
 		}
 	}
 
 	provinces={
-		1400 1605 12176
+		1400 1605 12176 
 	}
 	manpower=1833300
 	buildings_max_level_factor=1.000

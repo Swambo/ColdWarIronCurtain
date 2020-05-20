@@ -8,7 +8,7 @@ state = {
 
 	history = {
 		owner = MEX
-		set_state_flag = lushdesert
+		set_state_flag = desertlush
 		set_state_flag = lakes
 		set_state_flag = nominal
 		set_state_flag = semideveloped
@@ -21,13 +21,13 @@ state = {
 		}
 		add_core_of = MEX
 		victory_points = {
-			13089 1
+			13089 1 
 		}
 
 	}
 
 	provinces = {
-		2051 5052 10738 12746 12804 12873 13089 13435
+		2051 5052 10738 12746 12804 12873 13089 13435 
 	}
 	manpower = 2470875
 	buildings_max_level_factor = 1.000

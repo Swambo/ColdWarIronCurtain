@@ -30,19 +30,21 @@ sub_units = {
 		training_time = 120
 		supply_consumption = 0.20
 		weight = 0.6
-		combat_width = 3		
-		max_organisation = 0	
+		combat_width = 3
+		max_organisation = 0
 		default_morale = 0.1		
 		max_strength = 0.6
 		suppression = 0
 		
 		essential = {
 			artillery_equipment
-		}		
+		}
 		
 		need = {
 			artillery_equipment = 36
+			motorized_equipment = 18
 		}
+		transport = motorized_equipment
 		
 		forest = {
 			attack = -0.2
@@ -102,24 +104,24 @@ sub_units = {
 			category_artillery_indirect
 			category_self_propelled
 			category_all_armor
-		}		
+		}
 
 		manpower = 500
 		training_time = 180
 		supply_consumption = 0.40
 		weight = 1.25
-		combat_width = 3	
-		max_organisation = 0	
+		combat_width = 3
+		max_organisation = 0
 		default_morale = 0.1		
 		max_strength = 0.6
-		suppression = 0		
+		suppression = 0
 
 		essential = {
 			sp_artillery_equipment
-		}			
+		}
 		
 		need = {
-			sp_artillery_equipment = 40
+			sp_artillery_equipment = 36
 		}
 
 		forest = {
@@ -179,19 +181,21 @@ sub_units = {
 		training_time = 120
 		supply_consumption = 0.10
 		weight = 0.5
-		combat_width = 3	
-		max_organisation = 0	
+		combat_width = 3
+		max_organisation = 0
 		default_morale = 0.1		
 		max_strength = 0.6
 		suppression = 0
 
 		essential = {
 			light_artillery_equipment
-		}	
+		}
 		
 		need = {
 			light_artillery_equipment = 48
+			motorized_equipment = 18
 		}
+		transport = motorized_equipment
 		
 		forest = {
 			attack = -0.1
@@ -253,24 +257,24 @@ sub_units = {
 			category_artillery_indirect
 			category_self_propelled
 			category_all_armor
-		}		
+		}
 
 		manpower = 500
 		training_time = 180
 		supply_consumption = 0.30
 		weight = 1.0
-		combat_width = 3	
-		max_organisation = 0	
+		combat_width = 3
+		max_organisation = 0
 		default_morale = 0.1		
 		max_strength = 0.6
 		suppression = 0
 
 		essential = {
 			light_sp_artillery_equipment
-		}			
+		}
 		
 		need = {
-			light_sp_artillery_equipment = 60
+			light_sp_artillery_equipment = 48
 		}
 
 		forest = {
@@ -329,19 +333,21 @@ sub_units = {
 		training_time = 120
 		supply_consumption = 0.30
 		weight = 0.75
-		combat_width = 3		
-		max_organisation = 0	
+		combat_width = 3
+		max_organisation = 0
 		default_morale = 0.1		
 		max_strength = 0.6
 		suppression = 0
 		
 		essential = {
 			heavy_artillery_equipment
-		}			
+		}
 		
 		need = {
 			heavy_artillery_equipment = 24
+			motorized_equipment = 24
 		}
+		transport = motorized_equipment
 
 		forest = {
 			attack = -0.3
@@ -401,24 +407,24 @@ sub_units = {
 			category_artillery
 			category_self_propelled
 			category_artillery_indirect
-		}		
+		}
 
 		manpower = 500
 		training_time = 180
 		supply_consumption = 0.60
 		weight = 1.5
-		combat_width = 3		
-		max_organisation = 0	
+		combat_width = 3
+		max_organisation = 0
 		default_morale = 0.1		
 		max_strength = 0.6
-		suppression = 0		
+		suppression = 0
 		
 		essential = {
 			heavy_sp_artillery_equipment
-		}			
+		}
 
 		need = {
-			heavy_sp_artillery_equipment = 30
+			heavy_sp_artillery_equipment = 24
 		}
 
 
@@ -453,7 +459,7 @@ sub_units = {
 			attack = -0.7
 			movement = -0.6
 		}
-	}	
+	}
 	
 	rocket_sp_artillery = {
 		sprite = motorized
@@ -477,24 +483,24 @@ sub_units = {
 			category_self_propelled
 			category_front_line
 			category_rockets
-		}		
+		}
 
 		manpower = 500
 		training_time = 120
 		supply_consumption = 0.35
 		weight = 0.75
-		combat_width = 3		
-		max_organisation = 0	
+		combat_width = 3
+		max_organisation = 0
 		default_morale = 0.1		
 		max_strength = 0.6
-		suppression = 0		
+		suppression = 0
 		
 		essential = {
 			motorized_rocket_equipment
-		}			
+		}
 
 		need = {
-			motorized_rocket_equipment = 40
+			motorized_rocket_equipment = 36
 		}
 		
 		forest = {
@@ -532,5 +538,5 @@ sub_units = {
 		amphibious = {
 			attack = -0.4
 		}
-	}	
+	}
 }

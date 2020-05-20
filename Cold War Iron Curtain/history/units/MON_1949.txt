@@ -1,19 +1,19 @@
-##### Division Templates #####
+﻿##### Division Templates #####
 #dont move
 
 division_template = {
-	name = "Cavalry Division"
+	name = "Cavalry Division" 
 
 	regiments = {
-		cavalry = { x = 0 y = 0 }
-		cavalry = { x = 0 y = 1 }
-		cavalry = { x = 0 y = 2 }
-		cavalry = { x = 1 y = 0 }
-		cavalry = { x = 1 y = 1 }
+		motorized_infantry = { x = 0 y = 0 }
+		motorized_infantry = { x = 0 y = 1 }
+		motorized_infantry = { x = 0 y = 2 }
+		motorized_infantry = { x = 1 y = 0 }
+		motorized_infantry = { x = 1 y = 1 }
 	}
 	support = {
-		recon = { x = 0 y = 0 }
-		engineer = { x = 0 y = 1 }
+		recon = { x = 0 y = 0 } 		
+		engineer = { x = 0 y = 1 } 		
 		light_artillery_support = { x = 0 y = 2 }
 	}
 }
@@ -50,18 +50,18 @@ division_template = {
 ###### OOB ######
 units = {
 
-division = {
-		name = "1st Cavalry Division"
-		location = 12557
+division = {			
+		name = "1st Cavalry Division"		
+		location = 12557	
 		force_equipment_variants = { light_artillery_equipment_1 = { owner = "SOV" } }
 		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
 		division_template = "Cavalry Division"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
-
-division = {
-		name = "2nd Cavalry Division"
+	
+division = {			
+		name = "2nd Cavalry Division"		
 		location = 10575
 		force_equipment_variants = { light_artillery_equipment_1 = { owner = "SOV" } }
 		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
@@ -69,19 +69,19 @@ division = {
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
-
-division = {
-		name = "3rd Cavalry Division"
-		location = 4856
+	
+division = {			
+		name = "3rd Cavalry Division"		
+		location = 4856	
 		force_equipment_variants = { light_artillery_equipment_1 = { owner = "SOV" } }
 		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
 		division_template = "Cavalry Division"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
-
-division = {
-		name = "4th Cavalry Division"
+	
+division = {			
+		name = "4th Cavalry Division"		
 		location = 10689
 		force_equipment_variants = { light_artillery_equipment_1 = { owner = "SOV" } }
 		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
@@ -89,47 +89,47 @@ division = {
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
-
-division = {
-		name = "5th Cavalry Division"
-		location = 10560
+	
+division = {			
+		name = "5th Cavalry Division"		
+		location = 10560	
 		force_equipment_variants = { light_artillery_equipment_1 = { owner = "SOV" } }
 		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
 		division_template = "Cavalry Division"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
-
-division = {
-		name = "6th Cavalry Division"
-		location = 1855
+	
+division = {			
+		name = "6th Cavalry Division"		
+		location = 1855	
 		force_equipment_variants = { light_artillery_equipment_1 = { owner = "SOV" } }
 		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
 		division_template = "Cavalry Division"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
-
-division = {
-		name = "7th Cavalry Division"
-		location = 7870
+	
+division = {			
+		name = "7th Cavalry Division"		
+		location = 7870	
 		force_equipment_variants = { light_artillery_equipment_1 = { owner = "SOV" } }
 		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
 		division_template = "Cavalry Division"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
-division = {
-		name = "8th Cavalry Division"
-		location = 10539
+division = {			
+		name = "8th Cavalry Division"		
+		location = 10539	
 		force_equipment_variants = { light_artillery_equipment_1 = { owner = "SOV" } }
 		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
 		division_template = "Cavalry Division"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
-division = {
-		name = "9th Cavalry Division"
+division = {			
+		name = "9th Cavalry Division"		
 		location = 4777
 		force_equipment_variants = { light_artillery_equipment_1 = { owner = "SOV" } }
 		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
@@ -137,19 +137,19 @@ division = {
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
-
-division = {
-		name = "10th Cavalry Division"
-		location = 13340
+	
+division = {			
+		name = "10th Cavalry Division"		
+		location = 13340	
 		force_equipment_variants = { light_artillery_equipment_1 = { owner = "SOV" } }
 		force_equipment_variants = { infantry_equipment_0 = { owner = "SOV" } }
 		division_template = "Cavalry Division"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
-
-division = {
-		name = "7th Motorized Armored Brigade"
+	
+division = {			
+		name = "7th Motorized Armored Brigade"		
 		location = 7749
 		force_equipment_variants = { motorized_equipment_1 = { owner = "SOV" } }
 		force_equipment_variants = { light_artillery_equipment_1 = { owner = "SOV" } }
@@ -158,9 +158,9 @@ division = {
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
-
-division = {
-		name = "3rd Separate Tank Regiment"
+	
+division = {			
+		name = "3rd Separate Tank Regiment"		
 		location = 13339
 		force_equipment_variants = { lt_equipment_1 = { owner = "SOV" } }
 		force_equipment_variants = { mbt_equipment_1 = { owner = "SOV" } }
@@ -171,12 +171,12 @@ division = {
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.8
 	}
-
+	
 }
 
 air_wings = {
-	1184 = {
-		CAS_equipment_2 = { owner = "MON" amount = 20 creator = SOV }
-		fighter_equipment_3 = { owner = "MON" amount = 30 creator = SOV }
+	1184 = { 														  
+		CAS_equipment_2 = { owner = "MON" amount = 20 creator = SOV }  
+		fighter_equipment_3 = { owner = "MON" amount = 30 creator = SOV } 
 	}
 }

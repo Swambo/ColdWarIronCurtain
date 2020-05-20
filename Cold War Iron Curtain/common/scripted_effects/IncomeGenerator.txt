@@ -1,19 +1,27 @@
-income_effect = {
+income_effect = {		#DO NOT TOUCH FILE WITHOUT APPROVAL; IDEALLY FROM SWF
+	
 	set_variable = { grossdomesticproduct_influence_limit = grossdomesticproduct }
 	multiply_variable = { grossdomesticproduct_influence_limit = 2 }
 	
+	edict_expenditure = yes
 	corruption_idea_calc = yes
-	miitary_expenditure = yes
+	military_expenditure = yes
 	welfare_expenditure = yes
 	cpi_expenditure = yes
 	edu_expenditure = yes
 	health_expenditure = yes
 	public_expenditure = yes
 	tax_rate = yes
-	edict_expenditure = yes
+	domestic_bond_calc = yes
+	flag_building_macro = yes
+	mercenary_calc = yes
+	
 	
 	set_variable = { CorruptPolicyExcess = CorruptionLevel }
 	multiply_variable = { CorruptPolicyExcess = 0.2 }
+	
+	set_variable = { inc_productivity = 0.5 }
+	add_to_variable = { inc_productivity = modifier@production_factory_max_efficiency_factor }
 	
 	every_owned_state = {
 		add_to_variable = { ROOT.industrial_complex_total = building_level@industrial_complex }  
@@ -23,119 +31,26 @@ income_effect = {
 		add_to_variable = { ROOT.steel_works_total = building_level@steel_factory }
 		add_to_variable = { ROOT.tungsten_factory_total = building_level@tungsten_factory }
 		
+		add_to_variable = { ROOT.fossil_fuel_powerplant_total = building_level@fossil_fuel_powerplant }
+		add_to_variable = { ROOT.renewable_powerplant_total = building_level@renewable_powerplant }
+		add_to_variable = { ROOT.nuclear_powerplant_total = building_level@nuclear_powerplant }
+		
 		add_to_variable = { ROOT.office_park_total = building_level@office_park }	#+2
+		
 	}
 	
 	#industrial_complex Modifiers
-	multiply_variable = { industrial_complex_total = 0.9 } #DIVIDER
+	multiply_variable = { industrial_complex_total = global.GlobalCredit } #DIVIDER
 	set_variable = { industrial_complex_tech = 1 }
-	if = {
-		limit = {
-			has_tech = production_efficiency_I
-		}
-		add_to_variable = { industrial_complex_tech = 0.05 }
-	}
-	if = {
-		limit = {
-			has_tech = 	production_efficiency_II
-		}
-		add_to_variable = { industrial_complex_tech = 0.05 }
-	}
-	if = {
-		limit = {
-			has_tech = 	production_efficiency_III
-		}
-		add_to_variable = { industrial_complex_tech = 0.05 }
-	}
-	if = {
-		limit = {
-			has_tech = 	production_efficiency_IV
-		}
-		add_to_variable = { industrial_complex_tech = 0.05 }
-	}
-	if = {
-		limit = {
-			has_tech = 	production_efficiency_V
-		}
-		add_to_variable = { industrial_complex_tech = 0.05 }
-	}
-	if = {
-		limit = {
-			has_tech = 	production_efficiency_VI
-		}
-		add_to_variable = { industrial_complex_tech = 0.05 }
-	}
-	if = {
-		limit = {
-			has_tech = 	production_efficiency_VII
-		}
-		add_to_variable = { industrial_complex_tech = 0.05 }
-	}
-	if = {
-		limit = {
-			has_tech = 	production_efficiency_VIII
-		}
-		add_to_variable = { industrial_complex_tech = 0.05 }
-	}
-	if = {
-		limit = {
-			has_tech = 	production_efficiency_IX
-		}
-		add_to_variable = { industrial_complex_tech = 0.05 }
-	}
-	if = {
-		limit = {
-			has_tech = 	production_efficiency_X
-		}
-		add_to_variable = { industrial_complex_tech = 0.05 }
-	}
-	if = {
-		limit = {
-			has_tech = 	industrial_robots_I
-		}
-		add_to_variable = { industrial_complex_tech = 0.05 }
-	}
-	if = {
-		limit = {
-			has_tech = 	industrial_robots_II
-		}
-		add_to_variable = { industrial_complex_tech = 0.05 }
-	}
-	if = {
-		limit = {
-			has_tech = 	industrial_robots_III
-		}
-		add_to_variable = { industrial_complex_tech = 0.05 }
-	}
-	if = {
-		limit = {
-			has_tech = 	industrial_robots_IV
-		}
-		add_to_variable = { industrial_complex_tech = 0.05 }
-	}
-	if = {
-		limit = {
-			has_tech = 	industrial_robots_V
-		}
-		add_to_variable = { industrial_complex_tech = 0.05 }
-	}
-	if = {
-		limit = {
-			has_tech = 	factory_automation_I
-		}
-		add_to_variable = { industrial_complex_tech = 0.05 }
-	}
-	if = {
-		limit = {
-			has_tech = 	factory_automation_II
-		}
-		add_to_variable = { industrial_complex_tech = 0.05 }
-	}
+	add_to_variable = { industrial_complex_tech = industry_credit_factor_difference }
+	
+	multiply_variable = { industrial_complex_tech = inc_productivity }
 	multiply_variable = { industrial_complex_total = industrial_complex_tech }
+	
 	add_to_variable = { IncomeTotal = industrial_complex_total }
 	set_variable = { IND_DISPLAY = industrial_complex_total }
 	#agri_industrial_complex
-	multiply_variable = { farm_total = 0.9 } #DIVIDER
+	multiply_variable = { farm_total = global.GlobalCredit } #DIVIDER
 	set_variable = { farm_tech = 1 }
 	if = {
 		limit = {
@@ -180,11 +95,15 @@ income_effect = {
 		}
 		add_to_variable = { farm_tech = 0.15 }
 	}
+	add_to_variable = { dockyard_tech = agriculture_credit_factor_difference }
+	
+	multiply_variable = { farm_tech = inc_productivity }
+	
 	multiply_variable = { farm_total = farm_tech }
 	add_to_variable = { IncomeTotal = farm_total }
 	set_variable = { FARM_DISPLAY = farm_total }
 	#dockyard
-	multiply_variable = { dockyard_total = 0.9 } #DIVIDER
+	multiply_variable = { dockyard_total = global.GlobalCredit } #DIVIDER
 	set_variable = { dockyard_tech = 1 }
 	if = {
 		limit = {
@@ -282,6 +201,11 @@ income_effect = {
 		}
 		add_to_variable = { dockyard_tech = 0.05 }
 	}
+	add_to_variable = { dockyard_tech = trade_credit_factor_difference }
+	add_to_variable = { dockyard_tech = industry_credit_factor_difference }
+	
+	multiply_variable = { dockyard_tech = inc_productivity }
+	
 	multiply_variable = { dockyard_total = dockyard_tech }
 	add_to_variable = { IncomeTotal = dockyard_total }
 	set_variable = { DOCK_TOTAL = dockyard_total }
@@ -324,6 +248,9 @@ income_effect = {
 		}
 		add_to_variable = { oil_refinery_tech = 0.15 }
 	}
+	add_to_variable = { oil_refinery_tech = refinery_credit_factor_difference }
+	multiply_variable = { oil_refinery_tech = inc_productivity }
+	
 	multiply_variable = { oil_refinery_total = oil_refinery_tech }
 	add_to_variable = { IncomeTotal = oil_refinery_total }
 	
@@ -366,6 +293,8 @@ income_effect = {
 		}
 		add_to_variable = { steel_works_tech = 0.15 }
 	}
+	add_to_variable = { steel_works_tech = refinery_credit_factor_difference }
+	multiply_variable = { steel_works_tech = inc_productivity }
 	multiply_variable = { steel_works_total = steel_works_tech }
 	add_to_variable = { IncomeTotal = steel_works_total }
 
@@ -408,12 +337,14 @@ income_effect = {
 		}
 		add_to_variable = { tungsten_factory_tech = 0.15 }
 	}
+	add_to_variable = { tungsten_factory_tech = refinery_credit_factor_difference }
+	multiply_variable = { tungsten_factory_tech = inc_productivity }
 	multiply_variable = { tungsten_factory_total = tungsten_factory_tech }
 	add_to_variable = { IncomeTotal = tungsten_factory_total }
 
 	#office_park x2 +15%		office_park_total
 	multiply_variable = { office_park_total = 3 }
-	multiply_variable = { office_park_total = 0.9 } #DIVIDER
+	multiply_variable = { office_park_total = global.GlobalCredit } #DIVIDER
 	set_variable = { office_park_tech = 1 }
 	if = {
 		limit = {
@@ -451,9 +382,29 @@ income_effect = {
 		}
 		add_to_variable = { office_park_tech = 0.15 }
 	}
+	add_to_variable = { office_park_tech = commerce_credit_factor_difference }
+	
+	multiply_variable = { office_park_tech = inc_productivity }
+	
 	multiply_variable = { office_park_total = office_park_tech }
 	add_to_variable = { IncomeTotal = office_park_total }
 	set_variable { OP_Display = office_park_total }
+	
+	set_variable = { industrial_complex_per = 0.9 }
+	set_variable = { farm_per = 0.9 }
+	set_variable = { dockyard_per = 0.9 }
+	set_variable = { oil_refinery_per = 1.8 }
+	set_variable = { steel_works_per = 1.8 }
+	set_variable = { tungsten_factory_per = 1.8 }
+	set_variable = { office_park_per = 2.7 }
+	
+	multiply_variable = { industrial_complex_per = industrial_complex_tech }
+	multiply_variable = { farm_per = farm_tech }
+	multiply_variable = { dockyard_per = dockyard_tech }
+	multiply_variable = { oil_refinery_per = oil_refinery_tech }
+	multiply_variable = { steel_works_per = steel_works_tech }
+	multiply_variable = { tungsten_factory_per = tungsten_factory_tech }
+	multiply_variable = { office_park_per = office_park_tech }
 	
 	set_variable = { resource_income = 0 }
 	set_variable = { oil_exports = resource_exported@oil } 
@@ -475,14 +426,9 @@ income_effect = {
 	add_to_variable = { resource_income = tungsten_exports }
 	add_to_variable = { resource_income = steel_exports }
 	add_to_variable = { resource_income = chromium_exports }
+	multiply_variable = { resource_income = trade_credit_factor }
 	
 	add_to_variable = { IncomeTotal = tax_base }
-	if = {
-		limit = {
-			has_idea = 	Austrian_Taxation
-		}
-		multiply_variable = { IncomeTotal = 1 }
-	}
 	
 	add_to_variable = { IncomeTotal = resource_income }
 	
@@ -689,10 +635,25 @@ income_effect = {
 			add_to_variable = { 
 				currentMoney = pulse_deficit 
 			}
+			if = {
+				limit = { check_variable = { defaultCheck < currentDebt } }
+				multiply_variable = {	#Interest
+					pulse_deficit = 1.10
+				}
 
-			multiply_variable = {	#Interest
-				pulse_deficit = 1.05
 			}
+			else_if = {
+				limit = { check_variable = { austerityCheck < currentDebt } }
+				multiply_variable = {	#Interest
+					pulse_deficit = 1.06
+				}
+			}
+			else = {
+				multiply_variable = {	#Interest
+					pulse_deficit = 1.04
+				}
+			}
+			
 			add_to_array = {
 				array = debtOwnerArray
 				value = THIS.id
@@ -738,36 +699,44 @@ income_effect = {
 				currentMoney = pulse_deficit 
 			}
 
-			multiply_variable = {	#Interest
-				pulse_deficit = 1.025
+			if = {
+				limit = { check_variable = { defaultCheck < currentDebt } }
+				multiply_variable = {	#Interest
+					pulse_deficit = 1.10
+				}
+
+			}
+			else_if = {
+				limit = { check_variable = { austerityCheck < currentDebt } }
+				multiply_variable = {	#Interest
+					pulse_deficit = 1.06
+				}
+			}
+			else = {
+				multiply_variable = {	#Interest
+					pulse_deficit = 1.04
+				}
 			}
 			add_to_array = {
 				array = debtOwnerArray
-				value = GER.id
+				value = IND.id
 			}
 			add_to_array = {
 				array = debtTotalsArray
 				value = pulse_deficit
 			}
 
-			for_loop_effect = {
-				end = influence_array^num
-				value = v
-				if = {
-					limit = {
-						check_variable = { influence_array^v = GER }
-					}
-					add_to_variable = { influence_array_val^v = pulse_deficit }
-					set_country_flag = found
-				}
-			}
-			if = {
-				limit = { NOT = { has_country_flag = found } }
-					add_to_array = { influence_array = GER.id }
-					add_to_array = { influence_array_val = pulse_deficit }
-			}
-			clr_country_flag = found
-			recalculate_influence = yes	
+			#for_loop_effect = {
+			#	end = influence_array^num
+			#	value = v
+			#	set_country_flag = found
+			#}
+			#if = {
+			#	limit = { NOT = { has_country_flag = found } }
+			#		add_to_array = { influence_array_val = pulse_deficit }
+			#}
+			#clr_country_flag = found
+			#recalculate_influence = yes	
 				
 			
 			add_to_variable = { 
@@ -812,6 +781,7 @@ income_effect = {
 	add_to_variable = { refinery_total = oil_refinery_total }
 
 
+	ai_economic_planning = yes
 	
 	set_variable = { IncomeTotal = 0 }
 	set_variable = { ROOT.industrial_complex_total = 0 }  
@@ -821,9 +791,9 @@ income_effect = {
 	set_variable = { ROOT.steel_works_total = 0 }
 	set_variable = { ROOT.tungsten_factory_total = 0 }
 	set_variable = { ROOT.office_park_total = 0 }
-	}
+}
 
-miitary_expenditure = {
+military_expenditure = {
 	add_to_variable = { IncomeCheck = mil_expend }
 	set_variable = { battalion_tier_1 = num_battalions_with_type@direct_fire_gun }
 	add_to_variable = { battalion_tier_1 = num_battalions_with_type@militia }
@@ -839,6 +809,7 @@ miitary_expenditure = {
 	add_to_variable = { battalion_tier_2 = num_battalions_with_type@cavalry }
 	add_to_variable = { battalion_tier_2 = num_battalions_with_type@motorized_infantry }
 	add_to_variable = { battalion_tier_2 = num_battalions_with_type@recon }
+	add_to_variable = { battalion_tier_2 = num_battalions_with_type@recon_motorized }
 	add_to_variable = { battalion_tier_2 = num_battalions_with_type@logistics_company }
 	add_to_variable = { battalion_tier_2 = num_battalions_with_type@light_artillery_support }
 
@@ -852,14 +823,14 @@ miitary_expenditure = {
 	add_to_variable = { battalion_tier_3 = num_battalions_with_type@light_armor }
 	add_to_variable = { battalion_tier_3 = num_battalions_with_type@marine }
 	add_to_variable = { battalion_tier_3 = num_battalions_with_type@airborne }
-	add_to_variable = { battalion_tier_3 = num_battalions_with_type@ff1 }
+	add_to_variable = { battalion_tier_3 = num_battalions_with_type@ffl }
 	add_to_variable = { battalion_tier_3 = num_battalions_with_type@mechanized_infantry }
 	add_to_variable = { battalion_tier_3 = num_battalions_with_type@recon_mechanized }
 	add_to_variable = { battalion_tier_3 = num_battalions_with_type@artillery_support }
 	add_to_variable = { battalion_tier_3 = num_battalions_with_type@heavy_artillery_support }
 	add_to_variable = { battalion_tier_3 = num_battalions_with_type@military_police }
 
-	multiply_variable = { battalion_tier_3 = 0.075 }
+	multiply_variable = { battalion_tier_3 = 0.1 }
 
 	set_variable = { battalion_tier_4 = num_battalions_with_type@sam_carrier }
 	add_to_variable = { battalion_tier_4 = num_battalions_with_type@atgm_carrier }
@@ -870,24 +841,26 @@ miitary_expenditure = {
 	add_to_variable = { battalion_tier_4 = num_battalions_with_type@armored_infantry }
 	add_to_variable = { battalion_tier_4 = num_battalions_with_type@air_cavalry }
 	add_to_variable = { battalion_tier_4 = num_battalions_with_type@engineer }
+	add_to_variable = { battalion_tier_4 = num_battalions_with_type@engineer_mechanized }
 	add_to_variable = { battalion_tier_4 = num_battalions_with_type@recon_helicopter }
 	add_to_variable = { battalion_tier_4 = num_battalions_with_type@maintenance_company }
 	add_to_variable = { battalion_tier_4 = num_battalions_with_type@field_hospital }
+	add_to_variable = { battalion_tier_4 = num_battalions_with_type@field_hospital_mechanized }
 	add_to_variable = { battalion_tier_4 = num_battalions_with_type@army_special_force }
 	add_to_variable = { battalion_tier_4 = num_battalions_with_type@navy_special_force }
 	add_to_variable = { battalion_tier_4 = num_battalions_with_type@airforce_special_force }
 	add_to_variable = { battalion_tier_4 = num_battalions_with_type@logistics_helicopter }
 
-	multiply_variable = { battalion_tier_4 = 0.1 }
+	multiply_variable = { battalion_tier_4 = 0.2 }
 
 	set_variable = { battalion_tier_5 = num_battalions_with_type@attack_helicopter_support }
 	add_to_variable = { battalion_tier_5 = num_battalions_with_type@rocket_sp_artillery }
 	add_to_variable = { battalion_tier_5 = num_battalions_with_type@heavy_armor }
 	add_to_variable = { battalion_tier_5 = num_battalions_with_type@super_heavy_armor }
-	add_to_variable = { battalion_tier_5 = num_battalions_with_type@armored_engineers }
-	add_to_variable = { battalion_tier_5 = num_battalions_with_type@helicopter_medical_support }
+	add_to_variable = { battalion_tier_5 = num_battalions_with_type@engineer_armored }
+	add_to_variable = { battalion_tier_5 = num_battalions_with_type@field_hospital_helicopter }
 
-	multiply_variable = { battalion_tier_5 = 0.15 }
+	multiply_variable = { battalion_tier_5 = 0.25 }
 
 	set_variable = { mil_expend = 0 }
 	add_to_variable = { mil_expend = battalion_tier_1 }
@@ -899,27 +872,21 @@ miitary_expenditure = {
 
 	if = {
 		limit = {
-			has_idea = policy_military_temp_0
-		}
-		multiply_variable = { mil_expend = 0.1 }
-	}
-	if = {
-		limit = {
 			has_idea = policy_military_temp_1
-		}
-		multiply_variable = { mil_expend = 0.5 }
-	}
-	if = {
-		limit = {
-			has_idea = policy_military_temp_2
 		}
 		multiply_variable = { mil_expend = 1.0 }
 	}
 	if = {
 		limit = {
+			has_idea = policy_military_temp_2
+		}
+		multiply_variable = { mil_expend = 1.4 }
+	}
+	if = {
+		limit = {
 			has_idea = policy_military_temp_3
 		}
-		multiply_variable = { mil_expend = 1.5 }
+		multiply_variable = { mil_expend = 1.8 }
 	}
 	if = {
 		limit = {
@@ -927,13 +894,15 @@ miitary_expenditure = {
 		}
 		multiply_variable = { mil_expend = 2.2 }
 	}
-	if = {
-		limit = {
-			has_idea = policy_military_temp_5
-		}
-		multiply_variable = { mil_expend = 3.5 }
-	}
-	multiply_variable = { mil_expend = 0.4 } #COST DIVIDER
+	set_variable = { mil_expend_display = mil_expend }
+	multiply_variable = { mil_expend_display = military_edict_debit_factor }
+	
+	add_to_variable = { mil_expend = military_edict_debit_gain }
+	multiply_variable = { mil_expend = military_edict_debit_factor }
+	
+	multiply_variable = { mil_expend = global.GlobalDebit } #COST DIVIDER
+	multiply_variable = { mil_expend_display = global.GlobalDebit } #COST DIVIDER
+	
 	set_variable = { mil_expend_subsidy = mil_expend }
 	multiply_variable = { mil_expend_subsidy = 0.25 }
 	set_variable = { mil_expend_subsidy_tot = 0 }
@@ -970,7 +939,7 @@ miitary_expenditure = {
 	multiply_variable = { mil_expend_cor_penalty = CorruptPolicyExcess }
 	
 	add_to_variable = { mil_expend = mil_expend_cor_penalty }
-	set_variable = { mil_expend_display = mil_expend }
+	add_to_variable = { mil_cost_display = mil_cost_cor_penalty }
 	subtract_from_variable = { IncomeCheck = mil_expend }
 	}
 welfare_expenditure = {
@@ -990,38 +959,46 @@ welfare_expenditure = {
 		limit = {
 			has_idea = policy_welfare_temp_1
 		}
-		multiply_variable = { welfare_cost = 0.4 }
+		multiply_variable = { welfare_cost = 0.2 }
 	}
 	if = {
 		limit = {
 			has_idea = policy_welfare_temp_2
 		}
-		multiply_variable = { welfare_cost = 1.0 }
+		multiply_variable = { welfare_cost = 0.5 }
 	}
 	if = {
 		limit = {
 			has_idea = policy_welfare_temp_3
 		}
-		multiply_variable = { welfare_cost = 2.4 }
+		multiply_variable = { welfare_cost = 1.2 }
 	}
 	if = {
 		limit = {
 			has_idea = policy_welfare_temp_4
 		}
-		multiply_variable = { welfare_cost = 4 }
+		multiply_variable = { welfare_cost = 2 }
 	}
 	if = {
 		limit = {
 			has_idea = policy_welfare_temp_5
 		}
-		multiply_variable = { welfare_cost = 6 }
+		multiply_variable = { welfare_cost = 3 }
 	}
-	multiply_variable = { welfare_cost = 0.4 } #COST DIVIDER
+	set_variable = { welfare_cost_display = welfare_cost }
+	multiply_variable = { welfare_cost_display = welfare_edict_debit_factor }
+	
+	add_to_variable = { welfare_cost = welfare_edict_debit_gain }
+	multiply_variable = { welfare_cost = welfare_edict_debit_factor }
+	
+	multiply_variable = { welfare_cost = global.GlobalDebit } #COST DIVIDER
+	multiply_variable = { welfare_cost_display = global.GlobalDebit } #COST DIVIDER
+	
 	set_variable = { welfare_cost_cor_penalty = welfare_cost }
 	multiply_variable = { welfare_cost_cor_penalty = CorruptPolicyExcess }
 	
 	add_to_variable = { welfare_cost = welfare_cost_cor_penalty }
-	set_variable = { welfare_cost_display = welfare_cost }
+	add_to_variable = { welfare_cost_display = welfare_cost_cor_penalty }
 	subtract_from_variable = { IncomeCheck = welfare_cost }
 }
 cpi_expenditure = {
@@ -1041,45 +1018,46 @@ cpi_expenditure = {
 		limit = {
 			has_idea = policy_cpi_temp_1
 		}
-		multiply_variable = { cpi_cost = 0.5 }
+		multiply_variable = { cpi_cost = 0.25 }
 	}
 	if = {
 		limit = {
 			has_idea = policy_cpi_temp_2
 		}
-		multiply_variable = { cpi_cost = 1.0 }
+		multiply_variable = { cpi_cost = 0.5 }
 	}
 	if = {
 		limit = {
 			has_idea = policy_cpi_temp_3
 		}
-		multiply_variable = { cpi_cost = 1.5 }
+		multiply_variable = { cpi_cost = 0.75 }
 	}
 	if = {
 		limit = {
 			has_idea = policy_cpi_temp_4
 		}
-		multiply_variable = { cpi_cost = 2.5 }
+		multiply_variable = { cpi_cost = 1.25 }
 	}
 	if = {
 		limit = {
 			has_idea = policy_cpi_temp_5
 		}
-		multiply_variable = { cpi_cost = 3.5 }
+		multiply_variable = { cpi_cost = 1.75 }
 	}
-	multiply_variable = { cpi_cost = 0.4 } #COST DIVIDER
-	if = {
-		limit = {
-			has_country_flag = CPI_Discount
-		}
-		multiply_variable = { cpi_cost = 0.75 }
-	}	
+	set_variable = { cpi_cost_display = cpi_cost }
+	multiply_variable = { cpi_cost_display = cpi_edict_debit_factor }
+	
+	add_to_variable = { cpi_cost = cpi_edict_debit_gain }
+	multiply_variable = { cpi_cost = cpi_edict_debit_factor }
+	
+	multiply_variable = { cpi_cost = global.GlobalDebit } #COST DIVIDER
+	multiply_variable = { cpi_cost_display = global.GlobalDebit } #COST DIVIDER
 	
 	set_variable = { cpi_cost_cor_penalty = cpi_cost }
 	multiply_variable = { cpi_cost_cor_penalty = CorruptPolicyExcess }
 	
 	add_to_variable = { cpi_cost = cpi_cost_cor_penalty }
-	set_variable = { cpi_cost_display = cpi_cost }
+	add_to_variable = { cpi_cost_display = cpi_cost_cor_penalty }
 	subtract_from_variable = { IncomeCheck = cpi_cost }
 }
 edu_expenditure = {
@@ -1099,32 +1077,40 @@ edu_expenditure = {
 		limit = {
 			has_idea = policy_education_temp_1
 		}
-		multiply_variable = { edu_cost = 1 }
+		multiply_variable = { edu_cost = 0.5 }
 	}
 	if = {
 		limit = {
 			has_idea = policy_education_temp_2
 		}
-		multiply_variable = { edu_cost = 2 }
+		multiply_variable = { edu_cost = 1 }
 	}
 	if = {
 		limit = {
 			has_idea = policy_education_temp_3
 		}
-		multiply_variable = { edu_cost = 4 }
+		multiply_variable = { edu_cost = 2 }
 	}
 	if = {
 		limit = {
 			has_idea = policy_education_temp_4
 		}
-		multiply_variable = { edu_cost = 6 }
+		multiply_variable = { edu_cost = 3 }
 	}
-	multiply_variable = { edu_cost = 0.4 } #COST DIVIDER
+	set_variable = { edu_cost_display = edu_cost }
+	multiply_variable = { edu_cost_display = education_edict_debit_factor }
+	
+	add_to_variable = { edu_cost = education_edict_debit_gain }
+	multiply_variable = { edu_cost = education_edict_debit_factor }
+	
+	multiply_variable = { edu_cost = global.GlobalDebit } #COST DIVIDER
+	multiply_variable = { edu_cost_display = global.GlobalDebit } #COST DIVIDER
+	
 	set_variable = { edu_cost_cor_penalty = edu_cost }
 	multiply_variable = { edu_cost_cor_penalty = CorruptPolicyExcess }
 	
 	add_to_variable = { edu_cost = edu_cost_cor_penalty }
-	set_variable = { edu_cost_display = edu_cost }
+	add_to_variable = { edu_cost_display = edu_cost_cor_penalty }
 	subtract_from_variable = { IncomeCheck = edu_cost }
 }
 health_expenditure = {
@@ -1144,38 +1130,46 @@ health_expenditure = {
 		limit = {
 			has_idea = policy_healthcare_temp_1
 		}
-		multiply_variable = { health_cost = 0.7 }
+		multiply_variable = { health_cost = 0.35 }
 	}
 	if = {
 		limit = {
 			has_idea = policy_healthcare_temp_2
 		}
-		multiply_variable = { health_cost = 1.6 }
+		multiply_variable = { health_cost = 0.8 }
 	}
 	if = {
 		limit = {
 			has_idea = policy_healthcare_temp_3
 		}
-		multiply_variable = { health_cost = 2.8 }
+		multiply_variable = { health_cost = 1.4 }
 	}
 	if = {
 		limit = {
 			has_idea = policy_healthcare_temp_4
 		}
-		multiply_variable = { health_cost = 4.6 }
+		multiply_variable = { health_cost = 2.3 }
 	}
 	if = {
 		limit = {
 			has_idea = policy_healthcare_temp_5
 		}
-		multiply_variable = { health_cost = 6 }
+		multiply_variable = { health_cost = 3 }
 	}
-	multiply_variable = { health_cost = 0.4 } #COST DIVIDER
+	set_variable = { health_cost_display = health_cost }
+	multiply_variable = { health_cost_display = healthcare_edict_debit_factor }
+	
+	add_to_variable = { health_cost = healthcare_edict_debit_gain }
+	multiply_variable = { health_cost = healthcare_edict_debit_factor }
+	
+	multiply_variable = { health_cost = global.GlobalDebit } #COST DIVIDER
+	multiply_variable = { health_cost_display = global.GlobalDebit } #COST DIVIDER
+	
 	set_variable = { health_cost_cor_penalty = health_cost }
 	multiply_variable = { health_cost_cor_penalty = CorruptPolicyExcess }
 	
 	add_to_variable = { health_cost = health_cost_cor_penalty }
-	set_variable = { health_cost_display = health_cost }
+	add_to_variable = { health_cost_display = health_cost_cor_penalty }
 	subtract_from_variable = { IncomeCheck = health_cost }
 }
 public_expenditure = {
@@ -1195,30 +1189,40 @@ public_expenditure = {
 		limit = {
 			has_idea = policy_services_temp_1
 		}
-		multiply_variable = { pub_cost = 0.8 }
+		multiply_variable = { pub_cost = 0.4 }
 	}
 	if = {
 		limit = {
 			has_idea = policy_services_temp_2
 		}
-		multiply_variable = { pub_cost = 1.6 }
+		multiply_variable = { pub_cost = 0.8 }
 	}
 	if = {
 		limit = {
 			has_idea = policy_services_temp_3
 		}
-		multiply_variable = { pub_cost = 2.6 }
+		multiply_variable = { pub_cost = 1.3 }
 	}
-	multiply_variable = { pub_cost = 0.4 } #COST DIVIDER
+	set_variable = { pub_cost_display = pub_cost }
+	multiply_variable = { pub_cost_display = public_edict_debit_factor }
+	
+	add_to_variable = { pub_cost = public_edict_debit_gain }
+	multiply_variable = { pub_cost = public_edict_debit_factor }
+	
+	multiply_variable = { pub_cost = global.GlobalDebit } #COST DIVIDER
+	multiply_variable = { pub_cost_display = global.GlobalDebit } #COST DIVIDER
+	
 	set_variable = { pub_cost_cor_penalty = pub_cost }
 	multiply_variable = { pub_cost_cor_penalty = CorruptPolicyExcess }
-		
+	
 	add_to_variable = { pub_cost = pub_cost_cor_penalty }
-	set_variable = { pub_cost_display = pub_cost }
+	add_to_variable = { pub_cost_display = pub_cost_cor_penalty }
 	subtract_from_variable = { IncomeCheck = pub_cost }
 }
 gdp_calculation = {
-
+	set_variable = { inc_productivity = 0.5 }
+	add_to_variable = { inc_productivity = modifier@production_factory_max_efficiency_factor }
+	
 	every_owned_state = {
 		add_to_variable = { ROOT.industrial_complex_totalGDP = building_level@industrial_complex }  
 		add_to_variable = { ROOT.farm_totalGDP = building_level@agri_industrial_complex }
@@ -1231,114 +1235,14 @@ gdp_calculation = {
 	}
 	
 	#industrial_complex Modifiers
-	multiply_variable = { industrial_complex_totalGDP = 0.9 } #DIVIDER
 	set_variable = { industrial_complex_tech = 1 }
-	if = {
-		limit = {
-			has_tech = production_efficiency_I
-		}
-		add_to_variable = { industrial_complex_tech = 0.05 }
-	}
-	if = {
-		limit = {
-			has_tech = 	production_efficiency_II
-		}
-		add_to_variable = { industrial_complex_tech = 0.05 }
-	}
-	if = {
-		limit = {
-			has_tech = 	production_efficiency_III
-		}
-		add_to_variable = { industrial_complex_tech = 0.05 }
-	}
-	if = {
-		limit = {
-			has_tech = 	production_efficiency_IV
-		}
-		add_to_variable = { industrial_complex_tech = 0.05 }
-	}
-	if = {
-		limit = {
-			has_tech = 	production_efficiency_V
-		}
-		add_to_variable = { industrial_complex_tech = 0.05 }
-	}
-	if = {
-		limit = {
-			has_tech = 	production_efficiency_VI
-		}
-		add_to_variable = { industrial_complex_tech = 0.05 }
-	}
-	if = {
-		limit = {
-			has_tech = 	production_efficiency_VII
-		}
-		add_to_variable = { industrial_complex_tech = 0.05 }
-	}
-	if = {
-		limit = {
-			has_tech = 	production_efficiency_VIII
-		}
-		add_to_variable = { industrial_complex_tech = 0.05 }
-	}
-	if = {
-		limit = {
-			has_tech = 	production_efficiency_IX
-		}
-		add_to_variable = { industrial_complex_tech = 0.05 }
-	}
-	if = {
-		limit = {
-			has_tech = 	production_efficiency_X
-		}
-		add_to_variable = { industrial_complex_tech = 0.05 }
-	}
-	if = {
-		limit = {
-			has_tech = 	industrial_robots_I
-		}
-		add_to_variable = { industrial_complex_tech = 0.05 }
-	}
-	if = {
-		limit = {
-			has_tech = 	industrial_robots_II
-		}
-		add_to_variable = { industrial_complex_tech = 0.05 }
-	}
-	if = {
-		limit = {
-			has_tech = 	industrial_robots_III
-		}
-		add_to_variable = { industrial_complex_tech = 0.05 }
-	}
-	if = {
-		limit = {
-			has_tech = 	industrial_robots_IV
-		}
-		add_to_variable = { industrial_complex_tech = 0.05 }
-	}
-	if = {
-		limit = {
-			has_tech = 	industrial_robots_V
-		}
-		add_to_variable = { industrial_complex_tech = 0.05 }
-	}
-	if = {
-		limit = {
-			has_tech = 	factory_automation_I
-		}
-		add_to_variable = { industrial_complex_tech = 0.05 }
-	}
-	if = {
-		limit = {
-			has_tech = 	factory_automation_II
-		}
-		add_to_variable = { industrial_complex_tech = 0.05 }
-	}
+	add_to_variable = { industrial_complex_tech = industry_credit_factor_difference }
+	
+	multiply_variable = { industrial_complex_tech = inc_productivity }
 	multiply_variable = { industrial_complex_totalGDP = industrial_complex_tech }
+	
 	add_to_variable = { IncometotalGDP = industrial_complex_totalGDP }
 	#agri_industrial_complex
-	multiply_variable = { farm_totalGDP = 0.9 } #DIVIDER
 	set_variable = { farm_tech = 1 }
 	if = {
 		limit = {
@@ -1383,10 +1287,13 @@ gdp_calculation = {
 		}
 		add_to_variable = { farm_tech = 0.15 }
 	}
+	add_to_variable = { dockyard_tech = agriculture_credit_factor_difference }
+	
+	multiply_variable = { farm_tech = inc_productivity }
+	
 	multiply_variable = { farm_totalGDP = farm_tech }
 	add_to_variable = { IncometotalGDP = farm_totalGDP }
 	#dockyard
-	multiply_variable = { dockyard_totalGDP = 0.9 } #DIVIDER
 	set_variable = { dockyard_tech = 1 }
 	if = {
 		limit = {
@@ -1484,10 +1391,15 @@ gdp_calculation = {
 		}
 		add_to_variable = { dockyard_tech = 0.05 }
 	}
+	add_to_variable = { dockyard_tech = trade_credit_factor_difference }
+	add_to_variable = { dockyard_tech = industry_credit_factor_difference }
+	
+	multiply_variable = { dockyard_tech = inc_productivity }
+	
 	multiply_variable = { dockyard_totalGDP = dockyard_tech }
 	add_to_variable = { IncometotalGDP = dockyard_totalGDP }
 	#synthetic_refinery +15%
-	multiply_variable = { oil_refinery_totalGDP = 0.9 } #DIVIDER
+	multiply_variable = { oil_refinery_totalGDP = 1.8 } #DIVIDER
 	set_variable = { oil_refinery_tech = 1 }
 	if = {
 		limit = {
@@ -1525,11 +1437,14 @@ gdp_calculation = {
 		}
 		add_to_variable = { oil_refinery_tech = 0.15 }
 	}
+	add_to_variable = { oil_refinery_tech = refinery_credit_factor_difference }
+	multiply_variable = { oil_refinery_tech = inc_productivity }
+	
 	multiply_variable = { oil_refinery_totalGDP = oil_refinery_tech }
 	add_to_variable = { IncometotalGDP = oil_refinery_totalGDP }
 	
 	#steel_factory +15%			steel_works_totalGDP
-	multiply_variable = { steel_works_totalGDP = 0.9 } #DIVIDER
+	multiply_variable = { steel_works_totalGDP = 1.8 } #DIVIDER
 	set_variable = { steel_works_tech = 1 }
 	if = {
 		limit = {
@@ -1567,11 +1482,13 @@ gdp_calculation = {
 		}
 		add_to_variable = { steel_works_tech = 0.15 }
 	}
+	add_to_variable = { steel_works_tech = refinery_credit_factor_difference }
+	multiply_variable = { steel_works_tech = inc_productivity }
 	multiply_variable = { steel_works_totalGDP = steel_works_tech }
 	add_to_variable = { IncometotalGDP = steel_works_totalGDP }
 
 	#tungsten_factory +15%		tungsten_factory_totalGDP
-	multiply_variable = { tungsten_factory_totalGDP = 0.9 } #DIVIDER
+	multiply_variable = { tungsten_factory_totalGDP = 1.8 } #DIVIDER
 	set_variable = { tungsten_factory_tech = 1 }
 	if = {
 		limit = {
@@ -1609,12 +1526,13 @@ gdp_calculation = {
 		}
 		add_to_variable = { tungsten_factory_tech = 0.15 }
 	}
+	add_to_variable = { tungsten_factory_tech = refinery_credit_factor_difference }
+	multiply_variable = { tungsten_factory_tech = inc_productivity }
 	multiply_variable = { tungsten_factory_totalGDP = tungsten_factory_tech }
 	add_to_variable = { IncometotalGDP = tungsten_factory_totalGDP }
 
 	#office_park x2 +15%		office_park_totalGDP
 	multiply_variable = { office_park_totalGDP = 3 }
-	multiply_variable = { office_park_totalGDP = 0.9 } #DIVIDER
 	set_variable = { office_park_tech = 1 }
 	if = {
 		limit = {
@@ -1652,16 +1570,18 @@ gdp_calculation = {
 		}
 		add_to_variable = { office_park_tech = 0.15 }
 	}
+	add_to_variable = { office_park_tech = commerce_credit_factor_difference }
+	
+	multiply_variable = { office_park_tech = inc_productivity }
+	
 	multiply_variable = { office_park_totalGDP = office_park_tech }
 	add_to_variable = { IncometotalGDP = office_park_totalGDP }
 	
-	set_variable = { cgBase = modifier@consumer_goods_factor  } 
-	set_variable = { peBase = modifier@production_factory_max_efficiency_factor } 
-	add_to_variable = { peBase = 1 } 
-	divide_variable = { cgBase = peBase } 
-	multiply_variable = { IncometotalGDP = cgBase }
-	#multiply_variable = { IncometotalGDP = 2 }
-	set_variable = { grossdomesticproduct = IncometotalGDP } 
+	
+	
+	set_variable = { grossdomesticproduct = IncometotalGDP }
+	set_variable = { grossdomesticproduct_fake = grossdomesticproduct }
+	divide_variable = { grossdomesticproduct_fake = 25 } #Fake display multiplier
 	
 	set_variable = { IncometotalGDP = 0 }
 	set_variable = { ROOT.industrial_complex_totalGDP = 0 }  
@@ -1676,50 +1596,590 @@ tax_rate = {
 	subtract_from_variable = { IncomeCheck = tax_base }
 	set_variable = { tax_base = 0 }
 	every_owned_state = {
-		add_to_variable = { ROOT.tax_base = state_population_k }
-	}
-	multiply_variable = { ROOT.tax_base = 0.002 }
-	if = {
-		limit = {
-			has_idea = 	Austrian_Taxation
+		if = {
+			limit = {
+				OR = {
+					has_state_category = pop1
+					has_state_category = pop2
+					has_state_category = pop3
+					has_state_category = pop4
+					has_state_category = pop5
+					has_state_category = pop7
+					has_state_category = pop10
+					has_state_category = pop15
+					has_state_category = pop20
+				}
+			}
+			add_to_variable = { ROOT.preindustrial_population_census = state_population_k }
 		}
-		multiply_variable = { tax_base = 0.01 }
-	}
-	if = {
-		limit = {
-			has_idea = 	Light_Taxation
+		if = {
+			limit = {
+				OR = {
+					has_state_category = pop1dev1
+					has_state_category = pop2dev1
+					has_state_category = pop3dev1
+					has_state_category = pop4dev1
+					has_state_category = pop5dev1
+					has_state_category = pop7dev1
+					has_state_category = pop10dev1
+					has_state_category = pop15dev1
+					has_state_category = pop20dev1
+				}
+			}
+			add_to_variable = { ROOT.industrial_population_census = state_population_k }
 		}
-		multiply_variable = { tax_base = 0.10 }
+		if = {
+			limit = {
+				OR = {
+					has_state_category = pop1dev2
+					has_state_category = pop2dev2
+					has_state_category = pop3dev2
+					has_state_category = pop4dev2
+					has_state_category = pop5dev2
+					has_state_category = pop7dev2
+					has_state_category = pop10dev2
+					has_state_category = pop15dev2
+					has_state_category = pop20dev2
+				}
+			}
+			add_to_variable = { ROOT.developed_population_census = state_population_k }
+		}
+		if = {
+			limit = {
+				OR = {
+					has_state_category = pop1dev3
+					has_state_category = pop2dev3
+					has_state_category = pop3dev3
+					has_state_category = pop4dev3
+					has_state_category = pop5dev3
+					has_state_category = pop7dev3
+					has_state_category = pop10dev3
+					has_state_category = pop15dev3
+					has_state_category = pop20dev3
+				}
+			}
+			add_to_variable = { ROOT.modern_population_census = state_population_k }
+		}
+		if = {
+			limit = {
+				OR = {
+					has_state_category = pop1dev4
+					has_state_category = pop2dev4
+					has_state_category = pop3dev4
+					has_state_category = pop4dev4
+					has_state_category = pop5dev4
+					has_state_category = pop7dev4
+					has_state_category = pop10dev4
+					has_state_category = pop15dev4
+					has_state_category = pop20dev4
+				}
+			}
+			add_to_variable = { ROOT.automated_population_census = state_population_k }
+		}
+	}
+	multiply_variable = { preindustrial_population_census = 0.001 }
+	set_variable = { preindustrial_population_tax = preindustrial_population_census }
+	multiply_variable = { preindustrial_population_tax = global.PreindustrialTaxCredit }
+	add_to_variable = { tax_base = preindustrial_population_tax }
+	
+	multiply_variable = { industrial_population_census = 0.001 }
+	set_variable = { industrial_population_tax = industrial_population_census }
+	multiply_variable = { industrial_population_tax = global.IndustrialTaxCredit }
+	add_to_variable = { tax_base = industrial_population_tax }
+	
+	multiply_variable = { developed_population_census = 0.001 }
+	set_variable = { developed_population_tax = developed_population_census }
+	multiply_variable = { developed_population_tax = global.DevelopedTaxCredit }
+	add_to_variable = { tax_base = developed_population_tax }
+	
+	multiply_variable = { modern_population_census = 0.001 }
+	set_variable = { modern_population_tax = modern_population_census }
+	multiply_variable = { modern_population_tax = global.ModernTaxCredit }
+	add_to_variable = { tax_base = modern_population_tax }
+	
+	multiply_variable = { automated_population_census = 0.001 }
+	set_variable = { automated_population_tax = automated_population_census }
+	multiply_variable = { automated_population_tax = global.AutomatedTaxCredit }
+	add_to_variable = { tax_base = automated_population_tax }
+	
+	#multiply_variable = { ROOT.tax_base = 0.002 }
+	if = {
+		limit = {
+			has_idea = 	policy_taxrate_temp_1
+		}
+		multiply_variable = { tax_base = 0.15 }
 	}
 	if = {
 		limit = {
-			has_idea = 	Moderate_Taxation
+			has_idea = 	policy_taxrate_temp_2
 		}
 		multiply_variable = { tax_base = 0.25 }
 	}
 	if = {
 		limit = {
-			has_idea = 	Progressive_Taxation
+			has_idea = 	policy_taxrate_temp_3
 		}
 		multiply_variable = { tax_base = 0.35 }
 	}
 	if = {
 		limit = {
-			has_idea = 	Heavy_Taxation
+			has_idea = 	policy_taxrate_temp_4
 		}
 		multiply_variable = { tax_base = 0.45 }
 	}	
 	if = {
 		limit = {
-			has_idea = 	Marxist_Taxation
+			has_idea = 	policy_taxrate_temp_5
 		}
 		multiply_variable = { tax_base = 0.55 }
 	}
+	multiply_variable = { tax_base = tax_credit_factor }
+	multiply_variable = { tax_base = global.GlobalTaxCredit }
 	set_variable = { tax_display = 0 }
 	set_variable = { tax_display = tax_base }
 	add_to_variable = { IncomeCheck = tax_base }
 }
 edict_expenditure = {
+	#CHANGES COSTS BY FACTOR#
+	set_variable = { military_edict_debit_factor = 1 }
+	set_variable = { healthcare_edict_debit_factor = 1 }
+	set_variable = { education_edict_debit_factor = 1 }
+	set_variable = { welfare_edict_debit_factor = 1 }
+	set_variable = { cpi_edict_debit_factor = 1 }
+	set_variable = { public_edict_debit_factor = 1 }
+	#CHANGES COSTS BY FLAT AMOUNT#
+	set_variable = { military_edict_debit_gain = 0 }
+	set_variable = { healthcare_edict_debit_gain = 0 }
+	set_variable = { education_edict_debit_gain = 0 }
+	set_variable = { welfare_edict_debit_gain = 0 }
+	set_variable = { cpi_edict_debit_gain = 0 }
+	set_variable = { public_edict_debit_gain = 0 }
+	#CHANGES INCOME BY FACTOR#
+	set_variable = { trade_credit_factor = 1 }
+	set_variable = { tax_credit_factor = 1 }
+	set_variable = { commerce_credit_factor = 1 }
+	set_variable = { refinery_credit_factor = 1 }
+	set_variable = { agriculture_credit_factor = 1 }
+	set_variable = { industry_credit_factor = 1 }
+	#EFFICIENCY CHECKS#
+	set_variable = { efficiency_military_check = efficiency_military }
+	set_variable = { efficiency_healthcare_check = efficiency_healthcare }
+	set_variable = { efficiency_education_check = efficiency_education }
+	set_variable = { efficiency_welfare_check = efficiency_welfare }
+	set_variable = { efficiency_cpi_check = efficiency_cpi }
+	set_variable = { efficiency_public_check = efficiency_public }
+	###IDEAS###
+	edict_ideas_calc = yes
+	#ADDITIVE CREDIT FACTORS#
+	set_variable = { trade_credit_factor_difference = trade_credit_factor }
+	set_variable = { tax_credit_factor_difference = tax_credit_factor }
+	set_variable = { commerce_credit_factor_difference = commerce_credit_factor }
+	set_variable = { refinery_credit_factor_difference = refinery_credit_factor }
+	set_variable = { agriculture_credit_factor_difference = agriculture_credit_factor }
+	set_variable = { industry_credit_factor_difference = industry_credit_factor }
+	
+	subtract_from_variable = { trade_credit_factor_difference = 1 }
+	subtract_from_variable = { tax_credit_factor_difference = 1 }
+	subtract_from_variable = { commerce_credit_factor_difference = 1 }
+	subtract_from_variable = { refinery_credit_factor_difference = 1 }
+	subtract_from_variable = { agriculture_credit_factor_difference = 1 }
+	subtract_from_variable = { industry_credit_factor_difference = 1 }
+	
+	#DIVIDER APPLICATION#
+	multiply_variable = { military_edict_debit_gain = global.GlobalEdictDebit }
+	multiply_variable = { healthcare_edict_debit_gain = global.GlobalEdictDebit }
+	multiply_variable = { education_edict_debit_gain = global.GlobalEdictDebit }
+	multiply_variable = { welfare_edict_debit_gain = global.GlobalEdictDebit }
+	multiply_variable = { cpi_edict_debit_gain = global.GlobalEdictDebit }
+	multiply_variable = { public_edict_debit_gain = global.GlobalEdictDebit }
 }
+domestic_bond_calc = {
+	if = { #Failsafe to prevent crash
+		limit = {
+			check_variable = { available_liquidity < 1 }
+		}
+		set_variable = { available_liquidity = 1 }
+	}
+	
+	set_variable = { outcrowding_limit = 1 } #Limit on max domestic loans
+	every_owned_state = {
+		add_to_variable = { ROOT.outcrowding_limit = building_level@office_park }
+	}
+	
+	multiply_variable = { outcrowding_limit = 10 } #Billions per office park
+	
+	#MULTIPLY OUTCROWDING LIMIT PER OFFICE PARK BY TECH#
+	set_variable = { office_park_tech = 1 }
+	if = {
+		limit = {
+			has_tech = 	consumer_electronics_I
+		}
+		add_to_variable = { office_park_tech = 0.15 }
+	}
+	if = {
+		limit = {
+			has_tech = 	consumer_electronics_II
+		}
+		add_to_variable = { office_park_tech = 0.15 }
+	}
+	if = {
+		limit = {
+			has_tech = 	consumer_electronics_III
+		}
+		add_to_variable = { office_park_tech = 0.15 }
+	}
+	if = {
+		limit = {
+			has_tech = 	consumer_electronics_IV
+		}
+		add_to_variable = { office_park_tech = 0.15 }
+	}
+	if = {
+		limit = {
+			has_tech = 	consumer_electronics_V
+		}
+		add_to_variable = { office_park_tech = 0.15 }
+	}	
+	if = {
+		limit = {
+			has_tech = 	consumer_electronics_VI
+		}
+		add_to_variable = { office_park_tech = 0.15 }
+	}
+	multiply_variable = { outcrowding_limit = office_park_tech }
+	
+	
+	set_variable = { outcrowding_temp_var = outcrowding_limit }
+	
+	#REPLENISHMENT RATES FOR OUTCROWDING LIMITS#
+	if = {
+		limit = {
+			check_variable = { outcrowding_limit < 100 }
+		}
+		multiply_variable = { outcrowding_temp_var = 0.065 } #Percent to restore difference per month
+	}
+	if = {
+		limit = {
+			AND = {
+				check_variable = { outcrowding_limit < 500 }
+				check_variable = { outcrowding_limit > 100 }
+			}
+		}
+		multiply_variable = { outcrowding_temp_var = 0.05 } #Percent to restore difference per month
+	}
+	if = {
+		limit = {
+			check_variable = { outcrowding_limit > 500 }
+		}
+		multiply_variable = { outcrowding_temp_var = 0.035 } #Percent to restore difference per month
+	}
+	#REPLENISHMENT SCRIPT#
+	if = {
+		limit = {
+			check_variable = { available_liquidity < outcrowding_limit } #Liquidity less than limit
+		}
+		add_to_variable = { available_liquidity = outcrowding_temp_var } #Replenish available liquidity
+	}
+}
+flag_building_macro = {
+##### CATEGORIES #####
+	if = {
+		limit = {
+			check_variable = { industrialization_budget > 25 }
+		}
+		FBU_category_0 = yes
+	}
+	if = {
+		limit = {
+			check_variable = { development_budget > 25 }
+		}
+		FBU_category_1 = yes
+	}
+	if = {
+		limit = {
+			check_variable = { modernization_budget > 25 }
+		}
+		FBU_category_2 = yes
+	}
+	if = {
+		limit = {
+			check_variable = { automation_budget > 25 }
+		}
+		FBU_category_3 = yes
+	}
+##### TELECOMS #####
+}
+
+
+ai_economic_planning = {	#Caulcates building targets for the AI Strategies in default.txt
+	#Clear old values
+	multiply_variable = { ai_office_park_target = -1 }
+	meta_effect = {
+		text = {
+			add_ai_strategy = {
+				type = building_target
+				id = office_park
+				value = [OFFICE_PARK_UWU]
+			}
+		}
+		OFFICE_PARK_UWU = "[?ai_office_park_target]"
+	}
+	multiply_variable = { ai_fossil_fuel_powerplant_target_reduced = -1 }
+	meta_effect = {
+		text = {
+			add_ai_strategy = {
+				type = building_target
+				id = fossil_fuel_powerplant
+				value = [FOSSIL_FUEL_REDUCED_UWU]
+			}
+		}
+		FOSSIL_FUEL_REDUCED_UWU = "[ai_fossil_fuel_powerplant_target]"
+	}
+	multiply_variable = { ai_renewable_powerplant_target = -1 }
+	meta_effect = {
+		text = {
+			add_ai_strategy = {
+				type = building_target
+				id = renewable_powerplant
+				value = [RENEWABLE_UWU]
+			}
+		}
+		RENEWABLE_UWU = "[ai_renewable_powerplant_target]"
+	}
+	multiply_variable = { ai_nuclear_powerplant_target = -1 }
+	meta_effect = {
+		text = {
+			add_ai_strategy = {
+				type = building_target
+				id = nuclear_powerplant
+				value = [NUCLEAR_UWU]
+			}
+		}
+		NUCLEAR_UWU = "[ai_nuclear_powerplant_target]"
+	}
+	multiply_variable = { ai_agri_industrial_complex_target = -1 }
+	meta_effect = {
+		text = {
+			add_ai_strategy = {
+				type = building_target
+				id = agri_industrial_complex
+				value = [OMNOM_UWU]
+			}
+		}
+		OMNOM_UWU = "[ai_agri_industrial_complex_target]"
+	}
+	#ALL TARGETS ARE NOW RESET
+	
+	if = { limit = { is_ai = yes } emergency_policy_replanning = yes } #AI Reduces Policies if Overbudget
+	
+	#ai_fossil_fuel_powerplant_target is total economic buildings x the ai_power_Ratio global define
+	set_variable = { ai_fossil_fuel_powerplant_target = ROOT.industrial_complex_total }
+	multiply_variable = { ai_fossil_fuel_powerplant_target = 1.2 }
+	add_to_variable = { ai_fossil_fuel_powerplant_target = ROOT.dockyard_total }
+	add_to_variable = { ai_fossil_fuel_powerplant_target = ROOT.office_park_total }
+	multiply_variable = { ai_fossil_fuel_powerplant_target = global.ai_power_ratio }
+	
+	#Calculations for the large economy power plant building targets
+	set_variable = { ai_fossil_fuel_powerplant_target_reduced = ai_fossil_fuel_powerplant_target }
+	set_variable = { alpha = 1 }
+	subtract_from_variable = { alpha = global.ai_renewable_ratio }
+	subtract_from_variable = { alpha = global.ai_nuclear_ratio }
+	multiply_variable = { ai_fossil_fuel_powerplant_target_reduced = alpha }
+	set_variable = { ai_renewable_powerplant_target = ai_fossil_fuel_powerplant_target }
+	set_variable = { ai_nuclear_powerplant_target = ai_fossil_fuel_powerplant_target }
+	multiply_variable = { ai_renewable_powerplant_target = global.ai_renewable_ratio }
+	multiply_variable = { ai_nuclear_powerplant_target = global.ai_nuclear_ratio }
+	
+	#office target = factories x global define ratio
+	set_variable = { ai_office_park_target = ROOT.industrial_complex_total }
+	multiply_variable = { ai_office_park_target = global.ai_office_ratio }
+	
+	#AI will spend the ai_agri_investment on factories on agri-industry until they reach a positive food balance
+	set_variable = { ai_agri_industrial_complex_target = ROOT.farm_total }
+	set_variable = { beta = ROOT.num_of_civilian_factories_available_for_projects }
+	add_to_variable = { beta = 1 }
+	divide_variable = { beta = 7 } #one half max factories per construction project rounded down
+	multiply_variable = { beta = global.ai_agri_investment }
+	multiply_variable = { ai_agri_industrial_complex_target = beta }
+	
+	round_variable = ai_fossil_fuel_powerplant_target
+	round_variable = ai_fossil_fuel_powerplant_target_reduced
+	round_variable = ai_renewable_powerplant_target
+	round_variable = ai_nuclear_powerplant_target
+	round_variable = ai_office_park_target
+	round_variable = ai_agri_industrial_complex_target
+	
+	#ONLY BUILD NUCLEAR/RENEWABLES IF PAST THE AI POINT#
+	if = {
+		limit = {
+			num_of_civilian_factories_available_for_projects > global.ai_renewable_point
+		}
+		set_variable = { ai_fossil_fuel_powerplant_target = ai_fossil_fuel_powerplant_target_reduced }
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				var = num_of_civilian_factories_available_for_projects
+				value = global.ai_renewable_point
+				compare = less_than_or_equals
+			}
+		}
+		set_variable = { ai_nuclear_powerplant_target = 0 }
+		set_variable = { ai_renewable_powerplant_target = 0 }
+	}
+	
+	#DO NOT BUILD MORE FARMS THAN YOU NEED x 1.1#
+	set_variable = { food_compo = food_consumption }
+	multiply_variable = { food_compo = 1.1 }
+	if = {
+		limit = {
+			check_variable = { foodCheck > food_compo }
+		}
+		set_variable = { ai_agri_industrial_complex_target = ROOT.farm_total }
+		
+	}
+	
+	#APPLY NEW VALUES TO AI STRATEGIES
+	meta_effect = {
+		text = {
+			add_ai_strategy = {
+				type = building_target
+				id = office_park
+				value = [OFFICE_PARK_UWU]
+			}
+		}
+		OFFICE_PARK_UWU = "[?ai_office_park_target]"
+	}
+	meta_effect = {
+		text = {
+			add_ai_strategy = {
+				type = building_target
+				id = fossil_fuel_powerplant
+				value = [FOSSIL_FUEL_REDUCED_UWU]
+			}
+		}
+		FOSSIL_FUEL_REDUCED_UWU = "[ai_fossil_fuel_powerplant_target]"
+	}
+	meta_effect = {
+		text = {
+			add_ai_strategy = {
+				type = building_target
+				id = renewable_powerplant
+				value = [RENEWABLE_UWU]
+			}
+		}
+		RENEWABLE_UWU = "[ai_renewable_powerplant_target]"
+	}
+	meta_effect = {
+		text = {
+			add_ai_strategy = {
+				type = building_target
+				id = nuclear_powerplant
+				value = [NUCLEAR_UWU]
+			}
+		}
+		NUCLEAR_UWU = "[ai_nuclear_powerplant_target]"
+	}
+	meta_effect = {
+		text = {
+			add_ai_strategy = {
+				type = building_target
+				id = agri_industrial_complex
+				value = [OMNOMN_UWU]
+			}
+		}
+		OMNOM_UWU = "[ai_agri_industrial_complex_target]"
+	}
+	
+	#CONTROLLED WATER INFRASTRUCTURE GROWTH
+	#At the ai_water_point variable's number of factories that can construct in the country, the AI will start to build water infrastructure
+	set_variable = { gamma = 1.5 } #Will build 2 per month at gamma x the ai_water_point
+	multiply_variable = { gamma = global.ai_water_point }
+	set_variable = { delta = 2.5 } #Will build 3 per month at delta x the ai_water_point
+	multiply_variable = { delta = global.ai_water_point }
+	if = {
+		limit = { 
+			AND = { 
+				num_of_civilian_factories_available_for_projects > global.ai_water_point 
+				is_ai = yes
+			}
+		}
+		any_owned_state = {
+			limit = {
+				AND = {
+					agri_industrial_complex > 0
+					
+					free_building_slots = {
+						building = water_infrastructure
+						size > 0
+						include_locked = no
+					}
+				}
+			}
+			add_building_construction = {
+				type = water_infrastructure
+				level = 1
+				instant_build = no #ADDS TO QUEUE
+			}
+		}
+	}
+	if = {
+		limit = { 
+			AND = { 
+				num_of_civilian_factories_available_for_projects > gamma
+				is_ai = yes
+			}
+		}
+		any_owned_state = {
+			limit = {
+				AND = {
+					agri_industrial_complex > 0
+					
+					free_building_slots = {
+						building = water_infrastructure
+						size > 0
+						include_locked = no
+					}
+				}
+			}
+			add_building_construction = {
+				type = water_infrastructure
+				level = 1
+				instant_build = no #ADDS TO QUEUE
+			}
+		}
+	}
+	if = {
+		limit = { 
+			AND = { 
+				num_of_civilian_factories_available_for_projects > delta
+				is_ai = yes
+			}
+		}
+		any_owned_state = {
+			limit = {
+				AND = {
+					agri_industrial_complex > 0
+					
+					free_building_slots = {
+						building = water_infrastructure
+						size > 0
+						include_locked = no
+					}
+				}
+			}
+			add_building_construction = {
+				type = water_infrastructure
+				level = 1
+				instant_build = no #ADDS TO QUEUE
+			}
+		}
+	}
+}
+
+
+
+
+
 
 

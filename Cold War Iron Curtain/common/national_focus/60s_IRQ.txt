@@ -2013,7 +2013,7 @@ focus_tree = {
 					add_equipment_to_stockpile = {
 							type = jet_multirole_equipment_3
 							amount = 800
-							producer = TUR
+							producer = CUM
 						}
 				}
 
@@ -2751,7 +2751,7 @@ focus_tree = {
 					add_equipment_to_stockpile = {
 							type = infantry_equipment_3
 							amount = 2000
-							producer = USA
+							producer = CAP
 						}
 				}
 
@@ -2847,7 +2847,7 @@ focus_tree = {
 					add_tech_bonus = {
 							name = agri_tech_bonus
 							bonus = 1
-							category = agri_tech
+							category = agriculture
 						}
 				}
 
@@ -2881,7 +2881,7 @@ focus_tree = {
 					add_tech_bonus = {
 							name = agri_tech_bonus
 							bonus = 1
-							category = agri_tech
+							category = agriculture
 						}
 				}
 
@@ -2941,7 +2941,7 @@ focus_tree = {
 					add_equipment_to_stockpile = {
 							type = infantry_equipment_3
 							amount = 2000
-							producer = SOV
+							producer = CUM
 						}
 				}
 
@@ -3195,7 +3195,7 @@ focus_tree = {
 					add_tech_bonus = {
 							name = agri_tech_bonus
 							bonus = 1
-							category = agri_tech
+							category = agriculture
 						}
 				}
 

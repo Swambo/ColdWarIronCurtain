@@ -495,7 +495,7 @@ focus_tree = {
 				add_equipment_to_stockpile = {
 					type = infantry_equipment_2
 					amount = 10000
-					producer = SOV
+					producer = CUM
 				}			
 			}
 		}
@@ -528,7 +528,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = jet_multirole_equipment_3
 				amount = 150
-				producer = SOV
+				producer = CUM
 			}		
 		}
 	}
@@ -546,7 +546,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = transport_plane_equipment_2
 				amount = 200
-				producer = POL
+				producer = CUM
 			}		
 		}
 	}
@@ -568,7 +568,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = jet_tac_bomber_equipment_1
 				amount = 100
-				producer = POL
+				producer = CUM
 			}		
 		}
 	} 
@@ -586,7 +586,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = jet_multirole_equipment_5
 				amount = 100
-				producer = SOV
+				producer = CUM
 			}		
 		}
 	}
@@ -654,7 +654,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment_0
 				amount = 25000
-				producer = SOV
+				producer = CUM
 			}
 		}
 	}
@@ -672,7 +672,7 @@ focus_tree = {
 			add_equipment_to_stockpile = {
 				type = mbt_equipment_2
 				amount = 200
-				producer = SOV
+				producer = CUM
 			}
 		}
 	}
@@ -748,8 +748,8 @@ focus_tree = {
 				name = naval_equipment_bonus
 				bonus = 1.5
 				uses = 2
-				category = screen_hull_medium
-				category = screen_hull_large
+				category = screen_hull_heavy
+				category = battle_hull_light
 			}
 		}
 	}
